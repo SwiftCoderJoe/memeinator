@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EC7CC94214DE07D0070CB37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */; };
+		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
+		0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		791B6ABA13C0B2726102C791 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273B087D0F86709620FEDE53 /* Pods_memeinator3000Tests.framework */; };
+		CC483B9E69A44B24EC4FCCE5 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4A13C42D63902BDEFCCABF /* Pods_memeinator3000.framework */; };
+		D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */; };
+		D41F6A03210D5D4A006F5F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A02210D5D4A006F5F3C /* ViewController.swift */; };
+		D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A04210D5D4A006F5F3C /* Main.storyboard */; };
+		D41F6A08210D5D4F006F5F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
+		D41F6A0B210D5D4F006F5F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */; };
+		D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EC7CC9E214DE6760070CB37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC7CC98214DE6760070CB37;
+			remoteInfo = "memeinator but its a keyboard";
+		};
+		D41F6A12210D5D4F006F5F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41F69FC210D5D4A006F5F3C;
+			remoteInfo = memeinator3000;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D48AFB25210E1EE200728CD3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B4A13C42D63902BDEFCCABF /* Pods_memeinator3000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "memeinator but its a keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273B087D0F86709620FEDE53 /* Pods_memeinator3000Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DF10F411F70B1A70C5D258 /* Pods-memeinator3000Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6035A3FE150E4C08BADE063A /* Pods-memeinator3000.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.debug.xcconfig"; path = "Pods/Target Support Files/Pods-memeinator3000/Pods-memeinator3000.debug.xcconfig"; sourceTree = "<group>"; };
+		614BA077F1DB60C8CF035EB6 /* Pods-memeinator3000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.release.xcconfig"; path = "Pods/Target Support Files/Pods-memeinator3000/Pods-memeinator3000.release.xcconfig"; sourceTree = "<group>"; };
+		7D751086FB06C7C0C040668E /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D41F69FD210D5D4A006F5F3C /* memeinator3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D41F6A02210D5D4A006F5F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D41F6A05210D5D4A006F5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D41F6A07210D5D4F006F5F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D41F6A0A210D5D4F006F5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D41F6A0C210D5D4F006F5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D41F6A11210D5D4F006F5F3C /* memeinator3000Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000Tests.swift; sourceTree = "<group>"; };
+		D41F6A17210D5D4F006F5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48AFB14210E1EE000728CD3 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EC7CC96214DE6760070CB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F69FA210D5D4A006F5F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC483B9E69A44B24EC4FCCE5 /* Pods_memeinator3000.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F6A0E210D5D4F006F5F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791B6ABA13C0B2726102C791 /* Pods_memeinator3000Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EC7CC9A214DE6760070CB37 /* memeinator but its a keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */,
+				0EC7CC9D214DE6760070CB37 /* Info.plist */,
+			);
+			path = "memeinator but its a keyboard";
+			sourceTree = "<group>";
+		};
+		66221B6D5B16A5D4DB7C455F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6035A3FE150E4C08BADE063A /* Pods-memeinator3000.debug.xcconfig */,
+				614BA077F1DB60C8CF035EB6 /* Pods-memeinator3000.release.xcconfig */,
+				7D751086FB06C7C0C040668E /* Pods-memeinator3000Tests.debug.xcconfig */,
+				51DF10F411F70B1A70C5D258 /* Pods-memeinator3000Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96BB7F20A07B1603FCC81831 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B4A13C42D63902BDEFCCABF /* Pods_memeinator3000.framework */,
+				273B087D0F86709620FEDE53 /* Pods_memeinator3000Tests.framework */,
+				D48AFB14210E1EE000728CD3 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D41F69F4210D5D4A006F5F3C = {
+			isa = PBXGroup;
+			children = (
+				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
+				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
+				0EC7CC9A214DE6760070CB37 /* memeinator but its a keyboard */,
+				D41F69FE210D5D4A006F5F3C /* Products */,
+				66221B6D5B16A5D4DB7C455F /* Pods */,
+				96BB7F20A07B1603FCC81831 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D41F69FE210D5D4A006F5F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D41F69FD210D5D4A006F5F3C /* memeinator3000.app */,
+				D41F6A11210D5D4F006F5F3C /* memeinator3000Tests.xctest */,
+				0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D41F69FF210D5D4A006F5F3C /* memeinator3000 */ = {
+			isa = PBXGroup;
+			children = (
+				D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */,
+				D41F6A02210D5D4A006F5F3C /* ViewController.swift */,
+				D41F6A04210D5D4A006F5F3C /* Main.storyboard */,
+				D41F6A07210D5D4F006F5F3C /* Assets.xcassets */,
+				D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */,
+				D41F6A0C210D5D4F006F5F3C /* Info.plist */,
+				0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */,
+			);
+			path = memeinator3000;
+			sourceTree = "<group>";
+		};
+		D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */,
+				D41F6A17210D5D4F006F5F3C /* Info.plist */,
+			);
+			path = memeinator3000Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EC7CC98214DE6760070CB37 /* memeinator but its a keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EC7CCA1214DE6760070CB37 /* Build configuration list for PBXNativeTarget "memeinator but its a keyboard" */;
+			buildPhases = (
+				0EC7CC95214DE6760070CB37 /* Sources */,
+				0EC7CC96214DE6760070CB37 /* Frameworks */,
+				0EC7CC97214DE6760070CB37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "memeinator but its a keyboard";
+			productName = "memeinator but its a keyboard";
+			productReference = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D41F69FC210D5D4A006F5F3C /* memeinator3000 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41F6A1A210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000" */;
+			buildPhases = (
+				3C6B69CB9C1C6C91CB185A12 /* [CP] Check Pods Manifest.lock */,
+				D41F69F9210D5D4A006F5F3C /* Sources */,
+				D41F69FA210D5D4A006F5F3C /* Frameworks */,
+				D41F69FB210D5D4A006F5F3C /* Resources */,
+				BA61857F49576CD6CF87E250 /* [CP] Embed Pods Frameworks */,
+				D48AFB25210E1EE200728CD3 /* Embed App Extensions */,
+				0EC7CCA4214E90340070CB37 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EC7CC9F214DE6760070CB37 /* PBXTargetDependency */,
+			);
+			name = memeinator3000;
+			productName = memeinator3000;
+			productReference = D41F69FD210D5D4A006F5F3C /* memeinator3000.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41F6A1D210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000Tests" */;
+			buildPhases = (
+				09DA8C8D86F26EAE01C65C24 /* [CP] Check Pods Manifest.lock */,
+				D41F6A0D210D5D4F006F5F3C /* Sources */,
+				D41F6A0E210D5D4F006F5F3C /* Frameworks */,
+				D41F6A0F210D5D4F006F5F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41F6A13210D5D4F006F5F3C /* PBXTargetDependency */,
+			);
+			name = memeinator3000Tests;
+			productName = memeinator3000Tests;
+			productReference = D41F6A11210D5D4F006F5F3C /* memeinator3000Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41F69F5210D5D4A006F5F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = BytleBit;
+				TargetAttributes = {
+					0EC7CC98214DE6760070CB37 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					D41F69FC210D5D4A006F5F3C = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					D41F6A10210D5D4F006F5F3C = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = D41F69FC210D5D4A006F5F3C;
+					};
+				};
+			};
+			buildConfigurationList = D41F69F8210D5D4A006F5F3C /* Build configuration list for PBXProject "memeinator3000" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D41F69F4210D5D4A006F5F3C;
+			productRefGroup = D41F69FE210D5D4A006F5F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D41F69FC210D5D4A006F5F3C /* memeinator3000 */,
+				D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */,
+				0EC7CC98214DE6760070CB37 /* memeinator but its a keyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EC7CC97214DE6760070CB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F69FB210D5D4A006F5F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41F6A0B210D5D4F006F5F3C /* LaunchScreen.storyboard in Resources */,
+				0EC7CC94214DE07D0070CB37 /* GoogleService-Info.plist in Resources */,
+				D41F6A08210D5D4F006F5F3C /* Assets.xcassets in Resources */,
+				D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F6A0F210D5D4F006F5F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09DA8C8D86F26EAE01C65C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-memeinator3000Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EC7CCA4214E90340070CB37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/Fabric/run\n";
+		};
+		3C6B69CB9C1C6C91CB185A12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-memeinator3000-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA61857F49576CD6CF87E250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EC7CC95214DE6760070CB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F69F9210D5D4A006F5F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41F6A03210D5D4A006F5F3C /* ViewController.swift in Sources */,
+				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41F6A0D210D5D4F006F5F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EC7CC9F214DE6760070CB37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EC7CC98214DE6760070CB37 /* memeinator but its a keyboard */;
+			targetProxy = 0EC7CC9E214DE6760070CB37 /* PBXContainerItemProxy */;
+		};
+		D41F6A13210D5D4F006F5F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41F69FC210D5D4A006F5F3C /* memeinator3000 */;
+			targetProxy = D41F6A12210D5D4F006F5F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D41F6A04210D5D4A006F5F3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D41F6A05210D5D4A006F5F3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D41F6A0A210D5D4F006F5F3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EC7CCA2214DE6760070CB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = "memeinator but its a keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bb.ora.killyourself.memeinator3000.memeinator-but-its-a-keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EC7CCA3214DE6760070CB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = "memeinator but its a keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bb.ora.killyourself.memeinator3000.memeinator-but-its-a-keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D41F6A18210D5D4F006F5F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D41F6A19210D5D4F006F5F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D41F6A1B210D5D4F006F5F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6035A3FE150E4C08BADE063A /* Pods-memeinator3000.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = memeinator3000/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D41F6A1C210D5D4F006F5F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614BA077F1DB60C8CF035EB6 /* Pods-memeinator3000.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = memeinator3000/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D41F6A1E210D5D4F006F5F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D751086FB06C7C0C040668E /* Pods-memeinator3000Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = memeinator3000Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.app/memeinator3000";
+			};
+			name = Debug;
+		};
+		D41F6A1F210D5D4F006F5F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DF10F411F70B1A70C5D258 /* Pods-memeinator3000Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9QUV825R92;
+				INFOPLIST_FILE = memeinator3000Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.app/memeinator3000";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EC7CCA1214DE6760070CB37 /* Build configuration list for PBXNativeTarget "memeinator but its a keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EC7CCA2214DE6760070CB37 /* Debug */,
+				0EC7CCA3214DE6760070CB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41F69F8210D5D4A006F5F3C /* Build configuration list for PBXProject "memeinator3000" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41F6A18210D5D4F006F5F3C /* Debug */,
+				D41F6A19210D5D4F006F5F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41F6A1A210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41F6A1B210D5D4F006F5F3C /* Debug */,
+				D41F6A1C210D5D4F006F5F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41F6A1D210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41F6A1E210D5D4F006F5F3C /* Debug */,
+				D41F6A1F210D5D4F006F5F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41F69F5210D5D4A006F5F3C /* Project object */;
+}
