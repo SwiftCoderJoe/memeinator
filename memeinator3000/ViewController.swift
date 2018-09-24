@@ -10,11 +10,14 @@ import GoogleMobileAds
 class ViewController: UIViewController {
     
     @IBOutlet weak var BannerAd: GADBannerView!
+    @IBOutlet weak var shek: UIImageView!
     @IBOutlet weak var boi: UITextField!
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var datlabeltho: UILabel!
     
     @IBAction func whywouldanyonedothis(_ sender: Any) {
+        shek.isHidden = false
+        
         var sendnudes:String = ""
         
         for letter in boi.text! {
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
                 sendnudes.append(" ")
             }
         }
-        
+        shek.isHidden = true
         UIPasteboard.general.string = sendnudes
     }
     @IBAction func StepValChanged(_ sender: Any) {
