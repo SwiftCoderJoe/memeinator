@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var datlabeltho: UILabel!
     
     @IBAction func whywouldanyonedothis(_ sender: Any) {
+        pleasestop()
+    }
+    @IBAction func StepValChanged(_ sender: Any) {
+        datlabeltho.text = "Memeness: \(Int(stepper!.value))"
+    }
+    
+    func pleasestop() {
         shek.isHidden = false
         
         var sendnudes:String = ""
@@ -28,9 +35,6 @@ class ViewController: UIViewController {
         }
         shek.isHidden = true
         UIPasteboard.general.string = sendnudes
-    }
-    @IBAction func StepValChanged(_ sender: Any) {
-        datlabeltho.text = "Memeness: \(Int(stepper!.value))"
     }
     
     override func viewDidLoad() {
