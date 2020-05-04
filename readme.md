@@ -4,7 +4,7 @@
 Memeinator is an easy way to make low-effort joke texts on iOS. It is open source under the GNU GPLv3 license. Welcome to the future of low-effort jokes.
 
 ## Project2
-Learn about what project is at ``project2.md``.
+Learn about what project2 is at ``project2.md``.
 
 ## Installation
 TBW
