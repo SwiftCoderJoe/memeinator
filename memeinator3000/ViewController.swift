@@ -9,12 +9,17 @@ import UIKit
 import GoogleMobileAds
 class ViewController: UIViewController {
     
+    // MARK: IBOutlets
+       
+    //Banner Ad View at the bottom
     @IBOutlet weak var BannerAd: GADBannerView!
-    @IBOutlet weak var shek: UIImageView!
+    //main input text field
     @IBOutlet weak var boi: UITextField!
+    //Stepper that changed spaces between characters
     @IBOutlet weak var stepper: UIStepper!
+    //Memeness label that changes with the memeness slider
     @IBOutlet weak var datlabeltho: UILabel!
-    
+       
     @IBAction func whywouldanyonedothis(_ sender: Any) {
         pleasestop()
     }
