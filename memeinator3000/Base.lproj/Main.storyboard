@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVM-XO-CtQ">
-                                <rect key="frame" x="21" y="438" width="372" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="21" y="436" width="372" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -28,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="e n d   m e"/>
                                 <connections>
-                                    <action selector="whywouldanyonedothis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynP-mF-ZTf"/>
+                                    <action selector="spacingButtonCalled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynP-mF-ZTf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="w h y   d o e s   t h i s   e x i s t" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-Zp-DFZ">
@@ -45,17 +43,17 @@
                                 </constraints>
                             </view>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zOg-jy-qNi">
-                                <rect key="frame" x="293" y="489" width="94" height="29"/>
+                                <rect key="frame" x="293" y="491" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bqO-n9-FVU"/>
                                     <constraint firstAttribute="height" constant="30" id="hZ6-hu-qD6"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="StepValChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Edu-qm-hBz"/>
+                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Edu-qm-hBz"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memeness: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFA-iR-RHg">
-                                <rect key="frame" x="21" y="489" width="262" height="30"/>
+                                <rect key="frame" x="21" y="491" width="262" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aCg-Dm-bea"/>
                                 </constraints>
@@ -94,14 +92,15 @@
                     </view>
                     <connections>
                         <outlet property="BannerAd" destination="jja-9I-mgH" id="cze-YK-3jr"/>
-                        <outlet property="boi" destination="zVM-XO-CtQ" id="TsG-B6-lwI"/>
-                        <outlet property="datlabeltho" destination="IFA-iR-RHg" id="sMD-Nl-SbV"/>
-                        <outlet property="shek" destination="pyQ-RG-pLS" id="6cL-Rg-Wpc"/>
+                        <outlet property="easterEgg" destination="pyQ-RG-pLS" id="6cL-Rg-Wpc"/>
+                        <outlet property="mainTextField" destination="zVM-XO-CtQ" id="TsG-B6-lwI"/>
                         <outlet property="stepper" destination="zOg-jy-qNi" id="laZ-nx-gK8"/>
+                        <outlet property="stepperLabel" destination="IFA-iR-RHg" id="sMD-Nl-SbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="117"/>
         </scene>
     </scenes>
     <resources>

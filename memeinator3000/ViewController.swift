@@ -14,48 +14,48 @@ class ViewController: UIViewController {
     //Banner ad view at the bottom
     @IBOutlet weak var BannerAd: GADBannerView!
     //Single-frame processing easter egg (triggered by the memeinator spacing button)
-    @IBOutlet weak var shek: UIImageView!
+    @IBOutlet weak var easterEgg: UIImageView!
     //Main memeinator spacing text field
-    @IBOutlet weak var boi: UITextField!
+    @IBOutlet weak var mainTextField: UITextField!
     //Main memeinator spacing slider to adjust spacing between characters
     @IBOutlet weak var stepper: UIStepper!
     //memeinator spacing memeness (spacing between characters) slider
-    @IBOutlet weak var datlabeltho: UILabel!
+    @IBOutlet weak var stepperLabel: UILabel!
     
     // MARK: IBActions
     
     //Func triggered by memeinator spacing button, calls main processing func
-    @IBAction func whywouldanyonedothis(_ sender: Any) {
-        pleasestop()
+    @IBAction func spacingButtonCalled(_ sender: Any) {
+        spacingButtonFunction()
     }
     
     //Func triggered by a change in memeinator spacing slider, only changes label, stepper value accessed directly
-    @IBAction func StepValChanged(_ sender: Any) {
-        datlabeltho.text = "Memeness: \(Int(stepper!.value))"
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        stepperLabel.text = "Memeness: \(Int(stepper!.value))"
     }
     
     // MARK: Functions
     
     //func called by the memeinator spacing button
-    func pleasestop() {
+    func spacingButtonFunction() {
         //single-frame easter egg show
-        shek.isHidden = false
+        easterEgg.isHidden = false
         
         //This variable holds the text to add to clipboard
-        var sendnudes:String = ""
+        var workingClipboard:String = ""
         
         //iterate through each character, adding a space between
-        for letter in boi.text! {
-            sendnudes.append("\(letter)")
+        for letter in mainTextField.text! {
+            workingClipboard.append("\(letter)")
             //Add a space for each stepper value
             for _ in 1...Int(stepper!.value) {
-                sendnudes.append(" ")
+                workingClipboard.append(" ")
             }
         }
         //unhide sing-frame easter egg
-        shek.isHidden = true
+        easterEgg.isHidden = true
         //add to clipboard
-        UIPasteboard.general.string = sendnudes
+        UIPasteboard.general.string = workingClipboard
     }
     
     // MARK: Class override functions

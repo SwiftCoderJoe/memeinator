@@ -26,7 +26,7 @@ class memeinator3000Tests: XCTestCase {
     }
     
     func testingiguess() {
-        memeUnderTest.pleasestop()
+        memeUnderTest.spacingButtonFunction()
         
     }
     
