@@ -34,20 +34,31 @@ class ViewController: UIViewController {
         datlabeltho.text = "Memeness: \(Int(stepper!.value))"
     }
     
+    // MARK: Functions
+    
+    //func called by the memeinator spacing button
     func pleasestop() {
+        //single-frame easter egg show
         shek.isHidden = false
         
+        //This variable holds the text to add to clipboard
         var sendnudes:String = ""
         
+        //iterate through each character, adding a space between
         for letter in boi.text! {
             sendnudes.append("\(letter)")
+            //Add a space for each stepper value
             for _ in 1...Int(stepper!.value) {
                 sendnudes.append(" ")
             }
         }
+        //unhide sing-frame easter egg
         shek.isHidden = true
+        //add to clipboard
         UIPasteboard.general.string = sendnudes
     }
+    
+    // MARK: Class override functions
     
     override func viewDidLoad() {
         BannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"

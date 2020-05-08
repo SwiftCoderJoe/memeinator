@@ -62,7 +62,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Crashlytics
     - Fabric
     - Firebase
@@ -90,4 +90,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a57c59fe077dbedf80a253ffee70451b15894ffa
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.1
