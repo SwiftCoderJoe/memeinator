@@ -10,16 +10,18 @@ import GoogleMobileAds
 class ViewController: UIViewController {
     
     // MARK: IBOutlets
-       
-    //Banner Ad View at the bottom
+    
+    //Banner ad view at the bottom
     @IBOutlet weak var BannerAd: GADBannerView!
-    //main input text field
+    //Single-frame processing easter egg (triggered by the memeinator spacing button)
+    @IBOutlet weak var shek: UIImageView!
+    //Main memeinator spacing text field
     @IBOutlet weak var boi: UITextField!
-    //Stepper that changed spaces between characters
+    //Main memeinator spacing slider to adjust spacing between characters
     @IBOutlet weak var stepper: UIStepper!
-    //Memeness label that changes with the memeness slider
+    //memeinator spacing memeness (spacing between characters) slider
     @IBOutlet weak var datlabeltho: UILabel!
-       
+    
     @IBAction func whywouldanyonedothis(_ sender: Any) {
         pleasestop()
     }
