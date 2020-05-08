@@ -22,9 +22,14 @@ class ViewController: UIViewController {
     //memeinator spacing memeness (spacing between characters) slider
     @IBOutlet weak var datlabeltho: UILabel!
     
+    // MARK: IBActions
+    
+    //Func triggered by memeinator spacing button, calls main processing func
     @IBAction func whywouldanyonedothis(_ sender: Any) {
         pleasestop()
     }
+    
+    //Func triggered by a change in memeinator spacing slider, only changes label, stepper value accessed directly
     @IBAction func StepValChanged(_ sender: Any) {
         datlabeltho.text = "Memeness: \(Int(stepper!.value))"
     }
