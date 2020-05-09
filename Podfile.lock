@@ -55,8 +55,8 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
-  - Crashlytics (~> 3.10.7)
-  - Fabric (~> 1.7.11)
+  - Crashlytics
+  - Fabric
   - Firebase/AdMob
   - Firebase/Core
   - IQKeyboardManagerSwift
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: a57c59fe077dbedf80a253ffee70451b15894ffa
+PODFILE CHECKSUM: 42bb5b997295c4ec928c468f3c1bf48e3d5d47f6
 
 COCOAPODS: 1.8.1

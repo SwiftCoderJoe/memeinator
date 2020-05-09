@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '12.0'
+ platform :ios, '13.0'
 
 target 'memeinator3000' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,8 +9,8 @@ target 'memeinator3000' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
-  pod 'Fabric', '~> 1.7.11'
-  pod 'Crashlytics', '~> 3.10.7'
+  pod 'Fabric'
+  pod 'Crashlytics'
   
   target 'memeinator3000Tests' do
     inherit! :search_paths
