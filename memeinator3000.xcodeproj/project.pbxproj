@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EC7CC94214DE07D0070CB37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */; };
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		11AF09D586BDC511D15D72D1 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BCDCCCCB77387441D10DA5 /* Pods_memeinator3000Tests.framework */; };
-		92F248DC9632A3B9A3B5BF81 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161C09A7899DECE18E02E3AE /* Pods_memeinator3000.framework */; };
+		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
+		24F73EA04879798129FF3834 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6286F65CC150CE4E8EB6043F /* Pods_memeinator3000.framework */; };
+		27803C66DE9D20156B909952 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F76136111C4387464F449F /* Pods_memeinator3000Tests.framework */; };
 		D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */; };
 		D41F6A03210D5D4A006F5F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A02210D5D4A006F5F3C /* ViewController.swift */; };
 		D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A04210D5D4A006F5F3C /* Main.storyboard */; };
@@ -52,15 +52,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "memeinator but its a keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		161C09A7899DECE18E02E3AE /* Pods_memeinator3000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A453A2E75CE58C0172D44AB /* Pods-memeinator3000.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.debug.xcconfig"; sourceTree = "<group>"; };
+		6286F65CC150CE4E8EB6043F /* Pods_memeinator3000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		711792ED59CFF9E9F0FA79A0 /* Pods-memeinator3000Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.release.xcconfig"; sourceTree = "<group>"; };
 		940DE88ED91C6C06226D8C7E /* Pods-memeinator3000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.release.xcconfig"; sourceTree = "<group>"; };
-		D3BCDCCCCB77387441D10DA5 /* Pods_memeinator3000Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41F69FD210D5D4A006F5F3C /* memeinator3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D41F6A02210D5D4A006F5F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		D41F6A17210D5D4F006F5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D48AFB14210E1EE000728CD3 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		D4F7B3AAAE9C2190672CCE76 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F76136111C4387464F449F /* Pods_memeinator3000Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F248DC9632A3B9A3B5BF81 /* Pods_memeinator3000.framework in Frameworks */,
+				24F73EA04879798129FF3834 /* Pods_memeinator3000.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11AF09D586BDC511D15D72D1 /* Pods_memeinator3000Tests.framework in Frameworks */,
+				27803C66DE9D20156B909952 /* Pods_memeinator3000Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				D48AFB14210E1EE000728CD3 /* Messages.framework */,
-				161C09A7899DECE18E02E3AE /* Pods_memeinator3000.framework */,
-				D3BCDCCCCB77387441D10DA5 /* Pods_memeinator3000Tests.framework */,
+				6286F65CC150CE4E8EB6043F /* Pods_memeinator3000.framework */,
+				E3F76136111C4387464F449F /* Pods_memeinator3000Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 				D41F6A07210D5D4F006F5F3C /* Assets.xcassets */,
 				D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */,
 				D41F6A0C210D5D4F006F5F3C /* Info.plist */,
-				0EC7CC93214DE07D0070CB37 /* GoogleService-Info.plist */,
+				0EEDDA5224663052004553F9 /* GoogleService-Info.plist */,
 			);
 			path = memeinator3000;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 				D41F69FB210D5D4A006F5F3C /* Resources */,
 				D48AFB25210E1EE200728CD3 /* Embed App Extensions */,
 				0EC7CCA4214E90340070CB37 /* ShellScript */,
-				9EB9BC4495DA5FCCB6210829 /* [CP] Embed Pods Frameworks */,
+				E83CB73DA9063C2136600A95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,8 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41F6A0B210D5D4F006F5F3C /* LaunchScreen.storyboard in Resources */,
-				0EC7CC94214DE07D0070CB37 /* GoogleService-Info.plist in Resources */,
 				D41F6A08210D5D4F006F5F3C /* Assets.xcassets in Resources */,
+				0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */,
 				D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9EB9BC4495DA5FCCB6210829 /* [CP] Embed Pods Frameworks */ = {
+		E83CB73DA9063C2136600A95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
