@@ -11,9 +11,9 @@ target 'memeinator3000' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   pod 'Google-Mobile-Ads-SDK'
   pod 'Fabric'
-  pod 'Crashlytics'
   
   target 'memeinator3000Tests' do
     inherit! :search_paths

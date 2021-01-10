@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     // MARK: Global Vars & Constants
     // This holds the text that gets copied to clipboard when the copy button is clicked
     var workingClipboard: String = ""
+    // This holds the current selected case memeinator
+    var selectedCase: Int = 0
     
     // MARK: IBOutlets
     
@@ -30,21 +32,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var stepperLabel: UILabel!
     // Spacing memeinator enable switch
     @IBOutlet weak var spaceEnableSwitch: UISwitch!
-    // Spacing memeinator enabled label, should read "Enabled" or "Disabled" depending on switch state
-    @IBOutlet weak var spaceEnableLabel: UILabel!
     // Final meme label which should reflect workingClipboard
     @IBOutlet weak var finalMemeLabel: UILabel!
+    // selectedCase: 0 -> "None", 1 -> "mEmE", 2 -> "rAnDOm"
+    @IBOutlet weak var casingSelector: UISegmentedControl!
     
     // MARK: IBActions
     
     // Func triggered when the spacing memeinator is disabled or enabled
     @IBAction func spacingEnableChanged(_ sender: Any) {
         stateChanged()
-        spaceEnableLabel.text = "S p a c e d text: " + ( spaceEnableSwitch.isOn ? "Enabled" : "Disabled")
     }
     //Func triggered by memeinator spacing button, calls main processing func
     @IBAction func spacingButtonCalled(_ sender: Any) {
-        stateChanged()
         spacingButtonFunction()
     }
     
@@ -58,6 +58,13 @@ class ViewController: UIViewController {
     @IBAction func textInputValueChanged(_ sender: Any) {
         stateChanged()
     }
+    // Called whenever caseSelector gets clicked
+    @IBAction func caseSelectorClicked(_ sender: Any) {
+        stateChanged()
+    }
+    
+    
+    
     
     // MARK: Functions
     
@@ -65,14 +72,31 @@ class ViewController: UIViewController {
     func stateChanged() {
         // This variable holds the text to add to clipboard
         workingClipboard = ""
+    
+        // This variable holds alternating case state
+        var caseState = 0
         
-        // Iterate through each character
-        for letter in mainTextField.text! {
+        for letter in mainTextField.text! { // Iterate through each character
             
-            workingClipboard.append("\(letter)")
+            if selectedCase == 0 { // If "None" is selected for case, input normal case
+                workingClipboard.append(letter)
+            } else if selectedCase == 1 { // If "mEmE" is selected for case, input alternating case
+                if caseState == 0 {
+                    caseState = 1
+                    workingClipboard.append(letter.lowercased())
+                } else {
+                    caseState = 0
+                    workingClipboard.append(letter.uppercased())
+                }
+            } else { // If "rAnDOm" is selected, choose randomly for each character
+                if Int.random(in: 0...1) == 0 {
+                    workingClipboard.append(letter.lowercased())
+                } else {
+                    workingClipboard.append(letter.uppercased())
+                }
+            }
             
-            // Add a space for each stepper value if spacing is enabled
-            if spaceEnableSwitch.isOn {
+            if spaceEnableSwitch.isOn { // Add a space for each stepper value if spacing is enabled
                 for _ in 1...Int(stepper!.value) {
                     workingClipboard.append(" ")
                 }
@@ -80,8 +104,7 @@ class ViewController: UIViewController {
             
         }
         
-        // If spacing is enabled and there is text in the textbox, delete the last space(s)
-        if spaceEnableSwitch.isOn && workingClipboard != "" {
+        if spaceEnableSwitch.isOn && workingClipboard != "" { // If spacing is enabled and there is text in the textbox, delete the last space(s)
             workingClipboard = workingClipboard[0..<(workingClipboard.count - Int(stepper.value))]
         }
         
@@ -89,17 +112,21 @@ class ViewController: UIViewController {
         finalMemeLabel.text = workingClipboard
     }
     
-    //func called by the memeinator spacing button
+    // Func called by the memeinator spacing button
     func spacingButtonFunction() {
         //single-frame easter egg show
         easterEgg.isHidden = false
+        
         //add to clipboard
         UIPasteboard.general.string = workingClipboard
+        
+        // Edit the button to show COPIED
         buttonLabel.text = "COPIED!"
         copyButton.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
             self.resetButtonState()
         })
+        
         //unhide single-frame easter egg
         easterEgg.isHidden = true
     }
@@ -121,6 +148,20 @@ class ViewController: UIViewController {
         stepper.autorepeat = false
         stepper.maximumValue = 5
         stepper.minimumValue = 1
+        
+        let noneCaseAction = UIAction(title: "None") { (action) in
+            self.selectedCase = 0
+        }
+        casingSelector.setAction(noneCaseAction, forSegmentAt: 0)
+        let memeCaseAction = UIAction(title: "mEmE") { (action) in
+            self.selectedCase = 1
+        }
+        casingSelector.setAction(memeCaseAction, forSegmentAt: 1)
+        let randomCaseAction = UIAction(title: "rAnDOm") { (action) in
+            self.selectedCase = 2
+        }
+        casingSelector.setAction(randomCaseAction, forSegmentAt: 2)
+        
     }
     
 }
