@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
+		0EB20CA725AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
+		0EB20CA825AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
+		0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
+		0EB20CC325AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
+		0EB20CC425AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
@@ -53,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
+		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "memeinator but its a keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB20C9925AB8C2800D41488 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */,
+				0EB20CC125AB95E600D41488 /* StringExtentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		0EC7CC9A214DE6760070CB37 /* memeinator but its a keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +153,7 @@
 		D41F69F4210D5D4A006F5F3C = {
 			isa = PBXGroup;
 			children = (
+				0EB20C9925AB8C2800D41488 /* Extentions */,
 				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
 				0EC7CC9A214DE6760070CB37 /* memeinator but its a keyboard */,
@@ -399,6 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB20CA825AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
+				0EB20CC425AB95E600D41488 /* StringExtentions.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41F6A03210D5D4A006F5F3C /* ViewController.swift in Sources */,
+				0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */,
 				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
+				0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB20CA725AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
+				0EB20CC325AB95E600D41488 /* StringExtentions.swift in Sources */,
 				D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

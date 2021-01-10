@@ -18,6 +18,8 @@ class KeyboardViewController: UIInputViewController {
     // MARK: IBOutlets
     
     @IBOutlet var nextKeyboardButton: UIButton!
+    @IBOutlet var spaceButton: UIButton!
+    @IBOutlet var spaceLabel: UILabel!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -49,18 +51,27 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
-        let button = UIButton(type: .system) as UIButton
-        button.translatesAutoresizingMaskIntoConstraints = false
+        spaceButton = UIButton(type: .system) as UIButton
+        spaceButton.translatesAutoresizingMaskIntoConstraints = false
         //button.frame = CGRect(x:50, y:50, width:100, height:50)
         
-        self.view.addSubview(button)
+        self.view.addSubview(spaceButton)
+        
+        spaceLabel = UILabel()
+        spaceLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(spaceLabel)
         
         NSLayoutConstraint.activate([
             self.view.heightAnchor.constraint(lessThanOrEqualToConstant: 200),
-            button.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            button.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            button.topAnchor.constraint(equalTo: self.view.topAnchor),
-            button.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor),
+            spaceButton.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            spaceButton.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            spaceButton.topAnchor.constraint(equalTo: self.view.topAnchor),
+            spaceButton.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor),
+            spaceLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            spaceLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            spaceLabel.topAnchor.constraint(equalTo: self.view.topAnchor),
+            spaceLabel.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor),
             self.nextKeyboardButton.heightAnchor.constraint(equalToConstant: 25),
             self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.nextKeyboardButton.rightAnchor.constraint(equalTo: self.view.rightAnchor),
@@ -69,18 +80,27 @@ class KeyboardViewController: UIInputViewController {
         
         
         
-        button.isUserInteractionEnabled = true
-        button.isEnabled = true
+        spaceButton.isUserInteractionEnabled = true
+        spaceButton.isEnabled = true
         print(purpleGradient)
-        button.setBackgroundImage(purpleGradient, for: .normal)
+        spaceButton.setBackgroundImage(purpleGradient, for: .normal)
         //button.setBackgroundImage(purpleGradient, for: .normal)
-        button.setTitle("S P A C E", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 80)
-        button.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
+        let normalFont = UIFont.boldSystemFont(ofSize: 80)
+        let normalAttributes = [NSAttributedString.Key.font: normalFont]
+        let normalTitle = NSAttributedString(string: "S P A C E", attributes: normalAttributes)
+        spaceButton.setAttributedTitle(normalTitle, for: .normal)
+        let disabledTitle = NSAttributedString(string: "")
+        spaceButton.setAttributedTitle(disabledTitle, for: .disabled)
+        spaceButton.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
+        
+        spaceLabel.isHidden = true
+        spaceLabel.text = "Select Text First"
+        spaceLabel.textAlignment = .center
+        spaceLabel.font = UIFont.boldSystemFont(ofSize: 40)
 
     }
     
-    @objc func buttonClicked() {
+    @objc func buttonClicked(button: UIButton) {
         let cursor = self.textDocumentProxy
         print("Button Clicked")
         print(cursor.selectedText ?? "~~no value selected~~")
@@ -110,50 +130,19 @@ class KeyboardViewController: UIInputViewController {
             cursor.deleteBackward()
             
         } else {
-            // If the user had not selected any text, do this
-            if let charsBeforeCursor = cursor.documentContextBeforeInput {
-                
-                // Go to one character before the beginning
-                cursor.adjustTextPosition(byCharacterOffset: -(charsBeforeCursor.count) + 1)
-                
-                for char in charsBeforeCursor {
-                    print(char)
-                    cursor.deleteBackward()                             // Delete char
-                    cursor.insertText(String(char))                     // Insert char
-                    cursor.insertText(" ")                              // Insert space
-                    cursor.adjustTextPosition(byCharacterOffset: 1)     // Go backwards to ready for the next char
-                }
-                
-                cursor.adjustTextPosition(byCharacterOffset: -1)
-                cursor.deleteBackward()
-                
-            }
-            
-            if let charsAfterCursor = cursor.documentContextAfterInput {
-                for char in charsAfterCursor {
-                    cursor.adjustTextPosition(byCharacterOffset: 1)
-                    cursor.deleteBackward()
-                    cursor.insertText("\(char) ")
-                }
-                cursor.deleteBackward()
-                cursor.adjustTextPosition(byCharacterOffset: -(charsAfterCursor.count * 2)) // put the cursor back where it was before
-            }
-            
-            
-            
+            spaceLabel.isHidden = false
+            spaceButton.isEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                self.setButtonEnabled()
+            })
         }
         
-        /*
-        if let f = self.textDocumentProxy.documentContextBeforeInput {
-            for letter in f {
-                self.textDocumentProxy.deleteBackward()
-            }
-            for letter in f {
-                self.textDocumentProxy.insertText("\(letter) ")
-            }
-        }
-         */
-        
+    }
+    
+    
+    func setButtonEnabled() {
+        spaceLabel.isHidden = true
+        spaceButton.isEnabled = true
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -184,30 +173,3 @@ class KeyboardViewController: UIInputViewController {
 
 }
 
-
-extension String {
-
-    var length: Int {
-        return count
-    }
-
-    subscript (i: Int) -> String {
-        return self[i ..< i + 1]
-    }
-
-    func substring(fromIndex: Int) -> String {
-        return self[min(fromIndex, length) ..< length]
-    }
-
-    func substring(toIndex: Int) -> String {
-        return self[0 ..< max(0, toIndex)]
-    }
-
-    subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
-        let start = index(startIndex, offsetBy: range.lowerBound)
-        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return String(self[start ..< end])
-    }
-}
