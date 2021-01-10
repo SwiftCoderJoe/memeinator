@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
 		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
 		24F73EA04879798129FF3834 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6286F65CC150CE4E8EB6043F /* Pods_memeinator3000.framework */; };
 		27803C66DE9D20156B909952 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F76136111C4387464F449F /* Pods_memeinator3000Tests.framework */; };
@@ -288,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
