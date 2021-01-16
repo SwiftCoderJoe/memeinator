@@ -82,7 +82,6 @@ class KeyboardViewController: UIInputViewController {
         
         spaceButton.isUserInteractionEnabled = true
         spaceButton.isEnabled = true
-        print(purpleGradient)
         spaceButton.setBackgroundImage(purpleGradient, for: .normal)
         //button.setBackgroundImage(purpleGradient, for: .normal)
         let normalFont = UIFont.boldSystemFont(ofSize: 80)

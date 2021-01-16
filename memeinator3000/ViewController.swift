@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMobileAds
 class ViewController: UIViewController {
+    
     // MARK: Global Vars & Constants
     // This holds the text that gets copied to clipboard when the copy button is clicked
     var workingClipboard: String = ""
