@@ -7,6 +7,8 @@
 //
 import UIKit
 import GoogleMobileAds
+import FirebaseAnalytics
+
 class InputVC: UIViewController {
     
     // MARK: Global Vars & Constants
@@ -49,7 +51,14 @@ class InputVC: UIViewController {
     
     // Func called by the memeinator spacing button
     func spacingButtonFunction() {
-        //add to clipboard
+        // Log event to Analytics
+        Analytics.logEvent("spacing_button_pressed", parameters: [
+            "spacing_selected": MemeSettings.instance.isSpaced,
+            "spaces": MemeSettings.instance.spaces,
+            "casing_selected": MemeSettings.instance.spaces,
+            "furryspeak_selected": MemeSettings.instance.isFurryspeak
+        ])
+        // Add to clipboard
         UIPasteboard.general.string = MemeSettings.instance.currentGeneratedMeme
         
         // Edit the button to show COPIED
