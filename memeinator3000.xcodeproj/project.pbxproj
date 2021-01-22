@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				0EB20CC125AB95E600D41488 /* StringExtentions.swift */,
 				0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */,
 				0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */,
+				0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */,
 				D41F6A03210D5D4A006F5F3C /* InputVC.swift in Sources */,
 				0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */,
+				0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */,
 				0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */,
 				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
 				0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */,

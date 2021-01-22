@@ -11,6 +11,10 @@ extension String {
     var length: Int {
         return count
     }
+    
+    mutating func dropLast() {
+        self = self[0..<(self.count)]
+    }
 
     subscript (i: Int) -> String {
         return self[i ..< i + 1]

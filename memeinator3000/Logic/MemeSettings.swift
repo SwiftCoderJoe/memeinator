@@ -13,12 +13,12 @@ class MemeSettings {
     
     private init() {
     }
-    
-    weak var displayDelegate: MemeDisplayDelegate?
 
+    var currentInput = ""
+    
     var currentGeneratedMeme = ""
     
-    var isSpaced = false
+    var isSpaced = true
     
     var spaces = 1
     
@@ -27,12 +27,18 @@ class MemeSettings {
     var isFurryspeak = false
     
     func setInputAndChangeState(input: String) {
-        currentGeneratedMeme = input
-        
+        currentInput = input
         stateChanged()
     }
     
     func stateChanged() {
+        
+        currentGeneratedMeme = currentInput
+        
+        if isFurryspeak {
+            translateTextToFurryspeak()
+        }
+
         if isSpaced {
             spaceText()
         }
@@ -41,18 +47,16 @@ class MemeSettings {
             capitalizeText()
         }
         
-        if isFurryspeak {
-            translateTextToFurryspeak()
-        }
-        
-        displayDelegate?.memeWasGenerated(meme: currentGeneratedMeme)
-        
+        NotificationCenter.default.post(name: .didGenerateMeme, object: nil)
     }
     
     private func spaceText() {
         var workingMeme = ""
         
-        for _ in currentInputText { // Iterate through each character and add a space for each stepper value
+        for char in currentGeneratedMeme { // Iterate through each character and add a space for each stepper value
+            
+            workingMeme.append(char)
+            
             for _ in 1...Int(spaces) {
                 workingMeme.append(" ")
             }
@@ -71,7 +75,7 @@ class MemeSettings {
         var workingMeme = ""
         var caseState = 0
         
-        for letter in currentInputText {
+        for letter in currentGeneratedMeme {
             if selectedCase == 0 { // If "None" is selected for case, input normal case
                 workingMeme.append(letter)
             } else if selectedCase == 1 { // If "mEmE" is selected for case, input alternating case
@@ -89,9 +93,10 @@ class MemeSettings {
                     workingMeme.append(letter.uppercased())
                 }
             }
+            
+            currentGeneratedMeme = workingMeme
+            
         }
-        
-        currentGeneratedMeme = workingMeme
         
     }
     
@@ -110,6 +115,7 @@ class MemeSettings {
             } else if lastTwo == "th" {             // TH to D
                 workingMeme.append("d")
             } else if lastTwo == "Th" || lastTwo == "TH" {
+                workingMeme.dropLast()
                 workingMeme.append("D")
             } else {                                // NONE
                 workingMeme.append(letter)
@@ -119,13 +125,11 @@ class MemeSettings {
         }
 
         currentGeneratedMeme = workingMeme
+        
     }
     
 }
 
-protocol MemeDisplayDelegate: class {
-    func memeWasGenerated(meme: String)
-}
 
 /*
 var workingMeme = ""

@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        // ???: This has caused problems in the past.
+        /*
+        Sometimes, IQKeyboardManagerSwift will get rid of the safe area (or at least extend it to the edges of the screen)
+        The same things happened with Hero, although I couldn't find any issues relating to the subject.
+         With regard to Hero, I fixed it by changing the segue from "show" to "present modally", which makes sense because "show" caused Hero to stretch and change the size of the screen because "show" causes a space at the top which Hero must get rid of.
+         Although, I'm not sure why IQKeyboardManager would do this. Maybe there is an issue with something else in the app.
+        */
+        
+        //IQKeyboardManager.shared.enable = true
+        
         return true
     }
 
