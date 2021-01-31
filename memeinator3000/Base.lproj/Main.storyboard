@@ -31,6 +31,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta 3. Not final functionality." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-lD-Xy2">
+                                        <rect key="frame" x="0.0" y="80" width="320" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="VlI-EV-N7p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -41,6 +50,9 @@
                                     <constraint firstAttribute="trailing" secondItem="bEI-yr-jdJ" secondAttribute="trailing" id="TMT-Ws-OZa"/>
                                     <constraint firstAttribute="bottom" secondItem="bEI-yr-jdJ" secondAttribute="bottom" id="WLd-bY-9IM"/>
                                     <constraint firstItem="bEI-yr-jdJ" firstAttribute="leading" secondItem="pHj-az-T4g" secondAttribute="leading" id="ZsA-3X-U0K"/>
+                                    <constraint firstItem="oBa-lD-Xy2" firstAttribute="leading" secondItem="pHj-az-T4g" secondAttribute="leading" id="dv8-H9-rLk"/>
+                                    <constraint firstAttribute="trailing" secondItem="oBa-lD-Xy2" secondAttribute="trailing" id="jwf-f4-z0M"/>
+                                    <constraint firstAttribute="bottom" secondItem="oBa-lD-Xy2" secondAttribute="bottom" id="oNt-aI-8it"/>
                                     <constraint firstItem="VoG-Zp-DFZ" firstAttribute="leading" secondItem="pHj-az-T4g" secondAttribute="leading" constant="10" id="obs-DT-yMk"/>
                                     <constraint firstAttribute="height" constant="100" id="x1n-Fr-WvX"/>
                                 </constraints>
