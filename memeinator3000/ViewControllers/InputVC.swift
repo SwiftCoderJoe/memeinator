@@ -84,7 +84,13 @@ class InputVC: UIViewController {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
+        
+        // Use this during development, please!
         BannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        // Use this in production, please!
+        //BannerAd.adUnitID = "ca-app-pub-4026820850636406/5034986759"
+        
         BannerAd.rootViewController = self
         BannerAd.load(GADRequest())
         
