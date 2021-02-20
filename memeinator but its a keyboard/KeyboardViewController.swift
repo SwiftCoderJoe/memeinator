@@ -121,10 +121,14 @@ class KeyboardViewController: UIInputViewController {
                 }
             }
             
-            // Insert s p a c e d chars
+            // Create s p a c e d chars
+            var textToSend = ""
             for char in selectedChars {
-                cursor.insertText("\(char) ")
+                textToSend.append("\(char) ")
             }
+            
+            // Send s p a c e d string
+            cursor.insertText(textToSend)
             
             cursor.deleteBackward()
             
