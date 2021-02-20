@@ -24,8 +24,8 @@
 		0EC7CCA0214DE6760070CB37 /* memeinator but its a keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* memeinator but its a keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
 		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
-		4874B5739198130077FB5643 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03DDB76F1D4A9F6D00A35D9 /* Pods_memeinator3000Tests.framework */; };
-		8EA0215E1281724A1CC8B0B6 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CF8CA3D7DF4ECC303DBA8F /* Pods_memeinator3000.framework */; };
+		53B013FC300969112E47B5BF /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEDBF05CEEC67F5352055AF /* Pods_memeinator3000.framework */; };
+		7FFA264D820D1ADE85758B38 /* Pods_memeinator3000Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8F088B68DF1A3601677CE6 /* Pods_memeinator3000Tests.framework */; };
 		D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */; };
 		D41F6A03210D5D4A006F5F3C /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A02210D5D4A006F5F3C /* InputVC.swift */; };
 		D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A04210D5D4A006F5F3C /* Main.storyboard */; };
@@ -77,12 +77,12 @@
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		24DA2F0BFD30A6F050DCC6C2 /* Pods-memeinator3000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.release.xcconfig"; sourceTree = "<group>"; };
-		57391DB728EE9CC084F8E4A0 /* Pods-memeinator3000.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.debug.xcconfig"; sourceTree = "<group>"; };
-		6E027F4FB5A50676D1EE5EE3 /* Pods-memeinator3000Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.release.xcconfig"; sourceTree = "<group>"; };
-		ABA856969B1F116074BBC441 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B03DDB76F1D4A9F6D00A35D9 /* Pods_memeinator3000Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3CF8CA3D7DF4ECC303DBA8F /* Pods_memeinator3000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A73FC302A1BAAC2F6C22169 /* Pods-memeinator3000.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.debug.xcconfig"; sourceTree = "<group>"; };
+		2D8F088B68DF1A3601677CE6 /* Pods_memeinator3000Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC2EC50A65D9680D716351D /* Pods-memeinator3000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000/Pods-memeinator3000.release.xcconfig"; sourceTree = "<group>"; };
+		819DB3178A2A3383D7F9DE42 /* Pods-memeinator3000Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.release.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9DC84D6E2F50CDCDB10A12E1 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCEDBF05CEEC67F5352055AF /* Pods_memeinator3000.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memeinator3000.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41F69FD210D5D4A006F5F3C /* memeinator3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D41F6A02210D5D4A006F5F3C /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA0215E1281724A1CC8B0B6 /* Pods_memeinator3000.framework in Frameworks */,
+				53B013FC300969112E47B5BF /* Pods_memeinator3000.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4874B5739198130077FB5643 /* Pods_memeinator3000Tests.framework in Frameworks */,
+				7FFA264D820D1ADE85758B38 /* Pods_memeinator3000Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,10 +164,10 @@
 		1CD69B4E267C1E575AFF45A1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				57391DB728EE9CC084F8E4A0 /* Pods-memeinator3000.debug.xcconfig */,
-				24DA2F0BFD30A6F050DCC6C2 /* Pods-memeinator3000.release.xcconfig */,
-				ABA856969B1F116074BBC441 /* Pods-memeinator3000Tests.debug.xcconfig */,
-				6E027F4FB5A50676D1EE5EE3 /* Pods-memeinator3000Tests.release.xcconfig */,
+				2A73FC302A1BAAC2F6C22169 /* Pods-memeinator3000.debug.xcconfig */,
+				4CC2EC50A65D9680D716351D /* Pods-memeinator3000.release.xcconfig */,
+				9DC84D6E2F50CDCDB10A12E1 /* Pods-memeinator3000Tests.debug.xcconfig */,
+				819DB3178A2A3383D7F9DE42 /* Pods-memeinator3000Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -176,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				D48AFB14210E1EE000728CD3 /* Messages.framework */,
-				B3CF8CA3D7DF4ECC303DBA8F /* Pods_memeinator3000.framework */,
-				B03DDB76F1D4A9F6D00A35D9 /* Pods_memeinator3000Tests.framework */,
+				CCEDBF05CEEC67F5352055AF /* Pods_memeinator3000.framework */,
+				2D8F088B68DF1A3601677CE6 /* Pods_memeinator3000Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,13 +253,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D41F6A1A210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000" */;
 			buildPhases = (
-				0C8DDD2BA3506DB94877ED70 /* [CP] Check Pods Manifest.lock */,
+				1BDCDEDC4529D3E275D0EB96 /* [CP] Check Pods Manifest.lock */,
 				D41F69F9210D5D4A006F5F3C /* Sources */,
 				D41F69FA210D5D4A006F5F3C /* Frameworks */,
 				D41F69FB210D5D4A006F5F3C /* Resources */,
 				D48AFB25210E1EE200728CD3 /* Embed App Extensions */,
 				0EBB120C25ABB4F0009CF501 /* ShellScript */,
-				7F046CB2868D5ED16942AA46 /* [CP] Embed Pods Frameworks */,
+				DFB95734438F17357E21100D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,7 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D41F6A1D210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000Tests" */;
 			buildPhases = (
-				C5A7FFB9BFBA10DC6323BC88 /* [CP] Check Pods Manifest.lock */,
+				685ADFFA8D7319AF644C3FBA /* [CP] Check Pods Manifest.lock */,
 				D41F6A0D210D5D4F006F5F3C /* Sources */,
 				D41F6A0E210D5D4F006F5F3C /* Frameworks */,
 				D41F6A0F210D5D4F006F5F3C /* Resources */,
@@ -365,7 +365,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C8DDD2BA3506DB94877ED70 /* [CP] Check Pods Manifest.lock */ = {
+		0EBB120C25ABB4F0009CF501 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		1BDCDEDC4529D3E275D0EB96 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,42 +405,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0EBB120C25ABB4F0009CF501 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		7F046CB2868D5ED16942AA46 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5A7FFB9BFBA10DC6323BC88 /* [CP] Check Pods Manifest.lock */ = {
+		685ADFFA8D7319AF644C3FBA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,6 +425,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB95734438F17357E21100D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -524,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1004;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = "memeinator but its a keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,6 +532,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = "Beta 4";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bb.memeinator3000.memeinator-but-its-a-keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1004;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = "memeinator but its a keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +554,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = "Beta 4";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bb.memeinator3000.memeinator-but-its-a-keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,17 +680,19 @@
 		};
 		D41F6A1B210D5D4F006F5F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57391DB728EE9CC084F8E4A0 /* Pods-memeinator3000.debug.xcconfig */;
+			baseConfigurationReference = 2A73FC302A1BAAC2F6C22169 /* Pods-memeinator3000.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1004;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "Beta 4";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -696,17 +702,19 @@
 		};
 		D41F6A1C210D5D4F006F5F3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24DA2F0BFD30A6F050DCC6C2 /* Pods-memeinator3000.release.xcconfig */;
+			baseConfigurationReference = 4CC2EC50A65D9680D716351D /* Pods-memeinator3000.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1004;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "Beta 4";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -716,7 +724,7 @@
 		};
 		D41F6A1E210D5D4F006F5F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABA856969B1F116074BBC441 /* Pods-memeinator3000Tests.debug.xcconfig */;
+			baseConfigurationReference = 9DC84D6E2F50CDCDB10A12E1 /* Pods-memeinator3000Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,7 +746,7 @@
 		};
 		D41F6A1F210D5D4F006F5F3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E027F4FB5A50676D1EE5EE3 /* Pods-memeinator3000Tests.release.xcconfig */;
+			baseConfigurationReference = 819DB3178A2A3383D7F9DE42 /* Pods-memeinator3000Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
