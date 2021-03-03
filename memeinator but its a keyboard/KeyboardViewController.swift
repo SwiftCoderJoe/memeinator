@@ -38,6 +38,9 @@ class KeyboardViewController: UIInputViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         // Perform custom UI setup here
+        
+        
+        // Next Keyboard Button
         self.nextKeyboardButton = UIButton(type: .system)
         
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
@@ -46,20 +49,15 @@ class KeyboardViewController: UIInputViewController {
         
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
         
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        
         spaceButton = UIButton(type: .system) as UIButton
         spaceButton.translatesAutoresizingMaskIntoConstraints = false
-        //button.frame = CGRect(x:50, y:50, width:100, height:50)
         
-        self.view.addSubview(spaceButton)
+        //
         
         spaceLabel = UILabel()
         spaceLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        self.view.addSubview(spaceButton)
         self.view.addSubview(spaceLabel)
         
         NSLayoutConstraint.activate([
@@ -133,11 +131,35 @@ class KeyboardViewController: UIInputViewController {
             cursor.deleteBackward()
             
         } else {
+            /*
             spaceLabel.isHidden = false
             spaceButton.isEnabled = false
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
                 self.setButtonEnabled()
             })
+            */
+            
+            var totalString = ""
+            
+            if let charsBeforeCursor = cursor.documentContextBeforeInput {
+                totalString.append(charsBeforeCursor)
+            }
+            
+            if let charsAfterCursor = cursor.documentContextAfterInput {
+                totalString.append(charsAfterCursor)
+                cursor.adjustTextPosition(byCharacterOffset: charsAfterCursor.count)
+            }
+            
+            var finishedString = ""
+        
+            for char in totalString {
+                cursor.deleteBackward()
+                finishedString.append(char)
+                finishedString.append(" ")
+            }
+            
+            cursor.insertText(finishedString)
+            
         }
         
     }
