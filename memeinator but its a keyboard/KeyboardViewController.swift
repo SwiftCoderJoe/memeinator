@@ -20,6 +20,8 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var nextKeyboardButton: UIButton!
     @IBOutlet var spaceButton: UIButton!
     @IBOutlet var spaceLabel: UILabel!
+    @IBOutlet var labelButtonView: UIView!
+    @IBOutlet var mainVStack: UIStackView!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -37,51 +39,27 @@ class KeyboardViewController: UIInputViewController {
         //This allows me to get keyboard height
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        // Perform custom UI setup here
-        
+        // MARK: UI setup here
         
         // Next Keyboard Button
         self.nextKeyboardButton = UIButton(type: .system)
         
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
+        //self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         
         self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
         
+        // Space Button
+        
         spaceButton = UIButton(type: .system) as UIButton
         spaceButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        //
-        
-        spaceLabel = UILabel()
-        spaceLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.view.addSubview(spaceButton)
-        self.view.addSubview(spaceLabel)
-        
-        NSLayoutConstraint.activate([
-            self.view.heightAnchor.constraint(lessThanOrEqualToConstant: 200),
-            spaceButton.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            spaceButton.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            spaceButton.topAnchor.constraint(equalTo: self.view.topAnchor),
-            spaceButton.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor),
-            spaceLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            spaceLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            spaceLabel.topAnchor.constraint(equalTo: self.view.topAnchor),
-            spaceLabel.bottomAnchor.constraint(equalTo: self.nextKeyboardButton.topAnchor),
-            self.nextKeyboardButton.heightAnchor.constraint(equalToConstant: 25),
-            self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            self.nextKeyboardButton.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-        ])
-        
-        
         
         spaceButton.isUserInteractionEnabled = true
         spaceButton.isEnabled = true
         spaceButton.setBackgroundImage(purpleGradient, for: .normal)
-        //button.setBackgroundImage(purpleGradient, for: .normal)
+        
+        // This is horrible and disgusting. Someone should fix this.
         let normalFont = UIFont.boldSystemFont(ofSize: 80)
         let normalAttributes = [NSAttributedString.Key.font: normalFont]
         let normalTitle = NSAttributedString(string: "S P A C E", attributes: normalAttributes)
@@ -90,10 +68,61 @@ class KeyboardViewController: UIInputViewController {
         spaceButton.setAttributedTitle(disabledTitle, for: .disabled)
         spaceButton.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
         
+        // Space Label
+        
+        spaceLabel = UILabel()
+        spaceLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         spaceLabel.isHidden = true
         spaceLabel.text = "Select Text First"
         spaceLabel.textAlignment = .center
         spaceLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        
+        // Label and Button View
+        
+        labelButtonView = UIView()
+        labelButtonView.addSubview(spaceLabel)
+        labelButtonView.addSubview(spaceButton)
+        labelButtonView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Main VStack
+        
+        let vStackViews = [labelButtonView!, nextKeyboardButton!]
+        mainVStack = UIStackView()
+        mainVStack.axis = .vertical
+        mainVStack.spacing = 10.0
+        mainVStack.distribution = .fill
+        mainVStack.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        // Add subviews
+        
+        self.view.addSubview(mainVStack)
+        
+        // Constraints
+        
+        NSLayoutConstraint.activate([
+            self.view.heightAnchor.constraint(equalToConstant: 300),
+            
+            spaceButton.leftAnchor.constraint(equalTo: self.labelButtonView.leftAnchor),
+            spaceButton.rightAnchor.constraint(equalTo: self.labelButtonView.rightAnchor),
+            spaceButton.topAnchor.constraint(equalTo: self.labelButtonView.topAnchor),
+            spaceButton.bottomAnchor.constraint(equalTo: self.labelButtonView.topAnchor),
+            
+            spaceLabel.leftAnchor.constraint(equalTo: self.labelButtonView.leftAnchor),
+            spaceLabel.rightAnchor.constraint(equalTo: self.labelButtonView.rightAnchor),
+            spaceLabel.topAnchor.constraint(equalTo: self.labelButtonView.topAnchor),
+            spaceLabel.bottomAnchor.constraint(equalTo: self.labelButtonView.topAnchor),
+            
+            self.nextKeyboardButton.heightAnchor.constraint(equalToConstant: 25),
+            
+            mainVStack.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            mainVStack.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            mainVStack.topAnchor.constraint(equalTo: self.view.topAnchor),
+            mainVStack.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+        ])
+        
+        vStackViews.forEach { view in mainVStack.addArrangedSubview(view) }
 
     }
     
@@ -131,34 +160,13 @@ class KeyboardViewController: UIInputViewController {
             cursor.deleteBackward()
             
         } else {
-            /*
+            
             spaceLabel.isHidden = false
             spaceButton.isEnabled = false
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
                 self.setButtonEnabled()
             })
-            */
             
-            var totalString = ""
-            
-            if let charsBeforeCursor = cursor.documentContextBeforeInput {
-                totalString.append(charsBeforeCursor)
-            }
-            
-            if let charsAfterCursor = cursor.documentContextAfterInput {
-                totalString.append(charsAfterCursor)
-                cursor.adjustTextPosition(byCharacterOffset: charsAfterCursor.count)
-            }
-            
-            var finishedString = ""
-        
-            for char in totalString {
-                cursor.deleteBackward()
-                finishedString.append(char)
-                finishedString.append(" ")
-            }
-            
-            cursor.insertText(finishedString)
             
         }
         
