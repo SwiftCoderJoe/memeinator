@@ -48,8 +48,8 @@ struct KeyboardView: View {
 private extension KeyboardView {
     
     var autocompleteBar: some View {
-        Text("Options Would Go Here")
-            .frame(height: 50)
+        OptionsView()
+            .frame(height: 60)
     }
     
     func autocompleteBarButton(for suggestion: AutocompleteSuggestion) -> AnyView {

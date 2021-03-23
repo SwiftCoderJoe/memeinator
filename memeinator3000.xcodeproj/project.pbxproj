@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
+		0E4FDCFB260974F5005A7C5D /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FDCFA260974F5005A7C5D /* OptionsView.swift */; };
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
+		0E4FDCFA260974F5005A7C5D /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				0EFCE4E9260949E000B4F194 /* KeyboardView.swift */,
+				0E4FDCFA260974F5005A7C5D /* OptionsView.swift */,
 				0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */,
 				0EC7CC9D214DE6760070CB37 /* Info.plist */,
 			);
@@ -488,6 +491,7 @@
 				0EB20CA825AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
 				0EB20CC425AB95E600D41488 /* StringExtentions.swift in Sources */,
 				0EB20CD825ABB01D00D41488 /* BetterUISegmentedControl.swift in Sources */,
+				0E4FDCFB260974F5005A7C5D /* OptionsView.swift in Sources */,
 				0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
