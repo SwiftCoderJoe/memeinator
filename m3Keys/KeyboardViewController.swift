@@ -49,24 +49,6 @@ class KeyboardViewController: KeyboardInputViewController {
             .environmentObject(toastContext)
     }
     
-    // MARK: - Autocomplete
-    
-    private lazy var autocompleteProvider = DemoAutocompleteSuggestionProvider()
-    
-    override func performAutocomplete() {
-        guard let word = textDocumentProxy.currentWord else { return resetAutocomplete() }
-        autocompleteProvider.autocompleteSuggestions(for: word) { [weak self] result in
-            switch result {
-            case .failure(let error): print(error.localizedDescription)
-            case .success(let result): self?.autocompleteContext.suggestions = result
-            }
-        }
-    }
-    
-    override func resetAutocomplete() {
-        autocompleteContext.suggestions = []
-    }
-    
 }
 
 //    // da22ff, 9733ee

@@ -11,7 +11,6 @@
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
-		0E6FDCC72609606E0076E8F7 /* DemoAutocompleteSuggestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FDCC62609606E0076E8F7 /* DemoAutocompleteSuggestionProvider.swift */; };
 		0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFCE4E9260949E000B4F194 /* KeyboardView.swift */; };
 		0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
 		0EB20CA725AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
@@ -73,7 +72,6 @@
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
-		0E6FDCC62609606E0076E8F7 /* DemoAutocompleteSuggestionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAutocompleteSuggestionProvider.swift; sourceTree = "<group>"; };
 		0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 		0EC7CC9A214DE6760070CB37 /* m3Keys */ = {
 			isa = PBXGroup;
 			children = (
-				0E6FDCC62609606E0076E8F7 /* DemoAutocompleteSuggestionProvider.swift */,
 				0EFCE4E9260949E000B4F194 /* KeyboardView.swift */,
 				0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */,
 				0EC7CC9D214DE6760070CB37 /* Info.plist */,
@@ -492,7 +489,6 @@
 				0EB20CC425AB95E600D41488 /* StringExtentions.swift in Sources */,
 				0EB20CD825ABB01D00D41488 /* BetterUISegmentedControl.swift in Sources */,
 				0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */,
-				0E6FDCC72609606E0076E8F7 /* DemoAutocompleteSuggestionProvider.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
