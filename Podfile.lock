@@ -78,6 +78,7 @@ PODS:
     - GoogleUtilities/Logger
   - Hero (1.5.0)
   - IQKeyboardManagerSwift (6.5.5)
+  - KeyboardKit (4.0.3)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - Hero
   - IQKeyboardManagerSwift
+  - KeyboardKit
 
 SPEC REPOS:
   trunk:
@@ -112,6 +114,7 @@ SPEC REPOS:
     - GoogleUtilities
     - Hero
     - IQKeyboardManagerSwift
+    - KeyboardKit
     - nanopb
     - PromisesObjC
 
@@ -132,9 +135,10 @@ SPEC CHECKSUMS:
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  KeyboardKit: 1b3c750020ced9ed05080e698a1eab711df5b7bf
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: cafb3ee1af139177802dc4da4a63b5927d7b5427
+PODFILE CHECKSUM: 92d0c0ab4e98cc43200abb65bfc2e5a11cd25d8f
 
 COCOAPODS: 1.8.1
