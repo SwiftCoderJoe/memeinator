@@ -14,7 +14,7 @@ import Combine
 
 class KeyboardViewController: KeyboardInputViewController {
  
-    var settingsModel = SettingsViewModel()
+    var viewModel = SettingsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class KeyboardViewController: KeyboardInputViewController {
         ]
         
         // Set a standard action handler (This will likely be changed when we get m3keys functionality actually working...)
-        keyboardActionHandler = StandardKeyboardActionHandler(inputViewController: self)
+        keyboardActionHandler = M3KActionHandler(inputViewController: self, settingsViewModel: viewModel)
         
         // Set an input set provider with only English
         keyboardInputSetProvider = StandardKeyboardInputSetProvider(context: keyboardContext, providers: [EnglishKeyboardInputSetProvider()])
@@ -48,6 +48,7 @@ class KeyboardViewController: KeyboardInputViewController {
             actionHandler: keyboardActionHandler,
             appearance: keyboardAppearance,
             layoutProvider: keyboardLayoutProvider)
+            .environmentObject(viewModel)
             .environmentObject(toastContext)
     }
     

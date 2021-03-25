@@ -13,12 +13,12 @@ import Foundation
 Class for interacting with the current meme settings. SettingsInteractable has a singleton which contains information about exactly what the current settings are on the keybaord.
 
  */
-class SettingsViewModel {
+class SettingsViewModel: ObservableObject {
     init() {
         
     }
     
     // Is spacing currently enabled
-    var isSpaced = false
+    @Published var isSpaced = false
     
 }

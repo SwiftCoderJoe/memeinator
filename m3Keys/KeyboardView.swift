@@ -22,6 +22,8 @@ struct KeyboardView: View {
     var appearance: KeyboardAppearance
     var layoutProvider: KeyboardLayoutProvider
     
+    @EnvironmentObject var viewModel: SettingsViewModel
+    
     @EnvironmentObject var autocompleteContext: AutocompleteContext
     @EnvironmentObject var keyboardContext: KeyboardContext
     @EnvironmentObject var toastContext: KeyboardToastContext
@@ -49,6 +51,7 @@ private extension KeyboardView {
     
     var autocompleteBar: some View {
         OptionsView()
+            .environmentObject(viewModel)
             .frame(height: 60)
     }
     

@@ -10,31 +10,31 @@ import SwiftUI
 import Combine
 
 struct OptionsView: View {
-    @State var spacingIsOn = false
+    @EnvironmentObject var viewModel: SettingsViewModel
     
     var body: some View {
         VStack {
             ScrollView(.horizontal) {
                 HStack {
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing1")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing2")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing3")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing4")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing5")
                     })
-                    Toggle(isOn: $spacingIsOn, label: {
+                    Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing6")
                     })
                 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E315DA6260D3F14005ADF72 /* M3KActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */; };
+		0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */; };
 		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
 		0E4FDCFB260974F5005A7C5D /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FDCFA260974F5005A7C5D /* OptionsView.swift */; };
 		0E4FDCFD260A7B9B005A7C5D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FDCFC260A7B9B005A7C5D /* SettingsViewModel.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KActionHandler.swift; sourceTree = "<group>"; };
+		0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KKeyboardBehaivior.swift; sourceTree = "<group>"; };
 		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
 		0E4FDCFA260974F5005A7C5D /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		0E4FDCFC260A7B9B005A7C5D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */,
 				0EC7CC9D214DE6760070CB37 /* Info.plist */,
 				0E4FDCFC260A7B9B005A7C5D /* SettingsViewModel.swift */,
+				0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */,
+				0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */,
 			);
 			path = m3Keys;
 			sourceTree = "<group>";
@@ -492,11 +498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E315DA6260D3F14005ADF72 /* M3KActionHandler.swift in Sources */,
 				0EB20CA825AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
 				0EB20CC425AB95E600D41488 /* StringExtentions.swift in Sources */,
 				0EB20CD825ABB01D00D41488 /* BetterUISegmentedControl.swift in Sources */,
 				0E4FDCFB260974F5005A7C5D /* OptionsView.swift in Sources */,
 				0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */,
+				0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */,
 				0E4FDCFD260A7B9B005A7C5D /* SettingsViewModel.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
