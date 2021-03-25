@@ -14,6 +14,8 @@ import Combine
 
 class KeyboardViewController: KeyboardInputViewController {
  
+    var settingsModel = SettingsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

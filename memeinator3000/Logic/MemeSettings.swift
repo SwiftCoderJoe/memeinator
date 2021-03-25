@@ -6,6 +6,14 @@
 //  Copyright © 2021 BytleBit. All rights reserved.
 //
 
+
+/* There's a lot going on here. Also, singletons are bad apparently?
+ 
+ Look, if this works then it works, but maybe we should practice a bit more than singletons.
+ 
+ I suggest -- Protocol + Extension. Then we can move the */
+
+
 import Foundation
 
 class MemeSettings {
