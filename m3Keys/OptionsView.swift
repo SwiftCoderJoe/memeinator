@@ -9,36 +9,25 @@
 import SwiftUI
 import Combine
 
+/**
+ A view which presents meme controls to the user in a horizontal scrolling view 50px tall. A spacer is provided at the bottom to allow for bottom padding.
+ */
 struct OptionsView: View {
+    // Global SettingsViewModel inherited from parent
     @EnvironmentObject var viewModel: SettingsViewModel
     
     var body: some View {
         VStack {
             ScrollView(.horizontal) {
                 HStack {
+                    
+                    // Spacing toggle
                     Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing")
                     })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing1")
-                    })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing2")
-                    })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing3")
-                    })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing4")
-                    })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing5")
-                    })
-                    Toggle(isOn: $viewModel.isSpaced, label: {
-                        Text("Spacing6")
-                    })
+                    
                 }
-                
+                .padding(.horizontal)
             }.frame(height: 50)
             Spacer()
         }
