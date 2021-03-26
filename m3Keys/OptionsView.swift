@@ -24,6 +24,7 @@ struct OptionsView: View {
                     // Spacing toggle
                     Toggle(isOn: $viewModel.isSpaced, label: {
                         Text("Spacing")
+                            .font(.headline)
                     })
                     
                 }
@@ -32,5 +33,5 @@ struct OptionsView: View {
             Spacer()
         }
     }
+    
 }
-

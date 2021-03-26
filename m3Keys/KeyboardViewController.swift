@@ -43,6 +43,7 @@ class KeyboardViewController: KeyboardInputViewController {
     
     private lazy var toastContext = KeyboardToastContext() // This allows you to use "Toasts" which are basically popups as far as I understand it. What's with companies naming random UI elements based on foods? "Snackbar", anyone?
     
+    // Main keyboard view built from KeyboardView.swift
     private var keyboardView: some View {
         KeyboardView(
             actionHandler: keyboardActionHandler,

@@ -18,15 +18,20 @@ import KeyboardKit
  */
 struct KeyboardView: View {
     
-    var actionHandler: KeyboardActionHandler
+    // Standard appearance and layout provider
     var appearance: KeyboardAppearance
     var layoutProvider: KeyboardLayoutProvider
     
+    // Custom M3KActionHandler
+    var actionHandler: KeyboardActionHandler
+    
+    // Global SettingsViewModel inherited from KeyboardViewController.swift
     @EnvironmentObject var viewModel: SettingsViewModel
     
-    @EnvironmentObject var autocompleteContext: AutocompleteContext
+    // Standard keyboardContext and toastContext
     @EnvironmentObject var keyboardContext: KeyboardContext
     @EnvironmentObject var toastContext: KeyboardToastContext
+    
     
     var body: some View {
         keyboardView.keyboardToast(
@@ -34,6 +39,7 @@ struct KeyboardView: View {
             background: toastBackground)
     }
     
+    // ViewBuilder for main keyboard, switches based on keyboard type to emojiKeyboard (no m3k functionality for emojis yet)
     @ViewBuilder
     var keyboardView: some View {
         switch keyboardContext.keyboardType {
@@ -49,25 +55,14 @@ struct KeyboardView: View {
 
 private extension KeyboardView {
     
-    var autocompleteBar: some View {
+    // optionsView from OptionsView.swift -- shows meme options and settings
+    var optionsView: some View {
         OptionsView()
             .environmentObject(viewModel)
-            .frame(height: 60)
+            .frame(height: 55)
     }
-    
-    func autocompleteBarButton(for suggestion: AutocompleteSuggestion) -> AnyView {
-        guard let subtitle = suggestion.subtitle else { return AutocompleteToolbar.standardButton(for: suggestion) }
-        return AnyView(VStack(spacing: 0) {
-            Text(suggestion.title).font(.callout)
-            Text(subtitle).font(.footnote)
-        }.frame(maxWidth: .infinity))
-    }
-    
-    func autocompleteBarButtonBuilder(suggestion: AutocompleteSuggestion) -> AnyView {
-        AnyView(autocompleteBarButton(for: suggestion)
-                    .background(Color.clearInteractable))
-    }
-    
+
+    // Emoji Keyboard (Requires iOS 14) (No m3k functionality yet)
     @ViewBuilder
     var emojiKeyboard: some View {
         if #available(iOSApplicationExtension 14.0, *) {
@@ -77,9 +72,10 @@ private extension KeyboardView {
         }
     }
     
+    // Main system keyboard with symbols
     var systemKeyboard: some View {
         VStack(spacing: 0) {
-            autocompleteBar
+            optionsView
             SystemKeyboard(
                 layout: layoutProvider.keyboardLayout(for: keyboardContext),
                 appearance: appearance,
@@ -88,6 +84,7 @@ private extension KeyboardView {
         }
     }
     
+    // Toasts
     var toastBackground: some View {
         Color.white
             .cornerRadius(3)
