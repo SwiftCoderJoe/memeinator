@@ -49,6 +49,11 @@ class M3KActionHandler: StandardKeyboardActionHandler {
             $0?.textDocumentProxy.insertText("  ")
         }
         
+        // Emojis type emoji raw character, then space
+        case .emoji(let emoji): return {
+            $0?.textDocumentProxy.insertText(emoji.char + "0")
+        }
+        
         // If some other key is pressed, return nil
         default:
             break

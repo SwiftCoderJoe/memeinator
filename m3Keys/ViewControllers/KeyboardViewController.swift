@@ -46,9 +46,9 @@ class KeyboardViewController: KeyboardInputViewController {
     // Main keyboard view built from KeyboardView.swift
     private var keyboardView: some View {
         KeyboardView(
-            actionHandler: keyboardActionHandler,
             appearance: keyboardAppearance,
-            layoutProvider: keyboardLayoutProvider)
+            layoutProvider: keyboardLayoutProvider,
+            actionHandler: keyboardActionHandler)
             .environmentObject(viewModel)
             .environmentObject(toastContext)
     }
