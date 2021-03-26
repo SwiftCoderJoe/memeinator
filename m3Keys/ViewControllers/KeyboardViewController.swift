@@ -26,7 +26,10 @@ class KeyboardViewController: KeyboardInputViewController {
             LocaleKey.english.locale
         ]
         
-        // Set a standard action handler (This will likely be changed when we get m3keys functionality actually working...)
+        // Set custom keyboard behavior to stop automatic sentence ending
+        keyboardBehavior = M3KKeyboardBehaivior(context: keyboardContext)
+        
+        // Set a custom action handler to add functionality
         keyboardActionHandler = M3KActionHandler(inputViewController: self, settingsViewModel: viewModel)
         
         // Set an input set provider with only English
@@ -34,6 +37,7 @@ class KeyboardViewController: KeyboardInputViewController {
         
         // Setup a layout with .emojis instead of .dictation
         keyboardLayoutProvider = StandardKeyboardLayoutProvider(inputSetProvider: keyboardInputSetProvider, dictationReplacement: .keyboardType(.emojis))
+
         
         // Set the keyboard to load the view from SwiftUI
         setup(with: keyboardView)
