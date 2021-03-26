@@ -578,7 +578,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1004;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = "$(SRCROOT)/m3Keys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,7 +586,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = "Beta 4";
+				MARKETING_VERSION = "Beta 5";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,7 +602,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1004;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = "$(SRCROOT)/m3Keys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,7 +610,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = "Beta 4";
+				MARKETING_VERSION = "Beta 5";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -741,14 +741,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1004;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "Beta 4";
+				MARKETING_VERSION = "Beta 5";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -763,14 +763,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1004;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "Beta 4";
+				MARKETING_VERSION = "Beta 5";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
