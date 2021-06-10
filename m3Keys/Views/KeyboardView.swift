@@ -59,7 +59,7 @@ private extension KeyboardView {
     var optionsView: some View {
         OptionsView()
             .environmentObject(viewModel)
-            .frame(height: 55)
+            .frame(height: 45)
     }
 
     // Emoji Keyboard (Requires iOS 14) (No m3k functionality yet)
@@ -74,7 +74,7 @@ private extension KeyboardView {
     
     // Main system keyboard with symbols
     var systemKeyboard: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 5) {
             optionsView
             SystemKeyboard(
                 layout: layoutProvider.keyboardLayout(for: keyboardContext),

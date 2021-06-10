@@ -46,13 +46,13 @@ class MemeSettings {
         if isFurryspeak {
             translateTextToFurryspeak()
         }
-
-        if isSpaced {
-            spaceText()
-        }
         
         if selectedCase != 0 {
             capitalizeText()
+        }
+        
+        if isSpaced {
+            spaceText()
         }
         
         NotificationCenter.default.post(name: .didGenerateMeme, object: nil)
@@ -102,9 +102,9 @@ class MemeSettings {
                 }
             }
             
-            currentGeneratedMeme = workingMeme
-            
         }
+        
+        currentGeneratedMeme = workingMeme
         
     }
     
@@ -137,43 +137,3 @@ class MemeSettings {
     }
     
 }
-
-
-/*
-var workingMeme = ""
-
-for letter in currentInputText { // Iterate through each character
-    
-    if selectedCase == 0 { // If "None" is selected for case, input normal case
-        workingMeme.append(letter)
-    } else if selectedCase == 1 { // If "mEmE" is selected for case, input alternating case
-        if caseState == 0 {
-            caseState = 1
-            workingMeme.append(letter.lowercased())
-        } else {
-            caseState = 0
-            workingMeme.append(letter.uppercased())
-        }
-    } else { // If "rAnDOm" is selected, choose randomly for each character
-        if Int.random(in: 0...1) == 0 {
-            workingMeme.append(letter.lowercased())
-        } else {
-            workingMeme.append(letter.uppercased())
-        }
-    }
-    
-    if spaceEnableSwitch.isOn { // Add a space for each stepper value if spacing is enabled
-        for _ in 1...Int(stepper!.value) {
-            workingMeme.append(" ")
-        }
-    }
-    
-}
-
-if spaceEnableSwitch.isOn && workingClipboard != "" { // If spacing is enabled and there is text in the textbox, delete the last space(s)
-    workingMeme = workingMeme[0..<(workingMeme.count - Int(stepper.value))]
-}
-
-// Finally, update the finalMemeLabel to reflect the new workingClipboard
-currentGeneratedMeme = workingMeme
-*/

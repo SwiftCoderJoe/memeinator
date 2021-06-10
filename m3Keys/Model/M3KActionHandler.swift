@@ -25,8 +25,8 @@ class M3KActionHandler: StandardKeyboardActionHandler {
     // Called every button press
     override func action(for gesture: KeyboardGesture, on action: KeyboardAction) -> KeyboardAction.GestureAction? {
         
-        // Check if spacing is enabled, and if it is, only add a space after actions that should have a space after them.
-        if settingsViewModel.isSpaced && gesture == .tap, let action = tapActionWithSpace(for: action) {
+        // Only add a space after actions that should have a space after them.
+        if gesture == .tap, let action = customTapAction(for: action) {
             return action
         }
         
@@ -34,24 +34,24 @@ class M3KActionHandler: StandardKeyboardActionHandler {
     }
     
     // Return the standard action plus a space, or the system action
-    func tapActionWithSpace(for action: KeyboardAction) -> GestureAction? {
+    func customTapAction(for action: KeyboardAction) -> GestureAction? {
         switch action {
         
         // Characters type character plus a space
         case .character(let char): return {
-            $0?.textDocumentProxy.insertText(char + " ")
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
         }
         // Spaces type two spaces
         case .space: return {
-            $0?.textDocumentProxy.insertText("  ")
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
         }
         
         // Emojis type emoji raw character, then space
         case .emoji(let emoji): return {
-            $0?.textDocumentProxy.insertText(emoji.char + " ")
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
         }
         
-        // If some other key is pressed, return nil
+        // If some other key is pressed, return nil (breaks if and returns super.action)
         default:
             break
         }
