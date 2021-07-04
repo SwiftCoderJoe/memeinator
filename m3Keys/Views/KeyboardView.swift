@@ -55,7 +55,7 @@ struct KeyboardView: View {
 
 private extension KeyboardView {
     
-    // optionsView from OptionsView.swift -- shows meme options and settings
+    // optionsView from OptionsView.swift -- shows meme options, actions, and settings
     var optionsView: some View {
         OptionsView()
             .environmentObject(viewModel)

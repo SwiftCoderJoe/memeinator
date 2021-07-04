@@ -28,15 +28,15 @@ struct OptionsView: View {
                     // Spacing
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(.gray)
                         
                         HStack {
                             Button(action: {
                                 spacingOpened.toggle()
                             }) {
                                 Text("Spacing")
-                                    .fixedSize(horizontal: true, vertical: true)
-                                    .foregroundColor(Color.white)
+                                    .fixedSize()
+                                    .foregroundColor(.white)
                                     .font(.headline)
                             }
                             
@@ -47,7 +47,7 @@ struct OptionsView: View {
                                     // Enabled Toggle
                                     Toggle(isOn: $viewModel.isSpaced, label: {
                                         Text("Enabled:")
-                                            .fixedSize(horizontal: true, vertical: true)
+                                            .fixedSize()
                                             .font(.subheadline)
                                     })
                                     
@@ -59,7 +59,7 @@ struct OptionsView: View {
                                             step: viewModel.spacesStep) {
                                         
                                         Text("\(viewModel.numberOfSpaces)")
-                                            .fixedSize(horizontal: true, vertical: true)
+                                            .fixedSize()
                                             .font(.subheadline)
                                     }
                                 }
@@ -72,15 +72,15 @@ struct OptionsView: View {
                     // Casing
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(.gray)
                         
                         HStack {
                             Button(action: {
                                 casingOpened.toggle()
                             }) {
                                 Text("Casing")
-                                    .fixedSize(horizontal: true, vertical: true)
-                                    .foregroundColor(Color.white)
+                                    .fixedSize()
+                                    .foregroundColor(.white)
                                     .font(.headline)
                             }
                             
