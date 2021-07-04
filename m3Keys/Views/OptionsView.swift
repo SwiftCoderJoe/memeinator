@@ -15,14 +15,15 @@ import KeyboardKit
  */
 struct OptionsView: View {
     public init(
-        actionHandler: KeyboardActionHandler) {
+        actionHandler: M3KActionHandler) {
         self.actionHandler = actionHandler
     }
     
-    private let actionHandler: KeyboardActionHandler
+    private let actionHandler: M3KActionHandler
     
     // Global SettingsViewModel inherited from parent
     @EnvironmentObject var viewModel: SettingsViewModel
+    @EnvironmentObject var toastContext: KeyboardToastContext
     
     @State var spacingOpened: Bool = false
     @State var casingOpened: Bool = false
@@ -40,7 +41,12 @@ struct OptionsView: View {
                         
                         HStack {
                             Button(action: {
-                                actionHandler.handle(.tap, on: .custom(name: "paste"))
+                                guard actionHandler.tryPaste() else {
+                                    toastContext.present(Text("Full Access is required.")
+                                                            .font(.headline)
+                                                            .foregroundColor(.gray))
+                                    return
+                                }
                             }) {
                                 Text("Paste")
                                     .fixedSize()
@@ -48,6 +54,7 @@ struct OptionsView: View {
                                     .font(.headline)
                             }
                         }
+                        .padding(.horizontal)
                     }
                     
                     // Spacing
@@ -127,6 +134,7 @@ struct OptionsView: View {
                 }.padding(.horizontal)
             }.frame(height: 40)
         }
+        
     }
     
 }

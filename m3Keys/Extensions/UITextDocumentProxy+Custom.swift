@@ -13,8 +13,10 @@ public extension UITextDocumentProxy {
     
     /** Input content on the pasteboard, if there is any. */
     func paste() {
+        print("Made it here")
         if let pasteboard = UIPasteboard.general.string {
             insertText(pasteboard)
+            print("Probably won't make it here.")
         }
     }
     

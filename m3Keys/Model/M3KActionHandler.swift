@@ -8,12 +8,16 @@
 
 import Foundation
 import KeyboardKit
+import SwiftUI
 
 class M3KActionHandler: StandardKeyboardActionHandler {
+    
+    // MARK: Init
     
     // Same init as inherited, with SettingsViewModel added
     public init(inputViewController: KeyboardViewController, settingsViewModel: SettingsViewModel) {
         self.settingsViewModel = settingsViewModel
+        self.inputViewController = inputViewController
         
         super.init(inputViewController: inputViewController)
         
@@ -21,6 +25,9 @@ class M3KActionHandler: StandardKeyboardActionHandler {
     
     // Stores global SettingsViewModel
     private var settingsViewModel: SettingsViewModel
+    private var inputViewController: KeyboardViewController
+    
+    // MARK: Handling
     
     // Called every button press
     override func action(for gesture: KeyboardGesture, on action: KeyboardAction) -> KeyboardAction.GestureAction? {
@@ -33,36 +40,39 @@ class M3KActionHandler: StandardKeyboardActionHandler {
         return super.action(for: gesture, on: action)
     }
     
-    // Return the standard action plus a space, or the system action
+    // Return a custom action, or the standard action
     func customTapAction(for action: KeyboardAction) -> GestureAction? {
         switch action {
         
-        // Characters type character plus a space
-        case .character(let char): return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
-        }
-        // Spaces type two spaces
-        case .space: return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
-        }
-        
-        // Emojis type emoji raw character, then space
-        case .emoji(let emoji): return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
-        }
-            
-        case .custom(let name): return {
-            if name == "paste" {
-                $0?.textDocumentProxy.paste()
+            case .character(let char): return {
+                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
             }
-        }
+
+            case .space: return {
+                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
+            }
+
+            case .emoji(let emoji): return {
+                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
+            }
         
-        // If some other key is pressed, return nil (breaks if and returns super.action)
-        default:
-            break
+            // If some other key is pressed, return nil (breaks if and returns super.action)
+            default:
+                break
         }
         
         return nil
+    }
+    
+    // MARK: Custom Handling
+    
+    func tryPaste() -> Bool {
+        if inputViewController.hasFullAccess {
+            inputViewController.textDocumentProxy.paste()
+            return true
+        } else {
+            return false
+        }
     }
     
 }

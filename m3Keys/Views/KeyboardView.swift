@@ -23,7 +23,7 @@ struct KeyboardView: View {
     var layoutProvider: KeyboardLayoutProvider
     
     // Custom M3KActionHandler
-    var actionHandler: KeyboardActionHandler
+    var actionHandler: M3KActionHandler
     
     // Global SettingsViewModel inherited from KeyboardViewController.swift
     @EnvironmentObject var viewModel: SettingsViewModel
@@ -60,6 +60,7 @@ private extension KeyboardView {
         OptionsView(
             actionHandler: actionHandler)
             .environmentObject(viewModel)
+            .environmentObject(toastContext)
             .frame(height: 45)
     }
 
@@ -88,7 +89,7 @@ private extension KeyboardView {
     // Toasts
     var toastBackground: some View {
         Color.white
-            .cornerRadius(3)
+            .cornerRadius(10)
             .shadow(color: Color.black.opacity(0.3), radius: 2, x: 1, y: 1)
     }
 }
