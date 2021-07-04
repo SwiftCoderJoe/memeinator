@@ -50,6 +50,12 @@ class M3KActionHandler: StandardKeyboardActionHandler {
         case .emoji(let emoji): return {
             $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
         }
+            
+        case .custom(let name): return {
+            if name == "paste" {
+                $0?.textDocumentProxy.paste()
+            }
+        }
         
         // If some other key is pressed, return nil (breaks if and returns super.action)
         default:

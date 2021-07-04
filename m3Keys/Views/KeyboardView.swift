@@ -57,7 +57,8 @@ private extension KeyboardView {
     
     // optionsView from OptionsView.swift -- shows meme options, actions, and settings
     var optionsView: some View {
-        OptionsView()
+        OptionsView(
+            actionHandler: actionHandler)
             .environmentObject(viewModel)
             .frame(height: 45)
     }

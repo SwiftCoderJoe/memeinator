@@ -8,11 +8,19 @@
 
 import SwiftUI
 import Combine
+import KeyboardKit
 
 /**
  A view which presents meme controls to the user in a horizontal scrolling view 50px tall. A spacer is provided at the bottom to allow for bottom padding.
  */
 struct OptionsView: View {
+    public init(
+        actionHandler: KeyboardActionHandler) {
+        self.actionHandler = actionHandler
+    }
+    
+    private let actionHandler: KeyboardActionHandler
+    
     // Global SettingsViewModel inherited from parent
     @EnvironmentObject var viewModel: SettingsViewModel
     
@@ -24,6 +32,23 @@ struct OptionsView: View {
             Spacer()
             ScrollView(.horizontal) {
                 HStack {
+                    
+                    // Paste
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.gray)
+                        
+                        HStack {
+                            Button(action: {
+                                actionHandler.handle(.tap, on: .custom(name: "paste"))
+                            }) {
+                                Text("Paste")
+                                    .fixedSize()
+                                    .foregroundColor(.white)
+                                    .font(.headline)
+                            }
+                        }
+                    }
                     
                     // Spacing
                     ZStack {

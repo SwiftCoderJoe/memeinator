@@ -31,6 +31,7 @@
 		0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EB31F832671971300D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EB31F842671971400D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
+		0EBD7C30269212E5001BFE4A /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */; };
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
+		0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
 		0EC7CC99214DE6760070CB37 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */,
 				0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
+				0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */,
 				0E4FDCFD260A7B9B005A7C5D /* SettingsViewModel.swift in Sources */,
 				0EB31F832671971300D91ED6 /* randomBool.swift in Sources */,
+				0EBD7C30269212E5001BFE4A /* UITextDocumentProxy+Custom.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
