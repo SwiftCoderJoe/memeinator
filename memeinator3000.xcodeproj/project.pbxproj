@@ -34,6 +34,7 @@
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
+		0EE3012C2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */; };
 		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
 		3EF1352CCB5F7FC98D40D443 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96AF02DA0060D345CA61B63 /* Pods_memeinator3000.framework */; };
 		7359D7DFFE3FB88F6AA86066 /* Pods_m3Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783D0B62274E83EC707369E5 /* Pods_m3Keys.framework */; };
@@ -93,6 +94,7 @@
 		0EC7CC99214DE6760070CB37 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
 		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EFCE4E9260949E000B4F194 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		1B468D45587668226A3E5446 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		0EC7CC9A214DE6760070CB37 /* m3Keys */ = {
 			isa = PBXGroup;
 			children = (
+				0EE3012A2692A99D00FACC9D /* Extensions */,
 				0E315DAB260D6058005ADF72 /* ViewControllers */,
 				0E315DAA260D603D005ADF72 /* Views */,
 				0E315DA9260D6029005ADF72 /* Model */,
@@ -212,6 +215,14 @@
 				0EC7CC9D214DE6760070CB37 /* Info.plist */,
 			);
 			path = m3Keys;
+			sourceTree = "<group>";
+		};
+		0EE3012A2692A99D00FACC9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1CD69B4E267C1E575AFF45A1 /* Pods */ = {
@@ -540,6 +551,7 @@
 				0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */,
 				0E4FDCFD260A7B9B005A7C5D /* SettingsViewModel.swift in Sources */,
 				0EB31F832671971300D91ED6 /* randomBool.swift in Sources */,
+				0EE3012C2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
