@@ -52,7 +52,7 @@ class KeyboardViewController: KeyboardInputViewController {
         KeyboardView(
             appearance: keyboardAppearance,
             layoutProvider: keyboardLayoutProvider,
-            actionHandler: keyboardActionHandler as! M3KActionHandler)
+            actionHandler: keyboardActionHandler)
             .environmentObject(viewModel)
             .environmentObject(toastContext)
     }

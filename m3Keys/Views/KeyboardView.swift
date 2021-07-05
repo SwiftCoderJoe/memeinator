@@ -23,7 +23,7 @@ struct KeyboardView: View {
     var layoutProvider: KeyboardLayoutProvider
     
     // Custom M3KActionHandler
-    var actionHandler: M3KActionHandler
+    var actionHandler: KeyboardActionHandler
     
     // Global SettingsViewModel inherited from KeyboardViewController.swift
     @EnvironmentObject var viewModel: SettingsViewModel
@@ -58,7 +58,7 @@ private extension KeyboardView {
     // optionsView from OptionsView.swift -- shows meme options, actions, and settings
     var optionsView: some View {
         OptionsView(
-            actionHandler: actionHandler)
+            actionHandler: actionHandler as! M3KActionHandler)
             .environmentObject(viewModel)
             .environmentObject(toastContext)
             .frame(height: 45)
