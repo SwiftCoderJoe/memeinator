@@ -31,8 +31,6 @@
 		0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EB31F832671971300D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EB31F842671971400D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
-		0EBD7C30269212E5001BFE4A /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */; };
-		0EBD7C3326921C15001BFE4A /* KeyboardInputViewController+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD7C3226921C15001BFE4A /* KeyboardInputViewController+Access.swift */; };
 		0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */; };
 		0EC7CCA0214DE6760070CB37 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
@@ -92,8 +90,6 @@
 		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
-		0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
-		0EBD7C3226921C15001BFE4A /* KeyboardInputViewController+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardInputViewController+Access.swift"; sourceTree = "<group>"; };
 		0EC7CC99214DE6760070CB37 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,19 +202,9 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		0EBD7C3126921BF6001BFE4A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0EBD7C2F269212E5001BFE4A /* UITextDocumentProxy+Custom.swift */,
-				0EBD7C3226921C15001BFE4A /* KeyboardInputViewController+Access.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		0EC7CC9A214DE6760070CB37 /* m3Keys */ = {
 			isa = PBXGroup;
 			children = (
-				0EBD7C3126921BF6001BFE4A /* Extensions */,
 				0E315DAB260D6058005ADF72 /* ViewControllers */,
 				0E315DAA260D603D005ADF72 /* Views */,
 				0E315DA9260D6029005ADF72 /* Model */,
@@ -547,7 +533,6 @@
 				0E315DA6260D3F14005ADF72 /* M3KActionHandler.swift in Sources */,
 				0EB31F7D2671965A00D91ED6 /* BetterUISegmentedControl.swift in Sources */,
 				0EB31F7B2671965700D91ED6 /* StringExtentions.swift in Sources */,
-				0EBD7C3326921C15001BFE4A /* KeyboardInputViewController+Access.swift in Sources */,
 				0E4FDCFB260974F5005A7C5D /* OptionsView.swift in Sources */,
 				0EB31F792671965400D91ED6 /* UIViewControllerExtentions.swift in Sources */,
 				0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */,
@@ -555,7 +540,6 @@
 				0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */,
 				0E4FDCFD260A7B9B005A7C5D /* SettingsViewModel.swift in Sources */,
 				0EB31F832671971300D91ED6 /* randomBool.swift in Sources */,
-				0EBD7C30269212E5001BFE4A /* UITextDocumentProxy+Custom.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
