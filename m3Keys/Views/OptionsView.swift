@@ -42,10 +42,9 @@ struct OptionsView: View {
                         HStack {
                             Button(action: {
                                 guard actionHandler.tryPaste() else {
-                                    toastContext.present(Text("Full Access is required.")
+                                    return toastContext.present(Text("Full Access is required.")
                                                             .font(.headline)
                                                             .foregroundColor(.gray))
-                                    return
                                 }
                             }) {
                                 Text("Paste")
@@ -55,6 +54,7 @@ struct OptionsView: View {
                             }
                         }
                         .padding(.horizontal)
+                        
                     }
                     
                     // Spacing
@@ -124,6 +124,7 @@ struct OptionsView: View {
                                     Picker(selection: $viewModel.casingSetting, label: Text("")) { // The text view will not get rendered because of the picker style
                                         ForEach(Casing.allCases) {
                                             Text($0.rawValue)
+                                                .fixedSize()
                                                 .tag($0)
                                         }
                                     }.pickerStyle(SegmentedPickerStyle())
