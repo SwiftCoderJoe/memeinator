@@ -48,7 +48,6 @@ struct OptionsView: View {
                                 }
                             }) {
                                 Text("Paste")
-                                    .fixedSize()
                                     .foregroundColor(.white)
                                     .font(.headline)
                             }
@@ -67,7 +66,6 @@ struct OptionsView: View {
                                 spacingOpened.toggle()
                             }) {
                                 Text("Spacing")
-                                    .fixedSize()
                                     .foregroundColor(.white)
                                     .font(.headline)
                             }
@@ -79,7 +77,6 @@ struct OptionsView: View {
                                     // Enabled Toggle
                                     Toggle(isOn: $viewModel.isSpaced, label: {
                                         Text("Enabled:")
-                                            .fixedSize()
                                             .font(.subheadline)
                                     })
                                     
@@ -91,7 +88,6 @@ struct OptionsView: View {
                                             step: viewModel.spacesStep) {
                                         
                                         Text("\(viewModel.numberOfSpaces)")
-                                            .fixedSize()
                                             .font(.subheadline)
                                     }
                                 }
@@ -111,7 +107,6 @@ struct OptionsView: View {
                                 casingOpened.toggle()
                             }) {
                                 Text("Casing")
-                                    .fixedSize()
                                     .foregroundColor(.white)
                                     .font(.headline)
                             }
@@ -124,7 +119,6 @@ struct OptionsView: View {
                                     Picker(selection: $viewModel.casingSetting, label: Text("")) { // The text view will not get rendered because of the picker style
                                         ForEach(Casing.allCases) {
                                             Text($0.rawValue)
-                                                .fixedSize()
                                                 .tag($0)
                                         }
                                     }.pickerStyle(SegmentedPickerStyle())
