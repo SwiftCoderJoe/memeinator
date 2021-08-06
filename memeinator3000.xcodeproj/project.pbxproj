@@ -794,6 +794,7 @@
 				CURRENT_PROJECT_VERSION = 5006;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -816,6 +817,7 @@
 				CURRENT_PROJECT_VERSION = 5006;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				INFOPLIST_FILE = memeinator3000/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
