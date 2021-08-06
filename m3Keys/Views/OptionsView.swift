@@ -71,25 +71,24 @@ struct OptionsView: View {
                             }
                             
                             if spacingOpened {
-                                HStack {
-                                    Divider()
+                                Divider()
+                                
+                                Text("Enabled:")
+                                    .font(.subheadline)
+                                
+                                // Enabled Toggle
+                                Toggle("Spacing Enabled", isOn: $viewModel.isSpaced)
+                                    .labelsHidden()
+                                
+                                Divider()
+                                
+                                // Number of spaces change
+                                Stepper(value: $viewModel.numberOfSpaces,
+                                        in: viewModel.spacesRange,
+                                        step: viewModel.spacesStep) {
                                     
-                                    // Enabled Toggle
-                                    Toggle(isOn: $viewModel.isSpaced, label: {
-                                        Text("Enabled:")
-                                            .font(.subheadline)
-                                    })
-                                    
-                                    Divider()
-                                    
-                                    // Number of spaces change
-                                    Stepper(value: $viewModel.numberOfSpaces,
-                                            in: viewModel.spacesRange,
-                                            step: viewModel.spacesStep) {
-                                        
-                                        Text("\(viewModel.numberOfSpaces)")
-                                            .font(.subheadline)
-                                    }
+                                    Text("\(viewModel.numberOfSpaces)")
+                                        .font(.subheadline)
                                 }
                             }
                         }
@@ -116,7 +115,7 @@ struct OptionsView: View {
                                     Divider()
                                     
                                     // Enabled Toggle
-                                    Picker(selection: $viewModel.casingSetting, label: Text("")) { // The text view will not get rendered because of the picker style
+                                    Picker("Casing Type", selection: $viewModel.casingSetting) { 
                                         ForEach(Casing.allCases) {
                                             Text($0.rawValue)
                                                 .tag($0)
@@ -124,7 +123,8 @@ struct OptionsView: View {
                                     }.pickerStyle(SegmentedPickerStyle())
                                 }
                             }
-                        }.padding(.horizontal)
+                        }
+                        .padding(.horizontal)
                     }
                 }.padding(.horizontal)
             }.frame(height: 40)
