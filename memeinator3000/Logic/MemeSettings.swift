@@ -40,28 +40,33 @@ class MemeSettings {
     }
     
     func stateChanged() {
-        
-        currentGeneratedMeme = currentInput
-        
-        if isFurryspeak {
-            translateTextToFurryspeak()
-        }
-        
-        if selectedCase != 0 {
-            capitalizeText()
-        }
-        
-        if isSpaced {
-            spaceText()
-        }
+        currentGeneratedMeme = createMemedText(currentInput: currentInput)
         
         NotificationCenter.default.post(name: .didGenerateMeme, object: nil)
     }
     
-    private func spaceText() {
+    func createMemedText(currentInput: String) -> String {
+        var workingMeme = currentInput
+        
+        if isFurryspeak {
+            workingMeme = translateTextToFurryspeak(workingMeme)
+        }
+        
+        if selectedCase != 0 {
+            workingMeme = capitalizeText(workingMeme)
+        }
+        
+        if isSpaced {
+            workingMeme = spaceText(workingMeme)
+        }
+        
+        return workingMeme
+    }
+    
+    private func spaceText(_ input: String) -> String {
         var workingMeme = ""
         
-        for char in currentGeneratedMeme { // Iterate through each character and add a space for each stepper value
+        for char in input { // Iterate through each character and add a space for each stepper value
             
             workingMeme.append(char)
             
@@ -76,14 +81,14 @@ class MemeSettings {
         }
         
         // Finally, update the finalMemeLabel to reflect the new workingClipboard
-        currentGeneratedMeme = workingMeme
+        return workingMeme
     }
     
-    private func capitalizeText() {
+    private func capitalizeText(_ input: String) -> String {
         var workingMeme = ""
         var caseState = 0
         
-        for letter in currentGeneratedMeme {
+        for letter in input {
             if selectedCase == 0 { // If "None" is selected for case, input normal case
                 workingMeme.append(letter)
             } else if selectedCase == 1 { // If "mEmE" is selected for case, input alternating case
@@ -104,16 +109,16 @@ class MemeSettings {
             
         }
         
-        currentGeneratedMeme = workingMeme
+        return workingMeme
         
     }
     
-    private func translateTextToFurryspeak() {
+    private func translateTextToFurryspeak(_ input: String) -> String {
         var workingMeme = ""
         var prevChar = ""
         var lastTwo = ""
 
-        for letter in currentGeneratedMeme {
+        for letter in input {
             lastTwo = prevChar + String(letter)
             
             if letter == "L" || letter == "R" {         // L and R to W
@@ -132,7 +137,7 @@ class MemeSettings {
             prevChar = String(letter)
         }
 
-        currentGeneratedMeme = workingMeme
+        return workingMeme
         
     }
     
