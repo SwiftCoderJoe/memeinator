@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757AD26D5C65300C35984 /* SettingsView.swift */; };
+		0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B026D5C88D00C35984 /* AppPage.swift */; };
+		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
+		0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */; };
+		0E1757B926D8031A00C35984 /* VIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* VIewModel.swift */; };
 		0E315DA6260D3F14005ADF72 /* M3KActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */; };
 		0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */; };
 		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
@@ -15,6 +20,15 @@
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
+		0E6BF9DA26D46BBE008868B7 /* memeinator3000_newApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */; };
+		0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DB26D46BBE008868B7 /* ContentView.swift */; };
+		0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */; };
+		0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */; };
+		0E6BF9EB26D46BD0008868B7 /* memeinator3000_newTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */; };
+		0E6BF9F526D46BD0008868B7 /* memeinator3000_newUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */; };
+		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
+		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
+		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
 		0E6FDCCE260962110076E8F7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFCE4E9260949E000B4F194 /* KeyboardView.swift */; };
 		0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
 		0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
@@ -35,6 +49,7 @@
 		0EC7CCA0214DE6760070CB37 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
 		0EE3012C2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */; };
+		0EE57CCC26D84C70001F14DA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* File.swift */; };
 		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
 		3EF1352CCB5F7FC98D40D443 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96AF02DA0060D345CA61B63 /* Pods_memeinator3000.framework */; };
 		7359D7DFFE3FB88F6AA86066 /* Pods_m3Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783D0B62274E83EC707369E5 /* Pods_m3Keys.framework */; };
@@ -48,6 +63,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0E6BF9E726D46BD0008868B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6BF9D626D46BBE008868B7;
+			remoteInfo = memeinator3000.new;
+		};
+		0E6BF9F126D46BD0008868B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6BF9D626D46BBE008868B7;
+			remoteInfo = memeinator3000.new;
+		};
 		0EC7CC9E214DE6760070CB37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
@@ -79,6 +108,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E1757AD26D5C65300C35984 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0E1757B026D5C88D00C35984 /* AppPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPage.swift; sourceTree = "<group>"; };
+		0E1757B226D6B92000C35984 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneDeviceType.swift; sourceTree = "<group>"; };
+		0E1757B826D802F900C35984 /* VIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModel.swift; sourceTree = "<group>"; };
 		0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KActionHandler.swift; sourceTree = "<group>"; };
 		0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KKeyboardBehaivior.swift; sourceTree = "<group>"; };
 		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
@@ -87,6 +121,18 @@
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
+		0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newApp.swift; sourceTree = "<group>"; };
+		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000.newTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newTests.swift; sourceTree = "<group>"; };
+		0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000.newUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newUITests.swift; sourceTree = "<group>"; };
+		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
+		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
+		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
@@ -95,6 +141,7 @@
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
+		0EE57CCB26D84C70001F14DA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EFCE4E9260949E000B4F194 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		1B468D45587668226A3E5446 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +167,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E6BF9D426D46BBE008868B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9E326D46BD0008868B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9ED26D46BD0008868B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EC7CC96214DE6760070CB37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +215,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1757AF26D5C86800C35984 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E1757B026D5C88D00C35984 /* AppPage.swift */,
+				0E1757B226D6B92000C35984 /* KeyboardManager.swift */,
+				0E1757B826D802F900C35984 /* VIewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0E315DA9260D6029005ADF72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +269,55 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
-		0EB20C9925AB8C2800D41488 /* Extentions */ = {
+		0E6BF9D826D46BBE008868B7 /* memeinator3000.new */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */,
+				0E6BF9DB26D46BBE008868B7 /* ContentView.swift */,
+				0E6BF9FF26D5BE79008868B7 /* Views */,
+				0E1757AF26D5C86800C35984 /* Model */,
+				0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */,
+				0E6BF9DF26D46BCF008868B7 /* Preview Content */,
+			);
+			path = memeinator3000.new;
+			sourceTree = "<group>";
+		};
+		0E6BF9DF26D46BCF008868B7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E6BF9E926D46BD0008868B7 /* memeinator3000.newTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */,
+			);
+			path = memeinator3000.newTests;
+			sourceTree = "<group>";
+		};
+		0E6BF9F326D46BD0008868B7 /* memeinator3000.newUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */,
+			);
+			path = memeinator3000.newUITests;
+			sourceTree = "<group>";
+		};
+		0E6BF9FF26D5BE79008868B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
+				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
+				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
+				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0EB20C9925AB8C2800D41488 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 				0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */,
@@ -200,8 +326,10 @@
 				0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */,
 				0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
+				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
+				0EE57CCB26D84C70001F14DA /* File.swift */,
 			);
-			path = Extentions;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		0EC7CC9A214DE6760070CB37 /* m3Keys */ = {
@@ -252,10 +380,13 @@
 		D41F69F4210D5D4A006F5F3C = {
 			isa = PBXGroup;
 			children = (
-				0EB20C9925AB8C2800D41488 /* Extentions */,
+				0EB20C9925AB8C2800D41488 /* Lib */,
 				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
 				0EC7CC9A214DE6760070CB37 /* m3Keys */,
+				0E6BF9D826D46BBE008868B7 /* memeinator3000.new */,
+				0E6BF9E926D46BD0008868B7 /* memeinator3000.newTests */,
+				0E6BF9F326D46BD0008868B7 /* memeinator3000.newUITests */,
 				96BB7F20A07B1603FCC81831 /* Frameworks */,
 				1CD69B4E267C1E575AFF45A1 /* Pods */,
 			);
@@ -267,6 +398,9 @@
 				D41F69FD210D5D4A006F5F3C /* memeinator3000.app */,
 				D41F6A11210D5D4F006F5F3C /* memeinator3000Tests.xctest */,
 				0EC7CC99214DE6760070CB37 /* m3Keys.appex */,
+				0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */,
+				0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */,
+				0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -299,6 +433,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E6BF9D626D46BBE008868B7 /* memeinator3000.new */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.new" */;
+			buildPhases = (
+				0E6BF9D326D46BBE008868B7 /* Sources */,
+				0E6BF9D426D46BBE008868B7 /* Frameworks */,
+				0E6BF9D526D46BBE008868B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = memeinator3000.new;
+			productName = memeinator3000.new;
+			productReference = 0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E6BF9E526D46BD0008868B7 /* memeinator3000.newTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newTests" */;
+			buildPhases = (
+				0E6BF9E226D46BD0008868B7 /* Sources */,
+				0E6BF9E326D46BD0008868B7 /* Frameworks */,
+				0E6BF9E426D46BD0008868B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E6BF9E826D46BD0008868B7 /* PBXTargetDependency */,
+			);
+			name = memeinator3000.newTests;
+			productName = memeinator3000.newTests;
+			productReference = 0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E6BF9EF26D46BD0008868B7 /* memeinator3000.newUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newUITests" */;
+			buildPhases = (
+				0E6BF9EC26D46BD0008868B7 /* Sources */,
+				0E6BF9ED26D46BD0008868B7 /* Frameworks */,
+				0E6BF9EE26D46BD0008868B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E6BF9F226D46BD0008868B7 /* PBXTargetDependency */,
+			);
+			name = memeinator3000.newUITests;
+			productName = memeinator3000.newUITests;
+			productReference = 0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		0EC7CC98214DE6760070CB37 /* m3Keys */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EC7CCA1214DE6760070CB37 /* Build configuration list for PBXNativeTarget "m3Keys" */;
@@ -364,10 +551,21 @@
 		D41F69F5210D5D4A006F5F3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = BytleBit;
 				TargetAttributes = {
+					0E6BF9D626D46BBE008868B7 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					0E6BF9E526D46BD0008868B7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 0E6BF9D626D46BBE008868B7;
+					};
+					0E6BF9EF26D46BD0008868B7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 0E6BF9D626D46BBE008868B7;
+					};
 					0EC7CC98214DE6760070CB37 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1150;
@@ -399,11 +597,37 @@
 				D41F69FC210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */,
 				0EC7CC98214DE6760070CB37 /* m3Keys */,
+				0E6BF9D626D46BBE008868B7 /* memeinator3000.new */,
+				0E6BF9E526D46BD0008868B7 /* memeinator3000.newTests */,
+				0E6BF9EF26D46BD0008868B7 /* memeinator3000.newUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E6BF9D526D46BBE008868B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */,
+				0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9E426D46BD0008868B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9EE26D46BD0008868B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EC7CC97214DE6760070CB37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,6 +761,39 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E6BF9D326D46BBE008868B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
+				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
+				0E6BF9DA26D46BBE008868B7 /* memeinator3000_newApp.swift in Sources */,
+				0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */,
+				0E1757B926D8031A00C35984 /* VIewModel.swift in Sources */,
+				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
+				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
+				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
+				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
+				0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9E226D46BD0008868B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6BF9EB26D46BD0008868B7 /* memeinator3000_newTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E6BF9EC26D46BD0008868B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6BF9F526D46BD0008868B7 /* memeinator3000_newUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EC7CC95214DE6760070CB37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +826,7 @@
 				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
 				0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */,
 				0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
+				0EE57CCC26D84C70001F14DA /* File.swift in Sources */,
 				0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +848,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0E6BF9E826D46BD0008868B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E6BF9D626D46BBE008868B7 /* memeinator3000.new */;
+			targetProxy = 0E6BF9E726D46BD0008868B7 /* PBXContainerItemProxy */;
+		};
+		0E6BF9F226D46BD0008868B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E6BF9D626D46BBE008868B7 /* memeinator3000.new */;
+			targetProxy = 0E6BF9F126D46BD0008868B7 /* PBXContainerItemProxy */;
+		};
 		0EC7CC9F214DE6760070CB37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0EC7CC98214DE6760070CB37 /* m3Keys */;
@@ -622,6 +890,175 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E6BF9F626D46BD0008868B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"memeinator3000.new/Preview Content\"";
+				DEVELOPMENT_TEAM = CSYD442PMH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.new;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0E6BF9F726D46BD0008868B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"memeinator3000.new/Preview Content\"";
+				DEVELOPMENT_TEAM = CSYD442PMH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.new;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0E6BF9F826D46BD0008868B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "h.memeinator3000-newTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.new.app/memeinator3000.new";
+			};
+			name = Debug;
+		};
+		0E6BF9F926D46BD0008868B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "h.memeinator3000-newTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.new.app/memeinator3000.new";
+			};
+			name = Release;
+		};
+		0E6BF9FA26D46BD0008868B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "h.memeinator3000-newUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = memeinator3000.new;
+			};
+			name = Debug;
+		};
+		0E6BF9FB26D46BD0008868B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "h.memeinator3000-newUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = memeinator3000.new;
+			};
+			name = Release;
+		};
 		0EC7CCA2214DE6760070CB37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CD207ED6D90D0CBE33B273A /* Pods-m3Keys.debug.xcconfig */;
@@ -879,6 +1316,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.new" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6BF9F626D46BD0008868B7 /* Debug */,
+				0E6BF9F726D46BD0008868B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6BF9F826D46BD0008868B7 /* Debug */,
+				0E6BF9F926D46BD0008868B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6BF9FA26D46BD0008868B7 /* Debug */,
+				0E6BF9FB26D46BD0008868B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0EC7CCA1214DE6760070CB37 /* Build configuration list for PBXNativeTarget "m3Keys" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
