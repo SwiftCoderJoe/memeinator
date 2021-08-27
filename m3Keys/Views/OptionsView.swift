@@ -114,7 +114,7 @@ struct OptionsView: View {
                                 HStack {
                                     Divider()
                                     
-                                    // Enabled Toggle
+                                    // Casing picker
                                     Picker("Casing Type", selection: $viewModel.casingSetting) { 
                                         ForEach(Casing.allCases) {
                                             Text($0.rawValue)

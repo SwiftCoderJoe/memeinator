@@ -42,7 +42,7 @@ class SettingsViewModel: ObservableObject {
     
     // MARK: Functions
     
-    /** Creates a string with the correct formatting as defined by the current state of the SettingsViewModel */
+    /** Creates a single-character string with the correct formatting as defined by the current state of the SettingsViewModel */
     func createFormattedString(_ character: String) -> String {
         var string = character
         
