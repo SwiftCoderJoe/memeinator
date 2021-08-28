@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct memeinator3000_newApp: App {
+struct memeinatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

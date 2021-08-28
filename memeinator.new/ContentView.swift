@@ -12,12 +12,17 @@ struct ContentView: View {
     // Tells us whether keyboard is shown or hidden
     var keyboardManager = KeyboardManager()
     
+    // Tells us the current state of Memeinator and formats memes
+    var settingsViewModel = SettingsViewModel()
+    
+    // Current selected tab
     @State var selection: AppPage = .home
     
     var body: some View {
         TabView(selection: $selection) {
             MemeinatorView()
                 .environmentObject(keyboardManager)
+                .environmentObject(settingsViewModel)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

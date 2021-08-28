@@ -11,7 +11,7 @@
 		0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B026D5C88D00C35984 /* AppPage.swift */; };
 		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
 		0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */; };
-		0E1757B926D8031A00C35984 /* VIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* VIewModel.swift */; };
+		0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* SettingsViewModel.swift */; };
 		0E315DA6260D3F14005ADF72 /* M3KActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */; };
 		0E315DA8260D58EF005ADF72 /* M3KKeyboardBehaivior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */; };
 		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
@@ -20,7 +20,7 @@
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
-		0E6BF9DA26D46BBE008868B7 /* memeinator3000_newApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */; };
+		0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */; };
 		0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DB26D46BBE008868B7 /* ContentView.swift */; };
 		0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */; };
 		0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */; };
@@ -49,7 +49,9 @@
 		0EC7CCA0214DE6760070CB37 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EC7CC99214DE6760070CB37 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBD87C25AAAB3600F20BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A07210D5D4F006F5F3C /* Assets.xcassets */; };
 		0EE3012C2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */; };
-		0EE57CCC26D84C70001F14DA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* File.swift */; };
+		0EE57CCD26D96B1B001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
+		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
+		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
 		3EF1352CCB5F7FC98D40D443 /* Pods_memeinator3000.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96AF02DA0060D345CA61B63 /* Pods_memeinator3000.framework */; };
 		7359D7DFFE3FB88F6AA86066 /* Pods_m3Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783D0B62274E83EC707369E5 /* Pods_m3Keys.framework */; };
@@ -112,7 +114,7 @@
 		0E1757B026D5C88D00C35984 /* AppPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPage.swift; sourceTree = "<group>"; };
 		0E1757B226D6B92000C35984 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneDeviceType.swift; sourceTree = "<group>"; };
-		0E1757B826D802F900C35984 /* VIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewModel.swift; sourceTree = "<group>"; };
+		0E1757B826D802F900C35984 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0E315DA5260D3F14005ADF72 /* M3KActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KActionHandler.swift; sourceTree = "<group>"; };
 		0E315DA7260D58EF005ADF72 /* M3KKeyboardBehaivior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KKeyboardBehaivior.swift; sourceTree = "<group>"; };
 		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
@@ -121,14 +123,14 @@
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
-		0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newApp.swift; sourceTree = "<group>"; };
+		0E6BF9D726D46BBE008868B7 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinatorApp.swift; sourceTree = "<group>"; };
 		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000.newTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9E626D46BD0008868B7 /* memeinator.new.tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator.new.tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newTests.swift; sourceTree = "<group>"; };
-		0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000.newUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BF9F026D46BD0008868B7 /* memeinator.new.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator.new.UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newUITests.swift; sourceTree = "<group>"; };
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 		0EC7CC9B214DE6760070CB37 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0EC7CC9D214DE6760070CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EE3012B2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
-		0EE57CCB26D84C70001F14DA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EFCE4E9260949E000B4F194 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		1B468D45587668226A3E5446 /* Pods-memeinator3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeinator3000Tests.debug.xcconfig"; path = "Target Support Files/Pods-memeinator3000Tests/Pods-memeinator3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,7 +222,7 @@
 			children = (
 				0E1757B026D5C88D00C35984 /* AppPage.swift */,
 				0E1757B226D6B92000C35984 /* KeyboardManager.swift */,
-				0E1757B826D802F900C35984 /* VIewModel.swift */,
+				0E1757B826D802F900C35984 /* SettingsViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,17 +271,17 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
-		0E6BF9D826D46BBE008868B7 /* memeinator3000.new */ = {
+		0E6BF9D826D46BBE008868B7 /* memeinator.new */ = {
 			isa = PBXGroup;
 			children = (
-				0E6BF9D926D46BBE008868B7 /* memeinator3000_newApp.swift */,
+				0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */,
 				0E6BF9DB26D46BBE008868B7 /* ContentView.swift */,
 				0E6BF9FF26D5BE79008868B7 /* Views */,
 				0E1757AF26D5C86800C35984 /* Model */,
 				0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */,
 				0E6BF9DF26D46BCF008868B7 /* Preview Content */,
 			);
-			path = memeinator3000.new;
+			path = memeinator.new;
 			sourceTree = "<group>";
 		};
 		0E6BF9DF26D46BCF008868B7 /* Preview Content */ = {
@@ -327,7 +329,7 @@
 				0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
 				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
-				0EE57CCB26D84C70001F14DA /* File.swift */,
+				0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -384,7 +386,7 @@
 				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
 				0EC7CC9A214DE6760070CB37 /* m3Keys */,
-				0E6BF9D826D46BBE008868B7 /* memeinator3000.new */,
+				0E6BF9D826D46BBE008868B7 /* memeinator.new */,
 				0E6BF9E926D46BD0008868B7 /* memeinator3000.newTests */,
 				0E6BF9F326D46BD0008868B7 /* memeinator3000.newUITests */,
 				96BB7F20A07B1603FCC81831 /* Frameworks */,
@@ -398,9 +400,9 @@
 				D41F69FD210D5D4A006F5F3C /* memeinator3000.app */,
 				D41F6A11210D5D4F006F5F3C /* memeinator3000Tests.xctest */,
 				0EC7CC99214DE6760070CB37 /* m3Keys.appex */,
-				0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */,
-				0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */,
-				0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */,
+				0E6BF9D726D46BBE008868B7 /* memeinator.new.app */,
+				0E6BF9E626D46BD0008868B7 /* memeinator.new.tests.xctest */,
+				0E6BF9F026D46BD0008868B7 /* memeinator.new.UITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -433,9 +435,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E6BF9D626D46BBE008868B7 /* memeinator3000.new */ = {
+		0E6BF9D626D46BBE008868B7 /* memeinator.new */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.new" */;
+			buildConfigurationList = 0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new" */;
 			buildPhases = (
 				0E6BF9D326D46BBE008868B7 /* Sources */,
 				0E6BF9D426D46BBE008868B7 /* Frameworks */,
@@ -445,14 +447,14 @@
 			);
 			dependencies = (
 			);
-			name = memeinator3000.new;
+			name = memeinator.new;
 			productName = memeinator3000.new;
-			productReference = 0E6BF9D726D46BBE008868B7 /* memeinator3000.new.app */;
+			productReference = 0E6BF9D726D46BBE008868B7 /* memeinator.new.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0E6BF9E526D46BD0008868B7 /* memeinator3000.newTests */ = {
+		0E6BF9E526D46BD0008868B7 /* memeinator.new.tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newTests" */;
+			buildConfigurationList = 0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new.tests" */;
 			buildPhases = (
 				0E6BF9E226D46BD0008868B7 /* Sources */,
 				0E6BF9E326D46BD0008868B7 /* Frameworks */,
@@ -463,14 +465,14 @@
 			dependencies = (
 				0E6BF9E826D46BD0008868B7 /* PBXTargetDependency */,
 			);
-			name = memeinator3000.newTests;
+			name = memeinator.new.tests;
 			productName = memeinator3000.newTests;
-			productReference = 0E6BF9E626D46BD0008868B7 /* memeinator3000.newTests.xctest */;
+			productReference = 0E6BF9E626D46BD0008868B7 /* memeinator.new.tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0E6BF9EF26D46BD0008868B7 /* memeinator3000.newUITests */ = {
+		0E6BF9EF26D46BD0008868B7 /* memeinator.new.UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newUITests" */;
+			buildConfigurationList = 0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new.UITests" */;
 			buildPhases = (
 				0E6BF9EC26D46BD0008868B7 /* Sources */,
 				0E6BF9ED26D46BD0008868B7 /* Frameworks */,
@@ -481,9 +483,9 @@
 			dependencies = (
 				0E6BF9F226D46BD0008868B7 /* PBXTargetDependency */,
 			);
-			name = memeinator3000.newUITests;
+			name = memeinator.new.UITests;
 			productName = memeinator3000.newUITests;
-			productReference = 0E6BF9F026D46BD0008868B7 /* memeinator3000.newUITests.xctest */;
+			productReference = 0E6BF9F026D46BD0008868B7 /* memeinator.new.UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		0EC7CC98214DE6760070CB37 /* m3Keys */ = {
@@ -597,9 +599,9 @@
 				D41F69FC210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */,
 				0EC7CC98214DE6760070CB37 /* m3Keys */,
-				0E6BF9D626D46BBE008868B7 /* memeinator3000.new */,
-				0E6BF9E526D46BD0008868B7 /* memeinator3000.newTests */,
-				0E6BF9EF26D46BD0008868B7 /* memeinator3000.newUITests */,
+				0E6BF9D626D46BBE008868B7 /* memeinator.new */,
+				0E6BF9E526D46BD0008868B7 /* memeinator.new.tests */,
+				0E6BF9EF26D46BD0008868B7 /* memeinator.new.UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -766,10 +768,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
+				0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */,
 				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
-				0E6BF9DA26D46BBE008868B7 /* memeinator3000_newApp.swift in Sources */,
+				0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */,
+				0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */,
 				0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */,
-				0E1757B926D8031A00C35984 /* VIewModel.swift in Sources */,
+				0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */,
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
@@ -810,6 +814,7 @@
 				0EB31F832671971300D91ED6 /* randomBool.swift in Sources */,
 				0EE3012C2692A9C400FACC9D /* UITextDocumentProxy+Custom.swift in Sources */,
 				0EC7CC9C214DE6760070CB37 /* KeyboardViewController.swift in Sources */,
+				0EE57CCD26D96B1B001F14DA /* GenericViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,7 +831,6 @@
 				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
 				0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */,
 				0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
-				0EE57CCC26D84C70001F14DA /* File.swift in Sources */,
 				0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,12 +854,12 @@
 /* Begin PBXTargetDependency section */
 		0E6BF9E826D46BD0008868B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E6BF9D626D46BBE008868B7 /* memeinator3000.new */;
+			target = 0E6BF9D626D46BBE008868B7 /* memeinator.new */;
 			targetProxy = 0E6BF9E726D46BD0008868B7 /* PBXContainerItemProxy */;
 		};
 		0E6BF9F226D46BD0008868B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E6BF9D626D46BBE008868B7 /* memeinator3000.new */;
+			target = 0E6BF9D626D46BBE008868B7 /* memeinator.new */;
 			targetProxy = 0E6BF9F126D46BD0008868B7 /* PBXContainerItemProxy */;
 		};
 		0EC7CC9F214DE6760070CB37 /* PBXTargetDependency */ = {
@@ -899,7 +903,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_ASSET_PATHS = "\"memeinator3000.new/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -916,8 +920,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.new;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.new;
+				PRODUCT_NAME = memeinator.new;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -932,7 +936,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"memeinator3000.new/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -949,8 +953,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000.new;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.new;
+				PRODUCT_NAME = memeinator.new;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1316,7 +1320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.new" */ = {
+		0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E6BF9F626D46BD0008868B7 /* Debug */,
@@ -1325,7 +1329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newTests" */ = {
+		0E6BF9FD26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new.tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E6BF9F826D46BD0008868B7 /* Debug */,
@@ -1334,7 +1338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator3000.newUITests" */ = {
+		0E6BF9FE26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new.UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E6BF9FA26D46BD0008868B7 /* Debug */,

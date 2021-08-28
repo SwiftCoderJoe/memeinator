@@ -12,6 +12,7 @@ var numberBeforeIShouldScroll = 690
 
 struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
     
     @State var enteredText: String = ""
     @State var dummyToggle: Bool = false
@@ -70,10 +71,11 @@ struct MemeinatorView: View {
                             .foregroundColor(.purple)
                     }
                 
-            }.padding()
-                .foregroundColor(.primary)
+            }
+            .padding()
+            .foregroundColor(.primary)
             
-            Text(enteredText)
+            Text(settingsViewModel.createFormattedString())
                 .font(.system(size: 25))
                 //.font(.system(size: 30))
                 //.minimumScaleFactor(0.05)
@@ -83,7 +85,7 @@ struct MemeinatorView: View {
             
             TextField (
                     "Enter memes here...",
-                    text: $enteredText,
+                    text: $settingsViewModel.textInput,
                     onCommit: {
                         
                     })
@@ -105,7 +107,7 @@ struct MemeinatorView: View {
                             Text("Spacing")
                                 .font(.title3)
                                 .lineLimit(1)
-                            Toggle("", isOn: $dummyToggle)
+                            Toggle("", isOn: $settingsViewModel.isSpaced)
                                 .labelsHidden()
                         }.padding(.vertical)
                         Spacer()
