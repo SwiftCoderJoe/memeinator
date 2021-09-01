@@ -20,10 +20,10 @@ class KeyboardViewController: KeyboardInputViewController {
         super.viewDidLoad()
         
         // Set m3Keys to only use English Locale
-        keyboardContext.locale = LocaleKey.english.locale
+        keyboardContext.locale = KeyboardLocale.english.locale
         
         keyboardContext.locales = [
-            LocaleKey.english.locale
+            KeyboardLocale.english.locale
         ]
         
         // Set custom keyboard behavior to stop automatic sentence ending

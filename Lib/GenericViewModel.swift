@@ -32,6 +32,10 @@ class GenericViewModel : ObservableObject {
     let spacesStep = 1
     
     func formatSpaces(_ string: String) -> String {
+        guard isSpaced else {
+            return string
+        }
+        
         var workingString = ""
         
         for character in string {
@@ -56,12 +60,14 @@ class GenericViewModel : ObservableObject {
             workingString = string
         case .meme:
             for character in string {
-                workingString.append(memeState ? character.uppercased() : character.lowercased())
+                workingString.append(memeState ? character.uppercased() :
+                                                 character.lowercased())
                 memeState.toggle()
             }
         case .random:
             for character in string {
-                workingString.append(randomBool() ? character.uppercased() : character.lowercased())
+                workingString.append(randomBool() ? character.uppercased() :
+                                                    character.lowercased())
             }
         }
         

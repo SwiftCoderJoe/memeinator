@@ -106,13 +106,13 @@ private extension KeyboardView {
         }
     }
     
-    func changeLocale(to locale: LocaleKey) {
+    func changeLocale(to locale: KeyboardLocale) {
         DispatchQueue.main.async {
-            KeyboardInputViewController.shared.changeKeyboardLocale(to: locale.locale)
+            keyboardContext.locale = locale.locale
         }
     }
     
-    func localeButton(title: String, locale: LocaleKey) -> some View {
+    func localeButton(title: String, locale: KeyboardLocale) -> some View {
         Button(title) {
             changeLocale(to: locale)
         }

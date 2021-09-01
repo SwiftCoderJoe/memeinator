@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AlertToast",
+        "repositoryURL": "https://github.com/elai950/AlertToast.git",
+        "state": {
+          "branch": null,
+          "revision": "01c822ac8e425c48b39b39840c03415421ad3df5",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "KeyboardKit",
+        "repositoryURL": "https://github.com/KeyboardKit/KeyboardKit.git",
+        "state": {
+          "branch": null,
+          "revision": "7dbc408ac18e192316e3b3ded467dea1b3af0640",
+          "version": "4.7.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

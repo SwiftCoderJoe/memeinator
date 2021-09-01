@@ -22,9 +22,7 @@ class SettingsViewModel: GenericViewModel {
         
         workingString = formatCasing(workingString)
         
-        if isSpaced {
-            workingString = formatSpaces(workingString)
-        }
+        workingString = formatSpaces(workingString)
         
         return workingString
     }

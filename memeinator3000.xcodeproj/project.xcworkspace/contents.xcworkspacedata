@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:memeinator3000.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

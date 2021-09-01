@@ -7,15 +7,16 @@
 //
 
 import SwiftUI
+import AlertToast
 
 var numberBeforeIShouldScroll = 690
 
 struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
     @EnvironmentObject var settingsViewModel: SettingsViewModel
-    
-    @State var enteredText: String = ""
+
     @State var dummyToggle: Bool = false
+    @State var toastShowing: Bool = false
     
     var body: some View {
         VStack(spacing: 0.0) {
@@ -33,47 +34,42 @@ struct MemeinatorView: View {
             HStack {
                 
                 Button(action: {
-                    
+                    UIPasteboard.general.string = settingsViewModel.createFormattedString()
+                    toastShowing = true
                 }, label: {
                     Text("Copy")
                         .font(.title3)
                         .padding()
                 })
                     .frame(maxWidth: .infinity)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.purple)
-                    }
+                    .roundedBackground(color: .purple)
                 
                 Button(action: {
-                    
+                    settingsViewModel.textInput = UIPasteboard.general.string ?? ""
                 }, label: {
                     Text("Paste")
                         .font(.title3)
                         .padding()
                 })
                     .frame(maxWidth: .infinity)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.purple)
-                    }
+                    .roundedBackground(color: .purple)
                 
                 Button(action: {
-                    
+                    settingsViewModel.textInput = ""
                 }, label: {
                     Text("Clear")
                         .font(.title3)
                         .padding()
                 })
                     .frame(maxWidth: .infinity)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.purple)
-                    }
+                    .roundedBackground(color: .purple)
                 
             }
             .padding()
             .foregroundColor(.primary)
+            .toast(isPresenting: $toastShowing) {
+                AlertToast(displayMode: .hud, type: .complete(.green), title: "Copied!")
+            }
             
             Text(settingsViewModel.createFormattedString())
                 .font(.system(size: 25))
@@ -85,18 +81,14 @@ struct MemeinatorView: View {
             
             TextField (
                     "Enter memes here...",
-                    text: $settingsViewModel.textInput,
-                    onCommit: {
-                        
-                    })
+                    text: $settingsViewModel.textInput)
+                .textFieldStyle(.largeTextField)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
+                .textSelection(.disabled)
+                .roundedBackground(color: .purple)
                 .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.purple)
-                }
-                .padding()
+                .accentColor(.primary)
             
             // iPhone SE UI cleanup. ugh.
             if !(keyboardManager.keyboardIsShown && (UIDevice.current.type == .iPhoneSE)) {
@@ -136,19 +128,15 @@ struct MemeinatorView: View {
                             .font(.title)
                             .frame(maxWidth: .infinity)
                     })
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.primary))
+                        .roundedBackground(color: .primary)
                         .padding([.leading, .bottom, .trailing])
                     
                 }
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.purple)
-                }
+                .roundedBackground(color: .purple)
                 .padding()
             }
         }
+        
     }
 }
 
