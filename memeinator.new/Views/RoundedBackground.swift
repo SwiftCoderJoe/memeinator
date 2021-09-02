@@ -15,7 +15,7 @@ extension View {
     }
 }
 
-struct RoundedBackground : ViewModifier {
+struct RoundedBackground: ViewModifier {
     var color: Color
     
     func body(content: Content) -> some View {

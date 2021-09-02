@@ -9,11 +9,10 @@
 import SwiftUI
 
 @main
-struct memeinatorApp: App {
+struct MemeinatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
-

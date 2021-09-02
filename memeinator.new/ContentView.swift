@@ -36,7 +36,7 @@ struct ContentView: View {
                     Label("Keyboard", systemImage: "keyboard")
                 }
                 .tag(AppPage.keyboard)
-            
+
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")

@@ -38,6 +38,8 @@
 		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
+		0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */; };
+		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
 		0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
 		0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
 		0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */; };
@@ -149,6 +151,8 @@
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisclosureGroup.swift; sourceTree = "<group>"; };
+		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
 				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
+				0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */,
 				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
@@ -366,6 +371,7 @@
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
 				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
 				0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */,
+				0E8C8F3426E141EF003E53AB /* Persisted.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 			buildPhases = (
 				0E6BF9D326D46BBE008868B7 /* Sources */,
 				0E6BF9D426D46BBE008868B7 /* Frameworks */,
+				0E8C8F3626E148EE003E53AB /* ShellScript */,
 				0E6BF9D526D46BBE008868B7 /* Resources */,
 				0EBDD5FA26E018DC00CF3857 /* Embed App Extensions */,
 			);
@@ -654,6 +661,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E8C8F3626E148EE003E53AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint --lenient\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		0EBB120C25ABB4F0009CF501 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -740,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */,
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
@@ -750,6 +775,7 @@
 				0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */,
 				0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */,
 				0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */,
+				0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */,
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
