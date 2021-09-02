@@ -73,13 +73,11 @@ struct MemeinatorView: View {
             
             Text(settingsViewModel.createFormattedString())
                 .font(.system(size: 25))
-                //.font(.system(size: 30))
-                //.minimumScaleFactor(0.05)
                 .lineLimit(nil)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(.horizontal)
             
-            TextField (
+            TextField(
                     "Enter memes here...",
                     text: $settingsViewModel.textInput)
                 .textFieldStyle(.largeTextField)

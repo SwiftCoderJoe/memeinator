@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import ViewExtractor
 
+// swiftlint:disable all
 
 /**
  Experimental SwiftUI crap

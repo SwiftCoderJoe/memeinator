@@ -44,21 +44,21 @@ class M3KActionHandler: StandardKeyboardActionHandler {
     func customTapAction(for action: KeyboardAction) -> GestureAction? {
         switch action {
         
-            case .character(let char): return {
-                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
-            }
+        case .character(let char): return {
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
+        }
 
-            case .space: return {
-                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
-            }
+        case .space: return {
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
+        }
 
-            case .emoji(let emoji): return {
-                $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
-            }
-        
-            // If some other key is pressed, return nil (breaks if and returns super.action)
-            default:
-                break
+        case .emoji(let emoji): return {
+            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
+        }
+    
+        // If some other key is pressed, return nil (breaks if and returns super.action)
+        default:
+            break
         }
         
         return nil

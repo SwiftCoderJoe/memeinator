@@ -68,7 +68,7 @@ struct TextDisclosureGroup<Content>: View where Content: View {
                             .rotationEffect(.degrees(isExpanded ? 90 : 0))
                             .scaleEffect(isExpanded ? 1.5 : 1, anchor: .center)
                     }
-            }){
+            }) {
                 
                 if isExpanded {
                     content
@@ -94,4 +94,3 @@ struct TextDisclosureGroup_Previews: PreviewProvider {
         }
     }
 }
-

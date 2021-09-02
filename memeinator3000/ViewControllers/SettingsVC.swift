@@ -66,7 +66,9 @@ class SettingsVC: UIViewController {
         spacingStepper.maximumValue = 5
         spacingStepper.minimumValue = 1
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidGenerateMeme), name: .didGenerateMeme, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onDidGenerateMeme),
+                                               name: .didGenerateMeme, object: nil)
         
         // Set settings to match current state
         mainLabel.text = MemeSettings.instance.currentGeneratedMeme

@@ -12,7 +12,6 @@
 		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
 		0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */; };
 		0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* SettingsViewModel.swift */; };
-		0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
 		0E385F2426E019F10077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F2326E019F10077E40F /* KeyboardKit */; };
 		0E385F3926E01A950077E40F /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
@@ -28,26 +27,17 @@
 		0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6421C026DE96A80087E2BB /* AlertToast */; };
 		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
 		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
-		0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
 		0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */; };
 		0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DB26D46BBE008868B7 /* ContentView.swift */; };
 		0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */; };
 		0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */; };
-		0E6BF9EB26D46BD0008868B7 /* memeinator3000_newTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */; };
-		0E6BF9F526D46BD0008868B7 /* memeinator3000_newUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */; };
+		0E6BF9EB26D46BD0008868B7 /* MemeinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9EA26D46BD0008868B7 /* MemeinatorTests.swift */; };
+		0E6BF9F526D46BD0008868B7 /* MemeinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9F426D46BD0008868B7 /* MemeinatorUITests.swift */; };
 		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
 		0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
-		0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
-		0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
-		0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */; };
-		0EB31F782671965300D91ED6 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */; };
-		0EB31F7A2671965600D91ED6 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CC125AB95E600D41488 /* StringExtentions.swift */; };
-		0EB31F7C2671965900D91ED6 /* BetterUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */; };
-		0EB31F7E2671965C00D91ED6 /* UIRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */; };
-		0EB31F802671965F00D91ED6 /* NotificationCenterExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */; };
 		0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EB31F842671971400D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -127,7 +117,6 @@
 		0E1757B226D6B92000C35984 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneDeviceType.swift; sourceTree = "<group>"; };
 		0E1757B826D802F900C35984 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtentions.swift; sourceTree = "<group>"; };
 		0E385F2026E019C90077E40F /* memeinator.new.tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator.new.tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E385F2126E019C90077E40F /* memeinator.new.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator.new.UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E385F3F26E01B660077E40F /* UITextDocumentProxy+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+Custom.swift"; sourceTree = "<group>"; };
@@ -141,21 +130,18 @@
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
 		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedView.swift; sourceTree = "<group>"; };
 		0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinatorApp.swift; sourceTree = "<group>"; };
 		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E6BF9E026D46BCF008868B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newTests.swift; sourceTree = "<group>"; };
-		0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000_newUITests.swift; sourceTree = "<group>"; };
+		0E6BF9EA26D46BD0008868B7 /* MemeinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorTests.swift; sourceTree = "<group>"; };
+		0E6BF9F426D46BD0008868B7 /* MemeinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorUITests.swift; sourceTree = "<group>"; };
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisclosureGroup.swift; sourceTree = "<group>"; };
 		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
-		0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
-		0EB20CC125AB95E600D41488 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
-		0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUISegmentedControl.swift; sourceTree = "<group>"; };
+		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
 		0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD5F626E018DC00CF3857 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,20 +314,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0E6BF9E926D46BD0008868B7 /* memeinator3000.newTests */ = {
+		0E6BF9E926D46BD0008868B7 /* memeinatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E6BF9EA26D46BD0008868B7 /* memeinator3000_newTests.swift */,
+				0E6BF9EA26D46BD0008868B7 /* MemeinatorTests.swift */,
 			);
-			path = memeinator3000.newTests;
+			path = memeinatorTests;
 			sourceTree = "<group>";
 		};
-		0E6BF9F326D46BD0008868B7 /* memeinator3000.newUITests */ = {
+		0E6BF9F326D46BD0008868B7 /* memeinatorUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0E6BF9F426D46BD0008868B7 /* memeinator3000_newUITests.swift */,
+				0E6BF9F426D46BD0008868B7 /* MemeinatorUITests.swift */,
 			);
-			path = memeinator3000.newUITests;
+			path = memeinatorUITests;
 			sourceTree = "<group>";
 		};
 		0E6BF9FF26D5BE79008868B7 /* Views */ = {
@@ -363,11 +349,6 @@
 		0EB20C9925AB8C2800D41488 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				0EB20CA525AB8D4800D41488 /* UIViewControllerExtentions.swift */,
-				0EB20CC125AB95E600D41488 /* StringExtentions.swift */,
-				0EB20CCE25ABAF6700D41488 /* BetterUISegmentedControl.swift */,
-				0E6A03F325B674A300D0B3E6 /* UIRoundedView.swift */,
-				0E3464DE25B9160800BB67E0 /* NotificationCenterExtentions.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
 				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
 				0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */,
@@ -379,12 +360,13 @@
 		D41F69F4210D5D4A006F5F3C = {
 			isa = PBXGroup;
 			children = (
+				0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */,
 				0EB20C9925AB8C2800D41488 /* Lib */,
 				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
 				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
 				0E6BF9D826D46BBE008868B7 /* memeinator.new */,
-				0E6BF9E926D46BD0008868B7 /* memeinator3000.newTests */,
-				0E6BF9F326D46BD0008868B7 /* memeinator3000.newUITests */,
+				0E6BF9E926D46BD0008868B7 /* memeinatorTests */,
+				0E6BF9F326D46BD0008868B7 /* memeinatorUITests */,
 				0E385F3D26E01B660077E40F /* m3Keys */,
 				0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */,
 				0EBDD5F626E018DC00CF3857 /* memeinator.new.app */,
@@ -789,7 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6BF9EB26D46BD0008868B7 /* memeinator3000_newTests.swift in Sources */,
+				0E6BF9EB26D46BD0008868B7 /* MemeinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6BF9F526D46BD0008868B7 /* memeinator3000_newUITests.swift in Sources */,
+				0E6BF9F526D46BD0008868B7 /* MemeinatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,15 +803,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6A03F425B674A400D0B3E6 /* UIRoundedView.swift in Sources */,
 				D41F6A03210D5D4A006F5F3C /* InputVC.swift in Sources */,
-				0EB20CC225AB95E600D41488 /* StringExtentions.swift in Sources */,
-				0E3464DF25B9160800BB67E0 /* NotificationCenterExtentions.swift in Sources */,
 				0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */,
 				0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */,
 				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
-				0EB20CCF25ABAF6700D41488 /* BetterUISegmentedControl.swift in Sources */,
-				0EB20CA625AB8D4800D41488 /* UIViewControllerExtentions.swift in Sources */,
 				0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,11 +815,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EB31F802671965F00D91ED6 /* NotificationCenterExtentions.swift in Sources */,
-				0EB31F782671965300D91ED6 /* UIViewControllerExtentions.swift in Sources */,
-				0EB31F7E2671965C00D91ED6 /* UIRoundedView.swift in Sources */,
-				0EB31F7A2671965600D91ED6 /* StringExtentions.swift in Sources */,
-				0EB31F7C2671965900D91ED6 /* BetterUISegmentedControl.swift in Sources */,
 				D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */,
 				0EB31F842671971400D91ED6 /* randomBool.swift in Sources */,
 			);
@@ -971,8 +943,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -985,7 +958,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.new.app/memeinator3000.new";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator.new.app/memeinator.new";
 			};
 			name = Debug;
 		};
@@ -997,8 +970,9 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1011,7 +985,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.new.app/memeinator3000.new";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator.new.app/memeinator.new";
 			};
 			name = Release;
 		};
@@ -1023,6 +997,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1047,6 +1022,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

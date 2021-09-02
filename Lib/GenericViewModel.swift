@@ -15,7 +15,7 @@ A generic ObservableObject for interacting with the current meme settings.
  It's certainly possible I could rewrite this into a protocol, extension, and structures but that seems to much work for literally no benefit.
 
  */
-class GenericViewModel : ObservableObject {
+class GenericViewModel: ObservableObject {
     
     // MARK: Spacing
     

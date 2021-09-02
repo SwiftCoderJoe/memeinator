@@ -114,7 +114,7 @@ struct OptionsView: View {
                                     Divider()
                                     
                                     // Casing picker
-                                    Picker("Casing Type", selection: $viewModel.casingSetting) { 
+                                    Picker("Casing Type", selection: $viewModel.casingSetting) {
                                         ForEach(Casing.allCases) {
                                             Text($0.rawValue)
                                                 .tag($0)

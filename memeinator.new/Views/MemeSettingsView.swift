@@ -22,7 +22,6 @@ struct MemeSettingsView: View {
                 Toggle("Enabled", isOn: $settingsViewModel.isSpaced)
             }
             
-            
             TextDisclosureGroup("Casing", isExpanded: $disclosureStates.casingOpened) {
                 // Spacing Content
                 Picker("Type", selection: $settingsViewModel.casingSetting) {

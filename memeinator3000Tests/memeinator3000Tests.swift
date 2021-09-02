@@ -47,6 +47,7 @@ class memeinator3000Tests: XCTestCase {
         }
     }
     
+    // swiftlint:disable line_length
     let combinationMemeStatic = "t   D   e       q   U   i   C   k       b   W   o   W   n       f   O   x       j   U   m   P   s       o   V   e   W       T   d   E       W   a   Z   y       d   O   g   .       :   )"
     
     

@@ -1,15 +1,15 @@
 //
-//  memeinator3000_newTests.swift
-//  memeinator3000.newTests
+//  MemeinatorTests.swift
+//  MemeinatorTests
 //
 //  Created by Kids on 8/23/21.
 //  Copyright © 2021 BytleBit. All rights reserved.
 //
 
 import XCTest
-@testable import memeinator3000_new
+@testable import memeinator_new
 
-class memeinator3000_newTests: XCTestCase {
+class MemeinatorTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

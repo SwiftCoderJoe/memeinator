@@ -18,13 +18,13 @@ class InputVC: UIViewController {
     
     // MARK: IBOutlets
     
-    //Banner ad view at the bottom
-    @IBOutlet weak var BannerAd: GADBannerView!
-    //Main memeinator spacing text field
+    // Banner ad view at the bottom
+    @IBOutlet weak var bannerAd: GADBannerView!
+    // Main memeinator spacing text field
     @IBOutlet weak var mainTextField: UITextField!
-    //Label for button, shows either "copy to clipboard", or "copied!"
+    // Label for button, shows either "copy to clipboard", or "copied!"
     @IBOutlet weak var buttonLabel: UILabel!
-    //Button, disabled when the label shows "copied!"
+    // Button, disabled when the label shows "copied!"
     @IBOutlet weak var copyButton: UIButton!
     // Final meme label which should reflect workingClipboard
     @IBOutlet weak var finalMemeLabel: UILabel!
@@ -32,7 +32,7 @@ class InputVC: UIViewController {
     // MARK: IBActions
     
     
-    //Func triggered by memeinator spacing button, calls main processing func
+    // Func triggered by memeinator spacing button, calls main processing func
     @IBAction func spacingButtonCalled(_ sender: Any) {
         spacingButtonFunction()
     }

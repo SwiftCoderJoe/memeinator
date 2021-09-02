@@ -33,10 +33,14 @@ class KeyboardViewController: KeyboardInputViewController {
         keyboardActionHandler = M3KActionHandler(inputViewController: self, settingsViewModel: viewModel)
         
         // Set an input set provider with only English
-        keyboardInputSetProvider = StandardKeyboardInputSetProvider(context: keyboardContext, providers: [EnglishKeyboardInputSetProvider()])
+        keyboardInputSetProvider = StandardKeyboardInputSetProvider(
+            context: keyboardContext,
+            providers: [EnglishKeyboardInputSetProvider()])
         
         // Setup a layout with .emojis instead of .dictation
-        keyboardLayoutProvider = StandardKeyboardLayoutProvider(inputSetProvider: keyboardInputSetProvider, dictationReplacement: .keyboardType(.emojis))
+        keyboardLayoutProvider = StandardKeyboardLayoutProvider(
+            inputSetProvider: keyboardInputSetProvider,
+            dictationReplacement: .keyboardType(.emojis))
 
         
         // Set the keyboard to load the view from SwiftUI
