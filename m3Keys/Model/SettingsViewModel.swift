@@ -25,6 +25,7 @@ class SettingsViewModel: GenericViewModel {
         var workingString = input
         
         workingString = formatCasing(workingString, startsFrom: memeState)
+        memeState.toggle()
         
         workingString = formatSpaces(workingString)
         
