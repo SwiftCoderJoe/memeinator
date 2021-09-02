@@ -129,16 +129,14 @@ struct MemeinatorView: View {
                         }.padding(.vertical)
                         Spacer()
                     }
-                    
-                    Button(action: {
-                        // do something lol
-                    }, label: {
+                    NavigationLink(destination: MemeSettingsView().environmentObject(settingsViewModel)) {
                         Text("Meme Settings")
-                            .font(.title)
+                            .font(.system(size: 30))
                             .frame(maxWidth: .infinity)
-                    })
-                        .roundedBackground(color: .primary)
-                        .padding([.leading, .bottom, .trailing])
+                            .roundedBackground(color: .primary)
+                            .padding([.leading, .bottom, .trailing])
+                    }
+                    
                     
                 }
                 .roundedBackground(color: .purple)

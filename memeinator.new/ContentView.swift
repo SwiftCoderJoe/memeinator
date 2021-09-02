@@ -20,13 +20,16 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            MemeinatorView()
-                .environmentObject(keyboardManager)
-                .environmentObject(settingsViewModel)
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-                .tag(AppPage.home)
+            NavigationView {
+                MemeinatorView()
+                    .environmentObject(keyboardManager)
+                    .environmentObject(settingsViewModel)
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+            .tag(AppPage.home)
             
             KeyboardView()
                 .tabItem {

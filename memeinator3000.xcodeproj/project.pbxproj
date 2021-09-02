@@ -51,6 +51,7 @@
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */; };
 		0EBF10E826E0695C00CFA2BC /* ViewExtractor in Frameworks */ = {isa = PBXBuildFile; productRef = 0EBF10E726E0695C00CFA2BC /* ViewExtractor */; };
+		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
@@ -157,6 +158,7 @@
 		0EBDD5FB26E0192A00CF3857 /* memeinator3000Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD5FC26E0192A00CF3857 /* memeinator3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSegmentPicker.swift; sourceTree = "<group>"; };
+		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
 		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 			children = (
 				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
+				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
 				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
@@ -738,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
+				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
 				0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */,
 				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
