@@ -107,8 +107,17 @@ struct MemeinatorView: View {
                             Text("Casing")
                                 .font(.title3)
                                 .lineLimit(1)
-                            Toggle("", isOn: $dummyToggle)
-                                .labelsHidden()
+                            Picker(selection: $settingsViewModel.casingSetting,
+                                   label: Text(settingsViewModel.casingSetting.rawValue)
+                            ) {
+                                ForEach(Casing.allCases) {
+                                    Text($0.rawValue)
+                                        .font(.system(size: 15))
+                                        .tag($0)
+                                }
+                            }
+                            .frame(width: 65, height: 31)
+                            .roundedBackground(color: .primary)
                         }.padding(.vertical)
                         Spacer()
                         VStack(spacing: 5.0) {
