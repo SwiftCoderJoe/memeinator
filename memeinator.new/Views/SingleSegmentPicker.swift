@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftUI
-import ViewExtractor
+// import ViewExtractor
 
 // swiftlint:disable all
 
