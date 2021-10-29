@@ -45,15 +45,28 @@ class M3KActionHandler: StandardKeyboardActionHandler {
         switch action {
         
         case .character(let char): return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(char))
+            let formattedAction = self.settingsViewModel.createFormattedAction(
+                char,
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+            $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
+            $0?.textDocumentProxy.insertText(formattedAction.formattedString)
         }
 
         case .space: return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(" "))
+            let formattedAction = self.settingsViewModel.createFormattedAction(
+                " ",
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+            $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
+            $0?.textDocumentProxy.insertText(formattedAction.formattedString)
         }
 
         case .emoji(let emoji): return {
-            $0?.textDocumentProxy.insertText(self.settingsViewModel.createFormattedString(emoji.char))
+            let formattedAction = self.settingsViewModel.createFormattedAction(
+                emoji.char,
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+            $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
+            $0?.textDocumentProxy.insertText(formattedAction.formattedString)
+            
         }
     
         // If some other key is pressed, return nil (breaks if and returns super.action)

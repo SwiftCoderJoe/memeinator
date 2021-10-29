@@ -50,15 +50,13 @@ struct TextDisclosureGroup<Content>: View where Content: View {
         var body: some View {
             Section(header:
                 Button(action: {
-                    print(label)
-                    print("Big if true")
                     withAnimation(.easeInOut) {
                         isExpanded.toggle()
                     }
                 }) {
                     HStack {
                         Text(label)
-                            .font(.system(size: 25))
+                            .font(.system(size: 15))
                             .autocapitalization(.words)
                         
                         Spacer()
@@ -66,7 +64,6 @@ struct TextDisclosureGroup<Content>: View where Content: View {
                         Image(systemName: "chevron.right.circle")
                             .imageScale(.large)
                             .rotationEffect(.degrees(isExpanded ? 90 : 0))
-                            .scaleEffect(isExpanded ? 1.5 : 1, anchor: .center)
                     }
             }) {
                 

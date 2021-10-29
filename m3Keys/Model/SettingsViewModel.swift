@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeyboardKit
 
 /**
  
@@ -19,16 +20,46 @@ class SettingsViewModel: GenericViewModel {
     
     private var memeState = false
     
-    // MARK: Overrides
+    // MARK: Methods
     
-    func createFormattedString(_ input: String) -> String {
-        var workingString = input
+    /** Creates a formatted action based on the current user input and context. */
+    func createFormattedAction(_ input: String, contextBefore: String) -> FormattedAction {
+        var workingString = FormattedAction(input: input)
         
-        workingString = formatCasing(workingString, startsFrom: memeState)
+        workingString += formatCasing(from: workingString.formattedString, startingFrom: memeState)
         memeState.toggle()
         
-        workingString = formatSpaces(workingString)
+        workingString += formatSpaces(from: workingString.formattedString)
+        
+        // Furryspeak not yet implemented.
         
         return workingString
     }
+    
+    /** Keyboard action containing instructions on how to create a memeinated version of the original string. */
+    struct FormattedAction {
+        init(input: String) {
+            self.deletes = 0
+            self.formattedString = input
+        }
+        
+        init(deletes: Int, formattedString: String) {
+            self.deletes = deletes
+            self.formattedString = formattedString
+        }
+        
+        var deletes: Int
+        var formattedString: String
+        
+        static func += (lhs: inout Self, rhs: Self) {
+            let deletes = lhs.deletes + rhs.deletes
+            let formattedString = rhs.formattedString
+            lhs = FormattedAction(deletes: deletes, formattedString: formattedString)
+        }
+        
+        static func += (lhs: inout Self, rhs: String) {
+            lhs = FormattedAction(deletes: lhs.deletes, formattedString: rhs)
+        }
+    }
+    
 }

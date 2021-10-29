@@ -9,11 +9,7 @@
 import Foundation
 
 /**
- 
-A generic ObservableObject for interacting with the current meme settings.
- 
- It's certainly possible I could rewrite this into a protocol, extension, and structures but that seems to much work for literally no benefit.
-
+ A generic ObservableObject for interacting with the current meme settings.
  */
 class GenericViewModel: ObservableObject {
     
@@ -31,14 +27,14 @@ class GenericViewModel: ObservableObject {
     /** Integer value showing the step of the spacing stepper UI element. */
     let spacesStep = 1
     
-    func formatSpaces(_ string: String) -> String {
+    func formatSpaces(from input: String) -> String {
         guard isSpaced else {
-            return string
+            return input
         }
         
         var workingString = ""
         
-        for character in string {
+        for character in input {
             workingString.append(character)
             workingString.append(String(repeating: " ", count: numberOfSpaces))
         }
@@ -49,23 +45,73 @@ class GenericViewModel: ObservableObject {
     // MARK: Casing
     
     /** Published value expressing the current selected casing setting. */
-    @Published var casingSetting = Casing.none
+    @Published var casingSetting: Casing = .none {
+        didSet {
+            if casingSetting != .none {
+                lastEnabledCasingSetting = casingSetting
+            }
+        }
+    }
     
-    func formatCasing(_ string: String, startsFrom state: Bool = false) -> String {
+    /** Computed variable expressing if casing is currently enabled. */
+    var casingOn: Bool {
+        get {
+            return casingSetting != .none
+        }
+        
+        set(value) {
+            if value {
+                casingSetting = lastEnabledCasingSetting
+            } else {
+                lastEnabledCasingSetting = casingSetting
+                casingSetting = .none
+            }
+            
+        }
+    }
+    
+    /**
+     If casing is enabled, memeinator will use this casing setting.
+     
+     This value CANNOT be .none
+     */
+    var enabledCasingSetting: Casing {
+        get {
+            if casingSetting == .none {
+                return lastEnabledCasingSetting
+            } else {
+                return casingSetting
+            }
+        }
+        
+        set(value) {
+            if casingOn {
+                casingSetting = value
+            } else {
+                lastEnabledCasingSetting = value
+            }
+        }
+        
+    }
+    
+    /** Private value which stores the last used casing setting. */
+    private var lastEnabledCasingSetting: Casing = .meme
+    
+    func formatCasing(from input: String, startingFrom state: Bool = false) -> String {
         var workingString = ""
         var memeState = state
         
         switch casingSetting {
         case .none:
-            workingString = string
+            workingString = input
         case .meme:
-            for character in string {
+            for character in input {
                 workingString.append(memeState ? character.uppercased() :
                                                  character.lowercased())
                 memeState.toggle()
             }
         case .random:
-            for character in string {
+            for character in input {
                 workingString.append(randomBool() ? character.uppercased() :
                                                     character.lowercased())
             }
@@ -73,6 +119,45 @@ class GenericViewModel: ObservableObject {
         
         return workingString
     }
+    
+    // MARK: Furryspeak
+    
+    @Published var furryspeakEnabled = false
+    
+    func formatFurryspeak(from input: String) -> String {
+        guard furryspeakEnabled else {
+            return input
+        }
+        
+        
+        var workingString = ""
+        var prevChar = ""
+        var lastTwo = ""
+
+        for char in input {
+            lastTwo = prevChar + String(char)
+            
+            if char == "L" || char == "R" {         // L and R to W
+                workingString.append("W")
+            } else if char == "l" || char == "r" {
+                workingString.append("w")
+            } else if lastTwo == "th" {
+                workingString = String(workingString.dropLast())// TH to D
+                workingString.append("d")
+            } else if lastTwo == "Th" || lastTwo == "TH" {
+                workingString = String(workingString.dropLast())
+                workingString.append("D")
+            } else {                                // NONE
+                workingString.append(char)
+            }
+            
+            prevChar = String(char)
+        }
+        
+        return workingString
+
+    }
+    
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {

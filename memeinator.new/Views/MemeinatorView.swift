@@ -15,7 +15,6 @@ struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
     @EnvironmentObject var settingsViewModel: SettingsViewModel
 
-    @State var dummyToggle: Bool = false
     @State var toastShowing: Bool = false
     
     var body: some View {
@@ -122,7 +121,7 @@ struct MemeinatorView: View {
                             Text("Furryspeak")
                                 .font(.title3)
                                 .lineLimit(1)
-                            Toggle("", isOn: $dummyToggle)
+                            Toggle("", isOn: $settingsViewModel.furryspeakEnabled)
                                 .labelsHidden()
                         }.padding(.vertical)
                         Spacer()

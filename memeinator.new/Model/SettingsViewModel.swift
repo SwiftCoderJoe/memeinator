@@ -20,9 +20,11 @@ class SettingsViewModel: GenericViewModel {
     func createFormattedString() -> String {
         var workingString = textInput
         
-        workingString = formatCasing(workingString)
+        workingString = formatCasing(from: workingString)
         
-        workingString = formatSpaces(workingString)
+        workingString = formatSpaces(from: workingString)
+        
+        workingString = formatFurryspeak(from: workingString)
         
         return workingString
     }

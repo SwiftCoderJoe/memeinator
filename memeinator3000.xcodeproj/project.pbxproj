@@ -140,7 +140,6 @@
 		0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisclosureGroup.swift; sourceTree = "<group>"; };
 		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		0E8C8F3826E15BA6003E53AB /* memeinator-new-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "memeinator-new-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
 		0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD5F626E018DC00CF3857 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,7 +292,6 @@
 		0E6BF9D826D46BBE008868B7 /* memeinator.new */ = {
 			isa = PBXGroup;
 			children = (
-				0E8C8F3826E15BA6003E53AB /* memeinator-new-Info.plist */,
 				0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */,
 				0E6BF9DB26D46BBE008868B7 /* ContentView.swift */,
 				0E6BF9FF26D5BE79008868B7 /* Views */,
@@ -408,7 +406,7 @@
 			buildPhases = (
 				0E6BF9D326D46BBE008868B7 /* Sources */,
 				0E6BF9D426D46BBE008868B7 /* Frameworks */,
-				0E8C8F3626E148EE003E53AB /* ShellScript */,
+				0E8C8F3626E148EE003E53AB /* Run Script */,
 				0E6BF9D526D46BBE008868B7 /* Resources */,
 				0EBDD5FA26E018DC00CF3857 /* Embed App Extensions */,
 			);
@@ -637,7 +635,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E8C8F3626E148EE003E53AB /* ShellScript */ = {
+		0E8C8F3626E148EE003E53AB /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -646,6 +644,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -879,8 +878,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,8 +913,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
