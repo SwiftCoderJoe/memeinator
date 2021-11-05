@@ -26,6 +26,7 @@ struct OptionsView: View {
     
     @State var spacingOpened: Bool = false
     @State var casingOpened: Bool = false
+    @State var furryspeakOpened: Bool = false
     
     var body: some View {
         VStack {
@@ -125,6 +126,35 @@ struct OptionsView: View {
                         }
                         .padding(.horizontal)
                     }
+                    
+                    // Furryspeak
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.gray)
+                        
+                        HStack {
+                            Button(action: {
+                                furryspeakOpened.toggle()
+                            }) {
+                                Text("Furryspeak")
+                                    .foregroundColor(.white)
+                                    .font(.headline)
+                            }
+                            
+                            if furryspeakOpened {
+                                Divider()
+                                
+                                Text("Enabled:")
+                                    .font(.subheadline)
+                                
+                                // Enabled Toggle
+                                Toggle("Spacing Enabled", isOn: $viewModel.furryspeakEnabled)
+                                    .labelsHidden()
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    
                 }.padding(.horizontal)
             }.frame(height: 40)
         }

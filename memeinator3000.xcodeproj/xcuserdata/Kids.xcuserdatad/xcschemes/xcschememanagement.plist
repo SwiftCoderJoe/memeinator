@@ -4,15 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>m3Keys.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>memeinator but its a keyboard.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>memeinator.new.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>4</integer>
 		</dict>
 		<key>memeinator3000.new.xcscheme_^#shared#^_</key>
 		<dict>
@@ -21,6 +28,8 @@
 		</dict>
 		<key>memeinator3000.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -28,6 +37,29 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0E6BF9D626D46BBE008868B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E6BF9E526D46BD0008868B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E6BF9EF26D46BD0008868B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0EBDD5ED26E018DC00CF3857</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

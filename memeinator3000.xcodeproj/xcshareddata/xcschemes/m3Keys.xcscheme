@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1320"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -29,9 +29,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D41F69FC210D5D4A006F5F3C"
-               BuildableName = "memeinator3000.app"
-               BlueprintName = "memeinator3000"
+               BlueprintIdentifier = "0E6BF9D626D46BBE008868B7"
+               BuildableName = "memeinator.new.app"
+               BlueprintName = "memeinator.new"
                ReferencedContainer = "container:memeinator3000.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,15 +42,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EBDD5ED26E018DC00CF3857"
-            BuildableName = "m3Keys.appex"
-            BlueprintName = "m3Keys"
-            ReferencedContainer = "container:memeinator3000.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
       </Testables>
    </TestAction>
@@ -66,20 +57,16 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.apple.MobileSMS"
-         RemotePath = "/Applications/MobileSMS.app">
-      </RemoteRunnable>
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D41F69FC210D5D4A006F5F3C"
-            BuildableName = "memeinator3000.app"
-            BlueprintName = "memeinator3000"
+            BlueprintIdentifier = "0E6BF9D626D46BBE008868B7"
+            BuildableName = "memeinator.new.app"
+            BlueprintName = "memeinator.new"
             ReferencedContainer = "container:memeinator3000.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -92,9 +79,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D41F69FC210D5D4A006F5F3C"
-            BuildableName = "memeinator3000.app"
-            BlueprintName = "memeinator3000"
+            BlueprintIdentifier = "0E6BF9D626D46BBE008868B7"
+            BuildableName = "memeinator.new.app"
+            BlueprintName = "memeinator.new"
             ReferencedContainer = "container:memeinator3000.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

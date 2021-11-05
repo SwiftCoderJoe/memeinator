@@ -12,3 +12,11 @@ import Foundation
 func randomBool() -> Bool {
     return arc4random_uniform(2) == 0
 }
+
+extension Array where Element == Bool {
+    mutating func randomize() {
+        for idx in 0..<self.count {
+            self[idx] = randomBool()
+        }
+    }
+}

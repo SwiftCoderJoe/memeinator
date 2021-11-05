@@ -12,7 +12,6 @@
 		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
 		0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */; };
 		0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* SettingsViewModel.swift */; };
-		0E385F2426E019F10077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F2326E019F10077E40F /* KeyboardKit */; };
 		0E385F3926E01A950077E40F /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0E385F4A26E01B660077E40F /* UITextDocumentProxy+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E385F3F26E01B660077E40F /* UITextDocumentProxy+Custom.swift */; };
@@ -25,8 +24,6 @@
 		0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F5326E01BEF0077E40F /* KeyboardKit */; };
 		0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */; };
 		0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6421C026DE96A80087E2BB /* AlertToast */; };
-		0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */; };
-		0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */; };
 		0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */; };
 		0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DB26D46BBE008868B7 /* ContentView.swift */; };
 		0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */; };
@@ -38,20 +35,13 @@
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
 		0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
-		0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
-		0EB31F842671971400D91ED6 /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
+		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
-		0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDDA5224663052004553F9 /* GoogleService-Info.plist */; };
-		D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */; };
-		D41F6A03210D5D4A006F5F3C /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A02210D5D4A006F5F3C /* InputVC.swift */; };
-		D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A04210D5D4A006F5F3C /* Main.storyboard */; };
-		D41F6A0B210D5D4F006F5F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */; };
-		D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,13 +66,6 @@
 			remoteGlobalIDString = 0EBDD5ED26E018DC00CF3857;
 			remoteInfo = m3Keys;
 		};
-		D41F6A12210D5D4F006F5F3C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41F69F5210D5D4A006F5F3C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D41F69FC210D5D4A006F5F3C;
-			remoteInfo = memeinator3000;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,16 +76,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D48AFB25210E1EE200728CD3 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,8 +99,6 @@
 		0E385F4826E01B660077E40F /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0E385F4926E01B660077E40F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
-		0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettings.swift; sourceTree = "<group>"; };
-		0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinatorApp.swift; sourceTree = "<group>"; };
 		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,20 +114,11 @@
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
 		0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD5F626E018DC00CF3857 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EBDD5FB26E0192A00CF3857 /* memeinator3000Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memeinator3000Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EBDD5FC26E0192A00CF3857 /* memeinator3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSegmentPicker.swift; sourceTree = "<group>"; };
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
+		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
-		0EEDDA5224663052004553F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D41F6A02210D5D4A006F5F3C /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
-		D41F6A05210D5D4A006F5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D41F6A0A210D5D4F006F5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D41F6A0C210D5D4F006F5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinator3000Tests.swift; sourceTree = "<group>"; };
-		D41F6A17210D5D4F006F5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,21 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D41F69FA210D5D4A006F5F3C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E385F2426E019F10077E40F /* KeyboardKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D41F6A0E210D5D4F006F5F3C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,23 +219,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0E6A03E125B6045900D0B3E6 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D41F6A02210D5D4A006F5F3C /* InputVC.swift */,
-				0E6A03EE25B6508300D0B3E6 /* SettingsVC.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		0E6A03E225B6049300D0B3E6 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				0E6A03E325B604AA00D0B3E6 /* MemeSettings.swift */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
 		0E6BF9D826D46BBE008868B7 /* memeinator.new */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +268,7 @@
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */,
+				0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,43 +289,16 @@
 			children = (
 				0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */,
 				0EB20C9925AB8C2800D41488 /* Lib */,
-				D41F69FF210D5D4A006F5F3C /* memeinator3000 */,
-				D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */,
 				0E6BF9D826D46BBE008868B7 /* memeinator.new */,
 				0E6BF9E926D46BD0008868B7 /* memeinatorTests */,
 				0E6BF9F326D46BD0008868B7 /* memeinatorUITests */,
 				0E385F3D26E01B660077E40F /* m3Keys */,
 				0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */,
 				0EBDD5F626E018DC00CF3857 /* memeinator.new.app */,
-				0EBDD5FB26E0192A00CF3857 /* memeinator3000Tests.xctest */,
-				0EBDD5FC26E0192A00CF3857 /* memeinator3000.app */,
 				0E385F2026E019C90077E40F /* memeinator.new.tests.xctest */,
 				0E385F2126E019C90077E40F /* memeinator.new.UITests.xctest */,
 				0E385F5226E01BEF0077E40F /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		D41F69FF210D5D4A006F5F3C /* memeinator3000 */ = {
-			isa = PBXGroup;
-			children = (
-				0E6A03E225B6049300D0B3E6 /* Logic */,
-				0E6A03E125B6045900D0B3E6 /* ViewControllers */,
-				D41F6A00210D5D4A006F5F3C /* AppDelegate.swift */,
-				D41F6A04210D5D4A006F5F3C /* Main.storyboard */,
-				D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */,
-				D41F6A0C210D5D4F006F5F3C /* Info.plist */,
-				0EEDDA5224663052004553F9 /* GoogleService-Info.plist */,
-			);
-			path = memeinator3000;
-			sourceTree = "<group>";
-		};
-		D41F6A14210D5D4F006F5F3C /* memeinator3000Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D41F6A15210D5D4F006F5F3C /* memeinator3000Tests.swift */,
-				D41F6A17210D5D4F006F5F3C /* Info.plist */,
-			);
-			path = memeinator3000Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,49 +383,6 @@
 			productReference = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		D41F69FC210D5D4A006F5F3C /* memeinator3000 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D41F6A1A210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000" */;
-			buildPhases = (
-				A9B56F36E21659105D020F26 /* [CP] Check Pods Manifest.lock */,
-				D41F69F9210D5D4A006F5F3C /* Sources */,
-				D41F69FA210D5D4A006F5F3C /* Frameworks */,
-				D41F69FB210D5D4A006F5F3C /* Resources */,
-				D48AFB25210E1EE200728CD3 /* Embed App Extensions */,
-				0EBB120C25ABB4F0009CF501 /* ShellScript */,
-				ED381FC63923D53921818B47 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = memeinator3000;
-			packageProductDependencies = (
-				0E385F2326E019F10077E40F /* KeyboardKit */,
-			);
-			productName = memeinator3000;
-			productReference = 0EBDD5FC26E0192A00CF3857 /* memeinator3000.app */;
-			productType = "com.apple.product-type.application";
-		};
-		D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D41F6A1D210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000Tests" */;
-			buildPhases = (
-				4C765B76788C576EC2CEE2C2 /* [CP] Check Pods Manifest.lock */,
-				D41F6A0D210D5D4F006F5F3C /* Sources */,
-				D41F6A0E210D5D4F006F5F3C /* Frameworks */,
-				D41F6A0F210D5D4F006F5F3C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D41F6A13210D5D4F006F5F3C /* PBXTargetDependency */,
-			);
-			name = memeinator3000Tests;
-			productName = memeinator3000Tests;
-			productReference = 0EBDD5FB26E0192A00CF3857 /* memeinator3000Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -546,15 +407,6 @@
 					0EBDD5ED26E018DC00CF3857 = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					D41F69FC210D5D4A006F5F3C = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1150;
-					};
-					D41F6A10210D5D4F006F5F3C = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1150;
-						TestTargetID = D41F69FC210D5D4A006F5F3C;
-					};
 				};
 			};
 			buildConfigurationList = D41F69F8210D5D4A006F5F3C /* Build configuration list for PBXProject "memeinator3000" */;
@@ -574,8 +426,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D41F69FC210D5D4A006F5F3C /* memeinator3000 */,
-				D41F6A10210D5D4F006F5F3C /* memeinator3000Tests */,
 				0E6BF9D626D46BBE008868B7 /* memeinator.new */,
 				0E6BF9E526D46BD0008868B7 /* memeinator.new.tests */,
 				0E6BF9EF26D46BD0008868B7 /* memeinator.new.UITests */,
@@ -615,23 +465,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D41F69FB210D5D4A006F5F3C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D41F6A0B210D5D4F006F5F3C /* LaunchScreen.storyboard in Resources */,
-				0EEDDA5324663052004553F9 /* GoogleService-Info.plist in Resources */,
-				D41F6A06210D5D4A006F5F3C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D41F6A0F210D5D4F006F5F3C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -653,85 +486,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint --lenient\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		0EBB120C25ABB4F0009CF501 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		4C765B76788C576EC2CEE2C2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-memeinator3000Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9B56F36E21659105D020F26 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-memeinator3000-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED381FC63923D53921818B47 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-memeinator3000/Pods-memeinator3000-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -750,6 +504,7 @@
 				0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */,
 				0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */,
 				0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */,
+				0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */,
 				0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */,
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
@@ -792,27 +547,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D41F69F9210D5D4A006F5F3C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D41F6A03210D5D4A006F5F3C /* InputVC.swift in Sources */,
-				0E6A03E425B604AA00D0B3E6 /* MemeSettings.swift in Sources */,
-				0EB31F822671966D00D91ED6 /* randomBool.swift in Sources */,
-				D41F6A01210D5D4A006F5F3C /* AppDelegate.swift in Sources */,
-				0E6A03EF25B6508300D0B3E6 /* SettingsVC.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D41F6A0D210D5D4F006F5F3C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D41F6A16210D5D4F006F5F3C /* memeinator3000Tests.swift in Sources */,
-				0EB31F842671971400D91ED6 /* randomBool.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -831,31 +565,7 @@
 			target = 0EBDD5ED26E018DC00CF3857 /* m3Keys */;
 			targetProxy = 0EBDD5F326E018DC00CF3857 /* PBXContainerItemProxy */;
 		};
-		D41F6A13210D5D4F006F5F3C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D41F69FC210D5D4A006F5F3C /* memeinator3000 */;
-			targetProxy = D41F6A12210D5D4F006F5F3C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D41F6A04210D5D4A006F5F3C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D41F6A05210D5D4A006F5F3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D41F6A09210D5D4F006F5F3C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D41F6A0A210D5D4F006F5F3C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0E6BF9F626D46BD0008868B7 /* Debug */ = {
@@ -1206,92 +916,6 @@
 			};
 			name = Release;
 		};
-		D41F6A1B210D5D4F006F5F3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5008;
-				DEVELOPMENT_TEAM = CSYD442PMH;
-				INFOPLIST_FILE = memeinator3000/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.4.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		D41F6A1C210D5D4F006F5F3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5008;
-				DEVELOPMENT_TEAM = CSYD442PMH;
-				INFOPLIST_FILE = memeinator3000/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.4.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator3000;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		D41F6A1E210D5D4F006F5F3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CSYD442PMH;
-				INFOPLIST_FILE = memeinator3000Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.app/memeinator3000";
-			};
-			name = Debug;
-		};
-		D41F6A1F210D5D4F006F5F3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CSYD442PMH;
-				INFOPLIST_FILE = memeinator3000Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bb.ora.killyourself.memeinator3000Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/memeinator3000.app/memeinator3000";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1340,24 +964,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D41F6A1A210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D41F6A1B210D5D4F006F5F3C /* Debug */,
-				D41F6A1C210D5D4F006F5F3C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D41F6A1D210D5D4F006F5F3C /* Build configuration list for PBXNativeTarget "memeinator3000Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D41F6A1E210D5D4F006F5F3C /* Debug */,
-				D41F6A1F210D5D4F006F5F3C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1380,11 +986,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0E385F2326E019F10077E40F /* KeyboardKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */;
-			productName = KeyboardKit;
-		};
 		0E385F5326E01BEF0077E40F /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */;

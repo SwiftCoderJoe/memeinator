@@ -76,6 +76,72 @@ struct TextDisclosureGroup<Content>: View where Content: View {
     }
 }
 
+struct ButtonDisclosureGroup<Content>: View where Content: View {
+    @State private var isExpandedState = false
+    var isExpanded: Binding<Bool>?
+    let label: String
+    let content: Content
+    
+    init(_ label: String, isExpanded: Binding<Bool>, @ViewBuilder content: () -> Content) {
+        self.isExpanded = isExpanded
+        self.label = label
+        self.content = content()
+    }
+    
+    init(_ label: String, @ViewBuilder content: () -> Content) {
+        self.isExpanded = nil
+        self.content = content()
+        self.label = label
+    }
+    
+    
+    // Return the wrapper
+    var body: some View {
+        _TextDisclosureGroup(isExpanded: isExpanded ?? $isExpandedState, label: label) {
+            content
+        }
+    }
+    
+    // MARK: Wrapper
+    private struct _TextDisclosureGroup<Content>: View where Content: View {
+        @Binding var isExpanded: Bool
+        let label: String
+        let content: Content
+        
+        init(isExpanded: Binding<Bool>, label: String, @ViewBuilder content: () -> Content) {
+            self._isExpanded = isExpanded
+            self.label = label
+            self.content = content()
+        }
+        
+        // Actual implementation
+        var body: some View {
+            Section(header:
+                Button(action: {
+                    withAnimation(.easeInOut) {
+                        isExpanded.toggle()
+                    }
+                }) {
+                    HStack {
+                        Text(label)
+                            .font(.system(size: 15))
+                            .autocapitalization(.words)
+                        
+                        Spacer()
+                        
+                        Text(isExpanded ? "Enabled" : "Disabled")
+                    }
+            }) {
+                
+                if isExpanded {
+                    content
+                }
+                
+            }
+        }
+    }
+}
+
 
 
 struct TextDisclosureGroup_Previews: PreviewProvider {
