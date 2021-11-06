@@ -42,7 +42,7 @@ struct CopyPasteRegen: View {
             Button(action: {
                 settingsViewModel.randomizeState()
             }, label: {
-                Text("Random")
+                Text("Refresh")
                     .font(.title3)
                     .padding()
             })

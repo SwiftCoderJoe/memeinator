@@ -12,6 +12,7 @@ struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
+    
     var body: some View {
         VStack(spacing: 0.0) {
             if !keyboardManager.keyboardIsShown {
@@ -33,7 +34,7 @@ struct MemeinatorView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(.horizontal)
             
-            TextField(
+            DeletableTextField(
                     "Enter memes here...",
                     text: $settingsViewModel.textInput)
                 .textFieldStyle(.largeTextField)
