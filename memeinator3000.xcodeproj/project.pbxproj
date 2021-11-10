@@ -22,6 +22,7 @@
 		0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E385F4726E01B660077E40F /* OptionsView.swift */; };
 		0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E385F4826E01B660077E40F /* KeyboardView.swift */; };
 		0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F5326E01BEF0077E40F /* KeyboardKit */; };
+		0E3CF7D4273C3A7900650BB5 /* ProPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */; };
 		0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */; };
 		0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6421C026DE96A80087E2BB /* AlertToast */; };
 		0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */; };
@@ -33,13 +34,12 @@
 		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
-		0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */; };
+		0E8C8F3326E12D58003E53AB /* ButtonDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
-		0EDBB7EA27361A480015457C /* DeletableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E927361A480015457C /* DeletableTextField.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
@@ -99,6 +99,7 @@
 		0E385F4726E01B660077E40F /* OptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		0E385F4826E01B660077E40F /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0E385F4926E01B660077E40F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPreviewSheet.swift; sourceTree = "<group>"; };
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinatorApp.swift; sourceTree = "<group>"; };
 		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,7 +110,7 @@
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisclosureGroup.swift; sourceTree = "<group>"; };
+		0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDisclosureGroup.swift; sourceTree = "<group>"; };
 		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
@@ -118,7 +119,6 @@
 		0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSegmentPicker.swift; sourceTree = "<group>"; };
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
-		0EDBB7E927361A480015457C /* DeletableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableTextField.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,14 +264,14 @@
 				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
 				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
-				0E8C8F3226E12D58003E53AB /* TextDisclosureGroup.swift */,
+				0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */,
 				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */,
 				0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */,
-				0EDBB7E927361A480015457C /* DeletableTextField.swift */,
+				0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8C8F3326E12D58003E53AB /* TextDisclosureGroup.swift in Sources */,
+				0E8C8F3326E12D58003E53AB /* ButtonDisclosureGroup.swift in Sources */,
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
@@ -504,9 +504,9 @@
 				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
 				0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */,
 				0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */,
+				0E3CF7D4273C3A7900650BB5 /* ProPreviewSheet.swift in Sources */,
 				0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */,
 				0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */,
-				0EDBB7EA27361A480015457C /* DeletableTextField.swift in Sources */,
 				0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */,
 				0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */,
 				0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */,
@@ -766,7 +766,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -793,7 +793,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";

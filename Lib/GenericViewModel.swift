@@ -124,6 +124,9 @@ class GenericViewModel: ObservableObject {
     
     @Published var furryspeakEnabled = false
     
+    @Published var stutterEnabled = false
+    
+    // Not in use by m3keys, remember to update m3keys please
     func formatFurryspeak(from input: String) -> String {
         guard furryspeakEnabled else {
             return input

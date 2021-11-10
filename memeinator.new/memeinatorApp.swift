@@ -10,6 +10,10 @@ import SwiftUI
 
 @main
 struct MemeinatorApp: App {
+    init() {
+        UITextField.appearance().clearButtonMode = .whileEditing
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

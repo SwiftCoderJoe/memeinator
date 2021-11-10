@@ -15,7 +15,9 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
-    private var randomCasingState = [randomBool()]
+    private var casingState = [randomBool()]
+    
+    private var furryspeakState = [randomBool(in: 15)]
     
     // MARK: Methods
     
@@ -33,26 +35,62 @@ class SettingsViewModel: GenericViewModel {
     
     func randomizeState() {
         self.objectWillChange.send()
-        randomCasingState.randomize()
+        casingState.randomize()
+        furryspeakState.randomize(in: 15)
     }
     
+    // Save casing state
     override func formatCasing(from input: String, startingFrom state: Bool = false) -> String {
         switch casingSetting {
         case .random:
             var workingString = ""
-            for idx in 0..<input.count {
-                if idx < randomCasingState.count {
-                    randomCasingState.append(randomBool())
+            for (idx, character) in input.enumerated() {
+                if idx >= casingState.count {
+                    casingState.append(randomBool())
                 }
                 
-                let character = input[input.index(input.startIndex, offsetBy: idx)]
-                
-                workingString.append(randomCasingState[idx] ? character.uppercased() :
-                                                            character.lowercased())
+                workingString.append(casingState[idx] ? character.uppercased() :
+                                                        character.lowercased())
             }
             return workingString
         default:
             return super.formatCasing(from: input)
         }
+    }
+    
+    // Save furryspeak stutter state
+    override func formatFurryspeak(from input: String) -> String {
+        guard stutterEnabled && furryspeakEnabled else {
+            return super.formatFurryspeak(from: input)
+        }
+        
+        let words = input.split(separator: " ", omittingEmptySubsequences: false)
+        var workingString = ""
+        
+        for (idx, word) in words.enumerated() {
+            var word = String(word)
+            
+            // Don't add a space to the last word
+            if idx + 1 < words.count {
+                 word += " "
+            }
+            
+            // Add more state if needed
+            if idx >= furryspeakState.count {
+                furryspeakState.append(randomBool(in: 15))
+            }
+            
+            // If the word is just a space, add it without stuttering
+            if word == " " {
+                workingString.append(word)
+                continue
+            }
+            
+            workingString.append(furryspeakState[idx] ?
+                                 String(word.first!) + "-" + word :
+                                 word)
+        }
+        
+        return super.formatFurryspeak(from: workingString)
     }
 }

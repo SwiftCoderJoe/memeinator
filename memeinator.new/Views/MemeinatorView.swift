@@ -34,7 +34,7 @@ struct MemeinatorView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(.horizontal)
             
-            DeletableTextField(
+            TextField(
                     "Enter memes here...",
                     text: $settingsViewModel.textInput)
                 .textFieldStyle(.largeTextField)

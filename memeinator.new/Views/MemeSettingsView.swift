@@ -12,6 +12,10 @@ struct MemeSettingsView: View {
     
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
+    @State var dummySwitch: Bool = false
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack(spacing: 5.0) {
             
@@ -21,7 +25,8 @@ struct MemeSettingsView: View {
                 .frame(height: 100)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .roundedBackground(color: Color(uiColor: .systemBackground))
+                // .roundedBackground(color: Color(uiColor: colorScheme == .dark ? .systemBackground : .systemGroupedBackground))
+                .roundedBackground(color: Color(uiColor: .systemGroupedBackground))
                 .padding(.horizontal)
             
             
@@ -30,14 +35,14 @@ struct MemeSettingsView: View {
             
             Form {
                 
-                ButtonDisclosureGroup("Spaces", isExpanded: $settingsViewModel.isSpaced) {
+                Feature("Spaces", isExpanded: $settingsViewModel.isSpaced) {
                     Stepper("Amount: \(settingsViewModel.numberOfSpaces)",
                             value: $settingsViewModel.numberOfSpaces,
                             in: settingsViewModel.spacesRange,
                             step: settingsViewModel.spacesStep)
                 }
                 
-                ButtonDisclosureGroup("Casing", isExpanded: $settingsViewModel.casingOn) {
+                Feature("Casing", isExpanded: $settingsViewModel.casingOn) {
                     HStack(spacing: 50) {
                         Text("Casing Type")
                         
@@ -51,20 +56,25 @@ struct MemeSettingsView: View {
                     }
                 }
                 
-                ButtonDisclosureGroup("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {
-                    Toggle("Stutter", isOn: $settingsViewModel.furryspeakEnabled)
+                Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {
+                    Toggle("Stutter", isOn: $settingsViewModel.stutterEnabled)
                 }
+                
+                ProFeature("Emojifier", isExpanded: $dummySwitch) {
+                    
+                }
+                
             }
+            
         }
-        .background(Color(uiColor: .secondarySystemBackground))
+        .background(Color(uiColor: colorScheme == .dark ? .secondarySystemBackground : .systemBackground))
         .navigationTitle("Meme Settings")
     }
 }
 
 struct MemeSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            MemeSettingsView()
-        }
+        MemeSettingsView()
+            .environmentObject(SettingsViewModel())
     }
 }
