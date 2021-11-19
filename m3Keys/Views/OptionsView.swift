@@ -10,7 +10,7 @@ import SwiftUI
 import KeyboardKit
 
 /**
- A view which presents meme controls to the user in a horizontal scrolling view 50px tall. A spacer is provided at the bottom to allow for bottom padding.
+ A view which presents meme controls to the user in a horizontal scrolling view 45px tall.
  */
 struct OptionsView: View {
     public init(
@@ -24,140 +24,116 @@ struct OptionsView: View {
     @EnvironmentObject var viewModel: SettingsViewModel
     @EnvironmentObject var toastContext: KeyboardToastContext
     
-    @State var spacingOpened: Bool = false
-    @State var casingOpened: Bool = false
-    @State var furryspeakOpened: Bool = false
-    
     var body: some View {
-        VStack {
-            Spacer()
-            ScrollView(.horizontal) {
+        ScrollView(.horizontal) {
+            HStack {
+                
+                // Paste
                 HStack {
-                    
-                    // Paste
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.gray)
-                        
-                        HStack {
-                            Button(action: {
-                                guard actionHandler.tryPaste() else {
-                                    return toastContext.present(Text("Full Access is required.")
-                                                            .font(.headline)
-                                                            .foregroundColor(.gray))
-                                }
-                            }) {
-                                Text("Paste")
-                                    .foregroundColor(.white)
-                                    .font(.headline)
+                    VStack {
+                        Button(action: {
+                            guard actionHandler.tryPaste() else {
+                                return toastContext.present(Text("Full Access is required.")
+                                                        .font(.headline)
+                                                        .foregroundColor(.gray))
                             }
+                        }) {
+                            Text("Paste")
+                                .foregroundColor(.white)
+                                .font(.headline)
                         }
-                        .padding(.horizontal)
-                        
                     }
                     
-                    // Spacing
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.gray)
-                        
-                        HStack {
-                            Button(action: {
-                                spacingOpened.toggle()
-                            }) {
-                                Text("Spacing")
-                                    .foregroundColor(.white)
-                                    .font(.headline)
-                            }
-                            
-                            if spacingOpened {
-                                Divider()
-                                
-                                Text("Enabled:")
-                                    .font(.subheadline)
-                                
-                                // Enabled Toggle
-                                Toggle("Spacing Enabled", isOn: $viewModel.isSpaced)
-                                    .labelsHidden()
-                                
-                                Divider()
-                                
-                                // Number of spaces change
-                                Stepper(value: $viewModel.numberOfSpaces,
-                                        in: viewModel.spacesRange,
-                                        step: viewModel.spacesStep) {
+                }
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal)
+                .roundedBackground(color: .gray)
                                     
-                                    Text("\(viewModel.numberOfSpaces)")
-                                        .font(.subheadline)
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
+                // Spacing
+                HStack {
+                    Button(action: {
+                        viewModel.isSpaced.toggle()
+                    }) {
+                        Text("Spacing")
+                            .foregroundColor(.white)
+                            .font(.headline)
                     }
                     
-                    
-                    // Casing
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.gray)
+                    if viewModel.isSpaced {
                         
-                        HStack {
-                            Button(action: {
-                                casingOpened.toggle()
-                            }) {
-                                Text("Casing")
-                                    .foregroundColor(.white)
-                                    .font(.headline)
-                            }
-                            
-                            if casingOpened {
-                                HStack {
-                                    Divider()
-                                    
-                                    // Casing picker
-                                    Picker("Casing Type", selection: $viewModel.casingSetting) {
-                                        ForEach(Casing.allCases) {
-                                            Text($0.rawValue)
-                                                .tag($0)
-                                        }
-                                    }.pickerStyle(SegmentedPickerStyle())
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                    
-                    // Furryspeak
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.gray)
+                        Divider()
                         
-                        HStack {
-                            Button(action: {
-                                furryspeakOpened.toggle()
-                            }) {
-                                Text("Furryspeak")
-                                    .foregroundColor(.white)
-                                    .font(.headline)
-                            }
+                        // Number of spaces change
+                        Stepper(value: $viewModel.numberOfSpaces,
+                                in: viewModel.spacesRange,
+                                step: viewModel.spacesStep) {
                             
-                            if furryspeakOpened {
-                                Divider()
-                                
-                                Text("Enabled:")
-                                    .font(.subheadline)
-                                
-                                // Enabled Toggle
-                                Toggle("Spacing Enabled", isOn: $viewModel.furryspeakEnabled)
-                                    .labelsHidden()
-                            }
+                            Text("\(viewModel.numberOfSpaces)")
+                                .font(.subheadline)
                         }
-                        .padding(.horizontal)
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal)
+                .roundedBackground(color: viewModel.isSpaced ? .purple : .gray)
+                
+                
+                // Casing
+                HStack {
+                    Button(action: {
+                        viewModel.casingOn.toggle()
+                    }) {
+                        Text("Casing")
+                            .foregroundColor(.white)
+                            .font(.headline)
                     }
                     
-                }.padding(.horizontal)
-            }.frame(height: 40)
+                    if viewModel.casingOn {
+                        HStack {
+                            Divider()
+                            
+                            // Casing picker
+                            Picker("Casing Type", selection: $viewModel.enabledCasingSetting) {
+                                ForEach(Casing.allCases[1...]) {
+                                    Text($0.rawValue)
+                                        .tag($0)
+                                }
+                            }.pickerStyle(SegmentedPickerStyle())
+                        }
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal)
+                .roundedBackground(color: viewModel.casingOn ? .purple : .gray)
+                
+                // Furryspeak
+                HStack {
+                    Button(action: {
+                        viewModel.furryspeakEnabled.toggle()
+                    }) {
+                        Text("Furryspeak")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    }
+                    
+                    if viewModel.furryspeakEnabled {
+                        Divider()
+                        
+                        Text("Stutter:")
+                            .font(.subheadline)
+                        
+                        // Enabled Toggle
+                        Toggle("Stutter Enabled", isOn: $viewModel.stutterEnabled)
+                            .labelsHidden()
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal)
+                .roundedBackground(color: viewModel.furryspeakEnabled ? .purple : .gray)
+                
+            }.padding(.horizontal)
         }
+        .frame(maxHeight: .infinity)
         
     }
     

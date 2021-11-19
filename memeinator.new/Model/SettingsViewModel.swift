@@ -15,18 +15,18 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
-    private var casingState = [randomBool()]
+    private var casingState: [Bool] = []
     
-    private var furryspeakState = [randomBool(in: 15)]
+    private var furryspeakState: [Bool] = []
     
     // MARK: Methods
     
     func createFormattedString() -> String {
         var workingString = textInput
         
-        workingString = formatCasing(from: workingString)
-        
         workingString = formatFurryspeak(from: workingString)
+        
+        workingString = formatCasing(from: workingString)
         
         workingString = formatSpaces(from: workingString)
         
@@ -36,7 +36,7 @@ class SettingsViewModel: GenericViewModel {
     func randomizeState() {
         self.objectWillChange.send()
         casingState.randomize()
-        furryspeakState.randomize(in: 15)
+        furryspeakState.randomize(in: stutterProbability)
     }
     
     // Save casing state
@@ -80,8 +80,8 @@ class SettingsViewModel: GenericViewModel {
                 furryspeakState.append(randomBool(in: 15))
             }
             
-            // If the word is just a space, add it without stuttering
-            if word == " " {
+            // If the word is just a space or empty, add it without stuttering
+            if word == " " || word == "" {
                 workingString.append(word)
                 continue
             }

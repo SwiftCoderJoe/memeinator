@@ -161,6 +161,10 @@ class GenericViewModel: ObservableObject {
 
     }
     
+    // Stutter
+    
+    let stutterProbability: UInt32 = 15
+    
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {

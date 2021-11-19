@@ -36,9 +36,14 @@
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
 		0E8C8F3326E12D58003E53AB /* ButtonDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
+		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
+		0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0EBA3ACE274571CF00058EB2 /* Introspect */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
+		0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */; };
+		0ECDC592273F0F3F001291C3 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC591273F0F3F001291C3 /* Products.plist */; };
+		0ECDC594273F0F69001291C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
@@ -118,6 +123,9 @@
 		0EBDD5F626E018DC00CF3857 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSegmentPicker.swift; sourceTree = "<group>"; };
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
+		0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
+		0ECDC591273F0F3F001291C3 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
+		0ECDC593273F0F69001291C3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */,
+				0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +239,8 @@
 				0E1757AF26D5C86800C35984 /* Model */,
 				0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */,
 				0E6BF9DF26D46BCF008868B7 /* Preview Content */,
+				0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */,
+				0ECDC591273F0F3F001291C3 /* Products.plist */,
 			);
 			path = memeinator.new;
 			sourceTree = "<group>";
@@ -265,7 +276,6 @@
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
 				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
 				0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */,
-				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
@@ -279,10 +289,12 @@
 		0EB20C9925AB8C2800D41488 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
 				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
 				0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */,
 				0E8C8F3426E141EF003E53AB /* Persisted.swift */,
+				0ECDC593273F0F69001291C3 /* Store.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -325,6 +337,7 @@
 			name = memeinator.new;
 			packageProductDependencies = (
 				0E6421C026DE96A80087E2BB /* AlertToast */,
+				0EBA3ACE274571CF00058EB2 /* Introspect */,
 			);
 			productName = memeinator3000.new;
 			productReference = 0EBDD5F626E018DC00CF3857 /* memeinator.new.app */;
@@ -424,6 +437,7 @@
 			packageReferences = (
 				0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */,
 				0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D41F69F4210D5D4A006F5F3C;
 			projectDirPath = "";
@@ -442,6 +456,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECDC592273F0F3F001291C3 /* Products.plist in Resources */,
+				0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */,
 				0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */,
 				0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */,
 			);
@@ -496,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
 				0E8C8F3326E12D58003E53AB /* ButtonDisclosureGroup.swift in Sources */,
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
@@ -540,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E385F3926E01A950077E40F /* GenericViewModel.swift in Sources */,
+				0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */,
 				0E385F4A26E01B660077E40F /* UITextDocumentProxy+Custom.swift in Sources */,
 				0E385F4D26E01B660077E40F /* M3KActionHandler.swift in Sources */,
 				0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */,
@@ -987,6 +1005,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -999,6 +1025,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		0EBA3ACE274571CF00058EB2 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

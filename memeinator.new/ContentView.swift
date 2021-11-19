@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct ContentView: View {
     // Tells us whether keyboard is shown or hidden
-    var keyboardManager = KeyboardManager()
+    @StateObject var keyboardManager = KeyboardManager()
     
     // Tells us the current state of Memeinator and formats memes
-    var settingsViewModel = SettingsViewModel()
+    @StateObject var settingsViewModel = SettingsViewModel()
     
     // Current selected tab
     @State var selection: AppPage = .home
@@ -44,6 +45,12 @@ struct ContentView: View {
                 .tag(AppPage.settings)
         }
         .accentColor(.purple)
+        .introspectTabBarController { controller in
+            let bar = UITabBarAppearance()
+            bar.configureWithDefaultBackground()
+            controller.tabBar.scrollEdgeAppearance = bar
+            
+        }
     }
 }
 

@@ -64,6 +64,10 @@ struct MemeSettingsView: View {
                     
                 }
                 
+                ProFeature("Repeat", isExpanded: $dummySwitch) {
+                    
+                }
+                
             }
             
         }

@@ -77,6 +77,7 @@ private extension KeyboardView {
     // Main system keyboard with symbols
     var systemKeyboard: some View {
         VStack(spacing: 5) {
+            Spacer()
             optionsView
             SystemKeyboard(
                 layout: layoutProvider.keyboardLayout(for: keyboardContext),

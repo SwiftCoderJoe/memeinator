@@ -99,8 +99,8 @@ struct ProFeature<Content>: View where Content: View {
                     .background(.purple, in: RoundedRectangle(cornerRadius: 5))
             }
             .sheet(isPresented: $proOpen, content: {
-                ProPreviewSheet()
-                    .foregroundColor(.purple)
+                ProPreviewSheet(isOpen: $proOpen, feature: label)
+                    .textCase(.none)
             })
             
             Text(label)
