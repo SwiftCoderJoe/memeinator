@@ -66,8 +66,9 @@ class SettingsViewModel: GenericViewModel {
             return super.formatFurryspeak(from: input)
         }
         
-        let words = input.split(separator: " ", omittingEmptySubsequences: false)
-        var workingString = super.formatFurryspeak(from: input)
+        let words = super.formatFurryspeak(from: input)
+            .split(separator: " ", omittingEmptySubsequences: false)
+        var workingString = ""
         
         for (idx, word) in words.enumerated() {
             var word = String(word)
