@@ -37,12 +37,12 @@
 		0E8C8F3326E12D58003E53AB /* ButtonDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* ButtonDisclosureGroup.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
 		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
+		0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0EBA3ACE274571CF00058EB2 /* Introspect */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10E526E029B700CFA2BC /* SingleSegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */; };
-		0ECDC592273F0F3F001291C3 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC591273F0F3F001291C3 /* Products.plist */; };
 		0ECDC594273F0F69001291C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
@@ -124,7 +124,6 @@
 		0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSegmentPicker.swift; sourceTree = "<group>"; };
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
 		0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
-		0ECDC591273F0F3F001291C3 /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
 		0ECDC593273F0F69001291C3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
@@ -240,7 +239,6 @@
 				0E6BF9DD26D46BCF008868B7 /* Assets.xcassets */,
 				0E6BF9DF26D46BCF008868B7 /* Preview Content */,
 				0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */,
-				0ECDC591273F0F3F001291C3 /* Products.plist */,
 			);
 			path = memeinator.new;
 			sourceTree = "<group>";
@@ -456,7 +454,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ECDC592273F0F3F001291C3 /* Products.plist in Resources */,
 				0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */,
 				0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */,
 				0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */,
@@ -562,6 +559,7 @@
 				0E385F4D26E01B660077E40F /* M3KActionHandler.swift in Sources */,
 				0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */,
 				0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */,
+				0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */,
 				0E385F4C26E01B660077E40F /* M3KKeyboardBehaivior.swift in Sources */,
 				0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */,
 				0E385F4B26E01B660077E40F /* KeyboardViewController.swift in Sources */,

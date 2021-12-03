@@ -24,6 +24,8 @@ class SettingsViewModel: GenericViewModel {
     func createFormattedString() -> String {
         var workingString = textInput
         
+        workingString = repeatString(workingString)
+        
         workingString = formatFurryspeak(from: workingString)
         
         workingString = formatCasing(from: workingString)

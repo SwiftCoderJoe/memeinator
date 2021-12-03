@@ -14,13 +14,23 @@ struct CopyPasteRegen: View {
     
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @State var toastShowing = false
+    @State var errorShowing = false
     
     var body: some View {
         HStack {
             
             Button(action: {
-                UIPasteboard.general.string = settingsViewModel.createFormattedString()
-                toastShowing = true
+                Task {
+                    if settingsViewModel.proFeature != nil {
+                        if settingsViewModel.store.pro {
+                            copy()
+                        } else {
+                            buyPro()
+                        }
+                    } else {
+                        copy()
+                    }
+                }
             }, label: {
                 Text("Copy")
                     .font(.title3)
@@ -55,6 +65,19 @@ struct CopyPasteRegen: View {
         .toast(isPresenting: $toastShowing) {
             AlertToast(displayMode: .hud, type: .complete(.green), title: "Copied!")
         }
+        .sheet(isPresented: $errorShowing) {
+            ProPreviewSheet(isOpen: $errorShowing, feature: settingsViewModel.proFeature ?? "")
+                .environmentObject(settingsViewModel)
+        }
+    }
+    
+    func copy() {
+        UIPasteboard.general.string = settingsViewModel.createFormattedString()
+        toastShowing = true
+    }
+    
+    func buyPro() {
+        errorShowing = true
     }
     
 }

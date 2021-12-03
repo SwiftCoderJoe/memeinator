@@ -77,6 +77,9 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
 }
 
 struct ProFeature<Content>: View where Content: View {
+    // ProFeature needs settingsViewModel so it can access the store
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
+    
     @State var proOpen = false
     var isExpanded: Binding<Bool>?
     let label: String
@@ -90,21 +93,33 @@ struct ProFeature<Content>: View where Content: View {
     
     var body: some View {
         Feature(header: {
-            Button(action: {
-                proOpen.toggle()
-            }) {
-                Label("Pro", systemImage: "lock")
-                    .foregroundColor(Color(uiColor: .systemGroupedBackground))
-                    .padding(5)
-                    .background(.purple, in: RoundedRectangle(cornerRadius: 5))
+            Group {
+                if settingsViewModel.store.pro {
+                    Label("Pro", systemImage: "lock")
+                        .labelStyle(.titleOnly)
+                        .foregroundColor(Color(uiColor: .systemGroupedBackground))
+                        .padding(5)
+                        .background(.purple, in: RoundedRectangle(cornerRadius: 5))
+                } else {
+                    Button(action: {
+                        proOpen.toggle()
+                    }) {
+                        Label("Pro", systemImage: "lock")
+                            .foregroundColor(Color(uiColor: .systemGroupedBackground))
+                            .padding(5)
+                            .background(.purple, in: RoundedRectangle(cornerRadius: 5))
+                    }
+                }
             }
             .sheet(isPresented: $proOpen, content: {
                 ProPreviewSheet(isOpen: $proOpen, feature: label)
                     .textCase(.none)
+                    .environmentObject(settingsViewModel)
             })
             
             Text(label)
                 .font(.system(size: 15))
+            
         }, isExpanded: isExpanded) {
             content
         }

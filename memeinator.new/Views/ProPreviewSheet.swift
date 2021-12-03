@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 
 struct ProPreviewSheet: View {
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
+    
     @Binding var isOpen: Bool
     
     let feature: String
@@ -68,7 +70,10 @@ struct ProPreviewSheet: View {
             Text("Only $0.99")
             VStack {
                 Button(action: {
-                    
+                    Task {
+                        try await settingsViewModel.store.purchase(.pro)
+                        isOpen = false
+                    }
                 }) {
                     Text("Continue")
                         .frame(maxWidth: 300)

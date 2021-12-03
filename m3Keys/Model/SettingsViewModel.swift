@@ -132,7 +132,7 @@ class SettingsViewModel: GenericViewModel {
     
     /** Returns an action with added spaces between characters and corrects deletes for the added spaces. */
     func createSpacingAction(from input: FormattedAction) -> FormattedAction {
-        guard isSpaced else {
+        guard spacingEnabled else {
             return FormattedAction(input: input.formattedString)
         }
         
@@ -190,7 +190,7 @@ class SettingsViewModel: GenericViewModel {
         
         var context = context
         var formattedContext: [Character] = []
-        let sectionLength = isSpaced ? numberOfSpaces + 1 : 1
+        let sectionLength = spacingEnabled ? numberOfSpaces + 1 : 1
         
         // For every group of character and added spaces, extract the character and add it to a string.
         for _ in 0..<(context.count / sectionLength) {

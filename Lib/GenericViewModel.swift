@@ -13,10 +13,24 @@ import Foundation
  */
 class GenericViewModel: ObservableObject {
     
+    // MARK: All
+    
+    /** Transaction handler */
+    var store = Store()
+    
+    /** Pro feature that is used, or nil. */
+    var proFeature: String? {
+        if repeatEnabled {
+            return "Repeat"
+        } else {
+            return nil
+        }
+    }
+    
     // MARK: Spacing
     
     /** Pusblished value showing if spacing is enabled. */
-    @Published var isSpaced = false
+    @Published var spacingEnabled = false
     
     /** Pusblished value showing the number of spaces per character. */
     @Published var numberOfSpaces = 1
@@ -28,7 +42,7 @@ class GenericViewModel: ObservableObject {
     let spacesStep = 1
     
     func formatSpaces(from input: String) -> String {
-        guard isSpaced else {
+        guard spacingEnabled else {
             return input
         }
         
@@ -163,8 +177,31 @@ class GenericViewModel: ObservableObject {
     
     // Stutter
     
+    /** The probability of each word to stutter is 1 in this number. */
     let stutterProbability: UInt32 = 15
     
+    // MARK: Repeat
+    
+    /** Published value showing if Repeat is enabled. */
+    @Published var repeatEnabled = false
+    
+    /** Published value showing the number of times to repeat. */
+    @Published var numberOfRepeats = 2.0
+    
+    /** Value showing the possible range of repeats. */
+    let repeatsRange = 1.0...100.0
+    
+    /** Value showing the step of a repeat control. */
+    let repeatsStep = 1.0
+    
+    func repeatString(_ input: String) -> String {
+        guard repeatEnabled else {
+            return input
+        }
+        
+        return String(repeating: input, count: Int(numberOfRepeats))
+        
+    }
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {

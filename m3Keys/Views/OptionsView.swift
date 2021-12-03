@@ -52,14 +52,14 @@ struct OptionsView: View {
                 // Spacing
                 HStack {
                     Button(action: {
-                        viewModel.isSpaced.toggle()
+                        viewModel.spacingEnabled.toggle()
                     }) {
                         Text("Spacing")
                             .foregroundColor(.white)
                             .font(.headline)
                     }
                     
-                    if viewModel.isSpaced {
+                    if viewModel.spacingEnabled {
                         
                         Divider()
                         
@@ -75,7 +75,7 @@ struct OptionsView: View {
                 }
                 .frame(maxHeight: .infinity)
                 .padding(.horizontal)
-                .roundedBackground(color: viewModel.isSpaced ? .purple : .gray)
+                .roundedBackground(color: viewModel.spacingEnabled ? .purple : .gray)
                 
                 
                 // Casing

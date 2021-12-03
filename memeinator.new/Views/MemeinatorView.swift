@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
@@ -54,7 +55,7 @@ struct MemeinatorView: View {
                             Text("Spacing")
                                 .font(.title3)
                                 .lineLimit(1)
-                            Toggle("", isOn: $settingsViewModel.isSpaced)
+                            Toggle("", isOn: $settingsViewModel.spacingEnabled)
                                 .labelsHidden()
                         }.padding(.vertical)
                         Spacer()
@@ -98,7 +99,6 @@ struct MemeinatorView: View {
                 .padding()
             }
         }
-        
     }
 }
 

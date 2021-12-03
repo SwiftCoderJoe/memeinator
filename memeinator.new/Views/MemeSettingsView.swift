@@ -35,7 +35,7 @@ struct MemeSettingsView: View {
             
             Form {
                 
-                Feature("Spaces", isExpanded: $settingsViewModel.isSpaced) {
+                Feature("Spaces", isExpanded: $settingsViewModel.spacingEnabled) {
                     Stepper("Amount: \(settingsViewModel.numberOfSpaces)",
                             value: $settingsViewModel.numberOfSpaces,
                             in: settingsViewModel.spacesRange,
@@ -44,7 +44,7 @@ struct MemeSettingsView: View {
                 
                 Feature("Casing", isExpanded: $settingsViewModel.casingOn) {
                     HStack(spacing: 50) {
-                        Text("Casing Type")
+                        Text("Type")
                         
                         Picker("", selection: $settingsViewModel.enabledCasingSetting) {
                             ForEach(Casing.allCases[1...]) {
@@ -60,12 +60,25 @@ struct MemeSettingsView: View {
                     Toggle("Stutter", isOn: $settingsViewModel.stutterEnabled)
                 }
                 
-                ProFeature("Emojifier", isExpanded: $dummySwitch) {
-                    
+                ProFeature("Repeat", isExpanded: $settingsViewModel.repeatEnabled) {
+                    Slider(
+                        value: $settingsViewModel.numberOfRepeats,
+                        in: settingsViewModel.repeatsRange,
+                        step: settingsViewModel.repeatsStep
+                    )
+                    HStack {
+                        Text("Number of repeats:")
+                        Spacer()
+                        Text("\(Int(settingsViewModel.numberOfRepeats))")
+                    }
                 }
                 
-                ProFeature("Repeat", isExpanded: $dummySwitch) {
-                    
+                ProFeature("Emojifier", isExpanded: $dummySwitch) {
+                    Text("Not implemented.")
+                }
+                
+                ProFeature("Zalgo", isExpanded: $dummySwitch) {
+                    Text("Not implemented.")
                 }
                 
             }
@@ -73,6 +86,7 @@ struct MemeSettingsView: View {
         }
         .background(Color(uiColor: colorScheme == .dark ? .secondarySystemBackground : .systemBackground))
         .navigationTitle("Meme Settings")
+        .environmentObject(settingsViewModel)
     }
 }
 
