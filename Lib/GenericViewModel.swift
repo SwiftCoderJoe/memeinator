@@ -22,6 +22,8 @@ class GenericViewModel: ObservableObject {
     var proFeature: String? {
         if repeatEnabled {
             return "Repeat"
+        } else if zalgoEnabled {
+            return "Zalgo"
         } else {
             return nil
         }
@@ -189,7 +191,7 @@ class GenericViewModel: ObservableObject {
     @Published var numberOfRepeats = 2.0
     
     /** Value showing the possible range of repeats. */
-    let repeatsRange = 1.0...100.0
+    let repeatsRange = 1.0...25.0
     
     /** Value showing the step of a repeat control. */
     let repeatsStep = 1.0
@@ -202,6 +204,81 @@ class GenericViewModel: ObservableObject {
         return String(repeating: input, count: Int(numberOfRepeats))
         
     }
+    
+    // MARK: Zalgo
+    
+    /** Published value showing if Zalgo is enabled. */
+    @Published var zalgoEnabled = false
+    
+    /** Published value showing the height (number of diacritics) of zalgo. */
+    @Published var zalgoHeight = 1.0 {
+        didSet {
+            if Int(oldValue) != Int(zalgoHeight) {
+                invalidateState(for: .zalgoHeight)
+            }
+        }
+    }
+    
+    /** Value showing the possible range of zalgo heights. */
+    let zalgoHeightRange = 1.0...20.0
+    
+    /** Value showing the step of a zalgo height control. */
+    let zalgoHeightStep = 1.0
+    
+    /**
+     Value showing the randomness in height of zalgo.
+     
+     Randomness affects the number of diacritics. There will be `zalgoRange +/- (random 0...1) * zalgoRandomness` diacritics above and below each character.
+     */
+    @Published var zalgoRandomness = 0.0 {
+        didSet {
+            if Int(oldValue) != Int(zalgoRandomness) {
+                invalidateState(for: .zalgoRandomness)
+            }
+        }
+    }
+    
+    /** Value showing the possible range of zalgo randomness. */
+    let zalgoRandomnessRange = 0.0...20.0
+    
+    /** Value showing the step of a zalgo randomness control. */
+    let zalgoRandomnessStep = 1.0
+    
+    private var diacriticsCount: Int {
+        return
+            Int(zalgoHeight) +
+            Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+    }
+        
+    // Not used my memeinator, only m3keys
+    func zalgoString(_ input: String) -> String {
+        guard zalgoEnabled else {
+            return input
+        }
+        
+        var workingString = ""
+        
+        for character in input {
+            
+            workingString += String(character)
+            
+            for _ in 0..<diacriticsCount {
+                workingString += UnicodeLiterals.randomTopDiacritic()
+            }
+            
+            for _ in 0..<diacriticsCount {
+                workingString += UnicodeLiterals.randomBottomDiacritic()
+            }
+            
+        }
+        
+        return workingString
+    
+    }
+    
+    func invalidateState(for invalidatedState: ViewModelState) {
+        
+    }
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {
@@ -210,4 +287,13 @@ enum Casing: String, CaseIterable, Identifiable, Hashable {
     case random = "rAnDOm"
     
     var id: String { self.rawValue }
+}
+
+enum ViewModelState {
+    case all
+    case furryspeak
+    case casing
+    case zalgoHeight
+    case zalgoRandomness
+    case zalgoDiacritics
 }

@@ -39,6 +39,7 @@ struct ContentView: View {
                 .tag(AppPage.keyboard)
 
             SettingsView()
+                .environmentObject(settingsViewModel)
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }

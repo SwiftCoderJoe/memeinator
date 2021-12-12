@@ -61,24 +61,49 @@ struct MemeSettingsView: View {
                 }
                 
                 ProFeature("Repeat", isExpanded: $settingsViewModel.repeatEnabled) {
-                    Slider(
-                        value: $settingsViewModel.numberOfRepeats,
-                        in: settingsViewModel.repeatsRange,
-                        step: settingsViewModel.repeatsStep
-                    )
-                    HStack {
-                        Text("Number of repeats:")
-                        Spacer()
-                        Text("\(Int(settingsViewModel.numberOfRepeats))")
+                    VStack {
+                        Slider(
+                            value: $settingsViewModel.numberOfRepeats,
+                            in: settingsViewModel.repeatsRange,
+                            step: settingsViewModel.repeatsStep
+                        )
+                        HStack {
+                            Text("Number of repeats:")
+                            Spacer()
+                            Text("\(Int(settingsViewModel.numberOfRepeats))")
+                        }
                     }
                 }
                 
-                ProFeature("Emojifier", isExpanded: $dummySwitch) {
-                    Text("Not implemented.")
+                ProFeature("Zalgo", isExpanded: $settingsViewModel.zalgoEnabled) {
+                    VStack {
+                        Slider(
+                            value: $settingsViewModel.zalgoHeight,
+                            in: settingsViewModel.zalgoHeightRange,
+                            step: settingsViewModel.zalgoHeightStep)
+                        HStack {
+                            Text("Zalgo height:")
+                            Spacer()
+                            Text("\(Int(settingsViewModel.zalgoHeight))")
+                        }
+                    }
+                    
+                    VStack {
+                        Slider(
+                            value: $settingsViewModel.zalgoRandomness,
+                            in: settingsViewModel.zalgoRandomnessRange,
+                            step: settingsViewModel.zalgoRandomnessStep)
+                        HStack {
+                            Text("Zalgo randomness:")
+                            Spacer()
+                            Text("\(Int(settingsViewModel.zalgoRandomness))")
+                        }
+                    }
+                    
                 }
                 
-                ProFeature("Zalgo", isExpanded: $dummySwitch) {
-                    Text("Not implemented.")
+                ProFeature("Emojifier", isExpanded: $dummySwitch) {
+                    Text("Coming soon!")
                 }
                 
             }

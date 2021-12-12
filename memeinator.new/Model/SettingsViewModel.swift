@@ -19,6 +19,8 @@ class SettingsViewModel: GenericViewModel {
     
     private var furryspeakState: [Bool] = []
     
+    private var zalgoState: ZalgoState = ZalgoState()
+    
     // MARK: Methods
     
     func createFormattedString() -> String {
@@ -32,13 +34,13 @@ class SettingsViewModel: GenericViewModel {
         
         workingString = formatSpaces(from: workingString)
         
+        workingString = formatZalgo(from: workingString)
+        
         return workingString
     }
     
     func randomizeState() {
-        self.objectWillChange.send()
-        casingState.randomize()
-        furryspeakState.randomize(in: stutterProbability)
+        invalidateState(for: .all)
     }
     
     // Save casing state
@@ -95,5 +97,112 @@ class SettingsViewModel: GenericViewModel {
         }
         
         return workingString
+    }
+    
+    func formatZalgo(from input: String) -> String {
+        guard zalgoEnabled else {
+            return input
+        }
+        
+        var workingString = ""
+        
+        for (idx, character) in input.enumerated() {
+            
+            // First, add the characters with no modifications
+            workingString += String(character)
+            
+            // If state does not exist for this character, create it.
+            if zalgoState.diacriticsTop.count <= idx {
+                zalgoState.diacriticsTop.append([])
+                zalgoState.diacriticsBottom.append([])
+            }
+            
+            
+            // Next, if this character doesn't have a number of diacritics assigned to it, then create one using current parameters
+            if zalgoState.diacriticsCountTop.count <= idx {
+                zalgoState.diacriticsCountTop.append(Int(zalgoHeight))
+            }
+            
+            if zalgoState.diacriticsCountBottom.count <= idx {
+                zalgoState.diacriticsCountBottom.append(Int(zalgoHeight))
+            }
+            
+            if zalgoState.randomnessModifierBottom.count <= idx {
+                zalgoState.randomnessModifierBottom.append(
+                    Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+                )
+            }
+            
+            if zalgoState.randomnessModifierTop.count <= idx {
+                zalgoState.randomnessModifierTop.append(
+                    Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+                )
+            }
+            
+            
+            // Then, add diacritics to the top and bottom of each character.
+            // If the current state does not extend far enough, add more state.
+            
+            let topDiacriticsCount =
+                max(zalgoState.diacriticsCountTop[idx] +
+                    zalgoState.randomnessModifierTop[idx], 0)
+            
+            for diacriticNumber in 0..<topDiacriticsCount {
+                if diacriticNumber >= zalgoState.diacriticsTop[idx].count {
+                    zalgoState.diacriticsTop[idx]
+                        .append(UnicodeLiterals.randomTopDiacritic())
+                }
+                
+                workingString += zalgoState.diacriticsTop[idx][diacriticNumber]
+                
+            }
+            
+            let bottomDiacriticsCount =
+                max(zalgoState.diacriticsCountBottom[idx] +
+                    zalgoState.randomnessModifierBottom[idx], 0)
+            
+            for diacriticNumber in 0..<bottomDiacriticsCount {
+                if diacriticNumber >= zalgoState.diacriticsBottom[idx].count {
+                    zalgoState.diacriticsBottom[idx]
+                        .append(UnicodeLiterals.randomBottomDiacritic())
+                }
+                
+                workingString += zalgoState.diacriticsBottom[idx][diacriticNumber]
+                
+            }
+            
+        }
+        
+        return workingString
+    }
+    
+    override func invalidateState(for invalidatedState: ViewModelState) {
+        switch invalidatedState {
+        case .all:
+            casingState.randomize()
+            furryspeakState.randomize(in: stutterProbability)
+            zalgoState = ZalgoState()
+            
+        case .furryspeak:
+            furryspeakState.randomize(in: stutterProbability)
+            
+        case .casing:
+            casingState.randomize()
+            
+        case .zalgoHeight:
+            zalgoState.diacriticsCountTop = []
+            zalgoState.diacriticsCountBottom = []
+            
+        case .zalgoRandomness:
+            zalgoState.randomnessModifierTop = []
+            zalgoState.randomnessModifierBottom = []
+            
+        case .zalgoDiacritics:
+            zalgoState.diacriticsTop = []
+            zalgoState.diacriticsBottom = []
+        }
+        
+        self.objectWillChange.send()
+        
     }
 }
