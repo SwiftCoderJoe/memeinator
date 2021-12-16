@@ -12,6 +12,7 @@ struct SettingsView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
+    let appBuild = Bundle.main.infoDictionary!["CFBundleVersion"] as? String
     
     var body: some View {
         VStack(spacing: 0.0) {
@@ -25,7 +26,7 @@ struct SettingsView: View {
             
             Form {
                 Section(header:
-                    Text("Settings")
+                    Text("About")
                 ) {
                     HStack {
                         Text("App Version")
@@ -33,30 +34,47 @@ struct SettingsView: View {
                         Text(appVersion ?? "Unknown")
                     }
                     HStack {
+                        Text("App Build Number")
+                        Spacer()
+                        Text(appBuild ?? "Unknown")
+                    }
+                    HStack {
                         Text("App Mode")
                         Spacer()
                         Text(settingsViewModel.store.pro ? "Pro" : "Standard")
                     }
                 }
-                Section(header:
-                    Group {
-                        if settingsViewModel.store.pro {
-                            Label("Pro", systemImage: "lock")
-                                .labelStyle(.titleOnly)
-                                .foregroundColor(Color(uiColor: .systemGroupedBackground))
-                                .padding(5)
-                                .background(.purple, in: RoundedRectangle(cornerRadius: 5))
-                        } else {
-                            Label("Pro", systemImage: "lock")
-                                .foregroundColor(Color(uiColor: .systemGroupedBackground))
-                                .padding(5)
-                                .background(.purple, in: RoundedRectangle(cornerRadius: 5))
-                        }
+                ProGroup(name: "Furryspeak") {
+                    Toggle("Separate Furryspeak and Stutter", isOn: $settingsViewModel.furryspeakStutterSeparated)
+                    VStack {
+                        Stepper(value: $settingsViewModel.stutterProbability, in: 1...50, step: 1, label: {
+                            Text("Chance of stutter: " +
+                                (settingsViewModel.stutterProbability == 1 ?
+                                "Always" :
+                                "1 in \(settingsViewModel.stutterProbability)")
+                            )
+                        })
                     }
-                ) {
-                    Text("Coming Soon!")
+                    
                 }
+                
+                ProGroup(name: "Repeat") {
+                    Stepper(value: $settingsViewModel.repeatsMax,
+                            in: 2...200,
+                            step: 1,
+                            label: {
+                                Text("Max Repeats: \(settingsViewModel.repeatsMax)")
+                            })
+                }
+                
+                ProGroup(name: "Coming soon!", content: {
+                    Text("Repeat (max)")
+                    Text("Zalgo (maxes)")
+                    Text("Separate Furryspeak and Stutter")
+                })
+
             }
+            
         }
         .background(Color(uiColor: .systemGroupedBackground))
     }

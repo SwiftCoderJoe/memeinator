@@ -56,8 +56,18 @@ struct MemeSettingsView: View {
                     }
                 }
                 
-                Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {
-                    Toggle("Stutter", isOn: $settingsViewModel.stutterEnabled)
+                if settingsViewModel.furryspeakStutterSeparated {
+                    
+                    Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {}
+                    
+                    Feature("Stutter", isExpanded: $settingsViewModel.stutterEnabled) {}
+                    
+                } else {
+                    
+                    Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {
+                        Toggle("Stutter", isOn: $settingsViewModel.stutterEnabled)
+                    }
+                    
                 }
                 
                 ProFeature("Repeat", isExpanded: $settingsViewModel.repeatEnabled) {

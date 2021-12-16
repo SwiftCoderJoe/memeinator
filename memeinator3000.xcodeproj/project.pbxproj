@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E020D14276A532B008571C8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
+		0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
+		0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
 		0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757AD26D5C65300C35984 /* SettingsView.swift */; };
 		0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B026D5C88D00C35984 /* AppPage.swift */; };
 		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
@@ -34,7 +37,7 @@
 		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
-		0E8C8F3326E12D58003E53AB /* BetterDisclosureGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterDisclosureGroups.swift */; };
+		0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterGroups.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
 		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
 		0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */; };
@@ -92,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E020D13276A532B008571C8 /* ProBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProBadge.swift; sourceTree = "<group>"; };
+		0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
 		0E1757AD26D5C65300C35984 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0E1757B026D5C88D00C35984 /* AppPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPage.swift; sourceTree = "<group>"; };
 		0E1757B226D6B92000C35984 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
@@ -118,7 +123,7 @@
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		0E8C8F3226E12D58003E53AB /* BetterDisclosureGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterDisclosureGroups.swift; sourceTree = "<group>"; };
+		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
 		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeLiterals.swift; sourceTree = "<group>"; };
@@ -279,13 +284,14 @@
 				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
 				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
-				0E8C8F3226E12D58003E53AB /* BetterDisclosureGroups.swift */,
+				0E8C8F3226E12D58003E53AB /* BetterGroups.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */,
 				0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */,
 				0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */,
+				0E020D13276A532B008571C8 /* ProBadge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 				0E8C8F3426E141EF003E53AB /* Persisted.swift */,
 				0ECDC593273F0F69001291C3 /* Store.swift */,
 				0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */,
+				0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -517,7 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
-				0E8C8F3326E12D58003E53AB /* BetterDisclosureGroups.swift in Sources */,
+				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
 				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
@@ -536,7 +543,9 @@
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
+				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
+				0E020D14276A532B008571C8 /* ProBadge.swift in Sources */,
 				0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */,
 				0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */,
 			);
@@ -567,6 +576,7 @@
 				0E385F4A26E01B660077E40F /* UITextDocumentProxy+Custom.swift in Sources */,
 				0E385F4D26E01B660077E40F /* M3KActionHandler.swift in Sources */,
 				0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */,
+				0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */,
 				0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */,
 				0EA551D7275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
@@ -780,7 +790,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -808,7 +818,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;

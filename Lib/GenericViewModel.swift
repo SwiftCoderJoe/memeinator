@@ -29,6 +29,12 @@ class GenericViewModel: ObservableObject {
         }
     }
     
+    // MARK: Settings
+    
+    /** UserDefaults stored value. If enabled, furryspeak and stutter are shown as two separate effects. */
+    @Published(key: "settings.furryspeakStutterSeparated")
+    var furryspeakStutterSeparated = false
+    
     // MARK: Spacing
     
     /** Pusblished value showing if spacing is enabled. */
@@ -180,7 +186,7 @@ class GenericViewModel: ObservableObject {
     // Stutter
     
     /** The probability of each word to stutter is 1 in this number. */
-    let stutterProbability: UInt32 = 15
+    @Published(key: "settings.stutterProbability") var stutterProbability: Int = 15
     
     // MARK: Repeat
     
@@ -190,8 +196,13 @@ class GenericViewModel: ObservableObject {
     /** Published value showing the number of times to repeat. */
     @Published var numberOfRepeats = 2.0
     
+    @Published(key: "settings.repeatsMax")
+    var repeatsMax: Int = 25
+    
     /** Value showing the possible range of repeats. */
-    let repeatsRange = 1.0...25.0
+    var repeatsRange: ClosedRange<Double> {
+        1.0...Double(repeatsMax)
+    }
     
     /** Value showing the step of a repeat control. */
     let repeatsStep = 1.0

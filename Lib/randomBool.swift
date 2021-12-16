@@ -18,6 +18,10 @@ func randomBool(in chance: UInt32) -> Bool {
     return arc4random_uniform(chance) == 0
 }
 
+func randomBool(in chance: Int) -> Bool {
+    return arc4random_uniform(UInt32(chance)) == 0
+}
+
 extension Array where Element == Bool {
     mutating func randomize() {
         for idx in 0..<self.count {
@@ -25,7 +29,7 @@ extension Array where Element == Bool {
         }
     }
     
-    mutating func randomize(in chance: UInt32) {
+    mutating func randomize(in chance: Int) {
         for idx in 0..<self.count {
             self[idx] = randomBool(in: chance)
         }

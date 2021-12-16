@@ -72,7 +72,7 @@ class SettingsViewModel: GenericViewModel {
             .split(separator: " ", omittingEmptySubsequences: false)
         var workingString = ""
         
-        for (idx, word) in words.enumerated() {
+        for (idx, word) in words.enumerated() { #warning("This does not respect if only stutter is enabled")
             var word = String(word)
             
             // Don't add a space to the last word
@@ -82,7 +82,7 @@ class SettingsViewModel: GenericViewModel {
             
             // Add more state if needed
             if idx >= furryspeakState.count {
-                furryspeakState.append(randomBool(in: 15))
+                furryspeakState.append(randomBool(in: stutterProbability))
             }
             
             // If the word is just a space or empty, add it without stuttering

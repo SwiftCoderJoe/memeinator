@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+import m3Keys
+
+// MARK: Disclosure groups
 
 struct Feature<Content, Header>: View where Content: View, Header: View {
     @State private var isExpandedState = false
@@ -38,7 +41,7 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
         }
     }
     
-    // MARK: Wrapper
+    // Wrapper
     private struct _TextDisclosureGroup<Content, Header>: View where Content: View, Header: View {
         @Binding var isExpanded: Bool
         let header: Header
@@ -63,7 +66,16 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
                         
                         Spacer()
                         
-                        Text(isExpanded ? "Enabled" : "Disabled")
+                        if isExpanded {
+                            Text("Enabled")
+                                .foregroundColor(Color(uiColor: .systemGroupedBackground))
+                                .padding(5)
+                                .background(.purple, in: RoundedRectangle(cornerRadius: 5))
+                        } else {
+                            Text("Disabled")
+                                .padding(5)
+                        }
+                        
                     }
             }) {
                 
@@ -94,22 +106,9 @@ struct ProFeature<Content>: View where Content: View {
     var body: some View {
         Feature(header: {
             Group {
-                if settingsViewModel.store.pro {
-                    Label("Pro", systemImage: "lock")
-                        .labelStyle(.titleOnly)
-                        .foregroundColor(Color(uiColor: .systemGroupedBackground))
-                        .padding(5)
-                        .background(.purple, in: RoundedRectangle(cornerRadius: 5))
-                } else {
-                    Button(action: {
-                        proOpen.toggle()
-                    }) {
-                        Label("Pro", systemImage: "lock")
-                            .foregroundColor(Color(uiColor: .systemGroupedBackground))
-                            .padding(5)
-                            .background(.purple, in: RoundedRectangle(cornerRadius: 5))
-                    }
-                }
+                ProBadge(pro: settingsViewModel.store.pro, action: {
+                    proOpen.toggle()
+                })
             }
             .sheet(isPresented: $proOpen, content: {
                 ProPreviewSheet(isOpen: $proOpen, feature: label)
@@ -126,16 +125,47 @@ struct ProFeature<Content>: View where Content: View {
     }
 }
 
-struct TextDisclosureGroup_Previews: PreviewProvider {
+// MARK: Form Groups
 
-    @State static var isExpanded = false
-    @State static var dummyToggle = false
-
-    static var previews: some View {
-        Form {
-            Feature("Casing", isExpanded: $isExpanded) {
-                Toggle("Enabled", isOn: $dummyToggle)
-            }
+/**
+ A group used in the settings portion of memeinator. Needs SettingsViewModel environment object.
+ */
+struct ProGroup<Content>: View where Content: View {
+    
+    @EnvironmentObject var viewModel: SettingsViewModel
+    
+    let name: String
+    let content: Content
+    let feature: String
+    
+    @State var proPreviewOpen = false
+    
+    init(name: String, feature: String = "Settings", @ViewBuilder content: () -> Content) {
+        self.name = name
+        self.feature = feature
+        self.content = content()
+    }
+    
+    var body: some View {
+        Section(header: HStack {
+            ProBadge(pro: viewModel.store.pro, action: { /* Not needed */ })
+            Text(name)
+        }) {
+            content
+        }
+        .disabled(!viewModel.store.pro)
+        // We can't use .onTapGesture here because it interferes with SwiftUI!! Rah Apple bad or something!
+        .gesture( viewModel.store.pro ? nil :
+            (TapGesture()
+                .onEnded {
+                    if !viewModel.store.pro {
+                        proPreviewOpen.toggle()
+                    }
+            })
+                              
+        )
+        .sheet(isPresented: $proPreviewOpen) {
+            ProPreviewSheet(isOpen: $proPreviewOpen, feature: "Settings")
         }
     }
 }
