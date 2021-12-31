@@ -14,13 +14,17 @@ class Store: ObservableObject {
     
     @Published private(set) var pro: Bool = false
     
+    @Published private(set) var currentEntitlementTransactions: [MemeinatorTransaction] = []
+    
     var updateListenerTask: Task<Void, Error>?
     
     init() {
-        // In theory we should do this, but because the only IAP we have is checked every time we use it, it shouldn't matter.
         Task {
             do {
+                // This should maybe be done with currentEntitlements instead of isPurchased
                 pro = try await isPurchased(.pro)
+                
+                try await updateTransactionsList()
             } catch {
                 print("An Error occured while checking purchase states of IAP.")
                 pro = false
@@ -63,6 +67,8 @@ class Store: ObservableObject {
             
             // Finished
             await transaction.finish()
+            
+            try await updateTransactionsList()
 
             return transaction
         case .userCancelled, .pending:
@@ -72,8 +78,35 @@ class Store: ObservableObject {
         }
     }
     
+    func restorePurchases() async throws {
+        try await AppStore.sync()
+    }
     
-    func listenForTransactions() -> Task<Void, Error> {
+    func requestRefund(for transaction: MemeinatorTransaction, in windowScene: UIWindowScene) {
+        Task {
+            try await Transaction.beginRefundRequest(for: transaction.id, in: windowScene)
+        }
+    }
+    
+    func updateTransactionsList() async throws {
+        var transactions: [MemeinatorTransaction] = []
+        
+        for await unverifiedTransaction in Transaction.currentEntitlements {
+            let transaction = try checkVerified(unverifiedTransaction)
+            
+            transactions.append(
+                MemeinatorTransaction(
+                    product: MemeinatorProduct(rawValue: transaction.productID)!,
+                    purchaseDate: transaction.purchaseDate,
+                    id: transaction.id
+                )
+            )
+        }
+        
+        currentEntitlementTransactions = transactions
+    }
+    
+    private func listenForTransactions() -> Task<Void, Error> {
         return Task.detached {
             for await result in Transaction.updates {
                 print("recieved tx")
@@ -95,7 +128,6 @@ class Store: ObservableObject {
                         print("recieved tx productid: \(transaction.productID)")
                         switch transaction.productID {
                         case MemeinatorProduct.pro.rawValue:
-                            
                             self.pro = false
                         default:
                             break
@@ -103,6 +135,9 @@ class Store: ObservableObject {
                     }
                     
                     await transaction.finish()
+                    
+                    try await self.updateTransactionsList()
+                    
                 } catch {
                     print("Transaction verification failed.")
                 }
@@ -111,7 +146,7 @@ class Store: ObservableObject {
         }
     }
     
-    func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+    private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         // Check if the transaction passes StoreKit verification.
         switch result {
         case .unverified:
@@ -130,4 +165,27 @@ enum StoreError: Error {
 
 enum MemeinatorProduct: String {
     case pro = "com.bb.memeinator.pro"
+    
+    var name: String {
+        switch self {
+        case .pro:
+            return "Memeintor Pro"
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .pro:
+            return "star.fill"
+        }
+    }
+}
+
+struct MemeinatorTransaction: Identifiable {
+    let product: MemeinatorProduct
+    let purchaseDate: Date
+    var formattedPurchaseDate: String {
+        purchaseDate.formatted(date: .numeric, time: .shortened)
+    }
+    let id: UInt64
 }

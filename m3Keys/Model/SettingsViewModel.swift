@@ -27,6 +27,8 @@ class SettingsViewModel: GenericViewModel {
         var workingString = FormattedAction(input: input)
         
         workingString += createFurryspeakAction(from: workingString, with: contextBefore)
+        
+        workingString += createStutterAction(from: workingString, with: contextBefore)
 
         workingString += createCasingAction(from: workingString)
 
@@ -111,10 +113,19 @@ class SettingsViewModel: GenericViewModel {
         default: break
         }
         
-        // Stutter
+        return formattedAction
+
+    }
+    
+    func createStutterAction(from input: FormattedAction, with context: String) -> FormattedAction {
         guard stutterEnabled else {
-            return formattedAction
+            return input
         }
+        
+        let context = clean(context: context)
+        let last = context.suffix(1)
+        
+        var formattedAction = FormattedAction(input: input.formattedString)
         
         // If this is the beginning of a word or paragraph and random is true, stutter the char
         if (last == "" || last == " ") && randomBool(in: stutterProbability) {
@@ -127,7 +138,6 @@ class SettingsViewModel: GenericViewModel {
         
         // We're done!
         return formattedAction
-
     }
     
     /** Returns an action with added spaces between characters and corrects deletes for the added spaces. */

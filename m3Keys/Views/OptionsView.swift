@@ -107,29 +107,58 @@ struct OptionsView: View {
                 .roundedBackground(color: viewModel.casingOn ? .purple : .gray)
                 
                 // Furryspeak
-                HStack {
-                    Button(action: {
-                        viewModel.furryspeakEnabled.toggle()
-                    }) {
-                        Text("Furryspeak")
-                            .foregroundColor(.white)
-                            .font(.headline)
+                if viewModel.furryspeakStutterSeparated {
+                    HStack {
+                        Button(action: {
+                            viewModel.furryspeakEnabled.toggle()
+                        }) {
+                            Text("Furryspeak")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }
                     }
-                    
-                    if viewModel.furryspeakEnabled {
-                        Divider()
+                    .frame(maxHeight: .infinity)
+                    .padding(.horizontal)
+                    .roundedBackground(color: viewModel.furryspeakEnabled ? .purple : .gray)
                         
-                        Text("Stutter:")
-                            .font(.subheadline)
-                        
-                        // Enabled Toggle
-                        Toggle("Stutter Enabled", isOn: $viewModel.stutterEnabled)
-                            .labelsHidden()
+                    HStack {
+                        Button(action: {
+                            viewModel.stutterEnabled.toggle()
+                        }) {
+                            Text("Stutter")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }
                     }
+                    .frame(maxHeight: .infinity)
+                    .padding(.horizontal)
+                    .roundedBackground(color: viewModel.stutterEnabled ? .purple : .gray)
+                } else {
+                    HStack {
+                        Button(action: {
+                            viewModel.furryspeakEnabled.toggle()
+                        }) {
+                            Text("Furryspeak")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }
+                        
+                        if viewModel.furryspeakEnabled {
+                            Divider()
+                            
+                            Text("Stutter:")
+                                .font(.subheadline)
+                            
+                            // Enabled Toggle
+                            Toggle("Stutter Enabled", isOn: $viewModel.stutterEnabled)
+                                .labelsHidden()
+                        }
+                    }
+                    .frame(maxHeight: .infinity)
+                    .padding(.horizontal)
+                    .roundedBackground(color: viewModel.furryspeakEnabled ? .purple : .gray)
                 }
-                .frame(maxHeight: .infinity)
-                .padding(.horizontal)
-                .roundedBackground(color: viewModel.furryspeakEnabled ? .purple : .gray)
+                
                 
             }.padding(.horizontal)
         }

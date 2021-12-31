@@ -84,7 +84,10 @@ struct ProPreviewSheet: View {
                 .foregroundColor(Color(uiColor: .systemBackground))
                 
                 Button(action: {
-                    
+                    Task {
+                        try await settingsViewModel.store.restorePurchases()
+                        isOpen = false
+                    }
                 }) {
                     Text("Restore Purchases")
                         .frame(maxWidth: 300)

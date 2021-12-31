@@ -17,7 +17,7 @@ class SettingsViewModel: GenericViewModel {
     
     private var casingState: [Bool] = []
     
-    private var furryspeakState: [Bool] = []
+    private var stutterState: [Bool] = []
     
     private var zalgoState: ZalgoState = ZalgoState()
     
@@ -29,6 +29,8 @@ class SettingsViewModel: GenericViewModel {
         workingString = repeatString(workingString)
         
         workingString = formatFurryspeak(from: workingString)
+        
+        workingString = formatStutter(from: workingString)
         
         workingString = formatCasing(from: workingString)
         
@@ -62,17 +64,15 @@ class SettingsViewModel: GenericViewModel {
         }
     }
     
-    // Save furryspeak stutter state
-    override func formatFurryspeak(from input: String) -> String {
-        guard stutterEnabled && furryspeakEnabled else {
-            return super.formatFurryspeak(from: input)
+    override func formatStutter(from input: String) -> String {
+        guard stutterEnabled else {
+            return input
         }
         
-        let words = super.formatFurryspeak(from: input)
-            .split(separator: " ", omittingEmptySubsequences: false)
+        let words = input.split(separator: " ", omittingEmptySubsequences: false)
         var workingString = ""
         
-        for (idx, word) in words.enumerated() { #warning("This does not respect if only stutter is enabled")
+        for (idx, word) in words.enumerated() {
             var word = String(word)
             
             // Don't add a space to the last word
@@ -81,8 +81,8 @@ class SettingsViewModel: GenericViewModel {
             }
             
             // Add more state if needed
-            if idx >= furryspeakState.count {
-                furryspeakState.append(randomBool(in: stutterProbability))
+            if idx >= stutterState.count {
+                stutterState.append(randomBool(in: stutterProbability))
             }
             
             // If the word is just a space or empty, add it without stuttering
@@ -91,7 +91,7 @@ class SettingsViewModel: GenericViewModel {
                 continue
             }
             
-            workingString.append(furryspeakState[idx] ?
+            workingString.append(stutterState[idx] ?
                                  String(word.first!) + "-" + word :
                                  word)
         }
@@ -180,11 +180,11 @@ class SettingsViewModel: GenericViewModel {
         switch invalidatedState {
         case .all:
             casingState.randomize()
-            furryspeakState.randomize(in: stutterProbability)
+            stutterState.randomize(in: stutterProbability)
             zalgoState = ZalgoState()
             
         case .furryspeak:
-            furryspeakState.randomize(in: stutterProbability)
+            stutterState.randomize(in: stutterProbability)
             
         case .casing:
             casingState.randomize()

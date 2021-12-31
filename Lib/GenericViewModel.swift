@@ -7,16 +7,27 @@
 //
 
 import Foundation
+import Combine
 
 /**
  A generic ObservableObject for interacting with the current meme settings.
  */
-class GenericViewModel: ObservableObject {
+public class GenericViewModel: ObservableObject {
     
     // MARK: All
     
+    init() {
+        anyCancellable = store.objectWillChange
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] (_) in
+                self?.objectWillChange.send()
+            }
+    }
+    
+    private var anyCancellable: AnyCancellable?
+    
     /** Transaction handler */
-    var store = Store()
+    @Published var store = Store()
     
     /** Pro feature that is used, or nil. */
     var proFeature: String? {
@@ -146,8 +157,6 @@ class GenericViewModel: ObservableObject {
     
     @Published var furryspeakEnabled = false
     
-    @Published var stutterEnabled = false
-    
     // Not in use by m3keys, remember to update m3keys please
     func formatFurryspeak(from input: String) -> String {
         guard furryspeakEnabled else {
@@ -183,10 +192,17 @@ class GenericViewModel: ObservableObject {
 
     }
     
-    // Stutter
+    // MARK: Stutter
     
     /** The probability of each word to stutter is 1 in this number. */
     @Published(key: "settings.stutterProbability") var stutterProbability: Int = 15
+    
+    @Published var stutterEnabled = false
+    
+    /** Not implemented */
+    func formatStutter(from input: String) -> String {
+        return input
+    }
     
     // MARK: Repeat
     
@@ -290,6 +306,15 @@ class GenericViewModel: ObservableObject {
     func invalidateState(for invalidatedState: ViewModelState) {
         
     }
+    
+    enum ViewModelState {
+        case all
+        case furryspeak
+        case casing
+        case zalgoHeight
+        case zalgoRandomness
+        case zalgoDiacritics
+    }
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {
@@ -298,13 +323,4 @@ enum Casing: String, CaseIterable, Identifiable, Hashable {
     case random = "rAnDOm"
     
     var id: String { self.rawValue }
-}
-
-enum ViewModelState {
-    case all
-    case furryspeak
-    case casing
-    case zalgoHeight
-    case zalgoRandomness
-    case zalgoDiacritics
 }

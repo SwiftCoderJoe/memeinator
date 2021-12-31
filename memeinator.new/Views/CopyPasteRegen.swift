@@ -33,7 +33,7 @@ struct CopyPasteRegen: View {
                 }
             }, label: {
                 Text("Copy")
-                    .font(.title3)
+                    .font(.system(size: 20))
                     .padding()
             })
                 .frame(maxWidth: .infinity)
@@ -43,7 +43,7 @@ struct CopyPasteRegen: View {
                 settingsViewModel.textInput = UIPasteboard.general.string ?? ""
             }, label: {
                 Text("Paste")
-                    .font(.title3)
+                    .font(.system(size: 20))
                     .padding()
             })
                 .frame(maxWidth: .infinity)
@@ -53,7 +53,7 @@ struct CopyPasteRegen: View {
                 settingsViewModel.randomizeState()
             }, label: {
                 Text("Refresh")
-                    .font(.title3)
+                    .font(.system(size: 20))
                     .padding()
             })
                 .frame(maxWidth: .infinity)

@@ -10,8 +10,8 @@
 		0E020D14276A532B008571C8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
 		0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
+		0E146D48277554AB00B5053F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E146D47277554AB00B5053F /* StoreKit.framework */; };
 		0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757AD26D5C65300C35984 /* SettingsView.swift */; };
-		0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B026D5C88D00C35984 /* AppPage.swift */; };
 		0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B226D6B92000C35984 /* KeyboardManager.swift */; };
 		0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */; };
 		0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1757B826D802F900C35984 /* SettingsViewModel.swift */; };
@@ -26,6 +26,8 @@
 		0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E385F4826E01B660077E40F /* KeyboardView.swift */; };
 		0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F5326E01BEF0077E40F /* KeyboardKit */; };
 		0E3CF7D4273C3A7900650BB5 /* ProPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */; };
+		0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A07277E34C70020C70F /* SettingsHelp.swift */; };
+		0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */; };
 		0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */; };
 		0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6421C026DE96A80087E2BB /* AlertToast */; };
 		0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */; };
@@ -37,6 +39,7 @@
 		0E6BFA0126D5BE93008868B7 /* LargeDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
+		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterGroups.swift */; };
 		0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3426E141EF003E53AB /* Persisted.swift */; };
 		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
@@ -97,8 +100,8 @@
 /* Begin PBXFileReference section */
 		0E020D13276A532B008571C8 /* ProBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProBadge.swift; sourceTree = "<group>"; };
 		0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
+		0E146D47277554AB00B5053F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0E1757AD26D5C65300C35984 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		0E1757B026D5C88D00C35984 /* AppPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPage.swift; sourceTree = "<group>"; };
 		0E1757B226D6B92000C35984 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneDeviceType.swift; sourceTree = "<group>"; };
 		0E1757B826D802F900C35984 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		0E385F4826E01B660077E40F /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0E385F4926E01B660077E40F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPreviewSheet.swift; sourceTree = "<group>"; };
+		0E5A7A07277E34C70020C70F /* SettingsHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelp.swift; sourceTree = "<group>"; };
+		0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalitySettings.swift; sourceTree = "<group>"; };
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memeinatorApp.swift; sourceTree = "<group>"; };
 		0E6BF9DB26D46BBE008868B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 		0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDivider.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
 		0E8C8F3426E141EF003E53AB /* Persisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
+		0EF99C9927763D4D00228440 /* ContentInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+		0EFAA8BA276CDE16009F9BDC /* m3Keys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m3Keys.entitlements; sourceTree = "<group>"; };
+		0EFAA8BB276CDE89009F9BDC /* memeinator.new.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = memeinator.new.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E146D48277554AB00B5053F /* StoreKit.framework in Frameworks */,
 				0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */,
 				0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */,
 			);
@@ -178,7 +188,6 @@
 		0E1757AF26D5C86800C35984 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E1757B026D5C88D00C35984 /* AppPage.swift */,
 				0E1757B226D6B92000C35984 /* KeyboardManager.swift */,
 				0E1757B826D802F900C35984 /* SettingsViewModel.swift */,
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
@@ -189,6 +198,7 @@
 		0E385F3D26E01B660077E40F /* m3Keys */ = {
 			isa = PBXGroup;
 			children = (
+				0EFAA8BA276CDE16009F9BDC /* m3Keys.entitlements */,
 				0E385F3E26E01B660077E40F /* Extensions */,
 				0E385F4626E01B660077E40F /* Views */,
 				0E385F4026E01B660077E40F /* ViewControllers */,
@@ -236,13 +246,26 @@
 		0E385F5226E01BEF0077E40F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E146D47277554AB00B5053F /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E5A7A06277E34B10020C70F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
+				0E5A7A07277E34C70020C70F /* SettingsHelp.swift */,
+				0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */,
+				0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		0E6BF9D826D46BBE008868B7 /* memeinator.new */ = {
 			isa = PBXGroup;
 			children = (
+				0EFAA8BB276CDE89009F9BDC /* memeinator.new.entitlements */,
 				0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */,
 				0E6BF9DB26D46BBE008868B7 /* ContentView.swift */,
 				0E6BF9FF26D5BE79008868B7 /* Views */,
@@ -281,12 +304,12 @@
 		0E6BF9FF26D5BE79008868B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E5A7A06277E34B10020C70F /* Settings */,
 				0E6BFA0026D5BE93008868B7 /* LargeDivider.swift */,
 				0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */,
 				0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */,
 				0E8C8F3226E12D58003E53AB /* BetterGroups.swift */,
 				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
-				0E1757AD26D5C65300C35984 /* SettingsView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0EBF10E426E029B700CFA2BC /* SingleSegmentPicker.swift */,
 				0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */,
@@ -311,6 +334,14 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		0EF99C9827763D4D00228440 /* memeinator.pro */ = {
+			isa = PBXGroup;
+			children = (
+				0EF99C9927763D4D00228440 /* ContentInfo.plist */,
+			);
+			path = memeinator.pro;
+			sourceTree = "<group>";
+		};
 		D41F69F4210D5D4A006F5F3C = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +355,7 @@
 				0EBDD5F626E018DC00CF3857 /* memeinator.new.app */,
 				0E385F2026E019C90077E40F /* memeinator.new.tests.xctest */,
 				0E385F2126E019C90077E40F /* memeinator.new.UITests.xctest */,
+				0EF99C9827763D4D00228440 /* memeinator.pro */,
 				0E385F5226E01BEF0077E40F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -525,9 +557,9 @@
 			files = (
 				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
 				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
-				0E1757B126D5C88D00C35984 /* AppPage.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
+				0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */,
 				0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
 				0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */,
 				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
@@ -542,7 +574,9 @@
 				0E8C8F3526E141EF003E53AB /* Persisted.swift in Sources */,
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
+				0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
+				0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */,
 				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
 				0E020D14276A532B008571C8 /* ProBadge.swift in Sources */,
@@ -615,8 +649,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
@@ -634,7 +669,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -651,8 +686,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -669,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -789,8 +825,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -802,7 +839,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -817,8 +854,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
@@ -829,7 +867,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -37,13 +37,16 @@ struct ContentView: View {
                     Label("Keyboard", systemImage: "keyboard")
                 }
                 .tag(AppPage.keyboard)
-
-            SettingsView()
-                .environmentObject(settingsViewModel)
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
-                .tag(AppPage.settings)
+            
+            NavigationView {
+                SettingsView()
+                    .environmentObject(settingsViewModel)
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Settings", systemImage: "gearshape")
+            }
+            .tag(AppPage.settings)
         }
         .accentColor(.purple)
         .introspectTabBarController { controller in
@@ -53,6 +56,13 @@ struct ContentView: View {
             
         }
     }
+    
+    enum AppPage: Hashable {
+        case home
+        case keyboard
+        case settings
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

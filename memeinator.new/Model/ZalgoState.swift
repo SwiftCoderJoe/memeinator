@@ -15,7 +15,4 @@ struct ZalgoState {
     var randomnessModifierTop: [Int] = []
     var diacriticsCountBottom: [Int] = []
     var randomnessModifierBottom: [Int] = []
-    
-    
-    
 }
