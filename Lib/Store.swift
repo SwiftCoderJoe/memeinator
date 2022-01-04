@@ -8,15 +8,22 @@
 
 import Foundation
 import StoreKit
+import Combine
 
 class Store: ObservableObject {
     typealias Transaction = StoreKit.Transaction
     
-    @Published private(set) var pro: Bool = false
+    @Published private(set) var pro: Bool = false {
+        didSet {
+            proUpdatesPublisher.send(pro)
+        }
+    }
     
     @Published private(set) var currentEntitlementTransactions: [MemeinatorTransaction] = []
     
     var updateListenerTask: Task<Void, Error>?
+    
+    var proUpdatesPublisher = PassthroughSubject<Bool, Never>()
     
     init() {
         Task {
@@ -169,7 +176,7 @@ enum MemeinatorProduct: String {
     var name: String {
         switch self {
         case .pro:
-            return "Memeintor Pro"
+            return "Memeinator Pro"
         }
     }
     

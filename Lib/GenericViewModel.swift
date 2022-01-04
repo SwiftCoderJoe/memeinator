@@ -12,19 +12,31 @@ import Combine
 /**
  A generic ObservableObject for interacting with the current meme settings.
  */
-public class GenericViewModel: ObservableObject {
+class GenericViewModel: ObservableObject, PreferenceContainer {
     
     // MARK: All
     
     init() {
-        anyCancellable = store.objectWillChange
+        
+        // If the store changes, mark this object as changed.
+        storePublisher = store.objectWillChange
             .receive(on: DispatchQueue.main)
             .sink { [weak self] (_) in
                 self?.objectWillChange.send()
             }
+        
+        // If the user does not own pro, reset all preferences
+        storeProPublisher = store.proUpdatesPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { pro in
+                if pro == false {
+                    self.resetPreferences()
+                }
+            }
     }
     
-    private var anyCancellable: AnyCancellable?
+    private var storePublisher: AnyCancellable?
+    private var storeProPublisher: AnyCancellable?
     
     /** Transaction handler */
     @Published var store = Store()
@@ -40,10 +52,23 @@ public class GenericViewModel: ObservableObject {
         }
     }
     
+    func invalidateState(for invalidatedState: ViewModelState) {
+        
+    }
+    
+    enum ViewModelState {
+        case all
+        case furryspeak
+        case casing
+        case zalgoHeight
+        case zalgoRandomness
+        case zalgoDiacritics
+    }
+    
     // MARK: Settings
     
     /** UserDefaults stored value. If enabled, furryspeak and stutter are shown as two separate effects. */
-    @Published(key: "settings.furryspeakStutterSeparated")
+    @PublishedPreference(key: "settings.v2.furryspeakStutterSeparated")
     var furryspeakStutterSeparated = false
     
     // MARK: Spacing
@@ -195,7 +220,8 @@ public class GenericViewModel: ObservableObject {
     // MARK: Stutter
     
     /** The probability of each word to stutter is 1 in this number. */
-    @Published(key: "settings.stutterProbability") var stutterProbability: Int = 15
+    @PublishedPreference(key: "settings.v2.stutterProbability")
+    var stutterProbability: Int = 10
     
     @Published var stutterEnabled = false
     
@@ -212,7 +238,7 @@ public class GenericViewModel: ObservableObject {
     /** Published value showing the number of times to repeat. */
     @Published var numberOfRepeats = 2.0
     
-    @Published(key: "settings.repeatsMax")
+    @PublishedPreference(key: "settings.v2.repeatsMax")
     var repeatsMax: Int = 25
     
     /** Value showing the possible range of repeats. */
@@ -301,19 +327,6 @@ public class GenericViewModel: ObservableObject {
         
         return workingString
     
-    }
-    
-    func invalidateState(for invalidatedState: ViewModelState) {
-        
-    }
-    
-    enum ViewModelState {
-        case all
-        case furryspeak
-        case casing
-        case zalgoHeight
-        case zalgoRandomness
-        case zalgoDiacritics
     }
 }
 

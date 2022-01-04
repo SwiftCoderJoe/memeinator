@@ -10,7 +10,6 @@ import Foundation
 import SwiftUI
 
 struct FunctionalitySettings: View {
-    // FIXME: Settings changed with Pro do not get reset when Pro is revoked
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     
     var body: some View {
@@ -36,12 +35,20 @@ struct FunctionalitySettings: View {
                         label: {
                             Text("Max Repeats: \(settingsViewModel.repeatsMax)")
                         })
+                if settingsViewModel.repeatsMax > 25 {
+                    Label("High repeat values may cause performance issues", systemImage: "exclamationmark.triangle.fill")
+                        .accentColor(.yellow)
+                }
             }
             
             ProGroup(name: "Coming soon!", content: {
                 Text("Repeat (max)")
                 Text("Zalgo (maxes)")
                 Text("Separate Furryspeak and Stutter")
+            })
+            
+            Button("reset", action: {
+                settingsViewModel.resetPreferences()
             })
 
         }
