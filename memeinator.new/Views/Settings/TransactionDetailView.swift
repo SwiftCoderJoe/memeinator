@@ -23,9 +23,7 @@ struct TransactionDetailView: View {
     
     var body: some View {
         Form {
-            Section(header:
-                Text("About")
-            ) {
+            Section("About") {
                 HStack {
                     Text("Product Name:")
                     Spacer()
@@ -43,9 +41,7 @@ struct TransactionDetailView: View {
                 }
             }
             
-            Section(header:
-                Text("Actions")
-            ) {
+            Section("Actions") {
                 // FIXME: Goes nowhere
                 Link("Contact Us", destination: URL(string: "https://SwiftCoderJoe.github.io")!)
                 

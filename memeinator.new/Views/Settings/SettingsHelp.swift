@@ -18,9 +18,7 @@ struct SettingsHelp: View {
     var body: some View {
         VStack {
             Form {
-                Section(header:
-                    Text("About")
-                ) {
+                Section("About") {
                     HStack {
                         Text("App Version")
                         Spacer()
@@ -38,9 +36,7 @@ struct SettingsHelp: View {
                     }
                 }
                 // FIXME: Most of these links go nowhere
-                Section(header:
-                    Text("Support")
-                ) {
+                Section("Support") {
                     Link("Frequently Asked Questions",
                          destination: URL(string: "https://swiftcoderjoe.github.io")!)
                     Link("Submit Feedback",
@@ -49,9 +45,13 @@ struct SettingsHelp: View {
                          destination: URL(string: "mailto:coderjoe05@gmail.com")!)
                 }
                 
-                Section(header:
-                    Text("Purchases")
-                ) {
+                Section("Troubleshooting") {
+                    Button("Reset All Preferences", action: {
+                        settingsViewModel.resetPreferences()
+                    })
+                }
+                
+                Section("Purchases") {
                     if settingsViewModel.store.currentEntitlementTransactions.count == 0 {
                         Text("No Purchases Found")
                     } else {

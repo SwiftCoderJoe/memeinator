@@ -33,35 +33,31 @@ struct CopyPasteRegen: View {
                 }
             }, label: {
                 Text("Copy")
-                    .font(.system(size: 20))
-                    .padding()
+                    .font(.system(size: 15))
+                    .frame(maxWidth: .infinity)
             })
-                .frame(maxWidth: .infinity)
-                .roundedBackground(color: .purple)
+                .buttonStyle(.borderedProminent)
             
             Button(action: {
                 settingsViewModel.textInput = UIPasteboard.general.string ?? ""
             }, label: {
                 Text("Paste")
-                    .font(.system(size: 20))
-                    .padding()
+                    .font(.system(size: 15))
+                    .frame(maxWidth: .infinity)
             })
-                .frame(maxWidth: .infinity)
-                .roundedBackground(color: .purple)
+                .buttonStyle(.borderedProminent)
             
             Button(action: {
                 settingsViewModel.randomizeState()
             }, label: {
                 Text("Refresh")
-                    .font(.system(size: 20))
-                    .padding()
+                    .font(.system(size: 15))
+                    .frame(maxWidth: .infinity)
             })
-                .frame(maxWidth: .infinity)
-                .roundedBackground(color: .purple)
+                .buttonStyle(.borderedProminent)
             
         }
         .padding()
-        .foregroundColor(.primary)
         .toast(isPresenting: $toastShowing) {
             AlertToast(displayMode: .hud, type: .complete(.green), title: "Copied!")
         }
@@ -69,6 +65,7 @@ struct CopyPasteRegen: View {
             ProPreviewSheet(isOpen: $errorShowing, feature: settingsViewModel.proFeature ?? "")
                 .environmentObject(settingsViewModel)
         }
+        .controlSize(.large)
     }
     
     func copy() {

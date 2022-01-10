@@ -8,6 +8,21 @@
 
 import SwiftUI
 
+struct Heading: View {
+    let name: String
+    
+    var body: some View {
+        Text(name)
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .foregroundColor(.purple)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
+        
+        LargeDivider()
+    }
+}
+
 struct LargeDivider: View {
     var height: CGFloat = 4
     

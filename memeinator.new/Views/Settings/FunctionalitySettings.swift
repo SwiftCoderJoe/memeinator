@@ -36,19 +36,14 @@ struct FunctionalitySettings: View {
                             Text("Max Repeats: \(settingsViewModel.repeatsMax)")
                         })
                 if settingsViewModel.repeatsMax > 25 {
-                    Label("High repeat values may cause performance issues", systemImage: "exclamationmark.triangle.fill")
+                    Label("High repeat values may cause performance issues",
+                          systemImage: "exclamationmark.triangle.fill")
                         .accentColor(.yellow)
                 }
             }
             
             ProGroup(name: "Coming soon!", content: {
-                Text("Repeat (max)")
                 Text("Zalgo (maxes)")
-                Text("Separate Furryspeak and Stutter")
-            })
-            
-            Button("reset", action: {
-                settingsViewModel.resetPreferences()
             })
 
         }

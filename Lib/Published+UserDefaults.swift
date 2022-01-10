@@ -7,11 +7,9 @@
 //
 
 import Foundation
-import SwiftUI
 import Combine
 
 private var cancellables = [String: AnyCancellable]()
-private var isPro = [String: Bool]()
 
 extension Published {
     init(wrappedValue defaultValue: Value, key: String) {

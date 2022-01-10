@@ -221,7 +221,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     
     /** The probability of each word to stutter is 1 in this number. */
     @PublishedPreference(key: "settings.v2.stutterProbability")
-    var stutterProbability: Int = 10
+    var stutterProbability: Int = 5
     
     @Published var stutterEnabled = false
     
@@ -327,6 +327,28 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
         
         return workingString
     
+    }
+    
+    // MARK: Da Vinci
+    
+    /** Published value showing if Da Vinci flipping is enabled. */
+    @Published var daVinciEnabled = false
+    
+    func formatDaVinci(from input: String) -> String {
+        guard daVinciEnabled else {
+            return input
+        }
+        
+        var workingString = ""
+        
+        for element in input.reversed() {
+            let character = String(element)
+            
+            workingString += UnicodeLiterals.daVinciCharacters[character] ?? character
+        }
+        
+        return workingString
+        
     }
 }
 

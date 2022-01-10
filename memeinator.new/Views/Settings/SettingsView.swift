@@ -14,13 +14,7 @@ struct SettingsView: View {
     
     var body: some View {
         VStack(spacing: 0.0) {
-            Text("Settings")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.purple)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-            LargeDivider()
+            Heading(name: "Settings")
             
             Form {
                 
@@ -64,7 +58,7 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink(
-                        destination: FunctionalitySettings().environmentObject(settingsViewModel)
+                        destination: FavoritesSettings().environmentObject(settingsViewModel)
                     ) {
                         HStack {
                             Image(systemName: "star.fill")

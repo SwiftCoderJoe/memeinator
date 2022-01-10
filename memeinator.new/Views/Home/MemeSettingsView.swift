@@ -58,9 +58,9 @@ struct MemeSettingsView: View {
                 
                 if settingsViewModel.furryspeakStutterSeparated {
                     
-                    Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) {}
+                    Feature("Furryspeak", isExpanded: $settingsViewModel.furryspeakEnabled) { }
                     
-                    Feature("Stutter", isExpanded: $settingsViewModel.stutterEnabled) {}
+                    Feature("Stutter", isExpanded: $settingsViewModel.stutterEnabled) { }
                     
                 } else {
                     
@@ -112,6 +112,8 @@ struct MemeSettingsView: View {
                     
                 }
                 
+                ProFeature("Da Vinci", isExpanded: $settingsViewModel.daVinciEnabled) { }
+                
                 ProFeature("Emojifier", isExpanded: $dummySwitch) {
                     Text("Coming soon!")
                 }
@@ -120,7 +122,7 @@ struct MemeSettingsView: View {
             
         }
         .background(Color(uiColor: colorScheme == .dark ? .secondarySystemBackground : .systemBackground))
-        .navigationTitle("Meme Settings")
+        .navigationTitle("Text Settings")
         .environmentObject(settingsViewModel)
     }
 }

@@ -15,6 +15,32 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
+    @PublishedEnumPreference(key: "settings.v2.leftQuickSetting")
+    var leftQuickSetting: Favorite = .spacing
+    
+    @PublishedEnumPreference(key: "settings.v2.centerQuickSetting")
+    var centerQuickSetting: Favorite = .casing
+    
+    @PublishedEnumPreference(key: "settings.v2.rightQuickSetting")
+    var rightQuickSetting: Favorite = .furryspeak
+    
+    func shouldShowQuickSetting(favorite: Favorite, in section: FavoriteSection) -> Bool {
+        switch section {
+        case .left:
+            return !(centerQuickSetting == favorite || rightQuickSetting == favorite)
+        case .center:
+            return !(leftQuickSetting == favorite || rightQuickSetting == favorite)
+        case .right:
+            return !(leftQuickSetting == favorite || centerQuickSetting == favorite)
+        }
+    }
+    
+    enum FavoriteSection {
+        case left
+        case center
+        case right
+    }
+    
     private var casingState: [Bool] = []
     
     private var stutterState: [Bool] = []
@@ -23,7 +49,10 @@ class SettingsViewModel: GenericViewModel {
     
     // MARK: Methods
     
+    // FIXME: It seems like this function gets called multiple times when the screen is updated. Maybe we should try checking if state has changed, and if it hasn't, then just return a saved string.
     func createFormattedString() -> String {
+        // print("Creating Formatted String...")
+        
         var workingString = textInput
         
         workingString = repeatString(workingString)
@@ -33,6 +62,8 @@ class SettingsViewModel: GenericViewModel {
         workingString = formatStutter(from: workingString)
         
         workingString = formatCasing(from: workingString)
+        
+        workingString = formatDaVinci(from: workingString)
         
         workingString = formatSpaces(from: workingString)
         
@@ -65,7 +96,7 @@ class SettingsViewModel: GenericViewModel {
     }
     
     override func formatStutter(from input: String) -> String {
-        guard stutterEnabled else {
+        guard stutterEnabled && (furryspeakStutterSeparated || furryspeakEnabled) else {
             return input
         }
         
@@ -118,22 +149,17 @@ class SettingsViewModel: GenericViewModel {
             }
             
             
-            // Next, if this character doesn't have a number of diacritics assigned to it, then create one using current parameters
+            // Next, if this character doesn't have a height assigned to it, then create one using current parameters
             if zalgoState.diacriticsCountTop.count <= idx {
                 zalgoState.diacriticsCountTop.append(Int(zalgoHeight))
-            }
-            
-            if zalgoState.diacriticsCountBottom.count <= idx {
                 zalgoState.diacriticsCountBottom.append(Int(zalgoHeight))
             }
             
+            // Next, if this character doesn't have a randomness modifier assigned to it, create it.
             if zalgoState.randomnessModifierBottom.count <= idx {
                 zalgoState.randomnessModifierBottom.append(
                     Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
                 )
-            }
-            
-            if zalgoState.randomnessModifierTop.count <= idx {
                 zalgoState.randomnessModifierTop.append(
                     Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
                 )

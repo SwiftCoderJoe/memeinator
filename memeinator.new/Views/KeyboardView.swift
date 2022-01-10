@@ -11,13 +11,7 @@ import SwiftUI
 struct KeyboardView: View {
     var body: some View {
         VStack(spacing: 0.0) {
-            Text("Keyboard")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.purple)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-            LargeDivider()
+            Heading(name: "Keyboard")
             Spacer()
         }
     }
