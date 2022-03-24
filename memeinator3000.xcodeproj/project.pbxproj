@@ -47,6 +47,9 @@
 		0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
 		0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
 		0E80BBBE278CC4BA00F6B727 /* EnumPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */; };
+		0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80BBC1279C5BD100F6B727 /* MarkdownUI */; };
+		0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */; };
+		0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */; };
 		0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterGroups.swift */; };
 		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
 		0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */; };
@@ -58,6 +61,10 @@
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */; };
 		0ECDC594273F0F69001291C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
+		0ECDF548279C800500568675 /* LargeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDF547279C800500568675 /* LargeMessage.swift */; };
+		0ECFC3EC27EBCF0D009C9F2B /* M3KeysFunctionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */; };
+		0EDA93DF27AF3FFC0083EE82 /* KeyboardReorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */; };
+		0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
@@ -139,6 +146,8 @@
 		0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSettings.swift; sourceTree = "<group>"; };
 		0E80BBBA278BB59F00F6B727 /* Persisted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumPreference.swift; sourceTree = "<group>"; };
+		0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysInstallManager.swift; sourceTree = "<group>"; };
+		0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFullAccess.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeLiterals.swift; sourceTree = "<group>"; };
@@ -149,6 +158,9 @@
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
 		0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
 		0ECDC593273F0F69001291C3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0ECDF547279C800500568675 /* LargeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMessage.swift; sourceTree = "<group>"; };
+		0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReorder.swift; sourceTree = "<group>"; };
+		0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysFunctionOrder.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
@@ -165,6 +177,7 @@
 				0E146D48277554AB00B5053F /* StoreKit.framework in Frameworks */,
 				0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */,
 				0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */,
+				0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +213,7 @@
 				0E1757B826D802F900C35984 /* SettingsViewModel.swift */,
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
 				0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */,
+				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,15 +328,16 @@
 		0E6BF9FF26D5BE79008868B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E80BBC5279C74BC00F6B727 /* Keyboard */,
 				0E80BBB7278A57CF00F6B727 /* Home */,
 				0E5A7A06277E34B10020C70F /* Settings */,
 				0E80BBB5278A57BC00F6B727 /* Favorites.swift */,
 				0E6BFA0026D5BE93008868B7 /* Heading.swift */,
 				0E8C8F3226E12D58003E53AB /* BetterGroups.swift */,
-				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */,
 				0E020D13276A532B008571C8 /* ProBadge.swift */,
+				0ECDF547279C800500568675 /* LargeMessage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +352,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0E80BBC5279C74BC00F6B727 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BFA0426D5C485008868B7 /* KeyboardView.swift */,
+				0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */,
+				0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		0EB20C9925AB8C2800D41488 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +374,7 @@
 				0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */,
 				0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */,
 				0E7766CD2783BD4E0020EB1D /* Preference.swift */,
+				0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -401,6 +427,7 @@
 			packageProductDependencies = (
 				0E6421C026DE96A80087E2BB /* AlertToast */,
 				0EBA3ACE274571CF00058EB2 /* Introspect */,
+				0E80BBC1279C5BD100F6B727 /* MarkdownUI */,
 			);
 			productName = memeinator3000.new;
 			productReference = 0EBDD5F626E018DC00CF3857 /* memeinator.new.app */;
@@ -501,6 +528,7 @@
 				0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */,
 				0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 				0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 			);
 			productRefGroup = D41F69F4210D5D4A006F5F3C;
 			projectDirPath = "";
@@ -578,10 +606,12 @@
 				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
 				0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
+				0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
 				0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */,
 				0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
 				0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */,
+				0ECDF548279C800500568675 /* LargeMessage.swift in Sources */,
 				0E6BF9DC26D46BBE008868B7 /* ContentView.swift in Sources */,
 				0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */,
 				0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */,
@@ -593,16 +623,19 @@
 				0E1757B926D8031A00C35984 /* SettingsViewModel.swift in Sources */,
 				0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */,
 				0E1757B326D6B92200C35984 /* KeyboardManager.swift in Sources */,
+				0EDA93DF27AF3FFC0083EE82 /* KeyboardReorder.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */,
 				0E80BBBE278CC4BA00F6B727 /* EnumPreference.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
 				0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */,
+				0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */,
 				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
 				0E020D14276A532B008571C8 /* ProBadge.swift in Sources */,
 				0E80BBB6278A57BC00F6B727 /* Favorites.swift in Sources */,
 				0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */,
+				0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */,
 				0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +662,7 @@
 			files = (
 				0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */,
 				0E385F3926E01A950077E40F /* GenericViewModel.swift in Sources */,
+				0ECFC3EC27EBCF0D009C9F2B /* M3KeysFunctionOrder.swift in Sources */,
 				0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */,
 				0E385F4A26E01B660077E40F /* UITextDocumentProxy+Custom.swift in Sources */,
 				0E385F4D26E01B660077E40F /* M3KActionHandler.swift in Sources */,
@@ -675,14 +709,14 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "memeinator-new-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = memeinator;
+				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -693,7 +727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -712,13 +746,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "memeinator-new-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = memeinator;
+				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -729,7 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -851,19 +885,19 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = m3Keys;
+				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 BytleBit. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -880,18 +914,18 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = m3Keys;
+				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 BytleBit. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1085,6 +1119,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -1105,6 +1147,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		0E80BBC1279C5BD100F6B727 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
 		};
 		0EBA3ACE274571CF00058EB2 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;

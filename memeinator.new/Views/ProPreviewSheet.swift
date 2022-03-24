@@ -41,15 +41,7 @@ struct ProPreviewSheet: View {
             LargeDivider()
             
             VStack {
-                VStack {
-                    Image(systemName: "star.fill")
-
-                    Text("Get \(feature) and More")
-                }
-                .font(.title)
-                .foregroundColor(Color(uiColor: .systemBackground))
-                .padding()
-                .roundedBackground(color: .purple)
+                LargeMessage(iconName: "star.fill", message: "Get \(feature) and More")
 
                 VStack(alignment: .leading) {
                     Label("More Memeinator Functions", systemImage: "checkmark.circle.fill") // Repeat, emojifier

@@ -15,13 +15,13 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
-    @PublishedEnumPreference(key: "settings.v2.leftQuickSetting")
+    @PublishedEnumPreference(key: "settings.temp.leftQuickSetting")
     var leftQuickSetting: Favorite = .spacing
     
-    @PublishedEnumPreference(key: "settings.v2.centerQuickSetting")
+    @PublishedEnumPreference(key: "settings.temp.centerQuickSetting")
     var centerQuickSetting: Favorite = .casing
     
-    @PublishedEnumPreference(key: "settings.v2.rightQuickSetting")
+    @PublishedEnumPreference(key: "settings.temp.rightQuickSetting")
     var rightQuickSetting: Favorite = .furryspeak
     
     func shouldShowQuickSetting(favorite: Favorite, in section: FavoriteSection) -> Bool {

@@ -58,10 +58,16 @@ struct MemeinatorView: View {
                 .padding(.horizontal)
             }
             
-            NavigationLink(destination: MemeSettingsView().environmentObject(settingsViewModel)) {
-                Text("Text Settings")
-                    .frame(maxWidth: .infinity)
-                    .font(.system(size: 15).bold())
+            NavigationLink(
+                destination: MemeSettingsView().environmentObject(settingsViewModel)
+            ) {
+                HStack {
+                    Spacer()
+                    Text("Text Settings")
+                    Image(systemName: "chevron.right")
+                    Spacer()
+                }
+                .font(.system(size: 15).bold())
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)

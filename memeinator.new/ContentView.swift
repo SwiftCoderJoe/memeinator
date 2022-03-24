@@ -32,11 +32,15 @@ struct ContentView: View {
             }
             .tag(AppPage.home)
             
-            KeyboardView()
-                .tabItem {
-                    Label("Keyboard", systemImage: "keyboard")
-                }
-                .tag(AppPage.keyboard)
+            NavigationView {
+                KeyboardView()
+                    .environmentObject(settingsViewModel)
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Keyboard", systemImage: "keyboard")
+            }
+            .tag(AppPage.keyboard)
             
             NavigationView {
                 SettingsView()

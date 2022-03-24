@@ -33,6 +33,14 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
                     self.resetPreferences()
                 }
             }
+        
+        // Check if there are any new features to add to the list of buttons on M3Keys
+        for function in M3KeysFunction.allCases {
+            if !keyboardButtonOrdering.contains(function) && !unusedKeyboardButtons.contains(function) {
+                unusedKeyboardButtons.append(function)
+            }
+        }
+        
     }
     
     private var storePublisher: AnyCancellable?
@@ -68,8 +76,15 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Settings
     
     /** UserDefaults stored value. If enabled, furryspeak and stutter are shown as two separate effects. */
-    @PublishedPreference(key: "settings.v2.furryspeakStutterSeparated")
+    @PublishedPreference(key: "settings.temp.furryspeakStutterSeparated")
     var furryspeakStutterSeparated = false
+    
+    /** Ordered array which shows the order which buttons on M3Keys should be displayed, from left to right. */
+    @PublishedPreference(key: "settings.temp.keyboardButtonOrdering")
+    var keyboardButtonOrdering = M3KeysFunction.allCases
+    
+    @PublishedPreference(key: "settings.temp.unusedKeyboardButtons")
+    var unusedKeyboardButtons: [M3KeysFunction] = []
     
     // MARK: Spacing
     
@@ -220,7 +235,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Stutter
     
     /** The probability of each word to stutter is 1 in this number. */
-    @PublishedPreference(key: "settings.v2.stutterProbability")
+    @PublishedPreference(key: "settings.temp.stutterProbability")
     var stutterProbability: Int = 5
     
     @Published var stutterEnabled = false
@@ -238,7 +253,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     /** Published value showing the number of times to repeat. */
     @Published var numberOfRepeats = 2.0
     
-    @PublishedPreference(key: "settings.v2.repeatsMax")
+    @PublishedPreference(key: "settings.temp.repeatsMax")
     var repeatsMax: Int = 25
     
     /** Value showing the possible range of repeats. */

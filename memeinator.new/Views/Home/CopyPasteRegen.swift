@@ -14,7 +14,7 @@ struct CopyPasteRegen: View {
     
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @State var toastShowing = false
-    @State var errorShowing = false
+    @State var proToastShowing = false
     
     var body: some View {
         HStack {
@@ -36,7 +36,6 @@ struct CopyPasteRegen: View {
                     .font(.system(size: 15))
                     .frame(maxWidth: .infinity)
             })
-                .buttonStyle(.borderedProminent)
             
             Button(action: {
                 settingsViewModel.textInput = UIPasteboard.general.string ?? ""
@@ -45,7 +44,6 @@ struct CopyPasteRegen: View {
                     .font(.system(size: 15))
                     .frame(maxWidth: .infinity)
             })
-                .buttonStyle(.borderedProminent)
             
             Button(action: {
                 settingsViewModel.randomizeState()
@@ -54,18 +52,18 @@ struct CopyPasteRegen: View {
                     .font(.system(size: 15))
                     .frame(maxWidth: .infinity)
             })
-                .buttonStyle(.borderedProminent)
             
         }
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
         .padding()
         .toast(isPresenting: $toastShowing) {
             AlertToast(displayMode: .hud, type: .complete(.green), title: "Copied!")
         }
-        .sheet(isPresented: $errorShowing) {
-            ProPreviewSheet(isOpen: $errorShowing, feature: settingsViewModel.proFeature ?? "")
+        .sheet(isPresented: $proToastShowing) {
+            ProPreviewSheet(isOpen: $proToastShowing, feature: settingsViewModel.proFeature ?? "")
                 .environmentObject(settingsViewModel)
         }
-        .controlSize(.large)
     }
     
     func copy() {
@@ -74,7 +72,7 @@ struct CopyPasteRegen: View {
     }
     
     func buyPro() {
-        errorShowing = true
+        proToastShowing = true
     }
     
 }
