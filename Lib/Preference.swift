@@ -13,14 +13,29 @@ import Combine
  
  DO NOT USE IN OTHER SITUATIONS: Is this the best way to do this? Almost definitely not. Does it work? I think so. Make of that what you will. */
 @propertyWrapper
-class PublishedPreference<Value>: Resettable, ObservableObject {
-    @Published private var store: Value
-    private var initial: Value
+class PublishedPreference<Value>: Resettable, ObservableObject where Value: Codable {
+    
+    // TODO: document this shit please
+    // god this is so horrible
+    
+    @Published private var store: Data
+    private var initial: Data
+    
+    struct Wrapper<T>: Codable where T: Codable {
+        let wrapped: T
+    }
     
     init(wrappedValue: Value, key: String) {
-        self.store = wrappedValue
-        self._store = Published(wrappedValue: wrappedValue, key: key)
-        self.initial = wrappedValue
+        
+        do {
+            let codedValue = try PropertyListEncoder().encode(Wrapper(wrapped: wrappedValue))
+            
+            self.store = codedValue
+            self._store = Published(wrappedValue: codedValue, key: key)
+            self.initial = codedValue
+        } catch {
+            fatalError(error.localizedDescription)
+        }
     }
     
     func reset() {
@@ -33,18 +48,35 @@ class PublishedPreference<Value>: Resettable, ObservableObject {
         storage storageKeyPath: ReferenceWritableKeyPath<T, PublishedPreference>
     ) -> Value {
         get {
-            return instance[keyPath: storageKeyPath].store
+            
+            let store = instance[keyPath: storageKeyPath].store
+            
+            do {
+                let wrappedValue = try PropertyListDecoder().decode(Wrapper<Value>.self, from: store)
+                
+                return wrappedValue.wrapped
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+            
+            
         }
         set {
-            instance[keyPath: storageKeyPath].store = newValue
-            let publisher = instance.objectWillChange
-            (publisher as? ObservableObjectPublisher)?.send()
+            do {
+                let codedValue = try PropertyListEncoder().encode(Wrapper(wrapped: newValue))
+                instance[keyPath: storageKeyPath].store = codedValue
+                let publisher = instance.objectWillChange
+                (publisher as? ObservableObjectPublisher)?.send()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
         }
     }
     
+    // NOT CALLED!!!
     var wrappedValue: Value {
-        get { return store }
-        set { store = newValue }
+        get { fatalError("stop") }
+        set { fatalError("stop") }
     }
 }
 
