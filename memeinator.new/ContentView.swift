@@ -48,7 +48,7 @@ struct ContentView: View {
                     .navigationBarHidden(true)
             }
             .tabItem {
-                Label("Settings", systemImage: "gearshape")
+                Label("More", systemImage: "ellipsis.circle")
             }
             .tag(AppPage.settings)
         }

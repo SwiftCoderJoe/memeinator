@@ -20,6 +20,7 @@ struct LargeMessage: View {
 
             Text(message)
                 .font(.system(size: 30))
+                .lineLimit(nil)
                 .multilineTextAlignment(.center)
         }
         .foregroundColor(Color(uiColor: .systemBackground))

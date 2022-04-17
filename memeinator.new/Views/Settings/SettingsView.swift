@@ -18,6 +18,27 @@ struct SettingsView: View {
             
             Form {
                 
+                if !settingsViewModel.store.pro {
+                    Section {
+                        NavigationLink(
+                            destination: ProPreviewPage().environmentObject(settingsViewModel)
+                        ) {
+                            HStack {
+                                Image(systemName: "star.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.purple)
+                                VStack(alignment: .leading) {
+                                    Text("Memeinator Pro")
+                                        .font(.system(size: 25))
+                                    Text("Get More Features")
+                                        .font(.system(size: 15, weight: .light))
+                                }
+                                .foregroundColor(.primary)
+                            }
+                        }
+                    }
+                }
+                
                 Section {
                     NavigationLink(
                         destination: SettingsHelp().environmentObject(settingsViewModel)
@@ -61,7 +82,7 @@ struct SettingsView: View {
                         destination: FavoritesSettings().environmentObject(settingsViewModel)
                     ) {
                         HStack {
-                            Image(systemName: "star.fill")
+                            Image(systemName: "bookmark.fill")
                                 .font(.system(size: 40))
                                 .foregroundColor(.purple)
                             VStack(alignment: .leading) {

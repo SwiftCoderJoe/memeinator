@@ -17,6 +17,38 @@ struct ProPreviewSheet: View {
     let feature: String
     
     var body: some View {
+        GenericProPreview(text: "Get \(feature) and More", close: {
+            isOpen = false
+        })
+        .environmentObject(settingsViewModel)
+            
+        // Explicitly set the foreground color because this view is typically called from places where the foreground color is set my default to blue or purple, and we don't want that
+        .foregroundColor(.primary)
+    }
+}
+
+struct ProPreviewPage: View {
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    var body: some View {
+        GenericProPreview(text: "Get More with Memeinator Pro", close: {
+            self.presentationMode.wrappedValue.dismiss()
+        })
+        .environmentObject(settingsViewModel)
+        .padding(.bottom)
+        .navigationBarHidden(true)
+    }
+}
+
+struct GenericProPreview: View {
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
+    
+    let text: String
+    
+    let close: () -> Void
+    
+    var body: some View {
         VStack(spacing: 0) {
             HStack {
                 Text("Memeinator")
@@ -28,7 +60,7 @@ struct ProPreviewSheet: View {
                 Spacer()
                 
                 Button(action: {
-                    isOpen.toggle()
+                    close()
                 }) {
                     Label("Close", systemImage: "plus.circle.fill")
                         .rotationEffect(.degrees(45))
@@ -41,7 +73,7 @@ struct ProPreviewSheet: View {
             LargeDivider()
             
             VStack {
-                LargeMessage(iconName: "star.fill", message: "Get \(feature) and More")
+                LargeMessage(iconName: "star.fill", message: text)
 
                 VStack(alignment: .leading) {
                     Label("More Memeinator Functions", systemImage: "checkmark.circle.fill") // Repeat, emojifier
@@ -64,7 +96,7 @@ struct ProPreviewSheet: View {
                 Button(action: {
                     Task {
                         try await settingsViewModel.store.purchase(.pro)
-                        isOpen = false
+                        close()
                     }
                 }) {
                     Text("Continue")
@@ -78,7 +110,7 @@ struct ProPreviewSheet: View {
                 Button(action: {
                     Task {
                         try await settingsViewModel.store.restorePurchases()
-                        isOpen = false
+                        close()
                     }
                 }) {
                     Text("Restore Purchases")
@@ -93,8 +125,6 @@ struct ProPreviewSheet: View {
             .tint(.purple)
             
         }
-        // Explicitly set the foreground color because this view is typically called from places where the foreground color is set my default to blue or purple, and we don't want that
-        .foregroundColor(.primary)
     }
 }
 

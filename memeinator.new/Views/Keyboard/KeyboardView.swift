@@ -125,7 +125,7 @@ struct KeyboardView: View {
             VStack(spacing: 0) {
                 ProBadge(pro: viewModel.store.pro, action: {
                     proPreviewSheetOpen.toggle()
-                }, backgroundColor: .white, foregroundColor: .purple)
+                }, backgroundColor: Color(uiColor: .systemBackground), foregroundColor: .purple)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                 
