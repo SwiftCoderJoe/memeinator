@@ -17,6 +17,7 @@ struct KeyboardView: View {
     @StateObject var keyboardManager = M3KeysInstallManager()
     
     @State var fullAccessSheetOpen = false
+    @State var proPreviewSheetOpen = false
     
     var body: some View {
         VStack(spacing: 0.0) {
@@ -115,50 +116,29 @@ struct KeyboardView: View {
         }
     }
     
-    var keyboardIsWorking: some View {
-        HStack {
-            Image(systemName: "checkmark.circle.fill")
-                .foregroundColor(.green)
-                .font(.system(size: 40))
-                      
-            VStack(alignment: .leading) {
-                Text("Memeinator Keyboard is installed.")
-                    .bold()
-                    
-                Text("Press and hold the globe icon to use Memeinator Keyboard.")
-            }.foregroundColor(Color(uiColor: .systemBackground))
-            
-            Spacer()
-            
-        }
-        .padding()
-        .frame(maxWidth: .infinity)
-        .roundedBackground(color: .purple)
-        .padding()
-    }
-    
     var mainUI: some View {
         VStack {
             Spacer()
             
             WideMessage(iconName: "checkmark.circle", message: "Memeinator Keyboard is set up")
-            
-            NavigationLink(
-                destination: KeyboardReorder().environmentObject(viewModel)
-            ) {
-                HStack {
-                    Spacer()
-                    Text("Add, Remove, and Reorder Buttons")
-                    Image(systemName: "chevron.right")
-                    Spacer()
-                }
-                .font(.system(size: 15).bold())
+
+            VStack(spacing: 0) {
+                ProBadge(pro: viewModel.store.pro, action: {
+                    proPreviewSheetOpen.toggle()
+                }, backgroundColor: .white, foregroundColor: .purple)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                
+                ProLink(pro: viewModel.store.pro,
+                    getProAction: { proPreviewSheetOpen.toggle() },
+                    destination: KeyboardReorder().environmentObject(viewModel),
+                    name: "Add, Remove, and Reorder Buttons")
             }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .padding(.horizontal)
             
             Spacer()
+        }
+        .sheet(isPresented: $proPreviewSheetOpen) {
+            ProPreviewSheet(isOpen: $proPreviewSheetOpen, feature: "Customization")
         }
     }
 }

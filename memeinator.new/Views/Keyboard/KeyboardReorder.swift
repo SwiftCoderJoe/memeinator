@@ -13,12 +13,12 @@ struct KeyboardReorder: View {
     @EnvironmentObject var viewModel: SettingsViewModel
     
     var body: some View {
-        // TODO: This should have 2 different lists.
-        // 2 List Sections, one with keyboardButtonOrdering and one with unusedKeyboardButtons. Drag between the two Sections to move functions in or out of use. Should be implemented when cross-section .onMove works.
+        // when cross-section .onMove works, we should change this so that we can drag between lists instead of using + and - buttons.
         VStack {
             List {
                 Section(header:
                     Text("Memeinator Keyboard functions are displayed from left to right.")
+                            .lineLimit(nil)
                 ) {
                     ForEach(viewModel.keyboardButtonOrdering) { function in
                         Text(function.rawValue)
