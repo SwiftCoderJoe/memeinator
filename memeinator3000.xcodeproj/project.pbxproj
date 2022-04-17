@@ -26,6 +26,9 @@
 		0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E385F4826E01B660077E40F /* KeyboardView.swift */; };
 		0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E385F5326E01BEF0077E40F /* KeyboardKit */; };
 		0E3CF7D4273C3A7900650BB5 /* ProPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */; };
+		0E410FD42807A20E006439CC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD32807A20E006439CC /* Spacing.swift */; };
+		0E410FD6280C6D03006439CC /* Casing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD5280C6D03006439CC /* Casing.swift */; };
+		0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD7280C7103006439CC /* Furryspeak.swift */; };
 		0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A07277E34C70020C70F /* SettingsHelp.swift */; };
 		0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */; };
 		0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */; };
@@ -63,6 +66,9 @@
 		0ECDC594273F0F69001291C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0ECDF548279C800500568675 /* LargeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDF547279C800500568675 /* LargeMessage.swift */; };
 		0ECFC3EC27EBCF0D009C9F2B /* M3KeysFunctionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */; };
+		0ECFC3EE27EEACD0009C9F2B /* M3KeysFunction+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */; };
+		0ECFC3F127EEAD34009C9F2B /* Paste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3F027EEAD34009C9F2B /* Paste.swift */; };
+		0ECFC3F327EEAE69009C9F2B /* GenericKeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3F227EEAE69009C9F2B /* GenericKeyboardViews.swift */; };
 		0EDA93DF27AF3FFC0083EE82 /* KeyboardReorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */; };
 		0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
@@ -128,6 +134,9 @@
 		0E385F4826E01B660077E40F /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		0E385F4926E01B660077E40F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E3CF7D3273C3A7900650BB5 /* ProPreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPreviewSheet.swift; sourceTree = "<group>"; };
+		0E410FD32807A20E006439CC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		0E410FD5280C6D03006439CC /* Casing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casing.swift; sourceTree = "<group>"; };
+		0E410FD7280C7103006439CC /* Furryspeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furryspeak.swift; sourceTree = "<group>"; };
 		0E5A7A07277E34C70020C70F /* SettingsHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelp.swift; sourceTree = "<group>"; };
 		0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalitySettings.swift; sourceTree = "<group>"; };
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
@@ -159,6 +168,9 @@
 		0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
 		0ECDC593273F0F69001291C3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0ECDF547279C800500568675 /* LargeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMessage.swift; sourceTree = "<group>"; };
+		0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "M3KeysFunction+View.swift"; sourceTree = "<group>"; };
+		0ECFC3F027EEAD34009C9F2B /* Paste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paste.swift; sourceTree = "<group>"; };
+		0ECFC3F227EEAE69009C9F2B /* GenericKeyboardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericKeyboardViews.swift; sourceTree = "<group>"; };
 		0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReorder.swift; sourceTree = "<group>"; };
 		0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysFunctionOrder.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
@@ -253,6 +265,7 @@
 				0E385F4326E01B660077E40F /* M3KKeyboardBehaivior.swift */,
 				0E385F4426E01B660077E40F /* M3KActionHandler.swift */,
 				0E385F4526E01B660077E40F /* SettingsViewModel.swift */,
+				0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +273,7 @@
 		0E385F4626E01B660077E40F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0ECFC3EF27EEAD1B009C9F2B /* FunctionViews */,
 				0E385F4726E01B660077E40F /* OptionsView.swift */,
 				0E385F4826E01B660077E40F /* KeyboardView.swift */,
 			);
@@ -377,6 +391,18 @@
 				0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		0ECFC3EF27EEAD1B009C9F2B /* FunctionViews */ = {
+			isa = PBXGroup;
+			children = (
+				0ECFC3F027EEAD34009C9F2B /* Paste.swift */,
+				0ECFC3F227EEAE69009C9F2B /* GenericKeyboardViews.swift */,
+				0E410FD32807A20E006439CC /* Spacing.swift */,
+				0E410FD5280C6D03006439CC /* Casing.swift */,
+				0E410FD7280C7103006439CC /* Furryspeak.swift */,
+			);
+			path = FunctionViews;
 			sourceTree = "<group>";
 		};
 		0EF99C9827763D4D00228440 /* memeinator.pro */ = {
@@ -661,17 +687,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */,
+				0ECFC3F127EEAD34009C9F2B /* Paste.swift in Sources */,
 				0E385F3926E01A950077E40F /* GenericViewModel.swift in Sources */,
+				0E410FD42807A20E006439CC /* Spacing.swift in Sources */,
 				0ECFC3EC27EBCF0D009C9F2B /* M3KeysFunctionOrder.swift in Sources */,
 				0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */,
 				0E385F4A26E01B660077E40F /* UITextDocumentProxy+Custom.swift in Sources */,
+				0E410FD6280C6D03006439CC /* Casing.swift in Sources */,
 				0E385F4D26E01B660077E40F /* M3KActionHandler.swift in Sources */,
 				0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */,
+				0ECFC3F327EEAE69009C9F2B /* GenericKeyboardViews.swift in Sources */,
 				0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */,
 				0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */,
 				0EA551D7275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
+				0ECFC3EE27EEACD0009C9F2B /* M3KeysFunction+View.swift in Sources */,
 				0E385F4C26E01B660077E40F /* M3KKeyboardBehaivior.swift in Sources */,
+				0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */,
 				0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */,
 				0E385F4B26E01B660077E40F /* KeyboardViewController.swift in Sources */,
 				0E385F4E26E01B660077E40F /* SettingsViewModel.swift in Sources */,

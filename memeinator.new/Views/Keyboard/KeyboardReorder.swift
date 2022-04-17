@@ -37,6 +37,7 @@ struct KeyboardReorder: View {
                         }
                     }
                 }
+                .listRowSeparator(.hidden)
                 
                 Section(header:
                     Text("More Functions")
@@ -69,8 +70,8 @@ struct KeyboardReorder: View {
                         }
                     }
                 }
+                .listRowSeparator(.hidden)
             }
-            .listRowSeparator(.hidden)
             .listStyle(.plain)
             .environment(\.editMode, .constant(.active))
         }

@@ -10,7 +10,7 @@ import Foundation
 import KeyboardKit
 import SwiftUI
 
-class M3KActionHandler: StandardKeyboardActionHandler {
+class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
     
     // MARK: Init
     
