@@ -49,9 +49,9 @@ class SettingsViewModel: GenericViewModel {
     
     // MARK: Methods
     
-    // FIXME: It seems like this function gets called multiple times when the screen is updated. Maybe we should try checking if state has changed, and if it hasn't, then just return a saved string.
+    // FIXME: Refactor state so we can check state. called multiple times.
     func createFormattedString() -> String {
-        // print("Creating Formatted String...")
+        print("Creating Formatted String for \"\(textInput)\"...")
         
         var workingString = textInput
         
