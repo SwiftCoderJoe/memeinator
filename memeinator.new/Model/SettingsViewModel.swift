@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SettingsViewModel: GenericViewModel {
     
@@ -15,13 +16,13 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
-    @PublishedEnumPreference(key: "memeinator-settings.v1.leftQuickSetting")
+    @PublishedPreference(key: "memeinator-settings.v1.leftQuickSetting")
     var leftQuickSetting: Favorite = .spacing
     
-    @PublishedEnumPreference(key: "memeinator-settings.v1.centerQuickSetting")
+    @PublishedPreference(key: "memeinator-settings.v1.centerQuickSetting")
     var centerQuickSetting: Favorite = .casing
     
-    @PublishedEnumPreference(key: "memeinator-settings.v1.rightQuickSetting")
+    @PublishedPreference(key: "memeinator-settings.v1.rightQuickSetting")
     var rightQuickSetting: Favorite = .furryspeak
     
     func shouldShowQuickSetting(favorite: Favorite, in section: FavoriteSection) -> Bool {

@@ -29,6 +29,10 @@
 		0E410FD42807A20E006439CC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD32807A20E006439CC /* Spacing.swift */; };
 		0E410FD6280C6D03006439CC /* Casing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD5280C6D03006439CC /* Casing.swift */; };
 		0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E410FD7280C7103006439CC /* Furryspeak.swift */; };
+		0E4DFD01281D98A00097366C /* SpacingFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4DFD00281D98A00097366C /* SpacingFavorite.swift */; };
+		0E4DFD03281D991C0097366C /* CasingFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4DFD02281D991C0097366C /* CasingFavorite.swift */; };
+		0E4DFD05281D995E0097366C /* FurryspeakFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4DFD04281D995E0097366C /* FurryspeakFavorite.swift */; };
+		0E4DFD07281D999D0097366C /* DaVinciFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4DFD06281D999D0097366C /* DaVinciFavorite.swift */; };
 		0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A07277E34C70020C70F /* SettingsHelp.swift */; };
 		0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */; };
 		0E6421BE26DE90EE0087E2BB /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */; };
@@ -42,6 +46,7 @@
 		0E6BFA0126D5BE93008868B7 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* Heading.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
+		0E72F7102845768500A97F82 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F70F2845768500A97F82 /* Functions.swift */; };
 		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
 		0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
@@ -137,6 +142,10 @@
 		0E410FD32807A20E006439CC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		0E410FD5280C6D03006439CC /* Casing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casing.swift; sourceTree = "<group>"; };
 		0E410FD7280C7103006439CC /* Furryspeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furryspeak.swift; sourceTree = "<group>"; };
+		0E4DFD00281D98A00097366C /* SpacingFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingFavorite.swift; sourceTree = "<group>"; };
+		0E4DFD02281D991C0097366C /* CasingFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasingFavorite.swift; sourceTree = "<group>"; };
+		0E4DFD04281D995E0097366C /* FurryspeakFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurryspeakFavorite.swift; sourceTree = "<group>"; };
+		0E4DFD06281D999D0097366C /* DaVinciFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciFavorite.swift; sourceTree = "<group>"; };
 		0E5A7A07277E34C70020C70F /* SettingsHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelp.swift; sourceTree = "<group>"; };
 		0E5A7A09277E40550020C70F /* FunctionalitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalitySettings.swift; sourceTree = "<group>"; };
 		0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
@@ -149,6 +158,7 @@
 		0E6BFA0026D5BE93008868B7 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0E72F70F2845768500A97F82 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0E7766CD2783BD4E0020EB1D /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0E80BBB5278A57BC00F6B727 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
 				0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */,
 				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
+				0E72F70F2845768500A97F82 /* Functions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +299,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0E4DFCFF281D98900097366C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				0E4DFD00281D98A00097366C /* SpacingFavorite.swift */,
+				0E4DFD02281D991C0097366C /* CasingFavorite.swift */,
+				0E4DFD04281D995E0097366C /* FurryspeakFavorite.swift */,
+				0E4DFD06281D999D0097366C /* DaVinciFavorite.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		0E5A7A06277E34B10020C70F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +364,7 @@
 		0E6BF9FF26D5BE79008868B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E4DFCFF281D98900097366C /* Favorites */,
 				0E80BBC5279C74BC00F6B727 /* Keyboard */,
 				0E80BBB7278A57CF00F6B727 /* Home */,
 				0E5A7A06277E34B10020C70F /* Settings */,
@@ -631,6 +654,7 @@
 				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
 				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
 				0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */,
+				0E72F7102845768500A97F82 /* Functions.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
@@ -642,6 +666,7 @@
 				0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */,
 				0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */,
 				0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */,
+				0E4DFD07281D999D0097366C /* DaVinciFavorite.swift in Sources */,
 				0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */,
 				0EA551D9276139AD00584065 /* ZalgoState.swift in Sources */,
 				0E3CF7D4273C3A7900650BB5 /* ProPreviews.swift in Sources */,
@@ -652,9 +677,12 @@
 				0EDA93DF27AF3FFC0083EE82 /* KeyboardReorder.swift in Sources */,
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */,
+				0E4DFD03281D991C0097366C /* CasingFavorite.swift in Sources */,
+				0E4DFD05281D995E0097366C /* FurryspeakFavorite.swift in Sources */,
 				0E80BBBE278CC4BA00F6B727 /* EnumPreference.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
 				0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */,
+				0E4DFD01281D98A00097366C /* SpacingFavorite.swift in Sources */,
 				0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */,
 				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
