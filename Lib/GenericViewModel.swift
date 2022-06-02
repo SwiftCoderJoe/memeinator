@@ -55,6 +55,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
             return "Repeat"
         } else if zalgoEnabled {
             return "Zalgo"
+        } else if daVinciEnabled {
+            return "Da Vinci"
         } else {
             return nil
         }
