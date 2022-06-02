@@ -49,6 +49,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     /** Transaction handler */
     @Published var store = Store()
     
+    // FIXME: There has to be a better way to check for this (Property wrapper on enabled?)
     /** Pro feature that is used, or nil. */
     var proFeature: String? {
         if repeatEnabled {
