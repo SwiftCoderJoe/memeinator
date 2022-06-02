@@ -14,12 +14,14 @@ struct MemeSettingsView: View {
     
     @State var dummySwitch: Bool = false
     
+    var formattedString: String
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack(spacing: 5.0) {
             
-            Text(settingsViewModel.createFormattedString())
+            Text(formattedString)
                 .font(.system(size: 25))
                 .lineLimit(nil)
                 .frame(height: 100)
@@ -129,7 +131,7 @@ struct MemeSettingsView: View {
 
 struct MemeSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        MemeSettingsView()
+        MemeSettingsView(formattedString: "Preview!")
             .environmentObject(SettingsViewModel())
     }
 }

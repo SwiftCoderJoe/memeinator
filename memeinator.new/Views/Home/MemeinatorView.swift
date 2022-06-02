@@ -15,6 +15,10 @@ struct MemeinatorView: View {
     
     
     var body: some View {
+        
+        // I've heard some people saying that putting declarations like this in `body` isn't good... I cannot think of a good reason why you wouldn't. This is exactly what I need, afaik. Do more research.
+        let formattedString = settingsViewModel.createFormattedString()
+        
         VStack(spacing: 0.0) {
             if !keyboardManager.keyboardIsShown {
                 Heading(name: "Memeinator")
@@ -22,7 +26,7 @@ struct MemeinatorView: View {
             
             CopyPasteRegen().environmentObject(settingsViewModel)
             
-            Text(settingsViewModel.createFormattedString())
+            Text(formattedString)
                 .font(.system(size: 25))
                 .lineLimit(nil)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -59,7 +63,8 @@ struct MemeinatorView: View {
             }
             
             NavigationLink(
-                destination: MemeSettingsView().environmentObject(settingsViewModel)
+                destination: MemeSettingsView(formattedString: formattedString)
+                                .environmentObject(settingsViewModel)
             ) {
                 HStack {
                     Spacer()

@@ -46,7 +46,6 @@
 		0E6BFA0126D5BE93008868B7 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* Heading.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
-		0E72F7102845768500A97F82 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F70F2845768500A97F82 /* Functions.swift */; };
 		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
 		0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
@@ -158,7 +157,6 @@
 		0E6BFA0026D5BE93008868B7 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		0E72F70F2845768500A97F82 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0E7766CD2783BD4E0020EB1D /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0E80BBB5278A57BC00F6B727 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
 				0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */,
 				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
-				0E72F70F2845768500A97F82 /* Functions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -654,7 +651,6 @@
 				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
 				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
 				0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */,
-				0E72F7102845768500A97F82 /* Functions.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
