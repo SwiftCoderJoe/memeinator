@@ -37,7 +37,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
         // Check if there are any new features to add to the list of buttons on M3Keys
         for function in M3KeysFunction.allCases {
             if !keyboardButtonOrdering.contains(function) && !unusedKeyboardButtons.contains(function) {
-                unusedKeyboardButtons.append(function)
+                keyboardButtonOrdering.append(function)
             }
         }
         
@@ -281,7 +281,10 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     /** Published value showing if Zalgo is enabled. */
     @Published var zalgoEnabled = false
     
-    /** Published value showing the height (number of diacritics) of zalgo. */
+    /**
+     * Published value showing the height (number of diacritics) of zalgo.
+     *
+     * This value is a Double because it is used in a slider. */
     @Published var zalgoHeight = 1.0 {
         didSet {
             if Int(oldValue) != Int(zalgoHeight) {
