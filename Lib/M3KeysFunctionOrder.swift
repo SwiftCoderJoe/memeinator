@@ -13,6 +13,7 @@ enum M3KeysFunction: String, CaseIterable, Identifiable, Codable {
     case spacing = "Spacing"
     case casing = "Casing"
     case furryspeak = "Furryspeak"
+    case zalgo = "Zalgo"
     
     var pro: Bool {
         switch self {
@@ -24,6 +25,8 @@ enum M3KeysFunction: String, CaseIterable, Identifiable, Codable {
             return false
         case .furryspeak:
             return false
+        case .zalgo:
+            return true
         }
     }
     

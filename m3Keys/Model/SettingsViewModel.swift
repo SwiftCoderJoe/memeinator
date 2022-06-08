@@ -26,20 +26,22 @@ class SettingsViewModel: GenericViewModel {
     func createFormattedAction(_ input: String, contextBefore: String) -> FormattedAction {
         var workingString = FormattedAction(input: input)
         
-        workingString += createFurryspeakAction(from: workingString, with: contextBefore)
+        workingString = createFurryspeakAction(from: workingString, with: contextBefore)
         
-        workingString += createStutterAction(from: workingString, with: contextBefore)
+        workingString = createStutterAction(from: workingString, with: contextBefore)
 
-        workingString += createCasingAction(from: workingString)
+        workingString = createCasingAction(from: workingString)
 
-        workingString += createSpacingAction(from: workingString)
+        workingString = createSpacingAction(from: workingString)
+        
+        workingString = createZalgoAction(from: workingString)
         
         return workingString
     }
     
     func createCasingAction(from input: FormattedAction) -> FormattedAction {
         guard casingOn else {
-            return FormattedAction(input: input.formattedString)
+            return input
         }
         
         // If there are any deletes, make sure the memeState still lines up if we're in meme mode.
@@ -70,7 +72,7 @@ class SettingsViewModel: GenericViewModel {
      */
     func createFurryspeakAction(from input: FormattedAction, with context: String) -> FormattedAction {
         guard furryspeakEnabled else {
-            return FormattedAction(input: input.formattedString)
+            return input
         }
         
         // start with no change
@@ -143,14 +145,24 @@ class SettingsViewModel: GenericViewModel {
     /** Returns an action with added spaces between characters and corrects deletes for the added spaces. */
     func createSpacingAction(from input: FormattedAction) -> FormattedAction {
         guard spacingEnabled else {
-            return FormattedAction(input: input.formattedString)
+            return input
         }
         
         // Format spaces
         let formattedString = formatSpaces(from: input.formattedString)
         
         // Return formatted spaces with deletes corrected for added spaces.
-        return FormattedAction(deletes: input.deletes * numberOfSpaces, formattedString: formattedString)
+        return FormattedAction(deletes: input.deletes * (numberOfSpaces + 1), formattedString: formattedString)
+    }
+    
+    func createZalgoAction(from input: FormattedAction) -> FormattedAction {
+        guard zalgoEnabled else {
+            return input
+        }
+        
+        let formattedString = zalgoString(input.formattedString)
+        
+        return FormattedAction(deletes: input.deletes, formattedString: formattedString)
     }
     
     /** Keyboard action containing instructions on how to create a memeinated version of the original string. */
@@ -199,17 +211,41 @@ class SettingsViewModel: GenericViewModel {
         }
         
         var context = context
-        var formattedContext: [Character] = []
-        let sectionLength = spacingEnabled ? numberOfSpaces + 1 : 1
         
-        // For every group of character and added spaces, extract the character and add it to a string.
-        for _ in 0..<(context.count / sectionLength) {
-            let section = String(context.suffix(sectionLength))
-            formattedContext.insert(section.first!, at: 0)
-            context.removeLast(sectionLength)
+        print("====================")
+        print("Fixing \(context)...")
+        print("Here's each character of context, delimited by a newline:")
+        for char in context {
+            print(char)
         }
         
-        return String(formattedContext)
+        if zalgoEnabled {
+            context = context.folding(options: .diacriticInsensitive, locale: nil)
+        }
+        
+        print("Turned into \(context) after zalgo cleanup.")
+        
+        if spacingEnabled {
+            var formattedContext: [Character] = []
+            let sectionLength = numberOfSpaces + 1
+            
+            // For every group of character and added spaces, extract the character and add it to a string.
+            for _ in 0..<(context.count / sectionLength) {
+                let section = String(context.suffix(sectionLength))
+                
+                formattedContext.insert(section.first!, at: 0)
+                context.removeLast(sectionLength)
+            }
+            
+            context = String(formattedContext)
+        }
+        
+        print("Turned into \(context) after spacing cleanup.")
+        
+        print("Complete! Here is our output: \(context)")
+        print("====================")
+        
+        return String(context)
     }
     
     

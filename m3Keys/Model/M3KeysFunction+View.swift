@@ -21,6 +21,8 @@ extension M3KeysFunction {
             CasingFunction()
         case .furryspeak:
             FurryspeakFunction()
+        case .zalgo:
+            ZalgoFunction()
         }
     }
 }

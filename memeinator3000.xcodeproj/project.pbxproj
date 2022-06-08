@@ -46,6 +46,7 @@
 		0E6BFA0126D5BE93008868B7 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* Heading.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
+		0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F7132849165E00A97F82 /* Zalgo.swift */; };
 		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
 		0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
@@ -157,6 +158,7 @@
 		0E6BFA0026D5BE93008868B7 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0E72F7132849165E00A97F82 /* Zalgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zalgo.swift; sourceTree = "<group>"; };
 		0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0E7766CD2783BD4E0020EB1D /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0E80BBB5278A57BC00F6B727 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				0E410FD32807A20E006439CC /* Spacing.swift */,
 				0E410FD5280C6D03006439CC /* Casing.swift */,
 				0E410FD7280C7103006439CC /* Furryspeak.swift */,
+				0E72F7132849165E00A97F82 /* Zalgo.swift */,
 			);
 			path = FunctionViews;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */,
 				0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */,
 				0E385F4B26E01B660077E40F /* KeyboardViewController.swift in Sources */,
+				0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */,
 				0E385F4E26E01B660077E40F /* SettingsViewModel.swift in Sources */,
 				0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */,
 			);
