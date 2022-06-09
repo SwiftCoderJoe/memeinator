@@ -13,7 +13,7 @@ struct ZalgoFunction: View {
     @EnvironmentObject var viewModel: SettingsViewModel
     
     var body: some View {
-        KeyboardFunction(named: "Zalgo", enabled: $viewModel.zalgoEnabled) {
+        ProKeyboardFunction(named: "Zalgo", enabled: $viewModel.zalgoEnabled) {
             Stepper(value: $viewModel.zalgoHeight,
                     in: viewModel.zalgoHeightRange,
                     step: viewModel.zalgoHeightStep) {
@@ -23,5 +23,6 @@ struct ZalgoFunction: View {
                     .font(.subheadline)
             }
         }
+        .environmentObject(viewModel)
     }
 }

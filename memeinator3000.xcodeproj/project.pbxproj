@@ -50,6 +50,7 @@
 		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
 		0E7766CF2784B1AC0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
+		0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E80BBB6278A57BC00F6B727 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB5278A57BC00F6B727 /* Favorites.swift */; };
 		0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */; };
 		0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
@@ -372,7 +373,6 @@
 				0E8C8F3226E12D58003E53AB /* BetterGroups.swift */,
 				0E6421BD26DE90ED0087E2BB /* LargeTextField.swift */,
 				0E3CF7D3273C3A7900650BB5 /* ProPreviews.swift */,
-				0E020D13276A532B008571C8 /* ProBadge.swift */,
 				0ECDF547279C800500568675 /* LargeMessage.swift */,
 			);
 			path = Views;
@@ -411,6 +411,7 @@
 				0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */,
 				0E7766CD2783BD4E0020EB1D /* Preference.swift */,
 				0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */,
+				0E020D13276A532B008571C8 /* ProBadge.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -734,6 +735,7 @@
 				0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */,
 				0E385F4B26E01B660077E40F /* KeyboardViewController.swift in Sources */,
 				0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */,
+				0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */,
 				0E385F4E26E01B660077E40F /* SettingsViewModel.swift in Sources */,
 				0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */,
 			);

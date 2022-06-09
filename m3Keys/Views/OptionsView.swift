@@ -28,6 +28,8 @@ struct OptionsView: View {
         ScrollView(.horizontal) {
             HStack {
                 
+                Text("DEBUG: Pro = \(viewModel.store.pro ? "True" : "False")")
+                
                 ForEach(viewModel.keyboardButtonOrdering) { function in
                     function.view
                         .environmentObject(viewModel)
