@@ -8,9 +8,10 @@
 
 import Foundation
 import SwiftUI
+import KeyboardKit
 
 /// Generic Keyboard Function. Sets everything to be placed in an HStack, sets font, font color, padding, and sizing, but does not create a background.
-fileprivate struct GenericKeyboardFunction<Content: View>: View {
+private struct GenericKeyboardFunction<Content: View>: View {
     let content: Content
     
     init(@ViewBuilder content: () -> Content) {
@@ -59,11 +60,17 @@ struct KeyboardFunction<Content: View>: View {
     }
     
     var body: some View {
-        _KeyboardFunction(named: title, enabled: $isEnabled) {
-            content
-        } closedContent: {
-            // Intentionally Left Blank
+        GenericKeyboardFunction {
+            Button(title, action: {
+                isEnabled.toggle()
+            })
+            
+            if let content = content, isEnabled {
+                Divider()
+                content
+            }
         }
+        .roundedBackground(color: isEnabled ? .purple : .gray)
         
     }
     
@@ -71,6 +78,7 @@ struct KeyboardFunction<Content: View>: View {
 
 struct ProKeyboardFunction<Content: View>: View {
     @EnvironmentObject var viewModel: SettingsViewModel
+    @EnvironmentObject var toastContext: KeyboardToastContext
     
     let title: String
     @Binding var isEnabled: Bool
@@ -89,42 +97,31 @@ struct ProKeyboardFunction<Content: View>: View {
     }
     
     var body: some View {
-        _KeyboardFunction(named: title, enabled: $isEnabled) {
-            content
-        } closedContent: {
-            // FIXME: Test if this is correct pro to use, or store pro since last update instead
-            ProBadge(pro: viewModel.store.pro)
-        }
-    }
-    
-}
-
-fileprivate struct _KeyboardFunction<OpenContent: View, ClosedContent: View>: View {
-    let title: String
-    @Binding var isEnabled: Bool
-    let openContent: OpenContent
-    let closedContent: ClosedContent
-    
-    init(named title: String, enabled: Binding<Bool>, @ViewBuilder openContent: () -> OpenContent, @ViewBuilder closedContent: () -> ClosedContent) {
-        self.title = title
-        _isEnabled = enabled
-        self.openContent = openContent()
-        self.closedContent = closedContent()
-    }
-    
-    var body: some View {
         GenericKeyboardFunction {
-            Button(title, action: {
-                isEnabled.toggle()
-            })
+            Button(action: {
+                if viewModel.store.pro {
+                    isEnabled.toggle()
+                } else {
+                    toastContext.present("Memeinator Pro Required.")
+                }
+            }) {
+                // This must be in an if instead of ?: operator because for some reason .titleOnly and .titleAndIcon are not the same type
+                if viewModel.store.pro {
+                    Label(title, systemImage: "lock")
+                        .labelStyle(.titleOnly)
+                } else {
+                    Label(title, systemImage: "lock")
+                        .labelStyle(.titleAndIcon)
+                }
+                
+            }
             
-            if let content = openContent, isEnabled {
+            if let content = content, isEnabled {
                 Divider()
-                content
-            } else if let content = closedContent {
                 content
             }
         }
         .roundedBackground(color: isEnabled ? .purple : .gray)
     }
+    
 }

@@ -8,9 +8,11 @@
 
 import Foundation
 import SwiftUI
+import KeyboardKit
 
 struct ZalgoFunction: View {
     @EnvironmentObject var viewModel: SettingsViewModel
+    @EnvironmentObject var toastContext: KeyboardToastContext
     
     var body: some View {
         ProKeyboardFunction(named: "Zalgo", enabled: $viewModel.zalgoEnabled) {
@@ -23,6 +25,5 @@ struct ZalgoFunction: View {
                     .font(.subheadline)
             }
         }
-        .environmentObject(viewModel)
     }
 }
