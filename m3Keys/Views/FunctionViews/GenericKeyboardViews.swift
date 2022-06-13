@@ -102,7 +102,11 @@ struct ProKeyboardFunction<Content: View>: View {
                 if viewModel.store.pro {
                     isEnabled.toggle()
                 } else {
-                    toastContext.present("Memeinator Pro Required.")
+                    toastContext.present(
+                        Text("Memeinator Pro is required.")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                    )
                 }
             }) {
                 // This must be in an if instead of ?: operator because for some reason .titleOnly and .titleAndIcon are not the same type
