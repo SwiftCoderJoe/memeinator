@@ -38,16 +38,22 @@ struct SettingsHelp: View {
                 // FIXME: Most of these links go nowhere
                 Section("Support") {
                     Link("Frequently Asked Questions",
-                         destination: URL(string: "https://swiftcoderjoe.github.io")!)
-                    Link("Submit Feedback",
-                         destination: URL(string: "https://swiftcoderjoe.github.io")!)
+                         destination: URL(string: "https://memeinator.joecardenas.dev/faq")!)
+                    Link("Privacy",
+                         destination: URL(string: "https://memeinator.joecardenas.dev/privacy")!)
                     Link("Contact Us",
-                         destination: URL(string: "mailto:coderjoe05@gmail.com")!)
+                         destination: URL(string: "https://memeinator.joecardenas.dev/contact")!)
+                    Link("Feedback",
+                         destination: URL(string: "https://memeinator.joecardenas.dev/contact")!)
                 }
                 
                 Section("Troubleshooting") {
                     Button("Reset All Preferences", action: {
                         settingsViewModel.resetPreferences()
+                    })
+                    
+                    Button("Crash App", action: {
+                        fatalError("User manually triggered a crash. ")
                     })
                 }
                 

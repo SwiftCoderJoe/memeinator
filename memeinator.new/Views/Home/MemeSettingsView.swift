@@ -116,10 +116,6 @@ struct MemeSettingsView: View {
                 
                 ProFeature("Da Vinci", isExpanded: $settingsViewModel.daVinciEnabled) { }
                 
-                ProFeature("Emojifier", isExpanded: $dummySwitch) {
-                    Text("Coming soon!")
-                }
-                
             }
             
         }

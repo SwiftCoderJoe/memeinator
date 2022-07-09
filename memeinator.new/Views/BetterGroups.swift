@@ -103,6 +103,10 @@ struct ProFeature<Content>: View where Content: View {
         self.content = content()
     }
     
+    init(_ label: String, isExpanded: Binding<Bool>? = nil) where Content == EmptyView {
+        self.init(label, isExpanded: isExpanded) { }
+    }
+    
     var body: some View {
         Feature(header: {
             Group {

@@ -60,6 +60,10 @@
 		0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */; };
 		0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */; };
 		0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterGroups.swift */; };
+		0E91F289286BE2320020D627 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E91F288286BE2320020D627 /* GoogleService-Info.plist */; };
+		0E91F28C286BE3590020D627 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0E91F28B286BE3590020D627 /* FirebaseAnalytics */; };
+		0E91F28E286BE3590020D627 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0E91F28D286BE3590020D627 /* FirebaseAnalyticsSwift */; };
+		0E91F290286BE3590020D627 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0E91F28F286BE3590020D627 /* FirebaseCrashlytics */; };
 		0E9C90AC2742F0D5004832DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
 		0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */; };
 		0EA551D7275EAAE300584065 /* UnicodeLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */; };
@@ -170,6 +174,7 @@
 		0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFullAccess.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
 		0E8C8F3726E14B2F003E53AB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		0E91F288286BE2320020D627 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeLiterals.swift; sourceTree = "<group>"; };
 		0EA551D8276139AD00584065 /* ZalgoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZalgoState.swift; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
@@ -197,9 +202,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E91F28E286BE3590020D627 /* FirebaseAnalyticsSwift in Frameworks */,
 				0E146D48277554AB00B5053F /* StoreKit.framework in Frameworks */,
 				0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */,
+				0E91F290286BE3590020D627 /* FirebaseCrashlytics in Frameworks */,
 				0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */,
+				0E91F28C286BE3590020D627 /* FirebaseAnalytics in Frameworks */,
 				0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				0EFAA8BB276CDE89009F9BDC /* memeinator.new.entitlements */,
+				0E91F288286BE2320020D627 /* GoogleService-Info.plist */,
 				0E6BF9D926D46BBE008868B7 /* memeinatorApp.swift */,
 				0E6BF9DB26D46BBE008868B7 /* ContentView.swift */,
 				0E6BF9FF26D5BE79008868B7 /* Views */,
@@ -467,6 +476,7 @@
 				0E8C8F3626E148EE003E53AB /* Run Script */,
 				0E6BF9D526D46BBE008868B7 /* Resources */,
 				0EBDD5FA26E018DC00CF3857 /* Embed App Extensions */,
+				0EDCCCC1287A08B5006E6665 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -478,6 +488,9 @@
 				0E6421C026DE96A80087E2BB /* AlertToast */,
 				0EBA3ACE274571CF00058EB2 /* Introspect */,
 				0E80BBC1279C5BD100F6B727 /* MarkdownUI */,
+				0E91F28B286BE3590020D627 /* FirebaseAnalytics */,
+				0E91F28D286BE3590020D627 /* FirebaseAnalyticsSwift */,
+				0E91F28F286BE3590020D627 /* FirebaseCrashlytics */,
 			);
 			productName = memeinator3000.new;
 			productReference = 0EBDD5F626E018DC00CF3857 /* memeinator.new.app */;
@@ -579,6 +592,7 @@
 				0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 				0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+				0E91F28A286BE3590020D627 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D41F69F4210D5D4A006F5F3C;
 			projectDirPath = "";
@@ -598,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */,
+				0E91F289286BE2320020D627 /* GoogleService-Info.plist in Resources */,
 				0E6BF9E126D46BCF008868B7 /* Preview Assets.xcassets in Resources */,
 				0E6BF9DE26D46BCF008868B7 /* Assets.xcassets in Resources */,
 			);
@@ -644,6 +659,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint --lenient\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		0EDCCCC1287A08B5006E6665 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -771,8 +805,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 19;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -789,7 +823,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.10;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -808,7 +842,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -825,7 +859,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.10;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -947,7 +981,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -959,7 +993,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.10;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -976,7 +1010,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
@@ -987,7 +1021,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.9.1;
+				MARKETING_VERSION = 2.10;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1189,6 +1223,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		0E91F28A286BE3590020D627 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.2.0;
+			};
+		};
 		0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -1214,6 +1256,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
 			productName = MarkdownUI;
+		};
+		0E91F28B286BE3590020D627 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E91F28A286BE3590020D627 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0E91F28D286BE3590020D627 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E91F28A286BE3590020D627 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		0E91F28F286BE3590020D627 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E91F28A286BE3590020D627 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		0EBA3ACE274571CF00058EB2 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
