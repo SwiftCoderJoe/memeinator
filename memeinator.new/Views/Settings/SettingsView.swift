@@ -69,7 +69,7 @@ struct SettingsView: View {
                             VStack(alignment: .leading) {
                                 Text("Settings")
                                     .font(.system(size: 25))
-                                Text("Defaults, Maximums, Minimums")
+                                Text("Defaults, Settings, Data")
                                     .font(.system(size: 15, weight: .light))
                             }
                             .foregroundColor(.primary)

@@ -50,8 +50,7 @@ class SettingsViewModel: GenericViewModel {
     
     // MARK: Methods
     
-    // FIXME: Refactor state so we can check state. called multiple times. (Should be fixed... needs more testing tho)
-    func createFormattedString() -> String {        
+    func createFormattedString() -> String {
         var workingString = textInput
         
         workingString = repeatString(workingString)

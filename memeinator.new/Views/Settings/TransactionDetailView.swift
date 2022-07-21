@@ -42,8 +42,7 @@ struct TransactionDetailView: View {
             }
             
             Section("Actions") {
-                // FIXME: Goes nowhere
-                Link("Contact Us", destination: URL(string: "https://SwiftCoderJoe.github.io")!)
+                Link("Contact Us", destination: URL(string: "https://memeinator.joecardenas.dev/contact")!)
                 
                 Button("Request a Refund", action: {
                     settingsViewModel.store.requestRefund(for: transaction, in: windowScene)

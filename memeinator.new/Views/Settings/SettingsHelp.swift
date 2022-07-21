@@ -35,7 +35,7 @@ struct SettingsHelp: View {
                         Text(settingsViewModel.store.pro ? "Pro" : "Standard")
                     }
                 }
-                // FIXME: Most of these links go nowhere
+
                 Section("Support") {
                     Link("Frequently Asked Questions",
                          destination: URL(string: "https://memeinator.joecardenas.dev/faq")!)

@@ -55,7 +55,6 @@
 		0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */; };
 		0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
 		0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
-		0E80BBBE278CC4BA00F6B727 /* EnumPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */; };
 		0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80BBC1279C5BD100F6B727 /* MarkdownUI */; };
 		0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */; };
 		0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */; };
@@ -169,7 +168,6 @@
 		0E80BBB5278A57BC00F6B727 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSettings.swift; sourceTree = "<group>"; };
 		0E80BBBA278BB59F00F6B727 /* Persisted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
-		0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumPreference.swift; sourceTree = "<group>"; };
 		0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysInstallManager.swift; sourceTree = "<group>"; };
 		0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFullAccess.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				0E1757B226D6B92000C35984 /* KeyboardManager.swift */,
 				0E1757B826D802F900C35984 /* SettingsViewModel.swift */,
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
-				0E80BBBD278CC4BA00F6B727 /* EnumPreference.swift */,
 				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
 			);
 			path = Model;
@@ -713,7 +710,6 @@
 				0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */,
 				0E4DFD03281D991C0097366C /* CasingFavorite.swift in Sources */,
 				0E4DFD05281D995E0097366C /* FurryspeakFavorite.swift in Sources */,
-				0E80BBBE278CC4BA00F6B727 /* EnumPreference.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
 				0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */,
 				0E4DFD01281D98A00097366C /* SpacingFavorite.swift in Sources */,
@@ -805,7 +801,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
@@ -842,7 +838,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -981,7 +977,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1010,7 +1006,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
