@@ -16,6 +16,12 @@ struct ContentView: View {
     // Tells us the current state of Memeinator and formats memes
     @StateObject var settingsViewModel = SettingsViewModel()
     
+    // Tells us if analytics is enabled or disabled and can enable and disable analytics
+    @StateObject var analyticsConsentManager = AnalyticsConsentManager()
+    
+    // Tells us if the onboarding process has been completed
+    @StateObject var onboardingManager = OnboardingManager()
+    
     // Current selected tab
     @State var selection: AppPage = .home
     
@@ -45,6 +51,7 @@ struct ContentView: View {
             NavigationView {
                 SettingsView()
                     .environmentObject(settingsViewModel)
+                    .environmentObject(analyticsConsentManager)
                     .navigationBarHidden(true)
             }
             .tabItem {
@@ -57,7 +64,11 @@ struct ContentView: View {
             let bar = UITabBarAppearance()
             bar.configureWithDefaultBackground()
             controller.tabBar.scrollEdgeAppearance = bar
-            
+        }
+        .fullScreenCover(isPresented: !$onboardingManager.onboardingCompleted) {
+            OnboardingView()
+                .environmentObject(onboardingManager)
+                .environmentObject(analyticsConsentManager)
         }
     }
     

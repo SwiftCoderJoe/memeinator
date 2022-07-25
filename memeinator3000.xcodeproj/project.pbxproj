@@ -46,6 +46,7 @@
 		0E6BFA0126D5BE93008868B7 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0026D5BE93008868B7 /* Heading.swift */; };
 		0E6BFA0326D5C08D008868B7 /* MemeinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */; };
 		0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BFA0426D5C485008868B7 /* KeyboardView.swift */; };
+		0E72DE85288C985600D00F57 /* AnalyticsConsentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72DE84288C985600D00F57 /* AnalyticsConsentManager.swift */; };
 		0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F7132849165E00A97F82 /* Zalgo.swift */; };
 		0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */; };
 		0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7766CD2783BD4E0020EB1D /* Preference.swift */; };
@@ -69,6 +70,7 @@
 		0EA551D9276139AD00584065 /* ZalgoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA551D8276139AD00584065 /* ZalgoState.swift */; };
 		0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0EBA3ACE274571CF00058EB2 /* Introspect */; };
+		0EBD585A288CBF0B003B2F99 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD5859288CBF0B003B2F99 /* OnboardingView.swift */; };
 		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */; };
@@ -78,12 +80,19 @@
 		0ECFC3EE27EEACD0009C9F2B /* M3KeysFunction+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */; };
 		0ECFC3F127EEAD34009C9F2B /* Paste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3F027EEAD34009C9F2B /* Paste.swift */; };
 		0ECFC3F327EEAE69009C9F2B /* GenericKeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECFC3F227EEAE69009C9F2B /* GenericKeyboardViews.swift */; };
+		0ED65EC1288DC04400616C01 /* InvertBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC0288DC04400616C01 /* InvertBinding.swift */; };
+		0ED65EC2288DC04400616C01 /* InvertBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC0288DC04400616C01 /* InvertBinding.swift */; };
+		0ED65EC4288E1CA100616C01 /* CenteredScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC3288E1CA100616C01 /* CenteredScrollView.swift */; };
+		0ED65EC5288E1CA100616C01 /* CenteredScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC3288E1CA100616C01 /* CenteredScrollView.swift */; };
+		0ED65EC7288E1FEB00616C01 /* CaptionedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC6288E1FEB00616C01 /* CaptionedIcon.swift */; };
+		0ED65EC8288E1FEB00616C01 /* CaptionedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED65EC6288E1FEB00616C01 /* CaptionedIcon.swift */; };
 		0EDA93DF27AF3FFC0083EE82 /* KeyboardReorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */; };
 		0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */; };
 		0EDBB7E62735DBDF0015457C /* CopyPasteRegen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */; };
 		0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */; };
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
+		0EF9E857288A0EBE000B2A91 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +171,7 @@
 		0E6BFA0026D5BE93008868B7 /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		0E6BFA0226D5C08D008868B7 /* MemeinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeinatorView.swift; sourceTree = "<group>"; };
 		0E6BFA0426D5C485008868B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0E72DE84288C985600D00F57 /* AnalyticsConsentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConsentManager.swift; sourceTree = "<group>"; };
 		0E72F7132849165E00A97F82 /* Zalgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zalgo.swift; sourceTree = "<group>"; };
 		0E7766CB277FBEC30020EB1D /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		0E7766CD2783BD4E0020EB1D /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		0EA551D5275EAAE300584065 /* UnicodeLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeLiterals.swift; sourceTree = "<group>"; };
 		0EA551D8276139AD00584065 /* ZalgoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZalgoState.swift; sourceTree = "<group>"; };
 		0EB31F812671966D00D91ED6 /* randomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomBool.swift; sourceTree = "<group>"; };
+		0EBD5859288CBF0B003B2F99 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = m3Keys.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD5F626E018DC00CF3857 /* memeinator.new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeinator.new.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSettingsView.swift; sourceTree = "<group>"; };
@@ -185,12 +196,16 @@
 		0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "M3KeysFunction+View.swift"; sourceTree = "<group>"; };
 		0ECFC3F027EEAD34009C9F2B /* Paste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paste.swift; sourceTree = "<group>"; };
 		0ECFC3F227EEAE69009C9F2B /* GenericKeyboardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericKeyboardViews.swift; sourceTree = "<group>"; };
+		0ED65EC0288DC04400616C01 /* InvertBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertBinding.swift; sourceTree = "<group>"; };
+		0ED65EC3288E1CA100616C01 /* CenteredScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredScrollView.swift; sourceTree = "<group>"; };
+		0ED65EC6288E1FEB00616C01 /* CaptionedIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedIcon.swift; sourceTree = "<group>"; };
 		0EDA93DE27AF3FFC0083EE82 /* KeyboardReorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReorder.swift; sourceTree = "<group>"; };
 		0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysFunctionOrder.swift; sourceTree = "<group>"; };
 		0EDBB7E52735DBDF0015457C /* CopyPasteRegen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPasteRegen.swift; sourceTree = "<group>"; };
 		0EE57CCB26D84C70001F14DA /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		0EE57CD026DB0556001F14DA /* RoundedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackground.swift; sourceTree = "<group>"; };
 		0EF99C9927763D4D00228440 /* ContentInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+		0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		0EFAA8BA276CDE16009F9BDC /* m3Keys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m3Keys.entitlements; sourceTree = "<group>"; };
 		0EFAA8BB276CDE89009F9BDC /* memeinator.new.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = memeinator.new.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +257,8 @@
 				0E1757B826D802F900C35984 /* SettingsViewModel.swift */,
 				0EA551D8276139AD00584065 /* ZalgoState.swift */,
 				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
+				0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */,
+				0E72DE84288C985600D00F57 /* AnalyticsConsentManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +387,7 @@
 		0E6BF9FF26D5BE79008868B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0EBD5858288CBEFC003B2F99 /* Onboarding */,
 				0E4DFCFF281D98900097366C /* Favorites */,
 				0E80BBC5279C74BC00F6B727 /* Keyboard */,
 				0E80BBB7278A57CF00F6B727 /* Home */,
@@ -418,8 +436,19 @@
 				0E7766CD2783BD4E0020EB1D /* Preference.swift */,
 				0EDA93E027B073350083EE82 /* M3KeysFunctionOrder.swift */,
 				0E020D13276A532B008571C8 /* ProBadge.swift */,
+				0ED65EC0288DC04400616C01 /* InvertBinding.swift */,
+				0ED65EC3288E1CA100616C01 /* CenteredScrollView.swift */,
+				0ED65EC6288E1FEB00616C01 /* CaptionedIcon.swift */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		0EBD5858288CBEFC003B2F99 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0EBD5859288CBF0B003B2F99 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		0ECFC3EF27EEAD1B009C9F2B /* FunctionViews */ = {
@@ -686,9 +715,13 @@
 				0ECDC594273F0F69001291C3 /* Store.swift in Sources */,
 				0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */,
 				0E7766CE2783BD4E0020EB1D /* Preference.swift in Sources */,
+				0ED65EC1288DC04400616C01 /* InvertBinding.swift in Sources */,
+				0ED65EC4288E1CA100616C01 /* CenteredScrollView.swift in Sources */,
 				0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */,
 				0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */,
+				0E72DE85288C985600D00F57 /* AnalyticsConsentManager.swift in Sources */,
 				0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */,
+				0EBD585A288CBF0B003B2F99 /* OnboardingView.swift in Sources */,
 				0E5A7A0A277E40550020C70F /* FunctionalitySettings.swift in Sources */,
 				0EA551D6275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
 				0EE57CCE26D96B1C001F14DA /* GenericViewModel.swift in Sources */,
@@ -709,10 +742,12 @@
 				0E1757AE26D5C65300C35984 /* SettingsView.swift in Sources */,
 				0E5A7A08277E34C70020C70F /* SettingsHelp.swift in Sources */,
 				0E4DFD03281D991C0097366C /* CasingFavorite.swift in Sources */,
+				0ED65EC7288E1FEB00616C01 /* CaptionedIcon.swift in Sources */,
 				0E4DFD05281D995E0097366C /* FurryspeakFavorite.swift in Sources */,
 				0E1757B526D6CD8700C35984 /* IPhoneDeviceType.swift in Sources */,
 				0E7766CC277FBEC30020EB1D /* TransactionDetailView.swift in Sources */,
 				0E4DFD01281D98A00097366C /* SpacingFavorite.swift in Sources */,
+				0EF9E857288A0EBE000B2A91 /* OnboardingManager.swift in Sources */,
 				0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */,
 				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
@@ -758,11 +793,14 @@
 				0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */,
 				0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */,
+				0ED65EC8288E1FEB00616C01 /* CaptionedIcon.swift in Sources */,
 				0EA551D7275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
+				0ED65EC5288E1CA100616C01 /* CenteredScrollView.swift in Sources */,
 				0ECFC3EE27EEACD0009C9F2B /* M3KeysFunction+View.swift in Sources */,
 				0E385F4C26E01B660077E40F /* M3KKeyboardBehaivior.swift in Sources */,
 				0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */,
 				0E385F3A26E01AA70077E40F /* randomBool.swift in Sources */,
+				0ED65EC2288DC04400616C01 /* InvertBinding.swift in Sources */,
 				0E385F4B26E01B660077E40F /* KeyboardViewController.swift in Sources */,
 				0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */,
 				0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */,

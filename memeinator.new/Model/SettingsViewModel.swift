@@ -16,13 +16,13 @@ class SettingsViewModel: GenericViewModel {
     /** Current TextField input text */
     @Published var textInput = ""
     
-    @PublishedPreference(key: "memeinator-settings.v1.leftQuickSetting")
+    @ProPreference(key: "memeinator-settings.v1.leftQuickSetting")
     var leftQuickSetting: Favorite = .spacing
     
-    @PublishedPreference(key: "memeinator-settings.v1.centerQuickSetting")
+    @ProPreference(key: "memeinator-settings.v1.centerQuickSetting")
     var centerQuickSetting: Favorite = .casing
     
-    @PublishedPreference(key: "memeinator-settings.v1.rightQuickSetting")
+    @ProPreference(key: "memeinator-settings.v1.rightQuickSetting")
     var rightQuickSetting: Favorite = .furryspeak
     
     func shouldShowQuickSetting(favorite: Favorite, in section: FavoriteSection) -> Bool {

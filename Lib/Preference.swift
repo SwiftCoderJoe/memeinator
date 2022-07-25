@@ -13,7 +13,7 @@ import Combine
  
  DO NOT USE IN OTHER SITUATIONS: Is this the best way to do this? Almost definitely not. Does it work? I think so. Make of that what you will. */
 @propertyWrapper
-class PublishedPreference<Value>: Resettable, ObservableObject where Value: Codable {
+class ProPreference<Value>: Resettable where Value: Codable {
     
     // Store is where the value is actually stored, but encoded as Data. Published allows it to be stored in UserDefaults.
     @Published private var store: Data
@@ -50,7 +50,7 @@ class PublishedPreference<Value>: Resettable, ObservableObject where Value: Coda
     static subscript<T: ObservableObject> (
         _enclosingInstance instance: T,
         wrapped wrappedKeyPath: ReferenceWritableKeyPath<T, Value>,
-        storage storageKeyPath: ReferenceWritableKeyPath<T, PublishedPreference>
+        storage storageKeyPath: ReferenceWritableKeyPath<T, ProPreference>
     ) -> Value {
         get {
             
@@ -76,7 +76,7 @@ class PublishedPreference<Value>: Resettable, ObservableObject where Value: Coda
                 // Set store to the encoded value
                 instance[keyPath: storageKeyPath].store = codedValue
                 
-                // Send objectWillChange
+                // Send objectWillChange (this is why we can't
                 let publisher = instance.objectWillChange
                 (publisher as? ObservableObjectPublisher)?.send()
             } catch {

@@ -11,30 +11,24 @@ import KeyboardKit
 
 struct SettingsView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
+    @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager
     
     var body: some View {
         VStack(spacing: 0.0) {
-            Heading(name: "Settings")
+            Heading("Settings")
             
             Form {
-                
+                                
                 if !settingsViewModel.store.pro {
                     Section {
                         NavigationLink(
                             destination: ProPreviewPage().environmentObject(settingsViewModel)
                         ) {
-                            HStack {
-                                Image(systemName: "star.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(.purple)
-                                VStack(alignment: .leading) {
-                                    Text("Memeinator Pro")
-                                        .font(.system(size: 25))
-                                    Text("Get More Features")
-                                        .font(.system(size: 15, weight: .light))
-                                }
-                                .foregroundColor(.primary)
-                            }
+                            CaptionedIcon(
+                                systemName: "star.fill",
+                                title: "Memeinator Pro",
+                                caption: "Get More Features"
+                            )
                         }
                     }
                 }
@@ -43,37 +37,25 @@ struct SettingsView: View {
                     NavigationLink(
                         destination: SettingsHelp().environmentObject(settingsViewModel)
                     ) {
-                        HStack {
-                            Image(systemName: "questionmark.circle.fill")
-                                .font(.system(size: 40))
-                                .foregroundColor(.purple)
-                            VStack(alignment: .leading) {
-                                Text("Help")
-                                    .font(.system(size: 25))
-                                Text("About, Contact, Refunds")
-                                    .font(.system(size: 15, weight: .light))
-                            }
-                            .foregroundColor(.primary)
-                        }
+                        CaptionedIcon(
+                            systemName: "questionmark.circle.fill",
+                            title: "Help",
+                            caption: "About, Contact, Refunds"
+                        )
                     }
                 }
                 
                 Section {
                     NavigationLink(
-                        destination: FunctionalitySettings().environmentObject(settingsViewModel)
+                        destination: FunctionalitySettings()
+                            .environmentObject(settingsViewModel)
+                            .environmentObject(analyticsConsentManager)
                     ) {
-                        HStack {
-                            Image(systemName: "gearshape.fill")
-                                .font(.system(size: 40))
-                                .foregroundColor(.purple)
-                            VStack(alignment: .leading) {
-                                Text("Settings")
-                                    .font(.system(size: 25))
-                                Text("Defaults, Settings, Data")
-                                    .font(.system(size: 15, weight: .light))
-                            }
-                            .foregroundColor(.primary)
-                        }
+                        CaptionedIcon(
+                            systemName: "gearshape.fill",
+                            title: "Settings",
+                            caption: "Defaults, Settings, Analytics"
+                        )
                     }
                 }
                 
@@ -81,18 +63,11 @@ struct SettingsView: View {
                     NavigationLink(
                         destination: FavoritesSettings().environmentObject(settingsViewModel)
                     ) {
-                        HStack {
-                            Image(systemName: "bookmark.fill")
-                                .font(.system(size: 40))
-                                .foregroundColor(.purple)
-                            VStack(alignment: .leading) {
-                                Text("Favorites")
-                                    .font(.system(size: 25))
-                                Text("Easy Access, Defaults")
-                                    .font(.system(size: 15, weight: .light))
-                            }
-                            .foregroundColor(.primary)
-                        }
+                        CaptionedIcon(
+                            systemName: "bookmark.fill",
+                            title: "Favorites",
+                            caption: "Easy Access, Defaults"
+                        )
                     }
                 }
                 

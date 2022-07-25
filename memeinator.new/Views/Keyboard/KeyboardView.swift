@@ -21,7 +21,7 @@ struct KeyboardView: View {
     
     var body: some View {
         VStack(spacing: 0.0) {
-            Heading(name: "Keyboard")
+            Heading("Keyboard")
             
             // If the user does not have the keyboard installed, show them how to install it.
             if !keyboardManager.installed {

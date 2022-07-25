@@ -21,7 +21,7 @@ struct MemeinatorView: View {
         
         VStack(spacing: 0.0) {
             if !keyboardManager.keyboardIsShown {
-                Heading(name: "Memeinator")
+                Heading("Memeinator")
             }
             
             CopyPasteRegen().environmentObject(settingsViewModel)

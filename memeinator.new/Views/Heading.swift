@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct Heading: View {
+    init(_ name: String) {
+        self.name = name
+    }
+    
     let name: String
     
     var body: some View {

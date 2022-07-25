@@ -7,13 +7,24 @@
 //
 
 import Foundation
+import FirebaseAnalytics
 import SwiftUI
 
 struct FunctionalitySettings: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
+    @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager
     
     var body: some View {
         Form {
+            
+            Section("Analytics") {
+                VStack {
+                    Toggle("Enable Google Analytics", isOn: $analyticsConsentManager.consentGiven)
+                    Text("Google Analytics helps us understand how we can improve Memeinator. We understand that not everybody likes Google Analytics, so you can disable it if you'd like.")
+                        .font(.footnote)
+                }
+            }
+            
             ProGroup(name: "Furryspeak") {
                 Toggle("Separate Furryspeak and Stutter", isOn: $settingsViewModel.furryspeakStutterSeparated)
                 VStack {
