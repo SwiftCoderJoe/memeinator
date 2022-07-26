@@ -20,7 +20,7 @@ struct FunctionalitySettings: View {
             Section("Analytics") {
                 VStack {
                     Toggle("Enable Google Analytics", isOn: $analyticsConsentManager.consentGiven)
-                    Text("Google Analytics helps us understand how we can improve Memeinator. We understand that not everybody likes Google Analytics, so you can disable it if you'd like.")
+                    Text("Google Analytics helps us understand how we can improve Memeinator. We understand that not everybody likes Google Analytics, so you can disable it if you'd like. You can always change this later in settings.")
                         .font(.footnote)
                 }
             }
