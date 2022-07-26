@@ -11,6 +11,7 @@ import KeyboardKit
 
 struct SettingsView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
+    @EnvironmentObject var onboardingManager: OnboardingManager
     @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager
     
     var body: some View {
@@ -50,6 +51,7 @@ struct SettingsView: View {
                         destination: FunctionalitySettings()
                             .environmentObject(settingsViewModel)
                             .environmentObject(analyticsConsentManager)
+                            .environmentObject(onboardingManager)
                     ) {
                         CaptionedIcon(
                             systemName: "gearshape.fill",

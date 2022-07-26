@@ -52,6 +52,7 @@ struct ContentView: View {
                 SettingsView()
                     .environmentObject(settingsViewModel)
                     .environmentObject(analyticsConsentManager)
+                    .environmentObject(onboardingManager)
                     .navigationBarHidden(true)
             }
             .tabItem {

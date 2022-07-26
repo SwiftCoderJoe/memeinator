@@ -11,6 +11,7 @@ import SwiftUI
 
 struct SettingsHelp: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
+    @EnvironmentObject var onboardingManager: OnboardingManager
     
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
     let appBuild = Bundle.main.infoDictionary!["CFBundleVersion"] as? String
@@ -54,6 +55,10 @@ struct SettingsHelp: View {
                     
                     Button("Crash App", action: {
                         fatalError("User manually triggered a crash. ")
+                    })
+                    
+                    Button("Reset Onboarding", action: {
+                        onboardingManager.onboardingCompleted = false
                     })
                 }
                 
