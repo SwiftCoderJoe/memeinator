@@ -79,7 +79,7 @@ struct OnboardingView: View {
         }
     }
 }
-    
+
 private struct AnalyticsConsentView: View {
     @EnvironmentObject var onboardingManager: OnboardingManager
     @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager
@@ -96,7 +96,7 @@ private struct AnalyticsConsentView: View {
                     .foregroundColor(.purple)
                 Text("Analytics")
                     .font(.system(size: 30))
-                Text("Memeinator uses Google Analytics. Google Analytics helps us understand how we can improve Memeinator. We understand that not everybody likes Google Analytics, so you can disable it if you'd like.")
+                Text("Memeinator uses Google Analytics. Google Analytics helps us understand how we can improve Memeinator. We understand that not everybody likes Google Analytics, so you can disable it if you'd like. You can always change this later in settings.")
                     .multilineTextAlignment(.center)
             }
             .padding(10)
