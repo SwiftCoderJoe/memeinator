@@ -36,7 +36,9 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink(
-                        destination: SettingsHelp().environmentObject(settingsViewModel)
+                        destination: SettingsHelp()
+                            .environmentObject(settingsViewModel)
+                            .environmentObject(onboardingManager)
                     ) {
                         CaptionedIcon(
                             systemName: "questionmark.circle.fill",
@@ -51,7 +53,6 @@ struct SettingsView: View {
                         destination: FunctionalitySettings()
                             .environmentObject(settingsViewModel)
                             .environmentObject(analyticsConsentManager)
-                            .environmentObject(onboardingManager)
                     ) {
                         CaptionedIcon(
                             systemName: "gearshape.fill",
