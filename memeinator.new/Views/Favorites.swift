@@ -23,11 +23,11 @@ struct QuickSetting<Content: View>: View {
     var body: some View {
         VStack {
             Text(name)
-                .font(.system(size: 15))
+                .font(.body)
                 .lineLimit(1)
             content
         }
-        .padding()
+        .padding(.vertical)
         .frame(minWidth: 0, maxWidth: .infinity)
         .foregroundColor(Color(uiColor: .systemBackground))
     }

@@ -60,8 +60,6 @@ struct KeyboardReorder: View {
                                     .roundedBackground(color: .purple)
                             }
                             .onTapGesture {
-                                // FIXME: one animation doesn't look good
-                                // removing top from unusedKeyboardButtons
                                 withAnimation {
                                     viewModel.keyboardButtonOrdering.append(viewModel.unusedKeyboardButtons[index])
                                     viewModel.unusedKeyboardButtons.remove(at: index)
@@ -77,5 +75,12 @@ struct KeyboardReorder: View {
         }
         .navigationTitle("Reorder")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct KeyboardReorder_Previews: PreviewProvider {
+    static var previews: some View {
+        KeyboardReorder()
+            .environmentObject(SettingsViewModel())
     }
 }

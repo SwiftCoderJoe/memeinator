@@ -62,3 +62,11 @@ struct FunctionalitySettings: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+struct FunctionalitySettings_Previews: PreviewProvider {
+    static var previews: some View {
+        FunctionalitySettings()
+            .environmentObject(SettingsViewModel())
+            .environmentObject(AnalyticsConsentManager())
+    }
+}

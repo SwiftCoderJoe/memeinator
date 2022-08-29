@@ -51,3 +51,14 @@ struct TransactionDetailView: View {
         }
     }
 }
+
+struct TransactionDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        TransactionDetailView(for: MemeinatorTransaction(
+            product: .pro,
+            purchaseDate: Date.now,
+            id: 1001
+        ))
+            .environmentObject(SettingsViewModel())
+    }
+}

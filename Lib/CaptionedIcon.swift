@@ -27,9 +27,9 @@ struct CaptionedIcon: View {
                 .foregroundColor(.purple)
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.system(size: 25))
+                    .font(.title2)
                 Text(caption)
-                    .font(.system(size: 15, weight: .light))
+                    .font(.footnote.weight(.light))
             }
             .foregroundColor(.primary)
             

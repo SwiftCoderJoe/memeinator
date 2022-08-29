@@ -20,9 +20,6 @@ struct RoundedBackground: ViewModifier {
     
     func body(content: Content) -> some View {
         return content
-            .background {
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(color)
-            }
+            .background(color, in: RoundedRectangle(cornerRadius: 10))
     }
 }

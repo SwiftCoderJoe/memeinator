@@ -47,7 +47,7 @@ struct MemeinatorView: View {
             if !(keyboardManager.keyboardIsShown && (UIDevice.current.type == .iPhoneSE)) {
                 VStack(spacing: 0.0) {
                     
-                    HStack {
+                    HStack(spacing: 0) {
                         settingsViewModel.leftQuickSetting.quickSetting
                             .environmentObject(settingsViewModel)
                         
@@ -72,7 +72,7 @@ struct MemeinatorView: View {
                     Image(systemName: "chevron.right")
                     Spacer()
                 }
-                .font(.system(size: 15).bold())
+                .font(.body.bold())
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
@@ -83,6 +83,8 @@ struct MemeinatorView: View {
 
 struct MemeinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(selection: .home)
+        MemeinatorView()
+            .environmentObject(SettingsViewModel())
+            .environmentObject(KeyboardManager())
     }
 }

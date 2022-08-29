@@ -101,3 +101,11 @@ struct SettingsHelp: View {
         }
     }
 }
+
+struct SettingsHelp_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsHelp()
+            .environmentObject(SettingsViewModel())
+            .environmentObject(OnboardingManager())
+    }
+}

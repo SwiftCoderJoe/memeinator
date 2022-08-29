@@ -54,3 +54,10 @@ struct FavoritesSettings: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+struct FavoritesSettings_Previews: PreviewProvider {
+    static var previews: some View {
+        FavoritesSettings()
+            .environmentObject(SettingsViewModel())
+    }
+}

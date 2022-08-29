@@ -82,7 +82,7 @@ struct GenericProPreview: View {
                     Label("Shortcuts", systemImage: "checkmark.circle.fill") // Shortcuts 0_0
                     Label("All New Features, Forever", systemImage: "checkmark.circle.fill") // Guaranteed!
                 }
-                .font(.system(size: 15))
+                .font(.body)
                 .padding()
                 .frame(maxWidth: .infinity)
                 
@@ -101,7 +101,7 @@ struct GenericProPreview: View {
                 }) {
                     Text("Continue")
                         .frame(maxWidth: 300)
-                        .font(.system(size: 15).bold())
+                        .font(.body.bold())
                 }
                 
                 .buttonStyle(.borderedProminent)
@@ -115,7 +115,7 @@ struct GenericProPreview: View {
                 }) {
                     Text("Restore Purchases")
                         .frame(maxWidth: 300)
-                        .font(.system(size: 15).bold())
+                        .font(.body.bold())
                 }
                 .buttonStyle(.bordered)
                 .foregroundColor(.purple)
@@ -123,6 +123,8 @@ struct GenericProPreview: View {
             }
             .controlSize(.large)
             .tint(.purple)
+            // A little goofy having padding on just the bottom but it looks right
+            .padding(.bottom)
             
         }
     }
@@ -134,5 +136,6 @@ struct ProPreviewSheet_Previews: PreviewProvider {
     
     static var previews: some View {
         ProPreviewSheet(isOpen: $isOpen, feature: "Emojifier")
+            .environmentObject(SettingsViewModel())
     }
 }

@@ -20,7 +20,7 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
     init(_ label: String, isExpanded: Binding<Bool>? = nil, @ViewBuilder content: () -> Content) where Header == Text {
         self.init(header: {
             Text(label)
-                .font(.system(size: 15))
+                .font(.body)
         }, isExpanded: isExpanded, content: content)
     }
     
@@ -121,7 +121,7 @@ struct ProFeature<Content>: View where Content: View {
             })
             
             Text(label)
-                .font(.system(size: 15))
+                .font(.body)
             
         }, isExpanded: isExpanded) {
             content

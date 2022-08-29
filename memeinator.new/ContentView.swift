@@ -71,6 +71,7 @@ struct ContentView: View {
                 .environmentObject(onboardingManager)
                 .environmentObject(analyticsConsentManager)
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
     
     enum AppPage: Hashable {

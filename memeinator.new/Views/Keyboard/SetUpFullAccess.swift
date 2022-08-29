@@ -47,7 +47,7 @@ struct SetUpFullAccess: View {
                 )
                     .markdownStyle(
                         MarkdownStyle(
-                            font: .system(size: 20)
+                            font: .body
                         )
                     )
                 
@@ -57,7 +57,7 @@ struct SetUpFullAccess: View {
             Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
                 Text("Set Up Full Access")
                     .frame(maxWidth: 300)
-                    .font(.system(size: 15).bold())
+                    .font(.body.bold())
             }
             .buttonStyle(.bordered)
             .controlSize(.large)
@@ -65,5 +65,15 @@ struct SetUpFullAccess: View {
             
             Spacer()
         }
+    }
+}
+
+struct SetUpFullAccess_Previews: PreviewProvider {
+    
+    @State static var isOpen = true
+
+    
+    static var previews: some View {
+        SetUpFullAccess(isOpen: $isOpen)
     }
 }

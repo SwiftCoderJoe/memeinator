@@ -96,7 +96,7 @@ struct KeyboardView: View {
                 )
                     .markdownStyle(
                         MarkdownStyle(
-                            font: .system(size: 20)
+                            font: .body
                         )
                     )
                 
@@ -106,7 +106,7 @@ struct KeyboardView: View {
             Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
                 Text("Set Up M3Keys")
                     .frame(maxWidth: 300)
-                    .font(.system(size: 15).bold())
+                    .font(.body.bold())
             }
             .buttonStyle(.bordered)
             .controlSize(.large)
@@ -146,5 +146,8 @@ struct KeyboardView: View {
 struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
         KeyboardView()
+            .previewDisplayName("Set Up Keyboard")
+        KeyboardView().fullAccessWarning
+            .previewDisplayName("Full Access Warning")
     }
 }
