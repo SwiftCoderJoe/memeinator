@@ -1,9 +1,7 @@
 //
 //  TextDisclosureGroup.swift
-//  TextDisclosureGroup
 //
-//  Created by Kids on 9/2/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 9/2/21.
 //
 
 import SwiftUI
@@ -11,6 +9,7 @@ import m3Keys
 
 // MARK: Disclosure groups
 
+/// A memeinator "Feature", a group to enable, disable, and show/hide additional settings.
 struct Feature<Content, Header>: View where Content: View, Header: View {
     @State private var isExpandedState = false
     var isExpanded: Binding<Bool>?
@@ -88,6 +87,7 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
     }
 }
 
+// A `Feature` view with a ProBadge added to it.
 struct ProFeature<Content>: View where Content: View {
     // ProFeature needs settingsViewModel so it can access the store
     @EnvironmentObject var settingsViewModel: SettingsViewModel
@@ -131,9 +131,7 @@ struct ProFeature<Content>: View where Content: View {
 
 // MARK: Form Groups
 
-/**
- A group used in the settings portion of memeinator. Needs SettingsViewModel environment object.
- */
+/// A group used in the settings portion of memeinator. Needs SettingsViewModel environment object.
 struct ProGroup<Content>: View where Content: View {
     
     @EnvironmentObject var viewModel: SettingsViewModel

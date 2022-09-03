@@ -1,9 +1,7 @@
 //
 //  IPhoneDeviceType.swift
-//  IPhoneDeviceType
 //
-//  Created by Kids on 8/25/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/25/21.
 //
 
 // swiftlint:disable all

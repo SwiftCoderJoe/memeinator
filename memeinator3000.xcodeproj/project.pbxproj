@@ -54,8 +54,6 @@
 		0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E80BBB6278A57BC00F6B727 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB5278A57BC00F6B727 /* Favorites.swift */; };
 		0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */; };
-		0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
-		0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBBA278BB59F00F6B727 /* Persisted.swift */; };
 		0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80BBC1279C5BD100F6B727 /* MarkdownUI */; };
 		0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */; };
 		0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */; };
@@ -177,7 +175,6 @@
 		0E7766CD2783BD4E0020EB1D /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0E80BBB5278A57BC00F6B727 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSettings.swift; sourceTree = "<group>"; };
-		0E80BBBA278BB59F00F6B727 /* Persisted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persisted.swift; sourceTree = "<group>"; };
 		0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3KeysInstallManager.swift; sourceTree = "<group>"; };
 		0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpFullAccess.swift; sourceTree = "<group>"; };
 		0E8C8F3226E12D58003E53AB /* BetterGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterGroups.swift; sourceTree = "<group>"; };
@@ -425,7 +422,6 @@
 		0EB20C9925AB8C2800D41488 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				0E80BBBA278BB59F00F6B727 /* Persisted.swift */,
 				0EE57CD026DB0556001F14DA /* RoundedBackground.swift */,
 				0EB31F812671966D00D91ED6 /* randomBool.swift */,
 				0E1757B426D6CD8600C35984 /* IPhoneDeviceType.swift */,
@@ -732,7 +728,6 @@
 				0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */,
 				0E4DFD07281D999D0097366C /* DaVinciFavorite.swift in Sources */,
 				0ED65ECD2890510300616C01 /* AnalyticsConsentView.swift in Sources */,
-				0E80BBBB278BB59F00F6B727 /* Persisted.swift in Sources */,
 				0EA551D9276139AD00584065 /* ZalgoState.swift in Sources */,
 				0E3CF7D4273C3A7900650BB5 /* ProPreviews.swift in Sources */,
 				0E6BFA0126D5BE93008868B7 /* Heading.swift in Sources */,
@@ -806,7 +801,6 @@
 				0E72F7142849165E00A97F82 /* Zalgo.swift in Sources */,
 				0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */,
 				0E385F4E26E01B660077E40F /* SettingsViewModel.swift in Sources */,
-				0E80BBBC278BB59F00F6B727 /* Persisted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,7 +1016,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 BytleBit. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1050,7 +1044,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Memeinator;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 BytleBit. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

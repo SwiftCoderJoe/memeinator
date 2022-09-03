@@ -1,14 +1,13 @@
 //
 //  SettingsView.swift
-//  SettingsView
 //
-//  Created by Kids on 8/24/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/24/21.
 //
 
 import SwiftUI
 import KeyboardKit
 
+/// "More" tab of Memeinator
 struct SettingsView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @EnvironmentObject var onboardingManager: OnboardingManager

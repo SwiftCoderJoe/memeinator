@@ -1,15 +1,14 @@
 //
 //  SetUpFullAccessSheet.swift
-//  memeinator.new
 //
-//  Created by Kids on 1/22/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 1/22/22.
 //
 
 import Foundation
 import SwiftUI
 import MarkdownUI
 
+/// A small view that can be presented in order to guide the user through setting up Full Access for Memeinator Keyboard.
 struct SetUpFullAccess: View {
     
     @Binding var isOpen: Bool

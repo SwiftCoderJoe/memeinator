@@ -1,9 +1,7 @@
 //
 //  GenericKeyboardViews.swift
-//  m3Keys
 //
-//  Created by Kids on 3/25/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 3/25/22.
 //
 
 import Foundation

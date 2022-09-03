@@ -1,9 +1,7 @@
 //
 //  PreferencesContainer.swift
-//  memeinator.new
 //
-//  Created by Kids on 1/3/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 1/3/22.
 //
 
 import Foundation
@@ -76,7 +74,7 @@ class ProPreference<Value>: Resettable where Value: Codable {
                 // Set store to the encoded value
                 instance[keyPath: storageKeyPath].store = codedValue
                 
-                // Send objectWillChange (this is why we can't
+                // Send objectWillChange (this is why we can't use the basic wrappedValue)
                 let publisher = instance.objectWillChange
                 (publisher as? ObservableObjectPublisher)?.send()
             } catch {
@@ -138,7 +136,7 @@ extension PreferenceContainer where Self.ObjectWillChangePublisher == Observable
             }
         }
         
-        // If anything has reset then send an objectWillChange
+        // If anything has changed then send an objectWillChange
         if reset {
             objectWillChange.send()
         }

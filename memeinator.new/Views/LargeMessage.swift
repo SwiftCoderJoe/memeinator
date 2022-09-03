@@ -1,14 +1,13 @@
 //
 //  LargeMessage.swift
-//  memeinator.new
 //
-//  Created by Kids on 1/22/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 1/22/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// A large, centered header with a rounded purple background.
 struct LargeMessage: View {
     var iconName: String
     var message: String

@@ -1,9 +1,7 @@
 //
 //  UnicodeLiterals.swift
-//  memeinator3000
 //
-//  Created by Kids on 12/6/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 12/6/21.
 //
 
 // swiftlint:disable line_length

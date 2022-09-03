@@ -1,14 +1,13 @@
 //
 //  TransactionDetailView.swift
-//  memeinator.new
 //
-//  Created by Kids on 12/31/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 12/31/21.
 //
 
 import Foundation
 import SwiftUI
 
+/// A detail view that allows users to refund purchases. Used in the Help screen after tapping on a purchase.
 struct TransactionDetailView: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     

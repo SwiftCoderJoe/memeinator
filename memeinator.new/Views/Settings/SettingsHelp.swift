@@ -1,14 +1,13 @@
 //
 //  SettingsHelp.swift
-//  memeinator.new
 //
-//  Created by Kids on 12/30/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 12/30/21.
 //
 
 import Foundation
 import SwiftUI
 
+/// "Help" page of the Memeinator More tab.
 struct SettingsHelp: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @EnvironmentObject var onboardingManager: OnboardingManager

@@ -1,14 +1,13 @@
 //
 //  OnboardingView.swift
-//  memeinator.new
 //
-//  Created by Kids on 7/23/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 7/23/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// This view guides the user through setting up Analytics Consent. Should be presented on the first run of the app.
 struct OnboardingView: View {
     @EnvironmentObject var onboardingManager: OnboardingManager
     @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager

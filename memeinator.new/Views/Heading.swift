@@ -1,13 +1,12 @@
 //
 //  LargeDivider.swift
-//  LargeDivider
 //
-//  Created by Kids on 8/24/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/24/21.
 //
 
 import SwiftUI
 
+/// The top header of the three main Memeinator tabs.
 struct Heading: View {
     init(_ name: String) {
         self.name = name
@@ -27,6 +26,7 @@ struct Heading: View {
     }
 }
 
+/// A purple, 4 pixel tall divider.
 struct LargeDivider: View {
     var height: CGFloat = 4
     

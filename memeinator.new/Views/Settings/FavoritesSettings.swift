@@ -1,9 +1,7 @@
 //
 //  FavoritesSettings.swift
-//  memeinator.new
 //
-//  Created by Kids on 1/9/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 1/9/22.
 //
 
 import Foundation

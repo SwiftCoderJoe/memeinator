@@ -1,14 +1,13 @@
 //
 //  KeyboardView.swift
-//  KeyboardView
 //
-//  Created by Kids on 8/24/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/24/21.
 //
 
 import SwiftUI
 import MarkdownUI
 
+/// The Keyboard tab of the Memeinator App
 struct KeyboardView: View {
     @Environment(\.scenePhase) var scenePhase
     

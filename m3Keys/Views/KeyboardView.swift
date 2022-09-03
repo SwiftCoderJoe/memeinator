@@ -1,9 +1,7 @@
 //
 //  KeyboardView.swift
-//  KeyboardKitDemo
 //
-//  Created by Daniel Saidi on 2020-06-10.
-//  Copyright © 2021 Daniel Saidi. All rights reserved.
+//  Created by Joe Cardenas on 2020-06-10.
 //
 
 import SwiftUI

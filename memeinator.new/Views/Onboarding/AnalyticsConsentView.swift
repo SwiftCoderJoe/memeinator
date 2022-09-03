@@ -1,14 +1,15 @@
 //
 //  AnalyticsConsentView.swift
-//  memeinator3000
 //
-//  Created by Kids on 7/26/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 7/26/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// Allows the user to decide if they would like analytics data gathered or not.
+///
+/// Presented by OnboardingView. It is unlikely that this would need to be presented anywhere else.
 struct AnalyticsConsentView: View {
     @EnvironmentObject var onboardingManager: OnboardingManager
     @EnvironmentObject var analyticsConsentManager: AnalyticsConsentManager

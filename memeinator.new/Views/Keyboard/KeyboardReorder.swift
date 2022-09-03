@@ -1,14 +1,13 @@
 //
 //  KeyboardFunctionSettings.swift
-//  memeinator.new
 //
-//  Created by Kids on 2/5/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 2/5/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// A way to reorder, add, and remove functions from Memeinator Keyboard. Accessed from `KeyboardView`
 struct KeyboardReorder: View {
     @EnvironmentObject var viewModel: SettingsViewModel
     

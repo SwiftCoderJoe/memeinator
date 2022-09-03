@@ -1,9 +1,7 @@
 //
 //  KeyboardViewController.swift
-//  memeinator but its a keyboard
 //
 //  Created by Joe Cardenas on 9/15/18.
-//  Copyright © 2018 BytleBit. All rights reserved.
 //
 
 import UIKit

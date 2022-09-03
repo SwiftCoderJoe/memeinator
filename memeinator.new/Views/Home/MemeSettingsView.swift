@@ -1,13 +1,12 @@
 //
 //  MemeSettingsView.swift
-//  MemeSettingsView
 //
-//  Created by Kids on 9/2/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 9/2/21.
 //
 
 import SwiftUI
 
+/// The detail page for changing the text effect settings of Memeinator. Accessed from the `Text Settings` button in the homepage.
 struct MemeSettingsView: View {
     
     @EnvironmentObject var settingsViewModel: SettingsViewModel

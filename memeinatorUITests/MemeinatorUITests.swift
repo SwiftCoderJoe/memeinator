@@ -1,13 +1,12 @@
 //
 //  Memeinator3000_newUITests.swift
-//  Memeinator3000.newUITests
 //
-//  Created by Kids on 8/23/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/23/21.
 //
 
 import XCTest
 
+// FIXME: Add UI Tests!
 class MemeinatorUITests: XCTestCase {
 
     override func setUpWithError() throws {

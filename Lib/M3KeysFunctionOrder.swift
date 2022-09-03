@@ -1,9 +1,7 @@
 //
 //  M3KeysFunctions.swift
-//  memeinator.new
 //
-//  Created by Kids on 2/6/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 2/6/22.
 //
 
 import Foundation

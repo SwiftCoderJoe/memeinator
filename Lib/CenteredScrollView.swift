@@ -1,14 +1,13 @@
 //
 //  CenteredScrollView.swift
-//  memeinator3000
 //
-//  Created by Kids on 7/24/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 7/24/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// Centers content inside a ScrollView if the content doesn't take up the ScrollView's entire axis.
 struct CenteredScrollView<Content: View>: View {
     let axis: Axis.Set
     let content: Content

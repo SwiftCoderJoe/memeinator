@@ -1,14 +1,13 @@
 //
 //  ProPreviewSheet.swift
-//  memeinator.new
 //
-//  Created by Kids on 11/10/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 11/10/21.
 //
 
 import Foundation
 import SwiftUI
 
+/// Guides users through purchasing Memeinator pro, including a note about the feature they attempted to use.
 struct ProPreviewSheet: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     

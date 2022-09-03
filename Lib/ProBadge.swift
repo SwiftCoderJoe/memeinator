@@ -1,14 +1,13 @@
 //
 //  ProBadge.swift
-//  memeinator.new
 //
-//  Created by Kids on 12/15/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 12/15/21.
 //
 
 import Foundation
 import SwiftUI
 
+/// A small badge that says "Pro" with a lock icon if the user doesn't already own Pro.
 struct ProBadge: View {
     
     let pro: Bool
@@ -53,7 +52,7 @@ struct ProBadge: View {
     }
 }
 
-/// No probadge, if you want probadge please edit the code to include that!
+/// A NavigationLink where if the user does not own pro, a lock icon is shown and `getProAction` is executed if the link is pressed.
 struct ProLink<Content: View, Destination: View>: View {
     
     let content: Content

@@ -1,14 +1,13 @@
 //
 //  MemeinatorTests.swift
-//  MemeinatorTests
 //
-//  Created by Kids on 8/23/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/23/21.
 //
 
 import XCTest
 @testable import memeinator_new
 
+// FIXME: Add tests!
 class MemeinatorTests: XCTestCase {
 
     override func setUpWithError() throws {

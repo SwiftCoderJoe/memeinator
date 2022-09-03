@@ -1,9 +1,7 @@
 //
 //  memeSettings.swift
-//  m3Keys
 //
-//  Created by Kids on 3/23/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 3/23/21.
 //
 
 import Foundation

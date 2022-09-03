@@ -1,14 +1,13 @@
 //
 //  MemeinatorView.swift
-//  MemeinatorView
 //
-//  Created by Kids on 8/24/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/24/21.
 //
 
 import SwiftUI
 import AlertToast
 
+/// The main homepage of the app. "Home" tab.
 struct MemeinatorView: View {
     @EnvironmentObject var keyboardManager: KeyboardManager
     @EnvironmentObject var settingsViewModel: SettingsViewModel

@@ -1,9 +1,7 @@
 //
-//  File.swift
-//  File
+//  GenericViewModel.swift
 //
-//  Created by Kids on 8/26/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/26/21.
 //
 
 import Foundation

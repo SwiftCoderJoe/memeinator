@@ -1,14 +1,13 @@
 //
 //  KeyboardManager.swift
-//  KeyboardManager
 //
-//  Created by Kids on 8/25/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/25/21.
 //
 
 import Foundation
 import UIKit
 
+/// Makes the current keyboard state available.
 class KeyboardManager: ObservableObject {
     @Published private(set) var keyboardIsShown = false
     

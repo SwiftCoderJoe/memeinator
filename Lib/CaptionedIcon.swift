@@ -1,14 +1,13 @@
 //
 //  CaptionedIcon.swift
-//  memeinator3000
 //
-//  Created by Kids on 7/24/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 7/24/22.
 //
 
 import Foundation
 import SwiftUI
 
+/// A view that includes an icon, title and caption. Especially useful in forms.
 struct CaptionedIcon: View {
     let iconName: String
     let title: String

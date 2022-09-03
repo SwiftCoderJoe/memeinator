@@ -1,15 +1,14 @@
 //
 //  AnalyticsConsentManager.swift
-//  memeinator.new
 //
-//  Created by Kids on 7/23/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 7/23/22.
 //
 
 import Foundation
 import FirebaseAnalytics
 import FirebaseCrashlytics
 
+/// Manages the enabling/disabling of Google Analytics and Crashlytics.
 class AnalyticsConsentManager: ObservableObject {
     // In theory its not necessary that we set analyticsCollectionEnabled every time, but it feels like a good idea here to make sure consentGiven and analyticsCollectionEnabled do not get out of sync. Especially if the app is reinstalled.
     init() {

@@ -1,9 +1,7 @@
 //
 //  DaVinciFavorite.swift
-//  memeinator.new
 //
-//  Created by Kids on 4/30/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 4/30/22.
 //
 
 import Foundation

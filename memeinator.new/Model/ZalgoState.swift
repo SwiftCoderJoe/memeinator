@@ -1,9 +1,7 @@
 //
 //  ZalgoState.swift
-//  memeinator.new
 //
-//  Created by Kids on 12/8/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 12/8/21.
 //
 
 import Foundation

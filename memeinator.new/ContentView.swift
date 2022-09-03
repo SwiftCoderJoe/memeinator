@@ -1,9 +1,7 @@
 //
 //  ContentView.swift
-//  memeinator3000.new
 //
-//  Created by Kids on 8/23/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 8/23/21.
 //
 
 import SwiftUI

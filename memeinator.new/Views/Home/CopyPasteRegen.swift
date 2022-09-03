@@ -1,15 +1,14 @@
 //
 //  CopyPasteRegen.swift
-//  memeinator.new
 //
-//  Created by Kids on 11/5/21.
-//  Copyright © 2021 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 11/5/21.
 //
 
 import Foundation
 import SwiftUI
 import AlertToast
 
+/// A horizontal stack of three buttons which allow you to copy the generated text, paste text into the meme input, and regenerate randomized portions of text, respectively.
 struct CopyPasteRegen: View {
     
     @EnvironmentObject var settingsViewModel: SettingsViewModel

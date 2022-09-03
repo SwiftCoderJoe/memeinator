@@ -1,14 +1,13 @@
 //
 //  M3KeysInstallManager.swift
-//  memeinator.new
 //
-//  Created by Kids on 1/22/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 1/22/22.
 //
 
 import Foundation
 import UIKit
 
+/// Checks if Memeinator Keyboard is installed on the user's system and if it has full access.
 class M3KeysInstallManager: ObservableObject {
     init() {
         installed = getInstallState()

@@ -1,9 +1,7 @@
 //
 //  Zalgo.swift
-//  m3Keys
 //
-//  Created by Kids on 6/2/22.
-//  Copyright © 2022 BytleBit. All rights reserved.
+//  Created by Joe Cardenas on 6/2/22.
 //
 
 import Foundation
