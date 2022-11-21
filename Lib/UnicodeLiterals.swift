@@ -22,11 +22,7 @@ struct UnicodeLiterals {
     
     /** Chooses and returns a random diacritic from the diacriticsTop list. */
     static func randomTopDiacritic() -> String {
-        return diacriticsTop[
-            Int(arc4random_uniform(
-                UInt32(diacriticsTop.count)
-            ))
-        ]
+        return diacriticsTop[Int.random(in: 0...diacriticsTop.count)]
     }
     
     /** Diacritics to go in the middle of a character. */
@@ -34,11 +30,7 @@ struct UnicodeLiterals {
     
     /** Chooses and returns a random diacritic from the diacriticsMiddle list. */
     static func randomMiddleDiacritic() -> String {
-        return diacriticsMiddle[
-            Int(arc4random_uniform(
-                UInt32(diacriticsMiddle.count)
-            ))
-        ]
+        return diacriticsMiddle[Int.random(in: 0...diacriticsMiddle.count)]
     }
     
     /** Diacritics to go on the bottom of a character. */
@@ -46,15 +38,11 @@ struct UnicodeLiterals {
 
     /** Chooses and returns a random diacritic from the diacriticsBottom list. */
     static func randomBottomDiacritic() -> String {
-        return diacriticsBottom[
-            Int(arc4random_uniform(
-                UInt32(diacriticsBottom.count)
-            ))
-        ]
+        return diacriticsBottom[Int.random(in: 0...diacriticsBottom.count)]
     }
     
     // MARK: Da-Vinci Characters
-    // da vinky
+    // da vinky????
     
     /** A map of standard characters to their reversed counterparts. */
     static let daVinciCharacters: [String: String] = [

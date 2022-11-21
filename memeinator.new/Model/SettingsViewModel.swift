@@ -154,10 +154,11 @@ class SettingsViewModel: GenericViewModel {
             // Next, if this character doesn't have a randomness modifier assigned to it, create it.
             if zalgoState.randomnessModifierBottom.count <= idx {
                 zalgoState.randomnessModifierBottom.append(
-                    Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+                    Int.random(in: Int(zalgoRandomness)...Int(zalgoRandomness * 2))
                 )
+                
                 zalgoState.randomnessModifierTop.append(
-                    Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+                    Int.random(in: Int(zalgoRandomness)...Int(zalgoRandomness * 2))
                 )
             }
             

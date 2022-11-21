@@ -6,19 +6,14 @@
 
 import Foundation
 
-/// Returns a random boolean using arc4random_uniform.
+/// Returns a random boolean using Int.random.
 func randomBool() -> Bool {
-    return arc4random_uniform(2) == 0
+    return Int.random(in: 0...2) == 0
 }
 
-/// Returns a random boolean using arc4random_uniform with the given chance. For example, `randomBool(in: 10)` has a 1/10 chance of being true.
-func randomBool(in chance: UInt32) -> Bool {
-    return arc4random_uniform(chance) == 0
-}
-
-/// Returns a random boolean using arc4random_uniform with the given chance. For example, `randomBool(in: 10)` has a 1/10 chance of being true.
+/// Returns a random boolean using Int.random with the given chance. For example, `randomBool(in: 10)` has a 1/10 chance of being true.
 func randomBool(in chance: Int) -> Bool {
-    return arc4random_uniform(UInt32(chance)) == 0
+    return Int.random(in: 0...chance) == 0
 }
 
 extension Array where Element == Bool {

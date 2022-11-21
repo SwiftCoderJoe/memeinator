@@ -499,9 +499,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E6BF9FC26D46BD0008868B7 /* Build configuration list for PBXNativeTarget "memeinator.new" */;
 			buildPhases = (
+				0E8C8F3626E148EE003E53AB /* Run Script */,
 				0E6BF9D326D46BBE008868B7 /* Sources */,
 				0E6BF9D426D46BBE008868B7 /* Frameworks */,
-				0E8C8F3626E148EE003E53AB /* Run Script */,
 				0E6BF9D526D46BBE008868B7 /* Resources */,
 				0EBDD5FA26E018DC00CF3857 /* Embed Foundation Extensions */,
 				0EDCCCC1287A08B5006E6665 /* ShellScript */,
@@ -859,7 +859,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.12;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -895,7 +895,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.12;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -1029,7 +1029,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.12;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1057,7 +1057,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.11.2;
+				MARKETING_VERSION = 2.12;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";

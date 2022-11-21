@@ -319,7 +319,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     private var diacriticsCount: Int {
         return
             Int(zalgoHeight) +
-            Int(arc4random_uniform(UInt32(zalgoRandomness * 2))) - Int(zalgoRandomness)
+            Int.random(in: Int(zalgoRandomness)...Int(zalgoRandomness * 2))
     }
         
     // Not used my memeinator, only m3keys
