@@ -7,6 +7,7 @@
 import Foundation
 import SwiftUI
 import KeyboardKit
+import AlertToast
 
 /// Generic Keyboard Function. Sets everything to be placed in an HStack, sets font, font color, padding, and sizing, but does not create a background.
 private struct GenericKeyboardFunction<Content: View>: View {
@@ -76,7 +77,7 @@ struct KeyboardFunction<Content: View>: View {
 
 struct ProKeyboardFunction<Content: View>: View {
     @EnvironmentObject var viewModel: SettingsViewModel
-    @EnvironmentObject var toastContext: KeyboardToastContext
+    @EnvironmentObject var toastContext: ToastContext
     
     let title: String
     @Binding var isEnabled: Bool
@@ -101,9 +102,10 @@ struct ProKeyboardFunction<Content: View>: View {
                     isEnabled.toggle()
                 } else {
                     toastContext.present(
-                        Text("Memeinator Pro is required.")
-                            .font(.headline)
-                            .foregroundColor(.gray)
+                        toast: AlertToast(
+                            displayMode: .alert,
+                            type: .error(.red),
+                            title: "Memeinator Pro is required.")
                     )
                 }
             }) {

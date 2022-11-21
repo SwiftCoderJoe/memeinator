@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D010176292BDD2C00CA6600 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0D010175292BDD2C00CA6600 /* AlertToast */; };
+		0D010178292BE69900CA6600 /* ToastContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D010177292BE69900CA6600 /* ToastContext.swift */; };
 		0E020D14276A532B008571C8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
 		0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
@@ -66,7 +68,7 @@
 		0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
 		0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0EBA3ACE274571CF00058EB2 /* Introspect */; };
 		0EBD585A288CBF0B003B2F99 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD5859288CBF0B003B2F99 /* OnboardingView.swift */; };
-		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EBF10EA26E121EF00CFA2BC /* MemeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF10E926E121EF00CFA2BC /* MemeSettingsView.swift */; };
 		0ECDC590273F0E6F001291C3 /* StoreKit.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 0ECDC58F273F0E6F001291C3 /* StoreKit.storekit */; };
 		0ECDC594273F0F69001291C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC593273F0F69001291C3 /* Store.swift */; };
@@ -118,20 +120,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0EBDD5FA26E018DC00CF3857 /* Embed App Extensions */ = {
+		0EBDD5FA26E018DC00CF3857 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed App Extensions */,
+				0EBDD5F526E018DC00CF3857 /* m3Keys.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D010177292BE69900CA6600 /* ToastContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastContext.swift; sourceTree = "<group>"; };
 		0E020D13276A532B008571C8 /* ProBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProBadge.swift; sourceTree = "<group>"; };
 		0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
 		0E146D47277554AB00B5053F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E385F5426E01BEF0077E40F /* KeyboardKit in Frameworks */,
+				0D010176292BDD2C00CA6600 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +300,7 @@
 				0E385F4426E01B660077E40F /* M3KActionHandler.swift */,
 				0E385F4526E01B660077E40F /* SettingsViewModel.swift */,
 				0ECFC3ED27EEACD0009C9F2B /* M3KeysFunction+View.swift */,
+				0D010177292BE69900CA6600 /* ToastContext.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,7 +503,7 @@
 				0E6BF9D426D46BBE008868B7 /* Frameworks */,
 				0E8C8F3626E148EE003E53AB /* Run Script */,
 				0E6BF9D526D46BBE008868B7 /* Resources */,
-				0EBDD5FA26E018DC00CF3857 /* Embed App Extensions */,
+				0EBDD5FA26E018DC00CF3857 /* Embed Foundation Extensions */,
 				0EDCCCC1287A08B5006E6665 /* ShellScript */,
 			);
 			buildRules = (
@@ -569,6 +574,7 @@
 			name = m3Keys;
 			packageProductDependencies = (
 				0E385F5326E01BEF0077E40F /* KeyboardKit */,
+				0D010175292BDD2C00CA6600 /* AlertToast */,
 			);
 			productName = m3Keys;
 			productReference = 0EBDD5EE26E018DC00CF3857 /* m3Keys.appex */;
@@ -581,7 +587,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = BytleBit;
 				TargetAttributes = {
 					0E6BF9D626D46BBE008868B7 = {
@@ -792,6 +798,7 @@
 				0ED65EC8288E1FEB00616C01 /* CaptionedIcon.swift in Sources */,
 				0EA551D7275EAAE300584065 /* UnicodeLiterals.swift in Sources */,
 				0ED65EC5288E1CA100616C01 /* CenteredScrollView.swift in Sources */,
+				0D010178292BE69900CA6600 /* ToastContext.swift in Sources */,
 				0ECFC3EE27EEACD0009C9F2B /* M3KeysFunction+View.swift in Sources */,
 				0E385F4C26E01B660077E40F /* M3KKeyboardBehaivior.swift in Sources */,
 				0E410FD8280C7103006439CC /* Furryspeak.swift in Sources */,
@@ -834,7 +841,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
@@ -852,7 +859,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.11.1;
+				MARKETING_VERSION = 2.11.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -871,7 +878,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -888,7 +895,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.11.1;
+				MARKETING_VERSION = 2.11.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -1010,7 +1017,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1022,7 +1029,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.11.1;
+				MARKETING_VERSION = 2.11.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1039,7 +1046,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
@@ -1050,7 +1057,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.11.1;
+				MARKETING_VERSION = 2.11.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1233,7 +1240,7 @@
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 6.0.0;
 			};
 		};
 		0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */ = {
@@ -1271,6 +1278,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0D010175292BDD2C00CA6600 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
 		0E385F5326E01BEF0077E40F /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */;

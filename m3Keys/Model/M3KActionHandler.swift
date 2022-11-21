@@ -39,7 +39,7 @@ class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
     }
     
     // Return a custom action, or the standard action
-    func customTapAction(for action: KeyboardAction) -> GestureAction? {
+    func customTapAction(for action: KeyboardAction) -> KeyboardAction.GestureAction? {
         switch action {
         
         case .character(let char): return {

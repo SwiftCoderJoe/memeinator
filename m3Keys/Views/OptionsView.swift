@@ -20,7 +20,7 @@ struct OptionsView: View {
     
     // Global SettingsViewModel inherited from parent
     @EnvironmentObject var viewModel: SettingsViewModel
-    @EnvironmentObject var toastContext: KeyboardToastContext
+    @EnvironmentObject var toastContext: ToastContext
     
     var body: some View {
         ScrollView(.horizontal) {

@@ -37,10 +37,8 @@ class M3KeysInstallManager: ObservableObject {
             return false
         }
         
-        for keyboard in keyboards {
-            if keyboard.hasPrefix("com.bb.memeinator.") {
-                return true
-            }
+        for keyboard in keyboards where keyboard.hasPrefix("com.bb.memeinator.") {
+            return true
         }
         
         return false

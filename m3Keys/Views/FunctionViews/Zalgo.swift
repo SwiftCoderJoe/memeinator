@@ -10,7 +10,6 @@ import KeyboardKit
 
 struct ZalgoFunction: View {
     @EnvironmentObject var viewModel: SettingsViewModel
-    @EnvironmentObject var toastContext: KeyboardToastContext
     
     var body: some View {
         ProKeyboardFunction(named: "Zalgo", enabled: $viewModel.zalgoEnabled) {
