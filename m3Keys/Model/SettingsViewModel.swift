@@ -211,19 +211,10 @@ class SettingsViewModel: GenericViewModel {
         
         var context = context
         
-        print("====================")
-        print("Fixing \(context)...")
-        print("Here's each character of context, delimited by a newline:")
-        for char in context {
-            print(char)
-        }
-        
         if zalgoEnabled {
             context = context.folding(options: .diacriticInsensitive, locale: nil)
         }
-        
-        print("Turned into \(context) after zalgo cleanup.")
-        
+                
         if spacingEnabled {
             var formattedContext: [Character] = []
             let sectionLength = numberOfSpaces + 1
@@ -238,11 +229,6 @@ class SettingsViewModel: GenericViewModel {
             
             context = String(formattedContext)
         }
-        
-        print("Turned into \(context) after spacing cleanup.")
-        
-        print("Complete! Here is our output: \(context)")
-        print("====================")
         
         return String(context)
     }
