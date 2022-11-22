@@ -6,11 +6,16 @@
 
 import Foundation
 import SwiftUI
+import AlertToast
 
 /// "Help" page of the Memeinator More tab.
 struct SettingsHelp: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @EnvironmentObject var onboardingManager: OnboardingManager
+    
+    @State var restorePurchasesToast = false
+    @State var restorePurchasesText = ""
+    @State var restorePurchasesError = false
     
     let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
     let appBuild = Bundle.main.infoDictionary!["CFBundleVersion"] as? String
@@ -53,7 +58,13 @@ struct SettingsHelp: View {
                     })
                     
                     Button("Restore Purchases", action: { Task {
-                        try await settingsViewModel.store.restorePurchases()
+                        do {
+                            try await settingsViewModel.store.restorePurchases()
+                            restorePurchasesToast = true
+                        } catch {
+                            restorePurchasesText = error.localizedDescription
+                            restorePurchasesError = true
+                        }
                     }})
                     
                     Button("Reset Onboarding", action: {
@@ -71,6 +82,21 @@ struct SettingsHelp: View {
                         
                 }
             }
+        }
+        .toast(isPresenting: $restorePurchasesToast) {
+            AlertToast(
+                displayMode: .alert,
+                type: .complete(.green),
+                title: "Purchases Restored"
+            )
+        }
+        .toast(isPresenting: $restorePurchasesError) {
+            AlertToast(
+                displayMode: .alert,
+                type: .error(.red),
+                title: "Something went wrong",
+                subTitle: restorePurchasesText
+            )
         }
         .navigationTitle("Help")
         .navigationBarTitleDisplayMode(.inline)
