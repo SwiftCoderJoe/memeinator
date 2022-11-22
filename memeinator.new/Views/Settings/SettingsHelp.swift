@@ -52,9 +52,9 @@ struct SettingsHelp: View {
                         settingsViewModel.resetPreferences()
                     })
                     
-                    Button("Crash App", action: {
-                        fatalError("User manually triggered a crash. ")
-                    })
+                    Button("Restore Purchases", action: { Task {
+                        try await settingsViewModel.store.restorePurchases()
+                    }})
                     
                     Button("Reset Onboarding", action: {
                         onboardingManager.onboardingCompleted = false
