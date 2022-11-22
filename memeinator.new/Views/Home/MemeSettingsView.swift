@@ -120,6 +120,8 @@ struct MemeSettingsView: View {
         }
         .background(Color(uiColor: colorScheme == .dark ? .secondarySystemBackground : .systemBackground))
         .navigationTitle("Text Settings")
+        // Since this view doesn't scroll normally, the normal displayMode is broken.
+        .navigationBarTitleDisplayMode(.inline)
         .environmentObject(settingsViewModel)
     }
 }
