@@ -47,18 +47,23 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     /** Transaction handler */
     @Published var store = Store()
     
-    // FIXME: There has to be a better way to check for this (Property wrapper on enabled?)
+    // This is a slightly better way of doing this than before, but I still don't love it. Also reflection is unnecessary.
     /** Pro feature that is used, or nil. */
     var proFeature: String? {
-        if repeatEnabled {
-            return "Repeat"
-        } else if zalgoEnabled {
-            return "Zalgo"
-        } else if daVinciEnabled {
-            return "Da Vinci"
-        } else {
-            return nil
-        }
+        let mirror = Mirror(reflecting: self)
+        
+        return mirror.superclassMirror?.children
+            .compactMap { child in
+                print(child.value)
+                return child.value as? EnabledSetting
+            }
+            .reduce(nil) { (lastValue: String?, setting) in
+                print(lastValue ?? "None")
+                if let lastValue {
+                    return lastValue
+                }
+                return setting.isProAndEnabled()
+            }
     }
     
     func invalidateState(for invalidatedState: ViewModelState) {
@@ -90,7 +95,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Spacing
     
     /** Pusblished value showing if spacing is enabled. */
-    @Published var spacingEnabled = false
+    @EnabledSetting(pro: false, name: "spacing")
+    var spacingEnabled = false
     
     /** Pusblished value showing the number of spaces per character. */
     @Published var numberOfSpaces = 1
@@ -126,6 +132,9 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
             }
         }
     }
+    
+    // Casing doesn't have an @EnabledSetting because it doesn't have an easy on/off storage
+    // In theory it shouldn't matter because it's not restricted to pro, though this may cause issues later.
     
     /** Computed variable expressing if casing is currently enabled. */
     var casingOn: Bool {
@@ -196,7 +205,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     
     // MARK: Furryspeak
     
-    @Published var furryspeakEnabled = false
+    @EnabledSetting(pro: false, name: "Furryspeak")
+    var furryspeakEnabled = false
     
     // Not in use by m3keys, remember to update m3keys please
     func formatFurryspeak(from input: String) -> String {
@@ -239,7 +249,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     @ProPreference(key: "memeinator-settings.v1.stutterProbability")
     var stutterProbability: Int = 5
     
-    @Published var stutterEnabled = false
+    @EnabledSetting(pro: false, name: "Stutter")
+    var stutterEnabled = false
     
     /** Not implemented */
     func formatStutter(from input: String) -> String {
@@ -249,7 +260,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Repeat
     
     /** Published value showing if Repeat is enabled. */
-    @Published var repeatEnabled = false
+    @EnabledSetting(pro: true, name: "Repeat")
+    var repeatEnabled = false
     
     /** Published value showing the number of times to repeat. */
     @Published var numberOfRepeats = 2.0
@@ -277,7 +289,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Zalgo
     
     /** Published value showing if Zalgo is enabled. */
-    @Published var zalgoEnabled = false
+    @EnabledSetting(pro: true, name: "Zalgo")
+    var zalgoEnabled = false
     
     /**
      * Published value showing the height (number of diacritics) of zalgo.
@@ -351,7 +364,8 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
     // MARK: Da Vinci
     
     /** Published value showing if Da Vinci flipping is enabled. */
-    @Published var daVinciEnabled = false
+    @EnabledSetting(pro: true, name: "Da Vinci")
+    var daVinciEnabled = false
     
     func formatDaVinci(from input: String) -> String {
         guard daVinciEnabled else {

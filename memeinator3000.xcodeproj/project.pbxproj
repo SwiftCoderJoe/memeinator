@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D010176292BDD2C00CA6600 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 0D010175292BDD2C00CA6600 /* AlertToast */; };
 		0D010178292BE69900CA6600 /* ToastContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D010177292BE69900CA6600 /* ToastContext.swift */; };
+		0D01017C292C49B400CA6600 /* EnabledSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01017B292C49B300CA6600 /* EnabledSetting.swift */; };
+		0D01017D292C530900CA6600 /* EnabledSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01017B292C49B300CA6600 /* EnabledSetting.swift */; };
 		0E020D14276A532B008571C8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
 		0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */; };
@@ -135,6 +137,7 @@
 
 /* Begin PBXFileReference section */
 		0D010177292BE69900CA6600 /* ToastContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastContext.swift; sourceTree = "<group>"; };
+		0D01017B292C49B300CA6600 /* EnabledSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledSetting.swift; sourceTree = "<group>"; };
 		0E020D13276A532B008571C8 /* ProBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProBadge.swift; sourceTree = "<group>"; };
 		0E020D18276AA8F9008571C8 /* Published+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+UserDefaults.swift"; sourceTree = "<group>"; };
 		0E146D47277554AB00B5053F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -440,6 +443,7 @@
 				0ED65EC0288DC04400616C01 /* InvertBinding.swift */,
 				0ED65EC3288E1CA100616C01 /* CenteredScrollView.swift */,
 				0ED65EC6288E1FEB00616C01 /* CaptionedIcon.swift */,
+				0D01017B292C49B300CA6600 /* EnabledSetting.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -732,6 +736,7 @@
 				0E6BF9DA26D46BBE008868B7 /* memeinatorApp.swift in Sources */,
 				0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */,
 				0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */,
+				0D01017C292C49B400CA6600 /* EnabledSetting.swift in Sources */,
 				0E4DFD07281D999D0097366C /* DaVinciFavorite.swift in Sources */,
 				0ED65ECD2890510300616C01 /* AnalyticsConsentView.swift in Sources */,
 				0EA551D9276139AD00584065 /* ZalgoState.swift in Sources */,
@@ -793,6 +798,7 @@
 				0E385F5026E01B660077E40F /* KeyboardView.swift in Sources */,
 				0ECFC3F327EEAE69009C9F2B /* GenericKeyboardViews.swift in Sources */,
 				0E020D1A276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
+				0D01017D292C530900CA6600 /* EnabledSetting.swift in Sources */,
 				0E385F4F26E01B660077E40F /* OptionsView.swift in Sources */,
 				0EB45804275A6E9A00DE41E7 /* Store.swift in Sources */,
 				0ED65EC8288E1FEB00616C01 /* CaptionedIcon.swift in Sources */,
@@ -841,7 +847,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
@@ -859,7 +865,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.12;
+				MARKETING_VERSION = 2.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -878,7 +884,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = memeinator.new/memeinator.new.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"memeinator.new/Preview Content\"";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				ENABLE_PREVIEWS = YES;
@@ -895,7 +901,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.12;
+				MARKETING_VERSION = 2.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator;
 				PRODUCT_NAME = memeinator.new;
@@ -1017,7 +1023,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1029,7 +1035,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.12;
+				MARKETING_VERSION = 2.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1046,7 +1052,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = m3Keys/m3Keys.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = CSYD442PMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = m3Keys/Info.plist;
@@ -1057,7 +1063,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.12;
+				MARKETING_VERSION = 2.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bb.memeinator.m3Keys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
