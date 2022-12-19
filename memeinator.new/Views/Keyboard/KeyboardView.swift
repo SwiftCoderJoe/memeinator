@@ -88,9 +88,10 @@ struct KeyboardView: View {
             
             VStack {
                 Markdown("""
-                    1. Tap **Keyboards**
-                    2. Enable **M3Keys**
-                    3. Enable **Allow Full Access**
+                    1. Tap "Set Up Memeinator Keyboard
+                    2. Tap **Keyboards**
+                    3. Enable **Memeinator**
+                    4. Enable **Allow Full Access**
                     """
                 )
                     .markdownStyle(
@@ -103,7 +104,7 @@ struct KeyboardView: View {
             }.padding()
             
             Link(destination: URL(string: UIApplication.openSettingsURLString)!) {
-                Text("Set Up M3Keys")
+                Text("Set Up Memeinator Keyboard")
                     .frame(maxWidth: 300)
                     .font(.body.bold())
             }
