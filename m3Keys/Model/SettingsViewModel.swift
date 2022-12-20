@@ -21,6 +21,19 @@ class SettingsViewModel: GenericViewModel {
     
     // MARK: Methods
     
+    /** Calculates the number of times the keyboard should deleteBackward based on context. */
+    func deletes(contextBefore: String) -> Int {
+        // If spacing is enabled and the last context is a character with a bunch of spaces
+        if spacingEnabled && contextBefore.suffix(numberOfSpaces + 1).dropFirst(1).allSatisfy({
+            return $0 == " "
+        }) {
+            return numberOfSpaces + 1
+        }
+        
+        print("returning 1")
+        return 1
+    }
+    
     /** Creates a formatted action based on the current user input and context. */
     func createFormattedAction(_ input: String, contextBefore: String) -> FormattedAction {
         var workingString = FormattedAction(input: input)
@@ -50,7 +63,8 @@ class SettingsViewModel: GenericViewModel {
         
         // Create action
         let action = FormattedAction(
-            input: formatCasing(from: input.formattedString, startingFrom: memeState)
+            deletes: input.deletes,
+            formattedString: formatCasing(from: input.formattedString, startingFrom: memeState)
         )
         
         // Switch the casing state, only if we're in meme mode.
@@ -93,13 +107,13 @@ class SettingsViewModel: GenericViewModel {
         
         // Used below.
         func checkForStutter() {
+            print("mark")
             let lastThree = String(context.suffix(3))
-            let searches = ["t-t", "t-T", "T-t", "T-T"]
-            
-            if searches.contains(lastThree) {
+                        
+            if lastThree.lowercased() == "t-t" {
                 formattedAction = FormattedAction(
                     deletes: 3,
-                    formattedString: "d-d"
+                    formattedString: formattedAction.formattedString + "-" + formattedAction.formattedString
                 )
             }
         }
@@ -126,7 +140,7 @@ class SettingsViewModel: GenericViewModel {
         let context = clean(context: context)
         let last = context.suffix(1)
         
-        var formattedAction = FormattedAction(input: input.formattedString)
+        var formattedAction = input
         
         // If this is the beginning of a word or paragraph and random is true, stutter the char
         if (last == "" || last == " ") && randomBool(in: stutterProbability) {

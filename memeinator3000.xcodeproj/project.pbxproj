@@ -58,7 +58,6 @@
 		0E7AA6B628516E9800142EA8 /* ProBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E020D13276A532B008571C8 /* ProBadge.swift */; };
 		0E80BBB6278A57BC00F6B727 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB5278A57BC00F6B727 /* Favorites.swift */; };
 		0E80BBB9278B429100F6B727 /* FavoritesSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBB8278B429100F6B727 /* FavoritesSettings.swift */; };
-		0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0E80BBC1279C5BD100F6B727 /* MarkdownUI */; };
 		0E80BBC4279C6F4900F6B727 /* M3KeysInstallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */; };
 		0E80BBC7279C74CE00F6B727 /* SetUpFullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80BBC6279C74CE00F6B727 /* SetUpFullAccess.swift */; };
 		0E8C8F3326E12D58003E53AB /* BetterGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C8F3226E12D58003E53AB /* BetterGroups.swift */; };
@@ -224,7 +223,6 @@
 				0E6421C126DE96A80087E2BB /* AlertToast in Frameworks */,
 				0ED65ED328908BF700616C01 /* FirebaseCrashlytics in Frameworks */,
 				0EBA3ACF274571CF00058EB2 /* Introspect in Frameworks */,
-				0E80BBC2279C5BD100F6B727 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +517,6 @@
 			packageProductDependencies = (
 				0E6421C026DE96A80087E2BB /* AlertToast */,
 				0EBA3ACE274571CF00058EB2 /* Introspect */,
-				0E80BBC1279C5BD100F6B727 /* MarkdownUI */,
 				0ED65ED028908BF700616C01 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				0ED65ED228908BF700616C01 /* FirebaseCrashlytics */,
 			);
@@ -623,7 +620,6 @@
 				0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */,
 				0E385F2226E019F10077E40F /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 				0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 				0ED65ECF28908BF700616C01 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D41F69F4210D5D4A006F5F3C;
@@ -1257,14 +1253,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		0EBA3ACD274571CF00058EB2 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -1298,11 +1286,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E6421BF26DE96A80087E2BB /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
-		};
-		0E80BBC1279C5BD100F6B727 /* MarkdownUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0E80BBC0279C5BD100F6B727 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
-			productName = MarkdownUI;
 		};
 		0EBA3ACE274571CF00058EB2 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;

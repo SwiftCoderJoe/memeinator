@@ -6,7 +6,6 @@
 
 import Foundation
 import SwiftUI
-import MarkdownUI
 
 /// A small view that can be presented in order to guide the user through setting up Full Access for Memeinator Keyboard.
 struct SetUpFullAccess: View {
@@ -38,19 +37,15 @@ struct SetUpFullAccess: View {
             
             LargeMessage(iconName: "keyboard.fill", message: "Set up Full Access")
             
-            VStack {
-                Markdown("""
-                    1. Tap **Keyboards**
-                    2. Enable **Allow Full Access**
+            VStack(spacing: 10) {
+                Text("""
+                    1. Tap **Set Up Full Access**
+                    2. Tap **Keyboards**
+                    3. Enable **Allow Full Access**
                     """
                 )
-                    .markdownStyle(
-                        MarkdownStyle(
-                            font: .body
-                        )
-                    )
                 
-                Markdown("*Nothing you type is **ever** saved and cannot be viewed by anyone other than you.*")
+                Text("*Nothing you type is **ever** saved and cannot be viewed by anyone other than you.*")
             }.padding()
             
             Link(destination: URL(string: UIApplication.openSettingsURLString)!) {

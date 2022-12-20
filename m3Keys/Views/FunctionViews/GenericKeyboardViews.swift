@@ -23,6 +23,7 @@ private struct GenericKeyboardFunction<Content: View>: View {
         }
         .foregroundColor(.white)
         .font(.system(size: 15).bold())
+        .monospacedDigit()
         .frame(maxHeight: .infinity)
         .padding(.horizontal)
     }
@@ -67,6 +68,7 @@ struct KeyboardFunction<Content: View>: View {
             if let content = content, isEnabled {
                 Divider()
                 content
+                    .font(.subheadline)
             }
         }
         .roundedBackground(color: isEnabled ? .purple : .gray)

@@ -5,7 +5,6 @@
 //
 
 import SwiftUI
-import MarkdownUI
 
 /// The Keyboard tab of the Memeinator App
 struct KeyboardView: View {
@@ -83,24 +82,17 @@ struct KeyboardView: View {
             Spacer()
 
             LargeMessage(iconName: "keyboard.fill", message: "Set up Memeinator Keyboard")
-            
-            // TODO: We can probably do this without having a Markdown dep
-            
-            VStack {
-                Markdown("""
-                    1. Tap "Set Up Memeinator Keyboard"
+                        
+            VStack(spacing: 10) {
+                Text("""
+                    1. Tap **Set Up Memeinator Keyboard**
                     2. Tap **Keyboards**
                     3. Enable **Memeinator**
                     4. Enable **Allow Full Access**
                     """
                 )
-                    .markdownStyle(
-                        MarkdownStyle(
-                            font: .body
-                        )
-                    )
                 
-                Markdown("*Nothing you type is **ever** saved and cannot be viewed by anyone other than you.*")
+                Text("*Nothing you type is **ever** saved and cannot be viewed by anyone other than you.*")
             }.padding()
             
             Link(destination: URL(string: UIApplication.openSettingsURLString)!) {

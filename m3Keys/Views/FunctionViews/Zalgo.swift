@@ -17,9 +17,7 @@ struct ZalgoFunction: View {
                     in: viewModel.zalgoHeightRange,
                     step: viewModel.zalgoHeightStep) {
                 
-                // FIXME: This and other numbers in m3keys should probably have fixed width
                 Text("Height: \(Int(viewModel.zalgoHeight))")
-                    .font(.subheadline)
             }
         }
     }

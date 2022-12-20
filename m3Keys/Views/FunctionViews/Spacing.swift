@@ -17,7 +17,6 @@ struct SpacingFunction: View {
                     step: viewModel.spacesStep) {
                 
                 Text("\(viewModel.numberOfSpaces)")
-                    .font(.subheadline)
             }
         }
     }

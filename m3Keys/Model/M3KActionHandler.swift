@@ -30,7 +30,7 @@ class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
     // Called every button press
     override func action(for gesture: KeyboardGesture, on action: KeyboardAction) -> KeyboardAction.GestureAction? {
         
-        // Only add a space after actions that should have a space after them.
+        // Only run the text processing engine after characters that need them.
         if gesture == .tap, let action = customTapAction(for: action) {
             return action
         }
@@ -45,7 +45,8 @@ class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
         case .character(let char): return {
             let formattedAction = self.settingsViewModel.createFormattedAction(
                 char,
-                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? ""
+            )
             $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
             $0?.textDocumentProxy.insertText(formattedAction.formattedString)
         }
@@ -53,7 +54,8 @@ class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
         case .space: return {
             let formattedAction = self.settingsViewModel.createFormattedAction(
                 " ",
-                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? ""
+            )
             $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
             $0?.textDocumentProxy.insertText(formattedAction.formattedString)
         }
@@ -61,10 +63,18 @@ class M3KActionHandler: StandardKeyboardActionHandler, ObservableObject {
         case .emoji(let emoji): return {
             let formattedAction = self.settingsViewModel.createFormattedAction(
                 emoji.char,
-                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? "")
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? ""
+            )
             $0?.textDocumentProxy.deleteBackward(times: formattedAction.deletes)
             $0?.textDocumentProxy.insertText(formattedAction.formattedString)
             
+        }
+            
+        case .backspace: return {
+            print("Deleting")
+            $0?.textDocumentProxy.deleteBackward(times: self.settingsViewModel.deletes(
+                contextBefore: $0?.textDocumentProxy.documentContextBeforeInput ?? ""
+            ))
         }
     
         // If some other key is pressed, return nil (breaks if and returns super.action)
