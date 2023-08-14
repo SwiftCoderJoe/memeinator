@@ -12,13 +12,17 @@ class KeyboardManager: ObservableObject {
     @Published private(set) var keyboardIsShown = false
     
     init() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIApplication.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIApplication.keyboardWillShowNotification, object: nil
+        )
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIApplication.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIApplication.keyboardWillHideNotification, object: nil
+        )
     }
     
     @objc private func keyboardWillShow() {
