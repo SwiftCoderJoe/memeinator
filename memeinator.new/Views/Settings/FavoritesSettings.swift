@@ -7,6 +7,7 @@
 import Foundation
 import SwiftUI
 
+/// "Favorites" page of the Memeinator More tab.
 struct FavoritesSettings: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     

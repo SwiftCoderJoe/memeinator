@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 
 extension FavoriteViews {
+    /// A quick setting that presents a menu with the three casing modes.
     struct CasingFavorite: View {
         @EnvironmentObject var viewModel: SettingsViewModel
         

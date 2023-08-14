@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 
 extension FavoriteViews {
+    /// A quick toggle for toggling the da vinci function.
     struct DaVinciFavorite: View {
         @EnvironmentObject var viewModel: SettingsViewModel
         

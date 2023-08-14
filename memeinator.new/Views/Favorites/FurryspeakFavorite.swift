@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 
 extension FavoriteViews {
+    /// A quick toggle for toggling the furryspeak function.
     struct FurryspeakFavorite: View {
         @EnvironmentObject var viewModel: SettingsViewModel
         

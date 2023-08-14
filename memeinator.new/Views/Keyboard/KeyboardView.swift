@@ -47,6 +47,7 @@ struct KeyboardView: View {
         }
     }
     
+    /// A small warning badge that allows the user to set up full access.
     var fullAccessWarning: some View {
         Button(action: {
             fullAccessSheetOpen = true
@@ -77,6 +78,7 @@ struct KeyboardView: View {
         
     }
     
+    /// A full screen view that allows the user to begin initial setup for memeinator keyboard.
     var setUpMemeinatorKeyboard: some View {
         VStack {
             Spacer()
@@ -108,6 +110,7 @@ struct KeyboardView: View {
         }
     }
     
+    /// A full screen view that allows you to control memeinator keyboard.
     var mainUI: some View {
         VStack {
             Spacer()

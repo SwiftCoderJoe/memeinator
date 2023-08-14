@@ -8,19 +8,19 @@ import SwiftUI
 import Introspect
 
 struct ContentView: View {
-    // Tells us whether keyboard is shown or hidden
+    /// Current keyboard state
     @StateObject var keyboardManager = KeyboardManager()
     
-    // Tells us the current state of Memeinator and formats memes
+    /// Current memeinator state and meme formatter
     @StateObject var settingsViewModel = SettingsViewModel()
     
-    // Tells us if analytics is enabled or disabled and can enable and disable analytics
+    /// Tells us if analytics is enabled or disabled and can enable and disable analytics
     @StateObject var analyticsConsentManager = AnalyticsConsentManager()
     
-    // Tells us if the onboarding process has been completed
+    /// Tells us if the onboarding process has been completed
     @StateObject var onboardingManager = OnboardingManager()
     
-    // Current selected tab
+    /// Current selected tab
     @State var selection: AppPage = .home
     
     var body: some View {

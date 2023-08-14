@@ -87,7 +87,7 @@ struct Feature<Content, Header>: View where Content: View, Header: View {
     }
 }
 
-// A `Feature` view with a ProBadge added to it.
+/// A `Feature` view with a ProBadge added to it.
 struct ProFeature<Content>: View where Content: View {
     // ProFeature needs settingsViewModel so it can access the store
     @EnvironmentObject var settingsViewModel: SettingsViewModel

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FavoriteViews { }
 
+/// Generic quick setting template that includes a background and title.
 struct QuickSetting<Content: View>: View {
     let content: Content
     let name: String
@@ -31,6 +32,7 @@ struct QuickSetting<Content: View>: View {
     }
 }
 
+/// List of all quick settings and their respective views
 enum Favorite: String, CaseIterable, Identifiable, Codable {
     case spacing = "Spacing"
     case casing = "Casing"

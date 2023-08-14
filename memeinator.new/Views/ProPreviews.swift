@@ -26,6 +26,7 @@ struct ProPreviewSheet: View {
     }
 }
 
+/// A dedicated page to guide users through purchasing Memeinator pro.
 struct ProPreviewPage: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -40,6 +41,7 @@ struct ProPreviewPage: View {
     }
 }
 
+/// Heading and buttons for the pro preview pages. Can be customized with custom copy text and a way to close the page when the back button is pressed.
 struct GenericProPreview: View {
     @EnvironmentObject var settingsViewModel: SettingsViewModel
     

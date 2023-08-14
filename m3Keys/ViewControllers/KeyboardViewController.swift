@@ -29,6 +29,7 @@ class KeyboardViewController: KeyboardInputViewController {
         
         // Setup a layout with .emojis instead of .dictation
         keyboardLayoutProvider = StandardKeyboardLayoutProvider(
+            keyboardContext: keyboardContext,
             inputSetProvider: inputSetProvider,
             dictationReplacement: .keyboardType(.emojis))
 

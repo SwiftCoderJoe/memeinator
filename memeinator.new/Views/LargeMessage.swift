@@ -28,6 +28,7 @@ struct LargeMessage: View {
     }
 }
 
+/// A large, full width header with a rounded purple background.
 struct WideMessage: View {
     var iconName: String
     var message: String
