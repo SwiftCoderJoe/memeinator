@@ -77,6 +77,7 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
         case zalgoHeight
         case zalgoRandomness
         case zalgoDiacritics
+        case emojiAdditions
     }
     
     // MARK: Settings
@@ -383,6 +384,31 @@ class GenericViewModel: ObservableObject, PreferenceContainer {
         return workingString
         
     }
+    
+    // MARK: Emojifier
+    
+    @EnabledSetting(pro: true, name: "Emoji Additions")
+    var emojiAdditionsEnabled = false
+    
+    let maxEmojis = 3
+    
+    func getEmojiForWord(input: String) -> [String]? {
+        guard emojiAdditionsEnabled else {
+            return nil
+        }
+        let trimmedWord = input.trimmingCharacters(in: .punctuationCharacters).lowercased()
+        
+        if trimmedWord == "" { return nil }
+        
+        for fix in ["", "s", "ing", "ed", "'s", "er", "ies", "ied"] {
+            if let emojis = UnicodeLiterals.emojiAdditions[trimmedWord + fix] { return emojis }
+            if trimmedWord.hasSuffix(fix), let emojis = UnicodeLiterals.emojiAdditions[String(trimmedWord.dropLast(fix.count))] { return emojis }
+        }
+        
+        return nil
+    }
+    
+    // TODO: Add an emoji font transform
 }
 
 enum Casing: String, CaseIterable, Identifiable, Hashable {

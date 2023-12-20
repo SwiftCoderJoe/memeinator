@@ -115,6 +115,8 @@ struct MemeSettingsView: View {
                 
                 ProFeature("Da Vinci", isExpanded: $settingsViewModel.daVinciEnabled)
                 
+                ProFeature("Emoji Additions", isExpanded: $settingsViewModel.emojiAdditionsEnabled)
+                
             }
             
         }

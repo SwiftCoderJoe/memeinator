@@ -46,12 +46,16 @@ class SettingsViewModel: GenericViewModel {
     
     private var zalgoState: ZalgoState = ZalgoState()
     
+    private var emojiAdditionsState: [EmojiAdditionsState] = []
+    
     // MARK: Methods
     
     func createFormattedString() -> String {
         var workingString = textInput
         
         workingString = repeatString(workingString)
+        
+        workingString = formatEmojiAdditions(from: workingString)
         
         workingString = formatFurryspeak(from: workingString)
         
@@ -199,12 +203,49 @@ class SettingsViewModel: GenericViewModel {
         return workingString
     }
     
+    func formatEmojiAdditions(from input: String) -> String {
+        guard emojiAdditionsEnabled else {
+            return input
+        }
+        
+        var workingString = ""
+        
+        for (idx, word) in input.split(separator: " ", omittingEmptySubsequences: false).enumerated() {
+            if emojiAdditionsState.count <= idx || emojiAdditionsState[idx].word != word {
+                var newState: EmojiAdditionsState
+                if let emojiAdditions = getEmojiForWord(input: String(word)) {
+                    newState = EmojiAdditionsState(
+                        word: String(word),
+                        emojis: " " + String(repeating: emojiAdditions[Int.random(in: 0..<emojiAdditions.count)], count: Int.random(in: 1...maxEmojis))
+                    )
+                } else {
+                    newState = EmojiAdditionsState(
+                        word: String(word),
+                        emojis: ""
+                    )
+                }
+                
+                if emojiAdditionsState.count == idx {
+                    emojiAdditionsState.append(newState)
+                } else {
+                    emojiAdditionsState[idx] = newState
+                }
+            }
+            
+            workingString.append(word + emojiAdditionsState[idx].emojis + " ")
+        }
+        
+        // Be sure to drop the last space
+        return String(workingString.dropLast())
+    }
+    
     override func invalidateState(for invalidatedState: ViewModelState) {
         switch invalidatedState {
         case .all:
             casingState.randomize()
             stutterState.randomize(in: stutterProbability)
             zalgoState = ZalgoState()
+            emojiAdditionsState = []
             
         case .furryspeak:
             stutterState.randomize(in: stutterProbability)
@@ -223,9 +264,11 @@ class SettingsViewModel: GenericViewModel {
         case .zalgoDiacritics:
             zalgoState.diacriticsTop = []
             zalgoState.diacriticsBottom = []
+            
+        case .emojiAdditions:
+            emojiAdditionsState = []
         }
         
         self.objectWillChange.send()
-        
     }
 }

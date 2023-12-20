@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -94,6 +94,7 @@
 		0EE57CCF26D978A9001F14DA /* randomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB31F812671966D00D91ED6 /* randomBool.swift */; };
 		0EE57CD126DB0556001F14DA /* RoundedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE57CD026DB0556001F14DA /* RoundedBackground.swift */; };
 		0EF9E857288A0EBE000B2A91 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */; };
+		A8B7C4692B3271DA0071D973 /* EmojiAdditionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B7C4682B3271DA0071D973 /* EmojiAdditionsState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		0EFAA8BA276CDE16009F9BDC /* m3Keys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = m3Keys.entitlements; sourceTree = "<group>"; };
 		0EFAA8BB276CDE89009F9BDC /* memeinator.new.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = memeinator.new.entitlements; sourceTree = "<group>"; };
+		A8B7C4682B3271DA0071D973 /* EmojiAdditionsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiAdditionsState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 				0E80BBC3279C6F4900F6B727 /* M3KeysInstallManager.swift */,
 				0EF9E856288A0EBE000B2A91 /* OnboardingManager.swift */,
 				0E72DE84288C985600D00F57 /* AnalyticsConsentManager.swift */,
+				A8B7C4682B3271DA0071D973 /* EmojiAdditionsState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				0E4DFD01281D98A00097366C /* SpacingFavorite.swift in Sources */,
 				0EF9E857288A0EBE000B2A91 /* OnboardingManager.swift in Sources */,
 				0EDA93E127B073350083EE82 /* M3KeysFunctionOrder.swift in Sources */,
+				A8B7C4692B3271DA0071D973 /* EmojiAdditionsState.swift in Sources */,
 				0E020D19276AA8F9008571C8 /* Published+UserDefaults.swift in Sources */,
 				0E6BFA0526D5C485008868B7 /* KeyboardView.swift in Sources */,
 				0E020D14276A532B008571C8 /* ProBadge.swift in Sources */,
